@@ -139,3 +139,13 @@
 		}
 	}
 }
+
+.header--fixed .header-catalog__list.large {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+}
