@@ -1,0 +1,41 @@
+.news-slider {
+
+	@include below(1023px) {
+		margin-right: -16px;
+	}
+
+	@include below(423px) {
+		margin-right: -8px;
+	}
+
+
+	&__wrap {
+		@include below(1023px) {
+			padding-right: 16px;
+		}
+
+		@include below(423px) {
+			padding-right: 8px;
+		}
+	}
+
+	&__slide {
+
+		@include below(1023px) {
+			width: 298px ;
+			min-width: 298px;
+		}
+
+		@include below(423px) {
+			width: 258px;
+			min-width: 258px;
+		}
+	}
+
+	&__nav {
+		@include below(1023px) {
+			display: none;
+		}
+	}
+
+}

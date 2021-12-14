@@ -1,0 +1,47 @@
+.get-up {
+	position: fixed;
+	z-index: 10;
+	right: 16px;
+	bottom: 32px;
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: $white;
+	border-radius: 50%;
+	box-shadow: 0px 8px 20px rgba(0, 9, 17, 0.12);
+	transition:  background-color 0.3s ease, opacity 0.3s ease;
+	opacity: 0;
+	pointer-events: none;
+
+	&.is-active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	@include below(1023px) {
+		bottom: 104px;
+		width: 48px;
+		height: 48px;
+	}
+
+	@include below(1023px) {
+		bottom: 80px;
+		width: 40px;
+		height: 40px;
+		right: 12px;
+	}
+
+	&:hover {
+		@media (hover: hover) {
+			background-color: $blue;
+		}
+	}
+	&:hover &__icon {
+		@media (hover: hover) {
+			stroke: $white;
+		}
+	}
+}

@@ -1,0 +1,163 @@
+.form {
+
+	&--help &__inner {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include below(1023px) {
+
+		}
+	}
+
+	&--help &__left {
+		flex: 0 0 320px ;
+		margin-right: 20px;
+
+
+		@include below(1600px) {
+			flex: 0 0 256px;
+		}
+
+		@include below(1199px) {
+			flex: 0 0 234px;
+		}
+
+		@include below(1023px) {
+			flex: 0 0 100%;
+			margin-right: 0;
+			margin-bottom: 8px;
+		}
+	}
+
+	&--help &__right {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+
+		.input--textarea .input__field {
+			@include below(1023px) {
+				height: 144px;
+			}
+
+			@include below(423px) {
+				height: 108px;
+			}
+		}
+	}
+
+	&--help &__footer {
+		width: 100%;
+		margin-top: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include below(1023px) {
+			margin-top: 4px;
+		}
+		@include below(423px) {
+			display: block;
+		}
+	}
+
+
+	&--help &__btn {
+		flex: 0 0 214px;
+
+		@include below(1600px) {
+			flex: 0 0 134px;
+		}
+
+		@include below(1199px) {
+			flex: 0 0 108px;
+		}
+
+		@include below(1023px) {
+			flex: 0 0 122px;
+		}
+
+		@include below(767px) {
+			flex: 0 0 170px;
+		}
+
+		@include below(423px) {
+			flex: 0 0 100%;
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+
+	&__row {
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+
+	&__col {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	&__notice {
+		border-top: 1px solid #E7E9EB;
+
+		@include below(767px) {
+			text-align: center;
+		}
+
+	}
+
+
+	&__footer-col-text {
+		@include below(767px) {
+			text-align: center;
+		}
+	}
+
+	&__success {
+		display: none;
+	}
+
+	&__front.is-hidden {
+		display: none;
+	}
+
+	&__success.is-visible {
+		display: flex;
+		animation: tabAnim linear 0.3s forwards;
+	}
+
+
+	&__success {
+		min-height: 310px;
+		padding: 32px;
+		display: none;
+		align-items: center;
+
+		@include below(575px) {
+			min-height: 100vh;
+		}
+	}
+
+	&__success-inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__success-icon {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	&__success-title {
+		margin-bottom: 8px;
+	}
+
+	&--modal {
+		@include below(575px) {
+			min-height: 100vh;
+		}
+	}
+
+
+}

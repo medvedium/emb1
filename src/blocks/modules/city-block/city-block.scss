@@ -1,0 +1,15 @@
+.city-block {
+
+	&__list {
+		column-count: 2;
+		margin-bottom: -24px;
+
+		@include  below(575px) {
+			column-count: unset;
+		}
+	}
+
+	&__item  {
+		margin-bottom: 24px;
+	}
+}

@@ -1,0 +1,104 @@
+.about-block {
+
+	border: 1px solid $gray-2;
+	border-radius: 4px;
+
+	&__row {
+		display: flex;
+
+		@include below(1023px) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		padding: 64px 72px;
+
+		@include below(1199px) {
+			flex: 0 0 50%;
+			padding: 48px;
+		}
+
+		@include below(1023px) {
+			flex: 0 0 100%;
+			padding: 32px;
+		}
+
+		@include below(423px) {
+			padding: 24px 16px;
+		}
+	}
+
+	&__right {
+		flex: 0 0 528px;
+
+		@include below(1199px) {
+			flex: 0 0 50%;
+		}
+
+		@include below(1023px) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		border-left: 1px solid $gray-2;
+
+		@include below(1023px) {
+			border-left: 0;
+			border-top: 1px solid $gray-2;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+		border-top: 1px solid $gray-2;
+		border-right: 1px solid $gray-2;
+		min-height: 211px;
+		padding: 16px;
+
+		&:nth-child(1),
+		&:nth-child(2) {
+			border-top: none;
+		}
+
+		&:nth-child(2),
+		&:nth-child(4) {
+			border-right: 0;
+		}
+
+
+		@include below(1023px) {
+			min-height: 152px;
+		}
+
+		@include below(767px) {
+			min-height: 138px;
+		}
+	}
+
+	&__item-header {
+		margin-bottom: 16px;
+
+		@include below(767px) {
+
+			margin-bottom: 8px;
+		}
+	}
+
+	&__item-text {
+		text-align: center;
+
+		@include below(767px) {
+			font-size: 14px;
+			line-height: 140%;
+		}
+	}
+}

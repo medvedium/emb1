@@ -1,0 +1,225 @@
+.footer {
+	margin-top: auto;
+	padding-top: 48px;
+	padding-bottom: 48px;
+	background-color: $gray-2;
+	min-height: 321px;
+
+	@include below(1199px) {
+		min-height: 490px;
+	}
+
+	@include below(1023px) {
+		padding-top: 40px;
+		padding-bottom: 90px;
+		min-height: 540px;
+	}
+
+	@include below(767px) {
+		padding-bottom: 70px;
+		min-height: unset;
+	}
+
+	&__container {
+
+		@include below(1023px) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		@include below(423px) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+	}
+
+	&__row {
+		display: flex;
+
+		@include below(1023px) {
+			display: block;
+		}
+
+		@include below(767px) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__col--1 {
+		order: 1;
+		flex: 0 0 224px;
+		padding-right: 32px;
+		border-right: 1px solid rgba($dark, 0.1);
+
+		@include below(1600px) {
+			flex: 0 0 208px;
+		}
+
+		@include below(1199px) {
+			padding-right: 48px;
+		}
+
+		@include below(1023px) {
+			flex: 0 0 auto;
+			width: 204px;
+			margin-bottom: 32px;
+			padding-right: 0;
+			border-right: none;
+		}
+
+	}
+
+	&__col--2 {
+		order: 2;
+		padding-left: 32px;
+		flex-grow: 1;
+
+		@include below(1199px) {
+			padding-left: 48px;
+		}
+
+		@include below(1023px) {
+			float: right;
+			padding-top: 10px;
+			width: 62%;
+		}
+
+		@include below(767px) {
+			float: none;
+			width: 100%;
+			padding-left: 0;
+			padding-top: 0;
+			margin-bottom: 32px;
+		}
+	}
+
+	&__col--3 {
+		order: 3;
+		flex: 0 0 305px;
+		padding-left: 32px;
+		border-left: 1px solid rgba($dark, 0.1);
+		position: relative;
+
+		@include below(1600px) {
+			flex: 0 0 273px;
+		}
+
+		@include below(1199px) {
+			flex: 0 0 290px;
+			padding-left: 48px;
+		}
+
+		@include below(1023px) {
+			float: left;
+			flex: 0 0 auto;
+			width: 208px;
+			padding-left: 0;
+			border-left: none;
+		}
+
+		@include below(767px) {
+			float: none;
+			width: 100%;
+		}
+	}
+
+
+
+	&__col-inner {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
+
+	&__logo {
+		display: block;
+		width: 192px;
+		margin-bottom: 56px;
+
+		@include below(1600px) {
+			width: 174px;
+		}
+
+		@include below(1023px) {
+			margin-bottom: 0;
+		}
+
+		@include below(767px) {
+			width: 171px;
+		}
+
+
+		img  {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&__policy {
+		margin-top: auto;
+	}
+
+	&__phone-block {
+		margin-bottom: 56px;
+
+		@include below(1023px) {
+			margin-bottom: 48px;
+		}
+
+		@include below(767px) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__tabs {
+		//margin-top: auto;
+
+		position: absolute;
+		left: 32px;
+		top: 108px;
+
+		@include below(1199px) {
+			top: 260px;
+			bottom: 0;
+			left: 48px;
+		}
+
+		@include below(1023px) {
+			left: 0;
+			position: static;
+			margin-bottom: 48px;
+		}
+
+		@include below(767px) {
+			margin-bottom: 32px;
+		}
+
+
+
+		.tabs__btn:last-of-type {
+			flex-grow: 1;
+
+			@include below(767px) {
+				flex-grow: unset;
+			}
+
+			@include below(423px) {
+				flex-grow: 1;
+			}
+		}
+
+
+
+		.contacts__item {
+			@include below(1023px) {
+
+				&:last-of-type {
+					height: 39.4px;
+				}
+			}
+		}
+
+
+	}
+}

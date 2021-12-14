@@ -1,0 +1,94 @@
+.special-block {
+
+	padding: 24px 32px;
+	background-color: $gray-3;
+	border-radius: 4px;
+
+	@include below(1023px) {
+		padding: 16px 24px;
+	}
+
+	@include below(767px) {
+		margin-left: -16px;
+		margin-right: -16px;
+		width: auto;
+		padding: 16px;
+	}
+
+	@include below(423px) {
+		margin-left: -8px;
+		margin-right: -8px;
+		padding: 8px;
+	}
+
+	&__header {
+		margin-bottom: 24px;
+
+
+		@include below(767px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__footer {
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include below(423px) {
+			margin-top: 16px;
+			flex-direction: column;
+		}
+	}
+
+	&__footer-left {
+
+		@include below(767px) {
+			.text{
+				font-size: 14px;
+			}
+		}
+
+		@include below(423px) {
+			margin-bottom: 8px;
+		}
+	}
+
+
+	&__footer-right {
+		.link {
+			@include below(767px) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__compilation-row {
+
+		@include below(1023px) {
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			//margin-bottom: 0;
+			margin-bottom: -10px;
+			padding-bottom: 10px;
+
+		}
+
+		.compilation__col {
+			@include below(1023px) {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
+	&__content-item {
+		display: none;
+
+		&.is-active {
+			display: block;
+			animation: tabAnim linear 0.3s forwards;
+		}
+	}
+}

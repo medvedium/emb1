@@ -1,0 +1,67 @@
+.badge {
+	display: inline-flex;
+	text-decoration: none;
+	height: 40px;
+	background-color: $gray-3;
+	border-radius: 4px;
+	padding: 8px 12px;
+	border: 1px solid $gray-3;
+	transition: border-color 0.3s ease;
+	cursor: pointer;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		margin-top: 2px;
+	}
+
+	&__text {
+		color: $dark;
+		white-space: nowrap;
+
+		@include below(767px) {
+			font-size: 14px;
+		}
+	}
+
+	&__text--gray {
+		color: $gray;
+	}
+
+	&__text--amount {
+		margin-left: 6px;
+	}
+
+	&__icon {
+		margin-left: 12px;
+	}
+
+
+	&:hover {
+		@media (hover: hover) {
+			border-color: $blue;
+		}
+	}
+
+	&--white {
+		background-color: $white;
+		border-color: $white;
+	}
+
+	&--yellow {
+		background-color: $yellow;
+	}
+
+	&.is-active {
+		border-color: $dark-blue;
+		background-color: $dark-blue;
+	}
+
+	&.is-active &__text {
+		color: $white;
+	}
+
+	&--sm {
+		height: 36px;
+	}
+}

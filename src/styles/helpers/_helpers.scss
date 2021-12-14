@@ -1,0 +1,30 @@
+.hidden {
+  display: none;
+}
+
+.is-fixed {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.mb-12 {
+	margin-bottom: 12px;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.ml {
+	&-0 {
+		margin-left: 0 !important;
+	}
+}
+
+.mr {
+
+	&-16 {
+		margin-right: 16px;
+	}
+}
+

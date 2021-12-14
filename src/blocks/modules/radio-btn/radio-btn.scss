@@ -1,0 +1,32 @@
+.radio-btn {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 32px;
+
+	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+
+	&__input:checked + &__custom {
+		border: 6px solid $blue;
+	}
+
+	&__custom {
+		position: absolute;
+		left: 0;
+		top: -2px;
+		display: block;
+		width: 24px;
+		height: 24px;
+		border: 1px solid $gray;
+		border-radius: 50%;
+		transition: all 0.2s ease;
+	}
+
+}

@@ -1,0 +1,44 @@
+.news-card {
+
+	text-decoration: none;
+	color: $dark;
+
+	&__header {
+		margin-bottom: 16px;
+		height: 190px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 4px;
+
+		@include below(423px) {
+			height: 146px;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		transition: transform 0.4s ease;
+	}
+
+	&:hover  &__img{
+		@media (hover: hover) {
+			transform: scale(1.1);
+		}
+	}
+
+
+	&__body {
+		padding-right: 16px;
+	}
+
+	&__text {
+		line-height: 125%;
+	}
+}

@@ -1,0 +1,55 @@
+.user-block {
+
+	padding-right: 20px;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__personal &__link , &__favorite &__link {
+
+		width: 56px;
+	}
+
+	&__favorite {
+		position: relative;
+		display: inline-block;
+
+		.counter {
+			position: absolute;
+			top: 7px;
+			left: 25px;
+		}
+	}
+
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 56px;
+		text-decoration: none;
+		color: $black;
+		cursor: pointer;
+	}
+
+	&__link:hover &__icon path{
+		stroke: $blue;
+	}
+
+	&__icon path{
+		transition: stroke 0.3s ease;
+	}
+
+	&__cart &__icon {
+		width: 56px;
+	}
+
+	&__cart-text {
+		display: block;
+		//min-width: 85px;
+		text-align: right;
+	}
+}

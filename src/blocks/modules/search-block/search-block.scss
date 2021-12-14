@@ -1,0 +1,186 @@
+.search-block {
+	position: relative;
+
+	&__row {
+		position: relative;
+	}
+
+	&__input {
+		width: 100%;
+		height: 56px;
+		border: 1px solid $gray-2;
+		background-color: $gray-3;
+		padding-left: 56px;
+		padding-right: 20px;
+		border-radius: 4px;
+		font-size: 16px;
+
+		@include placeholder {
+			color: $gray-4;
+		}
+
+		@include below(1023px) {
+			height: 44px;
+			padding-left: 44px;
+			font-size: 14px;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		left: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include below(1023px) {
+			width: 20px;
+			height: 20px;
+			left: 12px;
+		}
+	}
+
+
+
+	&__result {
+		display: none;
+		position: absolute;
+		top: 100%;
+		margin-top: 8px;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		background-color: $white;
+		border: 1px solid #E7E9EB;
+		box-shadow: 0px 5px 25px rgba(19, 48, 80, 0.08);
+		border-radius: 4px;
+
+		@include below(1023px) {
+			z-index: 22;
+			border: none;
+			box-shadow: none;
+		}
+	}
+
+	&.is-active  &__result {
+		display: block;
+	}
+
+	&__result-list {
+		padding: 4px 8px;
+
+		@include below(1023px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&__result-item {
+		border-bottom: 1px solid #F7F8FA;
+	}
+
+	&__result-footer {
+		padding: 8px 12px 12px;
+	}
+
+	&--modal &__input{
+		height: 44px;
+		font-size: 14px;
+		padding-left: 44px;
+	}
+
+	&--modal &__icon{
+		width: 20px;
+		height: 20px;
+		left: 12px;
+	}
+
+
+	&__close {
+		display: none;
+
+
+		@include below(1023px) {
+			display: none;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.7071 4.29295C15.3166 3.90243 14.6834 3.90243 14.2929 4.29295L10 8.58585L5.70711 4.29295C5.31658 3.90243 4.68342 3.90243 4.29289 4.29295C3.90237 4.68348 3.90237 5.31664 4.29289 5.70717L8.58579 10.0001L4.29289 14.293C3.90237 14.6835 3.90237 15.3166 4.29289 15.7072C4.68342 16.0977 5.31658 16.0977 5.70711 15.7072L10 11.4143L14.2929 15.7072C14.6834 16.0977 15.3166 16.0977 15.7071 15.7072C16.0976 15.3166 16.0976 14.6835 15.7071 14.293L11.4142 10.0001L15.7071 5.70717C16.0976 5.31664 16.0976 4.68348 15.7071 4.29295Z' fill='%2300ADEF'/%3E%3C/svg%3E%0A");
+		}
+	}
+
+	&__button {
+		position: absolute;
+		right: 4px;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		background: $blue;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		border: none;
+		padding: 0;
+
+		&:hover {
+			background-color: #0089BD;
+		}
+
+		@include below(1023px) {
+			width: 20px;
+			height: 20px;
+			left: 12px;
+			right: auto;
+			background-color: transparent;
+			pointer-events: none;
+		}
+	}
+
+
+	&__button  &__icon {
+		@include below(1023px) {
+			fill: $blue;
+		}
+	}
+
+
+	&--btn  &__icon{
+		position: static;
+		transform: none;
+	}
+
+	&--btn &__input {
+		padding-left: 16px;
+		padding-right: 70px;
+
+		@include below(1023px) {
+			padding-right: 16px;
+			padding-left: 44px;
+		}
+	}
+
+
+
+	&--btn.is-active  &__button{
+
+		@include below(1023px) {
+			display: none;
+		}
+	}
+
+	&--btn.is-active  &__close{
+
+		@include below(1023px) {
+			display: block;
+		}
+	}
+
+}

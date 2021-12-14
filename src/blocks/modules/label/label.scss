@@ -1,0 +1,19 @@
+.label {
+	padding: 2px 5px;
+	border-radius: 2px;
+	font-size: 12px;
+	background-color: $yellow;
+	white-space: nowrap;
+	color: $dark;
+	display: inline-block;
+
+	&--gray {
+		background-color: $gray-3;
+	}
+
+
+	@include below(423px) {
+		font-size: 10px;
+
+	}
+}

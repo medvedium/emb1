@@ -1,0 +1,133 @@
+.main-slider {
+	border-radius: 4px;
+	overflow: hidden;
+
+	&__slide {
+		min-height: 468px;
+		padding-left: 75px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		display: inline-flex !important;
+		align-items: center;
+		background: linear-gradient(90deg, #004680 0%, #4484BA 100%);
+		position: relative;
+		border-radius: 4px;
+		box-sizing: border-box;
+
+		@include below(1600px) {
+			min-height: 405px;
+			padding-left: 70px;
+		}
+
+		@include below(1199px) {
+			min-height: 342px;
+			padding-left: 54px;
+		}
+
+		@include below(1023px) {
+			min-height: 398px;
+			padding-left: 63px;
+		}
+
+		@include below(767px) {
+			min-height: 300px;
+			padding-left: 40px;
+		}
+
+		@include below(575px) {
+			padding-left: 32px;
+			min-height: 212px;
+		}
+
+		@include below(423px) {
+			min-height: 164px;
+			padding-left: 24px;
+		}
+	}
+
+	&__info {
+		position: relative;
+		z-index: 1;
+
+		@include below(1023px) {
+			margin-top: -20px;
+		}
+
+		@include below(575px) {
+			margin-top: 0px;
+		}
+	}
+
+	&__title {
+		font-size: 40px;
+		line-height: 120%;
+		font-weight: bold;
+		font-family: 'Montserrat';
+		margin-bottom: 24px;
+		color: $white;
+
+		@include below(1600px) {
+			font-size: 34px;
+		}
+
+		@include below(1199px) {
+			font-size: 30px;
+			margin-bottom: 12px;
+		}
+
+		@include below(1023px) {
+			font-size: 34px;
+			margin-bottom: 24px;
+		}
+
+		@include below(767px) {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		@include below(423px) {
+			font-size: 14px;
+		}
+	}
+
+	&__desc {
+		p {
+			margin-top: 0;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 135%;
+			color: $white;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			@include below(1600px) {
+				font-size: 22px;
+			}
+
+			@include below(1199px) {
+				font-size: 18px;
+			}
+
+			@include below(767px) {
+				font-size: 12px;
+			}
+
+			@include below(423px) {
+				font-size: 10px;
+			}
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: auto;
+		height: 100%;
+		max-height: 100%;
+		pointer-events: none;
+	}
+}

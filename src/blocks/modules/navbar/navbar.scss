@@ -1,0 +1,74 @@
+.navbar  {
+	display: none;
+
+	@include below(1023px) {
+		display: block;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 20;
+		border-top: 2px solid $gray-2;
+		background-color: $white;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	@include below(767px) {
+	}
+
+	&__list {
+
+		@include below(1023px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+	}
+
+
+	&__link {
+
+		@include below(1023px) {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
+
+		.counter {
+			position: absolute;
+			right: 12px;
+			top: -6px;
+
+			@include below(767px) {
+				right: 2px;
+			}
+		}
+	}
+
+	&__link-icon {
+
+		@include below(1023px) {
+			width: 32px;
+			height: 32px;
+			margin-bottom: 8px;
+		}
+
+		@include below(767px) {
+			width: 24px;
+			height: 24px;
+			margin-bottom: 4px;
+		}
+	}
+
+	&__link-text {
+
+		@include below(1023px) {
+			font-size: 13px;
+		}
+
+		@include below(767px) {
+			font-size: 10px;
+		}
+	}
+}

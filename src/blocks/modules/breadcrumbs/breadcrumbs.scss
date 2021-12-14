@@ -1,0 +1,44 @@
+.breadcrumbs {
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -7px;
+		margin-right: -7px;
+		margin-bottom: -7px;
+	}
+
+	&__item {
+		padding-left: 7px;
+		padding-right: 7px;
+		margin-bottom: 7px;
+		position: relative;
+
+		&:after {
+			content: '›';
+			position: absolute;
+			right: -3px;
+			top: 0;
+			color: $gray-6;
+		}
+
+		&:last-of-type {
+			&:after {
+				display: none;
+			}
+		}
+
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $gray-6;
+		font-size: 14px;
+	}
+}
+
+a.breadcrumbs__link {
+	&:hover {
+		color: $blue;
+	}
+}

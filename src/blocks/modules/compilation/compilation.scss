@@ -1,0 +1,30 @@
+.compilation {
+	display: flex;
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -4px;
+		margin-right: -4px;
+		margin-bottom: -8px;
+	}
+
+	&__col {
+		padding-left: 4px;
+		padding-right: 4px;
+		margin-bottom: 8px;
+	}
+
+	&__col--hidden {
+		display: none;
+	}
+
+	&.is-active &__col--hidden{
+		display: block;
+		animation: tabAnim linear 0.3s forwards;
+	}
+
+	&.is-active &__col--btn {
+		display: none;
+	}
+}

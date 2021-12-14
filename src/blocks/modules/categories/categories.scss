@@ -1,0 +1,113 @@
+.categories {
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		border-top: 1px solid $gray-2;
+		border-left: 1px solid $gray-2;
+	}
+
+	&__item {
+		width: 16.66666%;
+		border-bottom: 1px solid $gray-2;
+		border-right: 1px solid $gray-2;
+
+
+		@include below(1023px){
+			width: 33.33333%;
+		}
+
+		@include below(767px){
+			width: 50%;
+		}
+	}
+
+	&__img-wrap {
+		height: 137px;
+		margin-bottom: 16px;
+
+		@include below(1600px){
+			height: 125px;
+		}
+
+		@include below(1199px){
+			height: 105px;
+			margin-bottom: 12px;
+		}
+
+		@include below(1023px){
+			height: 154px;
+			margin-bottom: 0;
+		}
+
+		@include below(767px){
+			height: 125px;
+			margin-bottom: 12px;
+		}
+
+		@include below(423px){
+			height: 100px;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__img {
+		width: auto;
+		max-width: 100%;
+
+		@include below(423px){
+			max-height: 100px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		padding-left: 16px;
+		padding-right: 16px;
+		min-height: 42px;
+	}
+
+	&__link {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 212px;
+		text-decoration: none;
+		color: $dark;
+		transition: box-shadow 0.3s ease;
+
+		@include below(1600px){
+			min-height: 200px;
+		}
+
+		@include below(1199px){
+			min-height: 180px;
+		}
+
+		@include below(1023px){
+			min-height: 228px;
+		}
+
+		@include below(767px){
+			min-height: 200px;
+		}
+
+		@include below(423px){
+			min-height: 173px;
+		}
+	}
+
+	&__link:hover {
+		box-shadow: 0px 5px 25px rgba(19, 48, 80, 0.12);
+	}
+
+	&__text {
+		text-align: center;
+		width: 100%;
+		display: block;
+		transition: color 0.3s ease;
+	}
+
+}

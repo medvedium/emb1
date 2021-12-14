@@ -1,0 +1,88 @@
+.subscription {
+	padding: 32px 56px;
+	background-color: $dark-blue;
+	border-radius: 4px;
+
+	@include below(1199px) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	@include below(1023px) {
+		padding: 24px;
+	}
+
+	@include below(423px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include below(1023px) {
+			display: block;
+		}
+	}
+
+
+	&__title {
+		margin-bottom: 8px;
+	}
+
+	&__desc {
+		p {
+			line-height: 125%;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__col--1 {
+		@include below(1023px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__col--2 {
+		flex: 0 0 696px;
+
+		@include below(1600px) {
+			flex: 0 0 520px
+		}
+
+		@include below(1199px) {
+			flex: 0 0 456px
+		}
+	}
+
+	&__form-top{
+		margin-bottom: 12px;
+	}
+
+	&__form-row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__form-input {
+		flex-grow: 1;
+		margin-right: 8px;
+	}
+
+	&__form-bottom {
+		display: flex;
+	}
+
+	&__form-btn {
+		@include below(767px) {
+			padding: 0;
+			width: 52px;
+			justify-content: center;
+		}
+	}
+
+}

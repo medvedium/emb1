@@ -1,0 +1,31 @@
+.main-section {
+	overflow: hidden;
+
+
+
+	&__row {
+		@include below(1600px) {
+			margin-left: -8px;
+			margin-right: -8px;
+		}
+	}
+
+	&__col {
+
+		@include below(1600px) {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+
+	&__col--1 {
+
+		@include below(1023px) {
+			margin-bottom: 56px;
+		}
+
+		@include below(767px) {
+			margin-bottom: 32px;
+		}
+	}
+}

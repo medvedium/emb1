@@ -1,0 +1,226 @@
+.modal {
+
+
+	&-content {
+		position: relative;
+		background: #FFFFFF;
+		box-shadow: 0px 5px 25px rgba(19, 48, 80, 0.25);
+		border-radius: 0;
+		min-height: 100vh;
+		border: none;
+
+		@include above(575px) {
+			border-radius: 4px;
+			min-height: auto;
+		}
+	}
+
+	&-dialog {
+		width: 100%;
+		margin: 0;
+
+		@include above(424px) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		@include above(575px) {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+
+		&--sm  {
+			@include above(576px) {
+				max-width: 368px;
+			}
+		}
+
+		&--md  {
+
+			@include above(424px) {
+				max-width: 100%;
+			}
+			@include above(576px) {
+				max-width: 533px;
+			}
+		}
+
+		&--xl  {
+			@include above(424px) {
+				max-width: 100%;
+			}
+			@include above(576px) {
+				max-width: 663px;
+			}
+		}
+
+		&--custom {
+			@include above(424px) {
+				max-width: 100%;
+			}
+
+			@include above(576px) {
+				max-width: 663px;
+			}
+			@include above(1024px) {
+				max-width: 368px;
+			}
+		}
+	}
+
+	&-body {
+		padding-bottom: 0;
+	}
+
+
+	&-header {
+		position: relative;
+		background: #F7F8FA;
+		border: none;
+		padding: 12px;
+
+		@include above(576px) {
+			padding: 16px;
+		}
+	}
+
+	&-footer {
+		display: block;
+		border:  none;
+		padding: 16px 32px 32px;
+
+		& > * {
+			margin: 0 ;
+		}
+	}
+
+
+	&-close {
+		position: absolute;
+		right: 10px;
+		top: 6px;
+		width: 30px;
+		height: 30px;
+		border: none;
+		cursor: pointer;
+		background: transparent;
+		z-index: 1;
+
+		@include above(576px) {
+			top: 12px;
+		}
+	}
+
+	&-btn {
+		margin: 0;
+	}
+
+
+	&--custom {
+
+		@include above(1024px) {
+			position: absolute;
+			height: auto;
+			pointer-events: none;
+			margin-top: 20px;
+		}
+
+
+
+		.container {
+			@include above(1024px) {
+				display: flex;
+				justify-content: flex-end;
+				pointer-events: none;
+			}
+
+			@include below(1023px) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+		}
+
+		.modal-dialog {
+
+			@include above(1024px) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+		}
+	}
+
+
+	&-body__grid {
+		display: flex;
+		margin-left: -32px;
+		margin-right: -32px;
+
+		@include below(767px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&-body__col {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	&-body__col--1 {
+		display: none;
+
+
+		@include below(1023px) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+			flex-grow: 1;
+		}
+
+		@include below(767px) {
+			width: 100%;
+			padding-bottom: 32px;
+			margin-bottom: 32px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			right: 0;
+			width: 1px;
+			background-color: $gray-2;
+			height: 266px;
+
+			@include below(767px) {
+				width: auto;
+				height: 1px;
+				right: 32px;
+				left: 32px;
+				top: 100%;
+
+			}
+		}
+	}
+
+	&-body__col--2 {
+		flex: 0 0 100%;
+
+		@include below(1023px) {
+			flex: 0 0 397px;
+		}
+
+		@include below(767px) {
+			flex: 0 0 100%;
+		}
+	}
+}
+
+
+.modal-backdrop--transparent {
+	background-color: transparent !important;
+	pointer-events: none !important;
+	width: 0;
+	height: 0;
+}
