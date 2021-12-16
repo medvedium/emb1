@@ -33,7 +33,7 @@ const closeCategory = document.querySelectorAll('.jsCloseCategory');
 
 for (let i = 0; i < closeCategory.length; i++) {
 	closeCategory[i].addEventListener('click', function () {
-		document.querySelector('.jsHeaderCatalogCategory.is-active').classList.remove('is-active')
+		this.closest('.jsHeaderCatalogCategory').classList.remove('is-active')
 	})
 }
 
