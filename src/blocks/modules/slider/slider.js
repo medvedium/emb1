@@ -1,4 +1,5 @@
-import Swiper from '../../../../node_modules/swiper/swiper-bundle.esm.browser';
+// import Swiper from 'swiper/swiper-bundle.esm.browser.js';
+import Swiper from "swiper/bundle";
 
 const mainSlider = document.querySelector('.jsMainSlider');
 let mainSliderInit;

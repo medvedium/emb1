@@ -1,0 +1,914 @@
+<div class="modal fade" id="user-enter" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--sm">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">
+							Вход
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="text text--color--gray-4 mb-4">
+							Если вы уже регистрировались <br> на нашем сайте, то заполните <br> соответствующие поля
+						</div>
+						
+						<div class="input mb-3">
+							<input type="text" class="input__field jsInput" required>
+							<div class="input__placeholder">Эл.почта/телефон </div>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+						
+						<div class="input input--icon input--password">
+							<input type="password" class="input__field jsInput" required>
+							<div class="input__placeholder">Пароль</div>
+							<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.59984 2.82666C7.05872 2.71924 7.52855 2.66555 7.99984 2.66666C12.6665 2.66666 15.3332 7.99999 15.3332 7.99999C14.9285 8.75706 14.4459 9.46981 13.8932 10.1267M9.41317 9.41332C9.23007 9.60982 9.00927 9.76743 8.76394 9.87674C8.51861 9.98605 8.25377 10.0448 7.98523 10.0496C7.71669 10.0543 7.44995 10.0049 7.20091 9.90432C6.95188 9.80373 6.72565 9.65401 6.53573 9.46409C6.34582 9.27418 6.1961 9.04795 6.09551 8.79892C5.99492 8.54988 5.94552 8.28314 5.95026 8.0146C5.955 7.74606 6.01378 7.48122 6.12309 7.23589C6.2324 6.99056 6.39001 6.76976 6.5865 6.58666M1.99984 2L13.9998 14M11.9598 11.96C10.8202 12.8287 9.43258 13.3099 7.99984 13.3333C3.33317 13.3333 0.666504 7.99999 0.666504 7.99999C1.49576 6.45459 2.64593 5.1044 4.03984 4.03999L11.9598 11.96Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.666504 8.00008C0.666504 8.00008 3.33317 2.66675 7.99984 2.66675C12.6665 2.66675 15.3332 8.00008 15.3332 8.00008C15.3332 8.00008 12.6665 13.3334 7.99984 13.3334C3.33317 13.3334 0.666504 8.00008 0.666504 8.00008ZM9.99984 8.00008C9.99984 9.10465 9.10441 10.0001 7.99984 10.0001C6.89527 10.0001 5.99984 9.10465 5.99984 8.00008C5.99984 6.89551 6.89527 6.00008 7.99984 6.00008C9.10441 6.00008 9.99984 6.89551 9.99984 8.00008Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="pb-3 text-center">
+							<a href="#" class="link link--color--blue text--sm" data-bs-toggle="modal" data-bs-target="#user-password">
+								<span class="link__text">
+									Забыли пароль?
+								</span>
+							</a>
+						</div>
+						<button class="button w-100 modal-btn jsFormSubmitBtn">
+							<span class="button__text">
+								Вход
+							</span>
+						</button>
+						<div class="pt-4 text-center">
+							<span class="text text--sm text--color--gray-4">
+								У Вас нет аккаунта?
+							</span>
+							<a href="#" class="link link--color--blue text--sm" data-bs-toggle="modal" data-bs-target="#user-registration">
+								<span class="link__text"> Зарегистрироваться
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="form__success jsFormSuccess">
+					<div class="form__success-inner">
+						<div class="form__success-icon">
+							<img src="img/big-icons/check.svg" alt="">
+						</div>
+						<div class="text-center form__success-title mb-2">
+							<div class="h4">Восстановление пароля</div>
+						</div>
+						<div class="text-center form__success-desc">
+							<div class="text text--color--gray-4">
+								На адрес «указать пользователя» был выслан одноразовый пароль и ссылка для авторизации на платформе
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="user-enter--2" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--sm">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">
+							Вход
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="text text--color--gray-4 mb-4">
+							Если вы уже регистрировались <br> на нашем сайте, то заполните <br> соответствующие поля
+						</div>
+						<div class="input">
+							<input type="text" class="input__field jsInput" required>
+							<div class="input__placeholder">Эл.почта/телефон </div>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="pb-3 text-center">
+							<a href="#" class="link link--color--blue text--sm" data-bs-toggle="modal" data-bs-target="#user-password">
+								<span class="link__text">
+									Забыли пароль?
+								</span>
+							</a>
+						</div>
+						<button class="button w-100 modal-btn jsFormSubmitBtn">
+							<span class="button__text">
+								Вход
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="form__success jsFormSuccess">
+					<div class="form__success-inner">
+						<div class="form__success-icon">
+							<img src="img/big-icons/check.svg" alt="">
+						</div>
+						<div class="text-center form__success-title mb-2">
+							<div class="h4">Восстановление пароля</div>
+						</div>
+						<div class="text-center form__success-desc">
+							<div class="text text--color--gray-4">
+								На адрес «указать пользователя» был выслан одноразовый пароль и ссылка для авторизации на платформе
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="user-enter--3" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--sm">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">
+							Вход
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="text text--color--gray-4 mb-4">
+							Если вы уже регистрировались <br> на нашем сайте, то заполните <br> соответствующие поля
+						</div>
+						
+						<div class="input">
+							<input type="text" class="input__field jsInput jsInputPhone" required>
+							<div class="input__placeholder">Телефон </div>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+					
+					</div>
+					<div class="modal-footer">
+						<button class="button w-100 modal-btn jsFormSubmitBtn">
+							<span class="button__text">
+								Выслать код в смс
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="form__success jsFormSuccess">
+					<div class="form__success-inner">
+						<div class="form__success-icon">
+							<img src="img/big-icons/check.svg" alt="">
+						</div>
+						<div class="text-center form__success-title mb-2">
+							<div class="h4">Восстановление пароля</div>
+						</div>
+						<div class="text-center form__success-desc">
+							<div class="text text--color--gray-4">
+								На адрес «указать пользователя» был выслан одноразовый пароль и ссылка для авторизации на платформе
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="user-password" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--sm">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">
+							Восстановление пароля
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="text text--color--gray-4 mb-4">
+							Если вы уже регистрировались <br> на нашем сайте, то заполните <br> соответствующие поля
+						</div>
+						
+						<div class="input ">
+							<input type="text" class="input__field jsInput" required>
+							<div class="input__placeholder">Email или телефон </div>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="button w-100 modal-btn jsFormSubmitBtn">
+							<span class="button__text">
+								Отправить
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="form__success jsFormSuccess">
+					<div class="form__success-inner">
+						<div class="form__success-icon">
+							<img src="img/big-icons/check.svg" alt="">
+						</div>
+						<div class="text-center form__success-title mb-2">
+							<div class="h4">Восстановление пароля</div>
+						</div>
+						<div class="text-center form__success-desc">
+							<div class="text text--color--gray-4">
+								На адрес «указать пользователя» был выслан одноразовый пароль и ссылка для авторизации на платформе
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="user-registration" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--sm">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">
+							Регистрация
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="mb-3">
+							<label class="radio-btn mr-16">
+								<input type="radio" class="radio-btn__input jsEntity jsEntityIndividual" name="radio" checked>
+								<span class="radio-btn__custom"></span>
+								<span class="radio-btn__text">
+										Физ. лицо
+								</span>
+							</label>
+							<label class="radio-btn">
+								<input type="radio" class="radio-btn__input jsEntity jsEntityLegal" name="radio">
+								<span class="radio-btn__custom"></span>
+								<span class="radio-btn__text">
+										Юр. лицо
+								</span>
+							</label>
+						</div>
+						<div class="mb-3 jsInputName">
+							<div class="input">
+								<input type="text" class="input__field jsInput" required>
+								<div class="input__placeholder">Имя *</div>
+								<div class="input__error">
+									Описание ошибки и способы ее исправить
+								</div>
+							</div>
+						</div>
+						<div class="mb-3 d-none jsInputOrganization">
+							<div class="input">
+								<input type="text" class="input__field jsInput">
+								<div class="input__placeholder">Организация *</div>
+								<div class="input__error">
+									Описание ошибки и способы ее исправить
+								</div>
+							</div>
+						</div>
+						<div class="mb-3 d-none jsInputInn">
+							<div class="input">
+								<input type="text" class="input__field jsInput">
+								<div class="input__placeholder">ИНН * </div>
+								<div class="input__error">
+									Описание ошибки и способы ее исправить
+								</div>
+							</div>
+						</div>
+						<div class="input mb-3">
+							<input type="email" class="input__field jsInput jsInputEmail" required>
+							<div class="input__placeholder">Эл.почта </div>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+						<div class="input mb-3">
+							<input type="text" class="input__field jsInput jsInputPhone" required>
+							<div class="input__placeholder">Телефон *</div>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+						<div class="input input--icon input--password mb-3">
+							<input type="password" class="input__field jsInput jsInputPasswordEq jsInputPasswordEq--1" required>
+							<div class="input__placeholder">Пароль</div>
+							<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.59984 2.82666C7.05872 2.71924 7.52855 2.66555 7.99984 2.66666C12.6665 2.66666 15.3332 7.99999 15.3332 7.99999C14.9285 8.75706 14.4459 9.46981 13.8932 10.1267M9.41317 9.41332C9.23007 9.60982 9.00927 9.76743 8.76394 9.87674C8.51861 9.98605 8.25377 10.0448 7.98523 10.0496C7.71669 10.0543 7.44995 10.0049 7.20091 9.90432C6.95188 9.80373 6.72565 9.65401 6.53573 9.46409C6.34582 9.27418 6.1961 9.04795 6.09551 8.79892C5.99492 8.54988 5.94552 8.28314 5.95026 8.0146C5.955 7.74606 6.01378 7.48122 6.12309 7.23589C6.2324 6.99056 6.39001 6.76976 6.5865 6.58666M1.99984 2L13.9998 14M11.9598 11.96C10.8202 12.8287 9.43258 13.3099 7.99984 13.3333C3.33317 13.3333 0.666504 7.99999 0.666504 7.99999C1.49576 6.45459 2.64593 5.1044 4.03984 4.03999L11.9598 11.96Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.666504 8.00008C0.666504 8.00008 3.33317 2.66675 7.99984 2.66675C12.6665 2.66675 15.3332 8.00008 15.3332 8.00008C15.3332 8.00008 12.6665 13.3334 7.99984 13.3334C3.33317 13.3334 0.666504 8.00008 0.666504 8.00008ZM9.99984 8.00008C9.99984 9.10465 9.10441 10.0001 7.99984 10.0001C6.89527 10.0001 5.99984 9.10465 5.99984 8.00008C5.99984 6.89551 6.89527 6.00008 7.99984 6.00008C9.10441 6.00008 9.99984 6.89551 9.99984 8.00008Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+						<div class="input input--icon input--password">
+							<input type="password" class="input__field jsInput jsInputPasswordEq jsInputPasswordEq--2" required>
+							<div class="input__placeholder">Повторите пароль *</div>
+							<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.59984 2.82666C7.05872 2.71924 7.52855 2.66555 7.99984 2.66666C12.6665 2.66666 15.3332 7.99999 15.3332 7.99999C14.9285 8.75706 14.4459 9.46981 13.8932 10.1267M9.41317 9.41332C9.23007 9.60982 9.00927 9.76743 8.76394 9.87674C8.51861 9.98605 8.25377 10.0448 7.98523 10.0496C7.71669 10.0543 7.44995 10.0049 7.20091 9.90432C6.95188 9.80373 6.72565 9.65401 6.53573 9.46409C6.34582 9.27418 6.1961 9.04795 6.09551 8.79892C5.99492 8.54988 5.94552 8.28314 5.95026 8.0146C5.955 7.74606 6.01378 7.48122 6.12309 7.23589C6.2324 6.99056 6.39001 6.76976 6.5865 6.58666M1.99984 2L13.9998 14M11.9598 11.96C10.8202 12.8287 9.43258 13.3099 7.99984 13.3333C3.33317 13.3333 0.666504 7.99999 0.666504 7.99999C1.49576 6.45459 2.64593 5.1044 4.03984 4.03999L11.9598 11.96Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.666504 8.00008C0.666504 8.00008 3.33317 2.66675 7.99984 2.66675C12.6665 2.66675 15.3332 8.00008 15.3332 8.00008C15.3332 8.00008 12.6665 13.3334 7.99984 13.3334C3.33317 13.3334 0.666504 8.00008 0.666504 8.00008ZM9.99984 8.00008C9.99984 9.10465 9.10441 10.0001 7.99984 10.0001C6.89527 10.0001 5.99984 9.10465 5.99984 8.00008C5.99984 6.89551 6.89527 6.00008 7.99984 6.00008C9.10441 6.00008 9.99984 6.89551 9.99984 8.00008Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<div class="input__error">
+								Описание ошибки и способы ее исправить
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="mb-3">
+							<label class="checkbox form__checkbox">
+								<input type="checkbox" class="checkbox__input jsFormCheckBox" required checked>
+								<span class="checkbox__custom"></span>
+								<span class="text--color--graphite checkbox__text">
+									Согласие на обработку персональных данных
+								</span>
+							</label>
+						</div>
+						<button class="button w-100 modal-btn jsFormSubmitBtn">
+							<span class="button__text">
+								Регистрация
+							</span>
+						</button>
+						<div class="pt-4 text-center">
+							<span class="text text--sm text--color--gray-4">
+								У Вас уже есть аккаунт?
+							</span>
+							<a href="#" class="link link--color--blue text--sm" data-bs-toggle="modal" data-bs-target="#user-enter">
+								<span class="link__text">  Войти
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="form__success jsFormSuccess">
+					<div class="form__success-inner">
+						<div class="form__success-icon">
+							<img src="img/big-icons/check.svg" alt="">
+						</div>
+						<div class="text-center form__success-title mb-2">
+							<div class="h4">Восстановление пароля</div>
+						</div>
+						<div class="text-center form__success-desc">
+							<div class="text text--color--gray-4">
+								На адрес «указать пользователя» был выслан одноразовый пароль и ссылка для авторизации на платформе
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal--custom" id="city-choose" tabindex="-1" aria-hidden="true">
+	<div class="container">
+		<div class="modal-dialog modal-dialog-centered modal-dialog--md">
+			<div class="modal-content">
+				<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg class="icon icon--lg icon--gray">
+						<use xlink:href="img/icons/icons.svg#cross"></use>
+					</svg>
+				</button>
+				<div class="modal-header">
+					<div class="h5">
+						Выбор города
+					</div>
+				</div>
+				<div class="modal-body p-3 p-sm-5">
+					<div class="tabs jsTabs">
+						<div class="tabs__btns tabs__btns--another mb-4">
+							<div class="tabs__btn jsTabsBtn is-active" data-id="tab_1">
+								<div class="tabs__btn-title">
+									Россия
+								</div>
+							</div>
+							<div class="tabs__btn jsTabsBtn" data-id="tab_2">
+								<div class="tabs__btn-title">
+									Казахстан
+								</div>
+							</div>
+							<div class="tabs__btn jsTabsBtn" data-id="tab_3">
+								<div class="tabs__btn-title">
+									Белоруссия
+								</div>
+							</div>
+						</div>
+						<div class="search-block search-block--modal mb-4">
+							<form action="" class="search-block__form">
+								<div class="search-block__row">
+									<input type="text" class="search-block__input jsSearchBlockInput" placeholder="Поиск города">
+									<svg class="icon icon--blue icon--lg search-block__icon">
+										<use xlink:href="img/icons/icons.svg#search"></use>
+									</svg>
+								</div>
+							</form>
+						</div>
+						<div class="tabs__items">
+							<div class="tabs__item jsTabsItem is-active" data-id="tab_1">
+								<div class="city-block">
+									<div class="city-block__list">
+										<div class="city-block__item">
+											<span class="link city-block__link text--bold">
+												<span class="link__text">
+													Москва
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link text--bold">
+												<span class="link__text">
+													Санкт-Петербург
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Архангельск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Владивосток
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Волгоград
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Воронеж
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Екатеринбург
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Ижевск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Иркутск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Краснодар
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Красноярск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Мурманск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Набережные Челны
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Нижний Новгород
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Новосибирск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Омск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Пермь
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Ростов-на-Дону
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__item jsTabsItem" data-id="tab_2">
+								<div class="city-block">
+									<div class="city-block__list">
+										<div class="city-block__item">
+											<span class="link city-block__link text--bold">
+												<span class="link__text">
+													Санкт-Петербург
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Владивосток
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Волгоград
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Екатеринбург
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Ижевск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Иркутск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Краснодар
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Красноярск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Мурманск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Набережные Челны
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Нижний Новгород
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Новосибирск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Омск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Пермь
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Ростов-на-Дону
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__item jsTabsItem" data-id="tab_3">
+								<div class="city-block">
+									<div class="city-block__list">
+										<div class="city-block__item">
+											<span class="link city-block__link text--bold">
+												<span class="link__text">
+													Москва
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Архангельск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Владивосток
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Волгоград
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Воронеж
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Екатеринбург
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Ижевск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Иркутск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Новосибирск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Омск
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Пермь
+												</span>
+											</span>
+										</div>
+										<div class="city-block__item">
+											<span class="link city-block__link">
+												<span class="link__text">
+													Ростов-на-Дону
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="call-back" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--custom">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">
+							Связаться с нами
+						</div>
+					</div>
+					<div class="modal-body p-5">
+						<div class="modal-body__grid">
+							<div class="modal-body__col modal-body__col--1">
+								
+								<div class="d-flex flex-column mb-4">
+									<div class="text text--sm text--color--gray-4">
+										Звонок по России бесплатный
+									</div>
+									<a href="#" class="link text text--bold text--lg">
+										<span class="link__text">
+											8 (800) 700-60-50
+										</span>
+									</a>
+								</div>
+								
+								<div class="d-flex flex-column mb-4">
+									<div class="text text--sm text--color--gray-4">
+										Санкт-Петербург:
+									</div>
+									<a href="#" class="link text text--bold text--lg">
+										<span class="link__text">
+											(812) 655-67-44
+										</span>
+									</a>
+									<a href="#" class="link">
+										<span class="link__text">
+											info@emb1.ru
+										</span>
+									</a>
+								</div>
+								
+								<div class="d-flex flex-column ">
+									<div class="text text--sm text--color--gray-4">
+										Москва:
+									</div>
+									
+									<a href="#" class="link text text--bold text--lg">
+										<span class="link__text">
+											(495) 982-50-16
+										</span>
+									</a>
+									<a href="#" class="link">
+										<span class="link__text">
+											info.msk@emb1.ru
+										</span>
+									</a>
+								</div>
+								
+							</div>
+							<div class="modal-body__col modal-body__col--2">
+								<div class="text mb-4 d-none d-lg-block">
+									Заполните форму и нам менеджер свяжется с вами
+								</div>
+								<div class="text text--color--gray-4 mb-4 d-lg-none">
+									Или заполните форму <br>и наш менеджер свяжется с вами
+								</div>
+								<div class="input mb-3">
+									<input type="text" class="input__field jsInput" required>
+									<div class="input__placeholder">Имя</div>
+									<div class="input__error">
+										Описание ошибки и способы ее исправить
+									</div>
+								</div>
+								<div class="input mb-3">
+									<input type="text" class="input__field jsInput jsInputPhone" required>
+									<div class="input__placeholder">Телефон</div>
+									<div class="input__error">
+										Описание ошибки и способы ее исправить
+									</div>
+								</div>
+								<div class="mb-3">
+									<label class="checkbox form__checkbox">
+										<input type="checkbox" class="checkbox__input jsFormCheckBox" required checked>
+										<span class="checkbox__custom"></span>
+											<span class="text--color--graphite checkbox__text">
+											Согласие на обработку персональных данных
+										</span>
+									</label>
+								</div>
+								<button class="button w-100 modal-btn jsFormSubmitBtn">
+									<span class="button__text">
+										Отправить
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__success jsFormSuccess">
+					<div class="form__success-inner">
+						<div class="form__success-icon">
+							<img src="img/big-icons/check.svg" alt="">
+						</div>
+						<div class="text-center form__success-title mb-2">
+							<div class="h4">Восстановление пароля</div>
+						</div>
+						<div class="text-center form__success-desc">
+							<div class="text text--color--gray-4">
+								На адрес «указать пользователя» был выслан одноразовый пароль и ссылка для авторизации на платформе
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

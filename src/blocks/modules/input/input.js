@@ -1,4 +1,4 @@
-import IMask from 'imask';
+import IMask from 'imask'
 
 
 const inputPhone = document.querySelectorAll('.jsInputPhone');
