@@ -1,8 +1,7 @@
 package-lock.json
 node_modules/
+.idea
 .gitignore
-flsStartTemplate/
-Source/
 version.json
 dist/
 undefined
