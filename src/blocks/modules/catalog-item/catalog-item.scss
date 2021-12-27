@@ -74,3 +74,49 @@
 		margin-bottom: 4px;
 	}
 }
+
+.item-pricing {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	max-height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	&__title {
+		font-size: 16px;
+		line-height: 125%;
+		margin-bottom: 12px;
+	}
+
+	&__price-item {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__status {
+		font-size: 12px;
+		display: flex;
+		height: 100%;
+		align-items: center;
+
+		&--available {
+			color: $status-available;
+		}
+
+		&--delivery {
+			color: $status-delivery;
+		}
+
+		&--order {
+			color: $status-order;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		margin-top: auto;
+	}
+}
