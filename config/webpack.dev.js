@@ -116,7 +116,7 @@ const config = {
 					noErrorOnMissing: true,
 					force: true
 				}, {
-					from: `${paths.src}/favicon.ico`, to: `./`,
+					from: `${paths.src}/favicon.png`, to: `./`,
 					noErrorOnMissing: true
 				}
 			],

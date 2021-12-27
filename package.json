@@ -49,7 +49,7 @@
 		"lightgallery": "latest",
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "latest",
-		"nouislider": "latest",
+		"nouislider": "^15.5.0",
 		"postcss": "latest",
 		"postcss-scss": "latest",
 		"prettier": "latest",

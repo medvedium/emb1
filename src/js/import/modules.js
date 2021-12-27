@@ -9,3 +9,4 @@ import "../../blocks/modules/catalog/catalog.js";
 import "../../blocks/modules/modal/modal.js";
 import "../../blocks/modules/form/form.js";
 import "../../blocks/modules/get-up/get-up.js";
+import "../../blocks/modules/catalog-filter/catalog-filter.js";

@@ -10,10 +10,11 @@
     name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
   />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body class="body">
-@@include("html/_header.html")
+@@include('blocks/modules/header/header.html')
 
 <main class="main">
   <div class="breadcrumbs mb-2">
@@ -66,7 +67,7 @@
         </div>
 
         <div class="catalog-wrapper">
-          @@include('html/_catalog-filter.html')
+          @@include('blocks/modules/catalog-filter/catalog-filter.html')
           <div class="catalog__controls">
             <div class="catalog__sort">Сортировка: по возрастанию цены</div>
             <div class="catalog__view-type">
@@ -99,24 +100,25 @@
                 </svg>
               </div>
             </div>
-            <div class="active-filter__item active-filter__item--reset"><span class="active-filter__title text--sm">Сбросить фильтры</span>
+            <div class="active-filter__item active-filter__item--reset">
+              <span class="active-filter__title text--sm">Сбросить фильтры</span>
             </div>
           </div>
           <div class="catalog__inner">
-            @@include('html/_catalog-item.html')
-            @@include('html/_catalog-item-2.html')
-            @@include('html/_catalog-item.html')
+            @@include('blocks/modules/catalog-item/catalog-item.html')
+            @@include('blocks/modules/catalog-item/catalog-item-2.html')
+            @@include('blocks/modules/catalog-item/catalog-item.html')
           </div>
         </div>
       </div>
     </section>
 
-    @@include('html/_special.html')
+    @@include('blocks/modules/special/special.html')
   </div>
-  @@include("html/_footer.html")
+  @@include('blocks/modules/footer/footer.html")
 </main>
 
-@@include("html/_modal.html")
+@@include('blocks/modules/modal/modal.html")
 
 <!--js	-->
 <!--<script src="js/vendor.js"></script>-->
