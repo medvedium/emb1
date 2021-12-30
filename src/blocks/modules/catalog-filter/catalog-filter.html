@@ -25,7 +25,7 @@
 				</label>
 			</div>
 		</div>
-		<div class="catalog-filter__item">
+		<div class="catalog-filter__item is-open">
 			<div class="catalog-filter__title jsFilterTitle">
 				<svg>
 					<use xlink:href="img/icons/icons.svg#dropdown"></use>
@@ -33,11 +33,17 @@
 				Цена
 			</div>
 			<div class="catalog-filter__inner">
-				<div class="catalog-filter__row">
-					<div class="catalog-filter__group"><span>от</span><input type="text"></div>
-					<div class="catalog-filter__group"><span>до</span><input type="text"></div>
+				<div class="catalog-filter__row d-flex justify-content-between">
+					<label class="range-slider-label">
+						<span>от</span>
+						<input type="number" min="0" value="100" />
+					</label>
+					<label class="range-slider-label">
+						<span>до</span>
+						<input type="number" min="0" value="1000" />
+					</label>
 				</div>
-				<div id="price-slider"></div>
+				<div id="price-slider" class="mb-12 range-slider"></div>
 			</div>
 		</div>
 		<div class="catalog-filter__item is-open">
@@ -52,42 +58,80 @@
 					<label class="checkbox filter-checkbox">
 						<input type="checkbox" class="checkbox__input" />
 						<span class="checkbox__custom"></span>
-						<span class="checkbox__text">№ 40 120d/2<span class="catalog-filter__value">57</span></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">57</span>
+						</span>
 					</label>
 				</div>
-<div class="catalog-filter__row">
+				<div class="catalog-filter__row">
 					<label class="checkbox filter-checkbox">
 						<input type="checkbox" class="checkbox__input" />
 						<span class="checkbox__custom"></span>
-						<span class="checkbox__text">№ 40<span class="catalog-filter__value">5</span></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">5</span>
+						</span>
 					</label>
 				</div>
-<div class="catalog-filter__row">
+				<div class="catalog-filter__row">
 					<label class="checkbox filter-checkbox">
 						<input type="checkbox" class="checkbox__input" />
 						<span class="checkbox__custom"></span>
-						<span class="checkbox__text">№ 40 120d/2<span class="catalog-filter__value">7</span></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
 					</label>
 				</div>
-<div class="catalog-filter__row">
+				<div class="catalog-filter__row">
 					<label class="checkbox filter-checkbox">
 						<input type="checkbox" class="checkbox__input" />
 						<span class="checkbox__custom"></span>
-						<span class="checkbox__text">№ 60<span class="catalog-filter__value">15</span></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
 					</label>
 				</div>
-<div class="catalog-filter__row">
+				<div class="catalog-filter__row">
 					<label class="checkbox filter-checkbox">
 						<input type="checkbox" class="checkbox__input" />
 						<span class="checkbox__custom"></span>
-						<span class="checkbox__text">№ 75<span class="catalog-filter__value">2</span></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
 					</label>
 				</div>
-<div class="catalog-filter__row">
+				<div class="catalog-filter__row">
 					<label class="checkbox filter-checkbox">
 						<input type="checkbox" class="checkbox__input" />
 						<span class="checkbox__custom"></span>
-						<span class="checkbox__text">№ 40<span class="catalog-filter__value">12</span></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 75
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">12</span>
+						</span>
 					</label>
 				</div>
 			</div>
@@ -99,7 +143,88 @@
 				</svg>
 				Намотка
 			</div>
-			<div class="catalog-filter__inner"></div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 75
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
 		</div>
 		<div class="catalog-filter__item">
 			<div class="catalog-filter__title jsFilterTitle">
@@ -108,7 +233,88 @@
 				</svg>
 				Бренд
 			</div>
-			<div class="catalog-filter__inner"></div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 75
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
 		</div>
 		<div class="catalog-filter__item">
 			<div class="catalog-filter__title jsFilterTitle">
@@ -117,7 +323,95 @@
 				</svg>
 				Цвет
 			</div>
-			<div class="catalog-filter__inner"></div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40 120d/2
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 60
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 75
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							№ 40
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
 		</div>
+
+		<button type="submit" class="button button--md button--border button--border--blue w-100">
+			<span class="button__text text--md">Применить</span>
+		</button>
+		<button type="reset" class="button button--md button--empty w-100">
+			<span class="button__text text--md">Сбросить</span>
+		</button>
 	</form>
 </div>

@@ -1,12 +1,6 @@
-// Получаем имя папки проекта
-import * as nodePath from 'path';
-const rootFolder = nodePath.basename(nodePath.resolve());
-
-// Пути к папке с исходниками и папке с результатом
-const buildFolder = `./dist`; // Также можно использовать rootFolder
+const buildFolder = `./dist`; // Также можно использовать app.rootFolder
 const srcFolder = `./src`;
 
-// Пути к папкам и файлам проекта
 export const path = {
 	build: {
 		html: `${buildFolder}/`,
@@ -17,7 +11,7 @@ export const path = {
 		files: `${buildFolder}/files/`
 	},
 	src: {
-		html: `${srcFolder}/*.html`,
+		html: `${srcFolder}/view/*.html`,
 		pug: `${srcFolder}/pug/*.pug`,
 		js: `${srcFolder}/js/app.js`,
 		scss: [`${srcFolder}/scss/style.scss`, `${srcFolder}/scss/fonts.scss`],
@@ -27,11 +21,17 @@ export const path = {
 		files: `${srcFolder}/files/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
 	},
+	watch: {
+		html: `${srcFolder}/**/*.html`,
+		pug: `${srcFolder}/pug/**/*.pug`,
+		js: `${srcFolder}/js/**/*.js`,
+		scss: `${srcFolder}/scss/**/*.scss`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`
+	},
 	clean: buildFolder,
 	buildFolder: buildFolder,
-	rootFolder: rootFolder,
 	srcFolder: srcFolder,
-	ftp: `` // Путь к нужной папке на удаленном сервере. gulp добавит имя папки проекта автоматически
+	ftp: `` // Путь к нужной папке на удаленном сервере
 };
 
 // Настройка FTP соединения

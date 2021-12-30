@@ -2,6 +2,7 @@
 	padding: 16px;
 	border: 1px solid $gray-2;
 	display: flex;
+	position: relative;
 
 	&:not(:first-child) {
 		border-top: none;
@@ -28,11 +29,17 @@
 	}
 
 	&__title {
+		display: inline-block;
 		color: $dark;
 		font-size: 16px;
 		line-height: 125%;
 		margin-bottom: 16px;
 		margin-top: 16px;
+		text-decoration: none;
+
+		&:hover {
+			color: $blue;
+		}
 	}
 
 	&__description {
@@ -40,9 +47,8 @@
 		padding-right: 56px;
 		margin-right: 56px;
 		flex-grow: 1;
+		max-width: 500px;
 	}
-
-
 }
 
 .item-options {
@@ -63,15 +69,25 @@
 
 	&__value {
 		color: $dark;
-
 	}
 
 	&__divider {
-		border-bottom: 1px dashed #C8CBCE;
+		border-bottom: 1px dashed #c8cbce;
 		flex-grow: 1;
 		margin-left: 5px;
 		margin-right: 3px;
 		margin-bottom: 4px;
+	}
+
+	&__color {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		border: 1px solid $color-item-border;
+		background-color: $white;
 	}
 }
 
@@ -118,5 +134,130 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: auto;
+	}
+}
+
+.catalog__inner.mosaic {
+	.catalog-item {
+		flex-direction: column;
+		width: 100%;
+		transition: box-shadow 0.3s ease;
+		padding: 0;
+		border: 1px solid $gray-2;
+		//border-right: 0;
+		margin-top: -1px;
+
+		& + & {
+			border-left: 0;
+		}
+
+		&:nth-child(4n + 4) {
+			border-right: 1px solid $gray-2;
+		}
+
+		&__title {
+			margin-top: 0;
+			margin-bottom: 8px;
+			font-size: 14px;
+			line-height: 130%;
+			height: 38px;
+
+			span {
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+		}
+
+		&__img {
+			height: 170px;
+			width: 100%;
+			margin-right: 0;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			img {
+				width: 100%;
+				margin: 0 auto;
+				//object-fit: contain;
+			}
+		}
+
+		&__description {
+			margin-right: 0;
+			border-right: 0;
+			padding: 12px;
+		}
+	}
+
+	.item-pricing {
+		padding: 12px;
+
+		&__title {
+			display: none;
+		}
+
+		&__btn {
+			display: flex;
+		}
+	}
+
+	.item-options {
+		&__item {
+			display: inline;
+
+			&:not(:last-child):not(&--colors)::after {
+				content: ',';
+				position: relative;
+				right: 3px;
+				color: $gray-4;
+			}
+			&--colors {
+				position: absolute;
+				left: 8px;
+				top: 146px;
+			}
+		}
+		&__list {
+			line-height: 100%;
+		}
+		&__title {
+			display: none;
+		}
+		&__divider {
+			display: none;
+		}
+		&__value {
+			display: inline;
+			color: $gray-4;
+		}
+
+		&__color {
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	.item-pricing {
+		position: relative;
+		&__price {
+			margin-bottom: 24px;
+
+			&-item {
+				margin-bottom: 0;
+			}
+		}
+
+		&__status {
+			position: absolute;
+			left: 12px;
+			bottom: 0;
+		}
+
+		&__btn {
+			flex-grow: 1;
+			margin-right: 16px;
+		}
 	}
 }

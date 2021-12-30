@@ -1,25 +1,20 @@
-import cleanCss from 'gulp-clean-css';
-import webpcss from 'gulp-webpcss';
-import autoprefixer from 'gulp-autoprefixer';
-import groupCssMediaQueries from 'gulp-group-css-media-queries';
-
 export const css = () => {
 	return app.gulp.src(`${app.path.build.css}style.css`, {})
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
+		.pipe(app.lp.plumber(
+			app.lp.notify.onError({
 				title: "CSS",
 				message: "Error: <%= error.message %>"
 			})))
 		.pipe(
-			app.plugins.if(
+			app.lp.if(
 				app.isBuild,
-				groupCssMediaQueries()
+				app.lp.groupCssMediaQueries()
 			)
 		)
 		.pipe(
-			app.plugins.if(
+			app.lp.if(
 				app.isBuild,
-				autoprefixer({
+				app.lp.autoprefixer({
 					grid: true,
 					overrideBrowserslist: ["last 3 versions"],
 					cascade: true
@@ -27,11 +22,11 @@ export const css = () => {
 			)
 		)
 		.pipe(
-			app.plugins.if(
+			app.lp.if(
 				app.isWebP,
-				app.plugins.if(
+				app.lp.if(
 					app.isBuild,
-					webpcss(
+					app.lp.webpcss(
 						{
 							webpClass: ".webp",
 							noWebpClass: ".no-webp"
@@ -41,13 +36,13 @@ export const css = () => {
 			)
 		)
 		// Раскомментировать если нужен не сжатый дубль файла стилей
-		//.pipe(app.gulp.dest(app.path.build.css))
+		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
-			app.plugins.if(
+			app.lp.if(
 				app.isBuild,
-				cleanCss()
+				app.lp.cleanCss()
 			)
 		)
-		.pipe(app.plugins.rename({ suffix: ".min" }))
+		.pipe(app.lp.rename({ suffix: ".min" }))
 		.pipe(app.gulp.dest(app.path.build.css));
 }

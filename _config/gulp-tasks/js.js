@@ -3,8 +3,8 @@ import webPackConfig from '../webpack.prod.js';
 
 export const js = () => {
 	return app.gulp.src(app.path.src.js)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
+		.pipe(app.lp.plumber(
+			app.lp.notify.onError({
 				title: "JS",
 				message: "Error: <%= error.message %>"
 			}))

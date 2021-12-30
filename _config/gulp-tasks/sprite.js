@@ -1,13 +1,12 @@
-import svgSprite from "gulp-svg-sprite";
 export const sprite = () => {
 	return app.gulp.src(`${app.path.src.svgicons}`, {})
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
+		.pipe(app.lp.plumber(
+			app.lp.notify.onError({
 				title: "SVG",
 				message: "Error: <%= error.message %>"
 			}))
 		)
-		.pipe(svgSprite({
+		.pipe(app.lp.svgSprite({
 			mode: {
 				stack: {
 					sprite: `../icons/icons.svg`,

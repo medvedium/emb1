@@ -1,121 +1,148 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Каталог | Флизелины</title>
-  <meta name="theme-color" content="#fff" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta
-    name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-  />
-  <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
-  <link rel="stylesheet" href="css/style.min.css" />
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>Каталог | Флизелины</title>
+	<meta name="theme-color" content="#fff"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta
+		name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	/>
+	<link rel="icon" type="image/png" href="favicon.ico" sizes="32x32"/>
+	<link rel="stylesheet" href="css/style.min.css"/>
 </head>
 <body class="body">
 @@include('blocks/modules/header/header.html')
 
 <main class="main">
-  <div class="breadcrumbs mb-2">
-    <div class="container">
-      <div class="breadcrumbs__list">
-        <div class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">Главная</a>
-        </div>
-        <div class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">Каталог</a>
-        </div>
-        <div class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">Материалы для вышивки</a>
-        </div>
-        <div class="breadcrumbs__item">
-          <span class="breadcrumbs__link">Флизелины</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content">
-    <section class="section">
-      <div class="container">
-        <h1 class="h1 mb-5">Флизелины</h1>
-        <div class="catalog-tags">
-          <div class="catalog-tags__item">
-            <a href="#" class="catalog-tags__title">Клеевые</a>
-            <span class="catalog-tags__quantity">12</span>
-          </div>
-          <div class="catalog-tags__item">
-            <a href="#" class="catalog-tags__title">Неклеевые</a>
-            <span class="catalog-tags__quantity">12</span>
-          </div>
-          <div class="catalog-tags__item">
-            <a href="#" class="catalog-tags__title">Водорастворимый</a>
-            <span class="catalog-tags__quantity">12</span>
-          </div>
-          <div class="catalog-tags__item">
-            <a href="#" class="catalog-tags__title">Филмопласт (FILMOPLAST)</a>
-            <span class="catalog-tags__quantity">12</span>
-          </div>
-          <div class="catalog-tags__item">
-            <a href="#" class="catalog-tags__title">Чистая изнанка</a>
-            <span class="catalog-tags__quantity">12</span>
-          </div>
-          <div class="catalog-tags__item">
-            <span class="catalog-tags__title">Показать все</span>
-            <span class="catalog-tags__quantity">12</span>
-          </div>
-        </div>
+	<div class="breadcrumbs mb-2">
+		<div class="container">
+			<div class="breadcrumbs__list">
+				<div class="breadcrumbs__item">
+					<a href="#" class="breadcrumbs__link">Главная</a>
+				</div>
+				<div class="breadcrumbs__item">
+					<a href="#" class="breadcrumbs__link">Каталог</a>
+				</div>
+				<div class="breadcrumbs__item">
+					<a href="#" class="breadcrumbs__link">Материалы для вышивки</a>
+				</div>
+				<div class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Флизелины</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<section class="section">
+			<div class="container">
+				<h1 class="h1 mb-5">Флизелины</h1>
+				<div class="catalog-tags">
+					<div class="catalog-tags__item">
+						<a href="#" class="catalog-tags__title">Клеевые</a>
+						<span class="catalog-tags__quantity">12</span>
+					</div>
+					<div class="catalog-tags__item">
+						<a href="#" class="catalog-tags__title">Неклеевые</a>
+						<span class="catalog-tags__quantity">12</span>
+					</div>
+					<div class="catalog-tags__item">
+						<a href="#" class="catalog-tags__title">Водорастворимый</a>
+						<span class="catalog-tags__quantity">12</span>
+					</div>
+					<div class="catalog-tags__item">
+						<a href="#" class="catalog-tags__title">Филмопласт (FILMOPLAST)</a>
+						<span class="catalog-tags__quantity">12</span>
+					</div>
+					<div class="catalog-tags__item">
+						<a href="#" class="catalog-tags__title">Чистая изнанка</a>
+						<span class="catalog-tags__quantity">12</span>
+					</div>
+					<div class="catalog-tags__item">
+						<span class="catalog-tags__title">Показать все</span>
+						<span class="catalog-tags__quantity">12</span>
+					</div>
+				</div>
 
-        <div class="catalog-wrapper">
-          @@include('blocks/modules/catalog-filter/catalog-filter.html')
-          <div class="catalog__controls">
-            <div class="catalog__sort">Сортировка: по возрастанию цены</div>
-            <div class="catalog__view-type">
-              <div class="catalog__view-type-item catalog__view-type-item--list active">
-                <svg class="icon icon--md">
-                  <use xlink:href="img/icons/icons.svg#list-view"></use>
-                </svg>
-              </div>
-              <div class="catalog__view-type-item catalog__view-type-item--mosaic">
-                <svg class="icon icon--md">
-                  <use xlink:href="img/icons/icons.svg#mosaic-view"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="catalog__active-filter">
-            <div class="active-filter__item">
-              <span class="active-filter__title text--sm">Тип: Неклеевой</span>
-              <div class="active-filter__remove">
-                <svg>
-                  <use xlink:href="img/icons/icons.svg#remove"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="active-filter__item">
-              <span class="active-filter__title text--sm">Толщина: № 40</span>
-              <div class="active-filter__remove">
-                <svg>
-                  <use xlink:href="img/icons/icons.svg#remove"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="active-filter__item active-filter__item--reset">
-              <span class="active-filter__title text--sm">Сбросить фильтры</span>
-            </div>
-          </div>
-          <div class="catalog__inner">
-            @@include('blocks/modules/catalog-item/catalog-item.html')
-            @@include('blocks/modules/catalog-item/catalog-item-2.html')
-            @@include('blocks/modules/catalog-item/catalog-item.html')
-          </div>
-        </div>
-      </div>
-    </section>
+				<div class="catalog-wrapper">
+					@@include('blocks/modules/catalog-filter/catalog-filter.html')
+					<div class="catalog__controls">
+						<div class="sort-wrap" data-box="sort-prod">
+							<span class="sort-title _bold">Сортировка:</span>
+							<input type="text" class="input hidden">
+							<div class="sort-list-wrap" data-box="sort-list">
+								<span class="sort-list-title">По наличию</span>
+								<div class="sort-submenu">
+									<div class="sort-submenu-item">По возрастанию цены</div>
+									<div class="sort-submenu-item">По убыванию цены</div>
+									<div class="sort-submenu-item">По популярности</div>
+									<div class="sort-submenu-item active">По наличию</div>
+									<div class="sort-submenu-item">По наименованию</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__view-type jsToggleViews">
+							<div class="catalog__view-type-item catalog__view-type-item--list jsToggleView jsListView active">
+								<svg class="icon icon--md">
+									<use xlink:href="img/icons/icons.svg#list-view"></use>
+								</svg>
+							</div>
+							<div class="catalog__view-type-item catalog__view-type-item--mosaic jsToggleView jsMosaicView">
+								<svg class="icon icon--md">
+									<use xlink:href="img/icons/icons.svg#mosaic-view"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__active-filter">
+						<div class="active-filter__item">
+							<span class="active-filter__title text--sm">Тип: Неклеевой</span>
+							<div class="active-filter__remove">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#remove"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="active-filter__item">
+							<span class="active-filter__title text--sm">Толщина: № 40</span>
+							<div class="active-filter__remove">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#remove"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="active-filter__item active-filter__item--reset">
+							<span class="active-filter__title text--sm">Сбросить фильтры</span>
+						</div>
+					</div>
+					<div class="catalog__inner jsCatalogInner">
+						@@include('blocks/modules/catalog-item/catalog-item.html')
+						@@include('blocks/modules/catalog-item/catalog-item.html')
+						@@include('blocks/modules/catalog-item/catalog-item-2.html')
+						@@include('blocks/modules/catalog-item/catalog-item-3.html')
+						@@include('blocks/modules/catalog-item/catalog-item.html')
+						@@include('blocks/modules/catalog-item/catalog-item-2.html')
+						@@include('blocks/modules/catalog-item/catalog-item-3.html')
+						@@include('blocks/modules/catalog-item/catalog-item.html')
+						@@include('blocks/modules/catalog-item/catalog-item-2.html')
+						@@include('blocks/modules/catalog-item/catalog-item-3.html')
+						@@include('blocks/modules/catalog-item/catalog-item.html')
+						@@include('blocks/modules/catalog-item/catalog-item-2.html')
+						@@include('blocks/modules/catalog-item/catalog-item-3.html')
+						@@include('blocks/modules/catalog-item/catalog-item.html')
+						@@include('blocks/modules/catalog-item/catalog-item-2.html')
+						@@include('blocks/modules/catalog-item/catalog-item-3.html')
+					</div>
+				@@include('blocks/modules/pagination/pagination.html')
+				</div>
+			</div>
+		</section>
 
-    @@include('blocks/modules/special/special.html')
-  </div>
-  @@include('blocks/modules/footer/footer.html")
+		@@include('blocks/modules/special/special.html')
+	</div>
+	@@include('blocks/modules/footer/footer.html")
 </main>
 
 @@include('blocks/modules/modal/modal.html")

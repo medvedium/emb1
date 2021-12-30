@@ -1,44 +1,29 @@
+import versionNumber from "gulp-version-number";
+import webpHtmlNosvg from "gulp-webp-html-nosvg";
+
 export const html = () => {
 	return app.gulp.src(`${app.path.build.html}*.html`)
-		.pipe(app.lp.plumber(
-			app.lp.notify.onError({
+		.pipe(app.plugins.plumber(
+			app.plugins.notify.onError({
 				title: "HTML",
 				message: "Error: <%= error.message %>"
 			}))
 		)
 		.pipe(
-			app.lp.if(
+			app.plugins.if(
 				app.isWebP,
-				app.lp.if(
-					app.isBuild,
-					app.lp.webpHtmlNosvg()
-				)
+				webpHtmlNosvg()
 			)
 		)
-		.pipe(app.lp.versionNumber({
+		.pipe(versionNumber({
 			'value': '%DT%',
-			'replaces': [
-				'#{VERSION_REPlACE}#',
-				[/#{VERSION_REPlACE}#/g, '%TS%']
-			],
 			'append': {
 				'key': '_v',
 				'cover': 0,
-				'to': [
-					'css',
-					['image', '%TS%'],
-					{
-						'type': 'js',
-						'attr': ['src', 'custom-src'], // String or Array, undefined this will use default. css: "href", js: ...
-						'key': '_v',
-						'value': '%DT%',
-						'cover': 1,
-						'files': ['app.min.js'] // Array [{String|Regex}] of explicit files to append to
-					}
-				]
+				'to': ['css', 'js', 'img']
 			},
 			'output': {
-				'file': 'version.json'
+				'file': 'config/version.json'
 			}
 		}))
 		.pipe(app.gulp.dest(app.path.build.html));

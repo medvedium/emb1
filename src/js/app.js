@@ -1,4 +1,4 @@
-import "@babel/polyfill";
+// import "@babel/polyfill";
 import "../scss/style.scss";
 import "./import/modules.js";
 

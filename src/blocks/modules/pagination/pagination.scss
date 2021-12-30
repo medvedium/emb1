@@ -1,0 +1,60 @@
+.pagination-wrap {
+	grid-column: 2/5;
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	margin-top: 24px;
+	align-items: center;
+}
+.pagination {
+	display: flex;
+}
+.pagination-item {
+	color: $dark;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 150%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		color: $blue;
+	}
+
+	&.active {
+		color: $blue;
+	}
+
+	&:not(:last-child) {
+		margin-right: 24px;
+	}
+
+	&.prev-btn,
+	&.next-btn {
+
+		height: 100%;
+		width: 40px;
+
+		svg {
+			height: 24px;
+			stroke: $blue;
+		}
+	}
+}
+
+.show-more {
+	color: $dark;
+	text-decoration: none;
+
+	&:hover {
+		color: $blue;
+	}
+	svg {
+		width: 13px;
+		height: 7px;
+		fill: #00ADEF;
+		margin-left: 12px;
+		transition: all 0.2s linear;
+	}
+}

@@ -131,6 +131,83 @@
 		&__inner {
 			grid-column: 2/5;
 			margin-top: 24px;
+			transition: all .2s linear;
+
+			&.mosaic {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+			}
 		}
+	}
+}
+
+.sort-wrap {
+	display: flex;
+	align-items: center;
+
+	&.active {
+		.sort-list-title {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		.sort-submenu {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.sort-list-wrap {
+	position: relative;
+	.sort-submenu {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 250px;
+		margin-top: 12px;
+		background-color: $white;
+		padding: 24px;
+		z-index: 1;
+		border-radius: 4px;
+		box-shadow: 0 10px 21px 10px rgba(0, 9, 17, 0.05);
+		transition: .2s;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.sort-submenu-item {
+		cursor: pointer;
+		transition: .2s;
+		margin-bottom: 12px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover,
+		&.active {
+			color: $blue;
+		}
+	}
+}
+
+.sort-list-title {
+	margin-left: 12px;
+	cursor: pointer;
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		margin-left: 4px;
+		margin-bottom: -2px;
+		background-image: url('img/svg/dropdown-blue.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 95%;
+		transition: .2s;
+		color: $blue;
 	}
 }

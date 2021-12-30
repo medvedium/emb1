@@ -34,6 +34,23 @@
 		user-select: none;
 	}
 
+	&--empty {
+		background-color: $white;
+		color: $blue;
+
+		&:hover {
+			@media (hover: hover) {
+				background-color: $white;
+				color: $blue;
+			}
+		}
+		&:active {
+			border-color: $blue-dark;
+			color: $blue-dark;
+			background-color: $white !important;
+		}
+	}
+
 	&--gray {
 		color: $dark;
 		background-color: $gray-3;
