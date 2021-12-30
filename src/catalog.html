@@ -71,7 +71,7 @@
 					<div class="catalog__controls">
 						<div class="sort-wrap" data-box="sort-prod">
 							<span class="sort-title _bold">Сортировка:</span>
-							<input type="text" class="input hidden">
+							<input type="text" class="input hidden"/>
 							<div class="sort-list-wrap" data-box="sort-list">
 								<span class="sort-list-title">По наличию</span>
 								<div class="sort-submenu">
@@ -135,12 +135,16 @@
 						@@include('blocks/modules/catalog-item/catalog-item-2.html')
 						@@include('blocks/modules/catalog-item/catalog-item-3.html')
 					</div>
-				@@include('blocks/modules/pagination/pagination.html')
+					@@include('blocks/modules/pagination/pagination.html')
 				</div>
 			</div>
 		</section>
 
 		@@include('blocks/modules/special/special.html')
+
+		@@include('blocks/modules/recent-slider/recent-slider.html')
+
+
 	</div>
 	@@include('blocks/modules/footer/footer.html")
 </main>

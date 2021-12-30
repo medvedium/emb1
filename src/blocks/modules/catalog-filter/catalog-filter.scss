@@ -96,6 +96,10 @@
 	button + button {
 		margin-top: 12px;
 	}
+
+	@include below(845px) {
+		display: none;
+	}
 }
 
 .range-slider {

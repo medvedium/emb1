@@ -35,14 +35,15 @@
 	column-gap: 30px;
 	margin-top: 32px;
 
+	@include below(845px) {
+		display: block;
+	}
 
 	.catalog {
 		&__filter {
 			grid-column: 1/2;
 			grid-row: 1/-6;
 		}
-
-
 
 		&__controls {
 			grid-column: 2/5;
@@ -53,6 +54,10 @@
 			-moz-border-radius: 4px;
 			border-radius: 4px;
 			border: 1px solid $gray-2;
+
+			@include below(845px) {
+				grid-column: 1/-1;
+			}
 		}
 
 		&__view-type {
@@ -101,7 +106,7 @@
 						color: $dark-blue;
 						border: 1px solid $dark-blue;
 						padding: 8px 12px;
-						transition: all .1s linear;
+						transition: all 0.1s linear;
 
 						&:hover {
 							color: $white;
@@ -126,16 +131,27 @@
 					}
 				}
 			}
+			@include below(845px) {
+				grid-column: 1/-1;
+			}
 		}
 
 		&__inner {
 			grid-column: 2/5;
 			margin-top: 24px;
-			transition: all .2s linear;
+			transition: all 0.2s linear;
 
 			&.mosaic {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
+
+				@include below(1023px) {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+
+			@include below(845px) {
+				grid-column: 1/-1;
 			}
 		}
 	}
@@ -172,14 +188,14 @@
 		z-index: 1;
 		border-radius: 4px;
 		box-shadow: 0 10px 21px 10px rgba(0, 9, 17, 0.05);
-		transition: .2s;
+		transition: 0.2s;
 		opacity: 0;
 		visibility: hidden;
 	}
 
 	.sort-submenu-item {
 		cursor: pointer;
-		transition: .2s;
+		transition: 0.2s;
 		margin-bottom: 12px;
 
 		&:last-child {
@@ -207,7 +223,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 95%;
-		transition: .2s;
+		transition: 0.2s;
 		color: $blue;
 	}
 }

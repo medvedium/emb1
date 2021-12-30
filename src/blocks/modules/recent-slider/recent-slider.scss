@@ -1,0 +1,96 @@
+.recent-block {
+	padding: 24px 32px;
+	background-color: #F7F8FA;
+	border-radius: 4px;
+}
+
+.recent-slider {
+	margin-top: -30px;
+	margin-bottom: -30px;
+
+
+	@include below(991px) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__inner {
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+
+	&__wrap {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			bottom: 29px;
+			top: 30px;
+			background-color: #E7E9EB;
+			z-index: 2;
+
+			@include below(991px) {
+				bottom: 0;
+				top: 0;
+			}
+		}
+
+
+	}
+
+
+	&__slide {
+		display: flex ;
+		height: auto;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		position: relative;
+
+		@include below(991px) {
+			padding-bottom: 2px;
+			padding-top: 0;
+		}
+
+		.card-product {
+			border-top: 1px solid #E7E9EB;
+			border-bottom: 1px solid #E7E9EB;
+		}
+
+		&:hover {
+			z-index: 2;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 29px;
+			top: 30px;
+			right: 0;
+			background-color: #E7E9EB;
+			width: 1px;
+			z-index: 1;
+
+			@include below(991px) {
+				top: 0;
+				bottom: 0;
+			}
+		}
+
+	}
+
+	&__nav {
+		@include below(767px) {
+			display: none;
+		}
+	}
+
+	&__scroll {
+		display: none;
+
+		@include below(767px) {
+			display: block;
+		}
+	}
+}

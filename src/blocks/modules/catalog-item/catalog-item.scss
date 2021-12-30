@@ -26,6 +26,12 @@
 		margin-right: 32px;
 		width: 204px;
 		height: 204px;
+		flex-shrink: 0;
+
+		@include below(1023px) {
+			width: 136px;
+			height: 136px;
+		}
 	}
 
 	&__title {
@@ -48,6 +54,11 @@
 		margin-right: 56px;
 		flex-grow: 1;
 		max-width: 500px;
+
+		@include below(1200px) {
+			margin-right: 32px;
+			padding-right: 32px;
+		}
 	}
 }
 
@@ -98,6 +109,7 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	flex-shrink: 0;
 
 	&__title {
 		font-size: 16px;
