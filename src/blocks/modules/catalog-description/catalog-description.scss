@@ -1,0 +1,16 @@
+.catalog-description {
+	display: flex;
+
+	&__img {
+		position: relative;
+		img:not(.catalog-description__watermark) {
+			object-fit: cover;
+		}
+		img.catalog-description__watermark {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			background-color: #fff;
+		}
+	}
+}
