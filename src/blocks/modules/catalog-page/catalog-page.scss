@@ -1,33 +1,4 @@
-.catalog-tags {
-	display: flex;
 
-	&__item {
-		height: 40px;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		padding: 8px 12px;
-		background-color: $gray-3;
-		margin-right: 8px;
-		cursor: pointer;
-		transition: all 0.2s linear;
-		border: 1px solid transparent;
-
-		&:hover {
-			border-color: $blue;
-		}
-	}
-
-	&__title {
-		color: $dark;
-		text-decoration: none;
-	}
-
-	&__quantity {
-		color: $gray-1;
-		margin-left: 6px;
-	}
-}
 
 .catalog-wrapper {
 	display: grid;
@@ -35,7 +6,7 @@
 	column-gap: 30px;
 	margin-top: 32px;
 
-	@include below(845px) {
+	@include below(923px) {
 		display: block;
 	}
 
@@ -55,7 +26,7 @@
 			border-radius: 4px;
 			border: 1px solid $gray-2;
 
-			@include below(845px) {
+			@include below(923px) {
 				grid-column: 1/-1;
 			}
 		}
@@ -131,7 +102,7 @@
 					}
 				}
 			}
-			@include below(845px) {
+			@include below(923px) {
 				grid-column: 1/-1;
 			}
 		}
@@ -150,7 +121,7 @@
 				}
 			}
 
-			@include below(845px) {
+			@include below(923px) {
 				grid-column: 1/-1;
 			}
 		}
