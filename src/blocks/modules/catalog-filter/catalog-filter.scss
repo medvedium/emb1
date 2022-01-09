@@ -116,6 +116,10 @@
 		z-index: 102;
 		overflow: auto;
 
+		@include below(767px) {
+			height: calc(100% - 60px);
+		}
+
 		&.is-open {
 			left: 0;
 		}
