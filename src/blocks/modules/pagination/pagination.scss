@@ -5,9 +5,19 @@
 	height: 40px;
 	margin-top: 24px;
 	align-items: center;
+	@include below(490px) {
+		flex-wrap: wrap;
+	}
+
 }
 .pagination {
 	display: flex;
+
+	@include below(490px) {
+		width: 100%;
+		justify-content: space-between;
+		margin-top: 24px;
+	}
 }
 .pagination-item {
 	color: $dark;
@@ -56,5 +66,10 @@
 		fill: #00ADEF;
 		margin-left: 12px;
 		transition: all 0.2s linear;
+	}
+
+	@include below(490px) {
+		width: 100%;
+		text-align: center;
 	}
 }

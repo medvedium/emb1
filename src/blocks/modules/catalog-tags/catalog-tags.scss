@@ -1,5 +1,8 @@
 .catalog-tags {
 	display: flex;
+	@include below(923px) {
+		padding-bottom: 4px;
+	}
 
 	&__list {
 	display: flex;

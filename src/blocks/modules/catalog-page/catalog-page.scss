@@ -31,19 +31,33 @@
 			}
 
 			.filter-toggler {
-
 				display: flex;
 				align-items: center;
 				cursor: pointer;
 
-				svg  {
+				svg {
 					width: 24px;
 					height: 24px;
+					margin-right: 10px;
 				}
 
 				@include above(924px) {
 					display: none;
 				}
+
+				@include below(490px) {
+					padding: 18px 24px;
+				}
+
+				@include below(400px) {
+					padding: 16px 24px;
+				}
+			}
+
+			@include below(490px) {
+				flex-wrap: wrap;
+				padding-left: 0;
+				padding-right: 0;
 			}
 		}
 
@@ -68,9 +82,17 @@
 			}
 
 			@include below(923px) {
-
 				display: flex;
 				align-items: center;
+			}
+
+			@include below(490px) {
+				padding: 18px 24px;
+				border-left: 1px solid $gray-2;
+			}
+
+			@include below(400xp) {
+				padding: 16px 24px;
 			}
 		}
 
@@ -79,51 +101,6 @@
 			margin-top: 16px;
 			display: flex;
 
-			.active-filter {
-				&__item {
-					height: 32px;
-					padding: 8px 32px 8px 12px;
-					margin-right: 8px;
-					background-color: $dark-blue;
-					color: $white;
-					-webkit-border-radius: 4px;
-					-moz-border-radius: 4px;
-					border-radius: 4px;
-					display: flex;
-					align-items: center;
-					cursor: pointer;
-					position: relative;
-
-					&--reset {
-						background-color: $white;
-						color: $dark-blue;
-						border: 1px solid $dark-blue;
-						padding: 8px 12px;
-						transition: all 0.1s linear;
-
-						&:hover {
-							color: $white;
-							background-color: $dark-blue;
-						}
-					}
-				}
-
-				&__remove {
-					position: absolute;
-					width: 10px;
-					height: 10px;
-					right: 12px;
-					top: 50%;
-					transform: translateY(-50%);
-					display: flex;
-
-					svg use {
-						width: 10px;
-						height: 10px;
-						fill: $white;
-					}
-				}
-			}
 			@include below(923px) {
 				grid-column: 1/-1;
 			}
@@ -141,10 +118,23 @@
 				@include below(1023px) {
 					grid-template-columns: repeat(3, 1fr);
 				}
+
+				@include below(600px) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@include below(1023px) {
+				padding-left: 0;
+				padding-right: 0;
 			}
 
 			@include below(923px) {
 				grid-column: 1/-1;
+			}
+
+			@include below(490px) {
+
 			}
 		}
 	}
@@ -179,6 +169,18 @@
 		justify-content: center;
 		margin-left: 24px;
 		margin-right: 24px;
+	}
+
+	@include below(490px) {
+		width: 100%;
+		order: -1;
+		border: none;
+		margin: 0;
+		border-bottom: 1px solid $gray-2;
+	}
+
+	@include below(400px) {
+		height: 52px;
 	}
 }
 
@@ -232,5 +234,76 @@
 		background-size: 95%;
 		transition: 0.2s;
 		color: $blue;
+	}
+}
+
+.active-filter {
+
+
+	@include below(923px) {
+		padding-bottom: 4px;
+		overflow-x: auto;
+		scrollbar-color: $gray-2;
+		scrollbar-width: thin;
+	}
+
+	&::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $gray-2;
+		border-radius: 20px;
+		border: 3px solid $gray-2;
+	}
+
+	&__item {
+		height: 32px;
+		padding: 8px 32px 8px 12px;
+		margin-right: 8px;
+		background-color: $dark-blue;
+		color: $white;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+		flex-wrap: nowrap;
+
+		&--reset {
+			background-color: $white;
+			color: $dark-blue;
+			border: 1px solid $dark-blue;
+			padding: 8px 12px;
+			transition: all 0.1s linear;
+
+			&:hover {
+				color: $white;
+				background-color: $dark-blue;
+			}
+		}
+	}
+
+	&__title {
+		//flex-wrap: nowrap;
+		white-space: nowrap;
+	}
+
+	&__remove {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+
+		svg use {
+			width: 10px;
+			height: 10px;
+			fill: $white;
+		}
 	}
 }
