@@ -7,10 +7,22 @@
 	height: 40px;
 	overflow: hidden;
 	transition: all .2s linear;
+		scrollbar-color: $gray-2;
+		scrollbar-width: thin;
 
 		@include below(923px) {
 			flex-wrap: nowrap;
 			overflow-x: auto;
+		}
+
+		&::-webkit-scrollbar {
+			height: 4px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $gray-2;
+			border-radius: 20px;
+			border: 3px solid $gray-2;
 		}
 	}
 

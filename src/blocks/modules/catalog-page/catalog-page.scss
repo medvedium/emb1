@@ -1,5 +1,3 @@
-
-
 .catalog-wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -28,6 +26,24 @@
 
 			@include below(923px) {
 				grid-column: 1/-1;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.filter-toggler {
+
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+
+				svg  {
+					width: 24px;
+					height: 24px;
+				}
+
+				@include above(924px) {
+					display: none;
+				}
 			}
 		}
 
@@ -49,6 +65,12 @@
 				&.active svg {
 					fill: $blue;
 				}
+			}
+
+			@include below(923px) {
+
+				display: flex;
+				align-items: center;
 			}
 		}
 
@@ -143,6 +165,20 @@
 			opacity: 1;
 			visibility: visible;
 		}
+	}
+	.sort-title {
+		@include below(923px) {
+			display: none;
+		}
+	}
+	@include below(923px) {
+		height: 58px;
+		border-right: 1px solid $gray-2;
+		border-left: 1px solid $gray-2;
+		flex-grow: 1;
+		justify-content: center;
+		margin-left: 24px;
+		margin-right: 24px;
 	}
 }
 
