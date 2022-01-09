@@ -65,6 +65,15 @@
 		margin-bottom: 16px;
 		margin-top: 16px;
 		text-decoration: none;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		line-clamp: 3;
+		box-orient: vertical;
 
 		&:hover {
 			color: $blue;
@@ -122,6 +131,7 @@
 		@include below(600px) {
 			font-size: 12px;
 			display: inline;
+			white-space: nowrap;
 
 			&:not(:last-child):not(&--colors)::after {
 				content: ',';
@@ -132,7 +142,7 @@
 			&--colors {
 				position: absolute;
 				left: 156px;
-				bottom: 80px;
+				top: 120px;
 			}
 		}
 	}
@@ -218,6 +228,10 @@
 		&:not(:last-child) {
 			margin-bottom: 8px;
 		}
+
+		@include below(600px) {
+			line-height: 100%;
+		}
 	}
 
 	&__status {
@@ -237,12 +251,41 @@
 		&--order {
 			color: $status-order;
 		}
+
+		@include below(600px) {
+			position: absolute;
+			right: 16px;
+			top: 126px;
+			height: auto;
+		}
 	}
 
 	&__buttons {
 		display: flex;
 		justify-content: space-between;
 		margin-top: auto;
+
+		@include below(600px) {
+			flex-direction: row-reverse;
+
+			.card-product__favorite {
+				margin-right: 8px;
+				width: 44px;
+				height: 44px;
+			}
+		}
+	}
+
+	&__btn {
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		@include below(600px) {
+			width: 44px;
+			height: 44px;
+		}
 	}
 }
 
@@ -254,6 +297,13 @@
 		padding: 0;
 		border: 1px solid $gray-2;
 		margin-top: -1px;
+
+		@include below(600px) {
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			margin-bottom: 0;
+		}
 
 		& + & {
 			border-left: 0;
@@ -304,12 +354,18 @@
 			@include below(400px) {
 				padding: 8px;
 			}
+
+			@include below(600px) {
+				width: 100%;
+			}
 		}
+
 	}
 
 	.item-options {
 		&__item {
 			display: inline;
+			white-space: nowrap;
 
 			&:not(:last-child):not(&--colors)::after {
 				content: ',';
@@ -351,6 +407,12 @@
 		position: relative;
 		padding: 12px;
 
+		@include below(600px) {
+			margin-top: 0;
+			border-top: 0;
+			flex-direction: column;
+		}
+
 		@include below(400px) {
 			padding: 8px;
 		}
@@ -381,6 +443,9 @@
 			position: absolute;
 			left: 12px;
 			bottom: 0;
+			height: 100%;
+			right: auto;
+			top: auto;
 		}
 
 		&__btn {

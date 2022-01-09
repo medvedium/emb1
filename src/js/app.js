@@ -1,6 +1,7 @@
 // import "@babel/polyfill";
 import "../scss/style.scss";
 import "./import/modules.js";
+import "./modules/dynamic_adapt.js"
 
 import Modal from 'bootstrap/js/dist/modal.js';
 

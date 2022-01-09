@@ -2,6 +2,28 @@ const toggler = document.querySelector('.jsToggleViews')
 const catalogMosaicView = document.querySelector('.jsMosaicView')
 const catalogListView = document.querySelector('.jsListView')
 const catalogInner = document.querySelector('.jsCatalogInner')
+const buyBtn = document.querySelectorAll('.item-pricing__btn .button__text')
+
+function textChange() {
+	if (buyBtn && window.innerWidth < 601) {
+		buyBtn.forEach((item) => {
+			item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#buy-cart"></use></svg>'
+		})
+	} else {
+		buyBtn.forEach((item) => {
+			item.innerHTML = 'Купить'
+		})
+	}
+
+	if (catalogInner.classList.contains('mosaic')) {
+		buyBtn.forEach((item) => {
+			item.innerHTML = 'Купить'
+		})
+	}
+}
+
+textChange()
+window.addEventListener('resize', textChange)
 
 if (toggler) {
 	catalogListView.addEventListener('click', () => {
@@ -10,6 +32,7 @@ if (toggler) {
 			catalogMosaicView.classList.remove('active')
 			catalogInner.classList.toggle('mosaic')
 		}
+		textChange()
 	})
 
 	catalogMosaicView.addEventListener('click', () => {
@@ -18,69 +41,70 @@ if (toggler) {
 			catalogListView.classList.toggle('active')
 			catalogInner.classList.toggle('mosaic')
 		}
+		textChange()
 	})
 }
 
 const sortProduct = () => {
-	const   sortBox      = document.querySelector('[data-box="sort-prod"]'),
-			submenuItems = document.querySelectorAll('[data-box="sort-prod"] .sort-submenu-item');
-	try{
+	const sortBox = document.querySelector('[data-box="sort-prod"]'),
+		submenuItems = document.querySelectorAll('[data-box="sort-prod"] .sort-submenu-item')
+	try {
 		sortBox.addEventListener('click', (e) => {
-			let target = e.target;
+			let target = e.target
 
-			let title       = sortBox.querySelector('.sort-list-title'),
-					hiddenInput = sortBox.querySelector('.input');
+			let title = sortBox.querySelector('.sort-list-title'),
+				hiddenInput = sortBox.querySelector('.input')
 
-			if(target.classList.contains('sort-list-title')) {
-				if(sortBox.classList.contains('active')) {
-					sortBox.classList.remove('active');
-					removeEventListener('click', closeMenu);
+			if (target.classList.contains('sort-list-title')) {
+				if (sortBox.classList.contains('active')) {
+					sortBox.classList.remove('active')
+					removeEventListener('click', closeMenu)
 
-					removeOverlay();
+					removeOverlay()
 				} else {
-					sortBox.classList.add('active');
-					addEventListener('click', closeMenu);
+					sortBox.classList.add('active')
+					addEventListener('click', closeMenu)
 
-					addOverlay();
+					addOverlay()
 				}
 			}
 
-			if(target.classList.contains('sort-submenu-item')) {
-				submenuItems.forEach(item => item.classList.remove('active'));
-				target.classList.add('active');
-				title.textContent = target.textContent;
-				hiddenInput.value = target.textContent;
-				removeEventListener('click', closeMenu);
-				sortBox.classList.remove('active');
-				removeOverlay();
+			if (target.classList.contains('sort-submenu-item')) {
+				submenuItems.forEach((item) => item.classList.remove('active'))
+				target.classList.add('active')
+				title.textContent = target.textContent
+				hiddenInput.value = target.textContent
+				removeEventListener('click', closeMenu)
+				sortBox.classList.remove('active')
+				removeOverlay()
 			}
-		});
-	}catch(e){}
+		})
+	} catch (e) {}
 }
 
 function closeMenu(event) {
-	let target = event.target;
-	let boxTarget = document.querySelector('[data-box="sort-prod"]');
+	let target = event.target
+	let boxTarget = document.querySelector('[data-box="sort-prod"]')
 
-	if(!boxTarget.contains(target)) {
-		boxTarget.classList.remove('active');
-		removeEventListener('click', closeMenu);
-		removeOverlay();
+	if (!boxTarget.contains(target)) {
+		boxTarget.classList.remove('active')
+		removeEventListener('click', closeMenu)
+		removeOverlay()
 	}
 }
 
 function addOverlay() {
-	if(window.innerWidth < 561) {
-		let overlayHtml = `<div class="overlay" data-box="overlay"></div>`;
+	if (window.innerWidth < 561) {
+		let overlayHtml = `<div class="overlay" data-box="overlay"></div>`
 
-		document.body.insertAdjacentHTML('beforeend', overlayHtml);
+		document.body.insertAdjacentHTML('beforeend', overlayHtml)
 	}
 }
 
 function removeOverlay() {
-	let overlay = document.querySelector('[data-box="overlay"]');
-	if(overlay) {
-		overlay.remove();
+	let overlay = document.querySelector('[data-box="overlay"]')
+	if (overlay) {
+		overlay.remove()
 	}
 }
 
