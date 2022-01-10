@@ -24,18 +24,17 @@
 		}
 
 		&[disabled],
-		&.disabled{
+		&.disabled {
 			border-color: $gray-3;
 			pointer-events: none;
 		}
-
 
 		@include placeholder {
 			color: $gray;
 		}
 	}
 
-	&__field:focus + &__placeholder{
+	&__field:focus + &__placeholder {
 		color: $blue;
 	}
 
@@ -84,8 +83,7 @@
 		color: $red !important;
 	}
 
-
-	&--textarea &__field{
+	&--textarea &__field {
 		height: 112px;
 		padding-top: 14px;
 	}
@@ -111,6 +109,7 @@
 
 	&--password &__icon {
 		cursor: pointer;
+
 		&:last-of-type {
 			display: none;
 		}
@@ -121,6 +120,7 @@
 			display: none;
 		}
 	}
+
 	&--password.is-active &__icon {
 		&:last-of-type {
 			display: block;

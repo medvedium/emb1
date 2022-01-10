@@ -67,7 +67,15 @@
 		"webpack": "latest",
 		"webpack-cli": "latest",
 		"webpack-dev-server": "latest",
-		"webpack-stream": "latest"
+		"webpack-stream": "latest",
+		"postcss-scss": "latest",
+		"stylelint": "latest",
+		"stylelint-config-prettier": "latest",
+		"stylelint-config-rational-order": "latest",
+		"stylelint-config-standard": "latest",
+		"stylelint-order": "latest",
+		"stylelint-prettier": "latest",
+		"stylelint-scss": "latest"
 	},
 	"dependencies": {
 		"simplebar": "latest",

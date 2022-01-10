@@ -1,8 +1,8 @@
 .catalog-item {
+	position: relative;
+	display: flex;
 	padding: 16px;
 	border: 1px solid $gray-2;
-	display: flex;
-	position: relative;
 
 	&:not(:first-child) {
 		border-top: none;
@@ -18,28 +18,24 @@
 	}
 
 	&:last-child {
-		border-bottom-left-radius: 4px;
 		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
 	}
 
 	@include below(600px) {
-		padding: 12px;
-		margin-bottom: 12px;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
 		flex-wrap: wrap;
+		margin-bottom: 12px;
+		padding: 12px;
+		border-radius: 4px;
 	}
 
 	&__img {
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		overflow: hidden;
-		margin-right: 32px;
+		flex-shrink: 0;
 		width: 204px;
 		height: 204px;
-		flex-shrink: 0;
+		margin-right: 32px;
+		overflow: hidden;
+		border-radius: 4px;
 
 		img {
 			width: 100%;
@@ -59,21 +55,19 @@
 
 	&__title {
 		display: inline-block;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		overflow: hidden;
 		color: $dark;
 		font-size: 16px;
 		line-height: 125%;
-		margin-bottom: 16px;
-		margin-top: 16px;
 		text-decoration: none;
-		overflow: hidden;
 		text-overflow: ellipsis;
-		display: -moz-box;
 		-moz-box-orient: vertical;
-		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		line-clamp: 3;
-		box-orient: vertical;
+		//box-orient: vertical;
 
 		&:hover {
 			color: $blue;
@@ -90,11 +84,11 @@
 	}
 
 	&__description {
-		border-right: 1px solid $gray-2;
-		padding-right: 56px;
-		margin-right: 56px;
 		flex-grow: 1;
 		max-width: 500px;
+		margin-right: 56px;
+		padding-right: 56px;
+		border-right: 1px solid $gray-2;
 
 		@include below(1200px) {
 			margin-right: 32px;
@@ -108,8 +102,8 @@
 
 		@include below(600px) {
 			width: calc(100% - 144px);
-			padding-right: 0;
 			margin-right: 0;
+			padding-right: 0;
 			border-right: 0;
 		}
 	}
@@ -127,20 +121,21 @@
 		}
 
 		@include below(600px) {
-			font-size: 12px;
 			display: inline;
+			font-size: 12px;
 			white-space: nowrap;
 
 			&:not(:last-child):not(&--colors)::after {
-				content: ',';
 				position: relative;
 				right: 3px;
 				color: $gray-4;
+				content: ',';
 			}
+
 			&--colors {
 				position: absolute;
-				left: 156px;
 				top: 120px;
+				left: 156px;
 			}
 		}
 	}
@@ -163,11 +158,11 @@
 	}
 
 	&__divider {
-		border-bottom: 1px dashed #c8cbce;
 		flex-grow: 1;
-		margin-left: 5px;
 		margin-right: 3px;
 		margin-bottom: 4px;
+		margin-left: 5px;
+		border-bottom: 1px dashed #c8cbce;
 
 		@include below(600px) {
 			display: none;
@@ -178,22 +173,20 @@
 		display: inline-block;
 		width: 20px;
 		height: 20px;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		border-radius: 50%;
-		border: 1px solid $color-item-border;
 		background-color: $white;
+		border: 1px solid $color-item-border;
+		border-radius: 50%;
 	}
 }
 
 .item-pricing {
-	padding-top: 16px;
-	padding-bottom: 16px;
-	max-height: 100%;
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
 	flex-shrink: 0;
+	justify-content: space-between;
+	max-height: 100%;
+	padding-top: 16px;
+	padding-bottom: 16px;
 
 	@include below(1023px) {
 		padding-top: 0;
@@ -201,17 +194,17 @@
 	}
 
 	@include below(600px) {
-		border-top: 1px solid $gray-2;
+		flex-direction: row;
 		width: 100%;
 		margin-top: 12px;
 		padding-top: 12px;
-		flex-direction: row;
+		border-top: 1px solid $gray-2;
 	}
 
 	&__title {
+		margin-bottom: 12px;
 		font-size: 16px;
 		line-height: 125%;
-		margin-bottom: 12px;
 
 		@include below(1023px) {
 			font-size: 14px;
@@ -233,10 +226,10 @@
 	}
 
 	&__status {
-		font-size: 12px;
 		display: flex;
-		height: 100%;
 		align-items: center;
+		height: 100%;
+		font-size: 12px;
 
 		&--available {
 			color: $status-available;
@@ -252,8 +245,8 @@
 
 		@include below(600px) {
 			position: absolute;
-			right: 16px;
 			top: 126px;
+			right: 16px;
 			height: auto;
 		}
 	}
@@ -267,9 +260,9 @@
 			flex-direction: row-reverse;
 
 			.card-product__favorite {
-				margin-right: 8px;
 				width: 44px;
 				height: 44px;
+				margin-right: 8px;
 			}
 		}
 	}
@@ -291,51 +284,47 @@
 	.catalog-item {
 		flex-direction: column;
 		width: 100%;
-		transition: box-shadow 0.3s ease;
+		margin-top: -1px;
 		padding: 0;
 		border: 1px solid $gray-2;
-		margin-top: -1px;
+		transition: box-shadow 0.3s ease;
 
 		@include below(600px) {
-			-webkit-border-radius: 0;
-			-moz-border-radius: 0;
-			border-radius: 0;
 			margin-bottom: 0;
-		}
-
-		& + & {
-			border-left: 0;
+			border-radius: 0;
 		}
 
 		&:nth-child(4n + 4) {
 			border-right: 1px solid $gray-2;
 		}
 
+		& + & {
+			border-left: 0;
+		}
+
 		&__title {
+			height: 38px;
 			margin-top: 0;
 			margin-bottom: 8px;
 			font-size: 14px;
 			line-height: 130%;
-			height: 38px;
 
 			@include below(400px) {
 				font-size: 12px;
 			}
 
 			span {
-				display: -webkit-box;
+				display: box;
+				overflow: hidden;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
-				overflow: hidden;
 			}
 		}
 
 		&__img {
-			height: 170px;
 			width: 100%;
+			height: 170px;
 			margin-right: 0;
-			-webkit-border-radius: 0;
-			-moz-border-radius: 0;
 			border-radius: 0;
 
 			img {
@@ -347,8 +336,8 @@
 
 		&__description {
 			margin-right: 0;
-			border-right: 0;
 			padding: 12px;
+			border-right: 0;
 
 			@include below(400px) {
 				padding: 8px;
@@ -366,16 +355,16 @@
 			white-space: nowrap;
 
 			&:not(:last-child):not(&--colors)::after {
-				content: ',';
 				position: relative;
 				right: 3px;
 				color: $gray-4;
+				content: ',';
 			}
 
 			&--colors {
 				position: absolute;
-				left: 8px;
 				top: 146px;
+				left: 8px;
 			}
 		}
 
@@ -411,9 +400,9 @@
 		padding: 12px;
 
 		@include below(600px) {
+			flex-direction: column;
 			margin-top: 0;
 			border-top: 0;
-			flex-direction: column;
 		}
 
 		@include below(400px) {
@@ -468,11 +457,11 @@
 
 		&__status {
 			position: absolute;
-			left: 12px;
-			bottom: 0;
-			height: 100%;
-			right: auto;
 			top: auto;
+			right: auto;
+			bottom: 0;
+			left: 12px;
+			height: 100%;
 		}
 	}
 }

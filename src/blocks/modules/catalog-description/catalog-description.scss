@@ -1,58 +1,66 @@
 .catalog-description {
-	&__img {
-	}
-}
-
-.catalog-description {
 	display: flex;
+
+	@include below(600px) {
+		display: block;
+	}
 
 	// .catalog-description__img
 
 	&__img {
 		position: relative;
+		flex: 0 0 40%;
+		overflow: hidden;
+		background: url('../img/catalog-description/threads.jpg') center no-repeat;
+		background-size: cover;
+		border-radius: 4px;
 
-		*:not(.catalog-description__watermark) {
-			object-fit: cover;
+		@include below(600px) {
+			height: 230px;
 		}
-		img.catalog-description__watermark {
-			position: absolute;
-			bottom: 20px;
-			left: 20px;
-			background-color: #fff;
+		@include below(400px) {
+			height: 180px;
 		}
 	}
-
-	// .catalog-description__watermark
 
 	&__watermark {
-	}
-
-	// .catalog-description__text
-
-	&__text {
-		padding: 51px 0 51px 64px;
-	}
-
-	// .catalog-description__title
-
-	&__title {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		background-color: #fff;
 	}
 
 	// .catalog-description__inner
 
 	&__inner {
+		p + p {
+			@include below(1023px) {
+				display: none;
+			}
+		}
 	}
 
-	// .catalog-description__show-more
+	&__text {
+		padding: 51px 0 51px 64px;
+
+		@include below(1023px) {
+			padding: 40px 0 40px 32px;
+		}
+
+		@include below(600px) {
+			margin-top: 32px;
+			padding: 0;
+		}
+	}
 
 	&__show-more {
 		margin-top: 40px;
 		cursor: pointer;
 
 		svg {
-			fill: $blue;
 			width: 12px;
 			height: 6px;
+			fill: $blue;
 		}
 	}
 }

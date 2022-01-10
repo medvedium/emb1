@@ -1,15 +1,10 @@
 module.exports = {
-  customSyntax: "postcss-scss",
-  extends: [
-    "stylelint-config-airbnb",
-    "stylelint-config-rational-order",
-    "stylelint-prettier/recommended",
-    "stylelint-config-prettier",
-    "stylelint-config-standard-scss"
-  ],
-  plugins: ["stylelint-order", "stylelint-scss"],
-  rules: {
-    "scss/dollar-variable-pattern": null,
-    "declaration-property-value-blacklist": null
-  }
-};
+	customSyntax: 'postcss-scss',
+	extends: ['stylelint-config-standard', 'stylelint-config-rational-order', 'stylelint-prettier/recommended'],
+	plugins: ['stylelint-order', 'stylelint-scss'],
+	rules: {
+		'selector-class-pattern': null,
+		'no-invalid-position-at-import-rule': null,
+		'at-rule-no-unknown': null
+	}
+}
