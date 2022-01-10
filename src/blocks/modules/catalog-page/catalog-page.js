@@ -15,7 +15,7 @@ function textChange() {
 		})
 	}
 
-	if (catalogInner.classList.contains('mosaic')) {
+	if (catalogInner && catalogInner.classList.contains('mosaic')) {
 		buyBtn.forEach((item) => {
 			item.innerHTML = 'Купить'
 		})
