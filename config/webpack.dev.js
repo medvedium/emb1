@@ -20,13 +20,14 @@ if (!pugPages.length) {
 			'indent_size': 3
 		},
 		replace: [
-			{ regex: '<link rel="stylesheet" href="css/style.min.css"/>', to: '' },
+			{ regex: '<link rel="stylesheet" href="css/style.min.css">', to: '' },
 			{ regex: '../img', to: 'img' },
 			{ regex: '@img', to: 'img' },
 			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
 		],
 	})];
 }
+
 
 const paths = {
 	src: path.resolve(srcFolder),
@@ -55,6 +56,7 @@ const config = {
 		hot: true,
 		watchFiles: [
 			`${paths.src}/**/*.html`,
+			`${paths.src}/**/*.pug`,
 			`${paths.src}/**/*.htm`,
 			`${paths.src}/img/**/*.*`
 		],

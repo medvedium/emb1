@@ -1,8 +1,8 @@
 .catalog-wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	column-gap: 30px;
 	margin-top: 32px;
+	column-gap: 30px;
 
 	@include below(923px) {
 		display: block;
@@ -10,19 +10,17 @@
 
 	.catalog {
 		&__filter {
-			grid-column: 1/2;
 			grid-row: 1/-6;
+			grid-column: 1/2;
 		}
 
 		&__controls {
-			grid-column: 2/5;
 			display: flex;
+			grid-column: 2/5;
 			justify-content: space-between;
 			padding: 16px 24px;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px;
 			border: 1px solid $gray-2;
+			border-radius: 4px;
 
 			@include below(923px) {
 				grid-column: 1/-1;
@@ -56,8 +54,8 @@
 
 			@include below(490px) {
 				flex-wrap: wrap;
-				padding-left: 0;
 				padding-right: 0;
+				padding-left: 0;
 			}
 		}
 
@@ -97,9 +95,9 @@
 		}
 
 		&__active-filter {
+			display: flex;
 			grid-column: 2/5;
 			margin-top: 16px;
-			display: flex;
 
 			@include below(923px) {
 				grid-column: 1/-1;
@@ -125,87 +123,40 @@
 			}
 
 			@include below(1023px) {
-				padding-left: 0;
 				padding-right: 0;
+				padding-left: 0;
 			}
 
 			@include below(923px) {
 				grid-column: 1/-1;
 			}
-
-			@include below(490px) {
-
-			}
 		}
-	}
-}
-
-.sort-wrap {
-	display: flex;
-	align-items: center;
-
-	&.active {
-		.sort-list-title {
-			&::after {
-				transform: rotate(180deg);
-			}
-		}
-
-		.sort-submenu {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
-	.sort-title {
-		@include below(923px) {
-			display: none;
-		}
-	}
-	@include below(923px) {
-		height: 58px;
-		border-right: 1px solid $gray-2;
-		border-left: 1px solid $gray-2;
-		flex-grow: 1;
-		justify-content: center;
-		margin-left: 24px;
-		margin-right: 24px;
-	}
-
-	@include below(490px) {
-		width: 100%;
-		order: -1;
-		border: none;
-		margin: 0;
-		border-bottom: 1px solid $gray-2;
-	}
-
-	@include below(400px) {
-		height: 52px;
 	}
 }
 
 .sort-list-wrap {
 	position: relative;
+
 	.sort-submenu {
 		position: absolute;
-		left: 0;
 		top: 100%;
+		left: 0;
+		z-index: 1;
 		width: 250px;
 		margin-top: 12px;
-		background-color: $white;
 		padding: 24px;
-		z-index: 1;
+		background-color: $white;
 		border-radius: 4px;
-		box-shadow: 0 10px 21px 10px rgba(0, 9, 17, 0.05);
-		transition: 0.2s;
-		opacity: 0;
+		box-shadow: 0 10px 21px 10px rgb(0 9 17 / 5%);
 		visibility: hidden;
+		opacity: 0;
+		transition: 0.2s;
 	}
 
 	.sort-submenu-item {
+		margin-bottom: 12px;
 		cursor: pointer;
 		transition: 0.2s;
-		margin-bottom: 12px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -221,25 +172,69 @@
 .sort-list-title {
 	margin-left: 12px;
 	cursor: pointer;
+
 	&::after {
-		content: '';
 		display: inline-block;
 		width: 16px;
 		height: 16px;
-		margin-left: 4px;
 		margin-bottom: -2px;
+		margin-left: 4px;
+		color: $blue;
 		background-image: url('img/svg/dropdown-blue.svg');
-		background-position: center;
 		background-repeat: no-repeat;
+		background-position: center;
 		background-size: 95%;
 		transition: 0.2s;
-		color: $blue;
+		content: '';
+	}
+}
+
+.sort-wrap {
+	display: flex;
+	align-items: center;
+
+	&.active {
+		.sort-list-title {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		.sort-submenu {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.sort-title {
+		@include below(923px) {
+			display: none;
+		}
+	}
+	@include below(923px) {
+		flex-grow: 1;
+		justify-content: center;
+		height: 58px;
+		margin-right: 24px;
+		margin-left: 24px;
+		border-right: 1px solid $gray-2;
+		border-left: 1px solid $gray-2;
+	}
+
+	@include below(490px) {
+		order: -1;
+		width: 100%;
+		margin: 0;
+		border: none;
+		border-bottom: 1px solid $gray-2;
+	}
+
+	@include below(400px) {
+		height: 52px;
 	}
 }
 
 .active-filter {
-
-
 	@include below(923px) {
 		padding-bottom: 4px;
 		overflow-x: auto;
@@ -253,30 +248,28 @@
 
 	&::-webkit-scrollbar-thumb {
 		background-color: $gray-2;
-		border-radius: 20px;
 		border: 3px solid $gray-2;
+		border-radius: 20px;
 	}
 
 	&__item {
-		height: 32px;
-		padding: 8px 32px 8px 12px;
-		margin-right: 8px;
-		background-color: $dark-blue;
-		color: $white;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		display: flex;
-		align-items: center;
-		cursor: pointer;
 		position: relative;
+		display: flex;
 		flex-wrap: nowrap;
+		align-items: center;
+		height: 32px;
+		margin-right: 8px;
+		padding: 8px 32px 8px 12px;
+		color: $white;
+		background-color: $dark-blue;
+		border-radius: 4px;
+		cursor: pointer;
 
 		&--reset {
-			background-color: $white;
-			color: $dark-blue;
-			border: 1px solid $dark-blue;
 			padding: 8px 12px;
+			color: $dark-blue;
+			background-color: $white;
+			border: 1px solid $dark-blue;
 			transition: all 0.1s linear;
 
 			&:hover {
@@ -287,18 +280,17 @@
 	}
 
 	&__title {
-		//flex-wrap: nowrap;
 		white-space: nowrap;
 	}
 
 	&__remove {
 		position: absolute;
+		top: 50%;
+		right: 12px;
+		display: flex;
 		width: 10px;
 		height: 10px;
-		right: 12px;
-		top: 50%;
 		transform: translateY(-50%);
-		display: flex;
 
 		svg use {
 			width: 10px;
