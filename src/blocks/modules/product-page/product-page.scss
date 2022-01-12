@@ -1,0 +1,41 @@
+.product {
+	&__inner {
+		display: grid;
+		grid-column-gap: 32px;
+		grid-template:
+			'code code code'
+			'image info control'
+			'tabs tabs tabs';
+		grid-template-rows: repeat(3, min-content);
+		grid-template-columns: repeat(3, 1fr);
+
+		@include below(1200px) {
+			grid-template-areas:
+				'code code code'
+				'image control info'
+				'tabs tabs tabs';
+		}
+	}
+
+	&__code {
+		grid-area: code;
+		color: $gray-6;
+	}
+
+	&__img {
+		grid-area: image;
+	}
+
+	&__info {
+		grid-area: info;
+	}
+
+	&__control-panel {
+		grid-area: control;
+	}
+
+	&__tabs {
+		grid-area: tabs;
+		background-color: $gray-1;
+	}
+}
