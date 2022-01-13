@@ -10,10 +10,19 @@
 	&__img {
 		position: relative;
 		flex: 0 0 40%;
+		height: 509px;
 		overflow: hidden;
 		//background: url('../img/catalog-description/threads.jpg') center no-repeat;
-		background-size: cover;
+		//background-size: cover;
 		border-radius: 4px;
+
+		@include below(1023px) {
+			height: 367px;
+		}
+
+		@include below(1023px) {
+			height: 331px;
+		}
 
 		@include below(600px) {
 			height: 230px;
@@ -23,19 +32,30 @@
 		}
 	}
 
+	&__img-main {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	&__watermark {
 		position: absolute;
 		bottom: 20px;
 		left: 20px;
+		padding: 8px;
 		background-color: #fff;
+		border-radius: 4px;
 	}
 
 	// .catalog-description__inner
 
 	&__inner {
 		p + p {
+			transition: all 0.2s linear;
+
 			@include below(1023px) {
 				display: none;
+				opacity: 0;
 			}
 		}
 	}

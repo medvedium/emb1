@@ -1,30 +1,36 @@
-import versionNumber from "gulp-version-number";
-import webpHtmlNosvg from "gulp-webp-html-nosvg";
+import versionNumber from 'gulp-version-number'
+import webpHtmlNosvg from 'gulp-webp-html-nosvg'
+import typograf from 'gulp-typograf';
 
 export const html = () => {
-	return app.gulp.src(`${app.path.build.html}*.html`)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: "HTML",
-				message: "Error: <%= error.message %>"
-			}))
-		)
+	return app.gulp
+		.src(`${app.path.build.html}*.html`)
 		.pipe(
-			app.plugins.if(
-				app.isWebP,
-				webpHtmlNosvg()
+			app.plugins.plumber(
+				app.plugins.notify.onError({
+					title: 'HTML',
+					message: 'Error: <%= error.message %>'
+				})
 			)
 		)
-		.pipe(versionNumber({
-			'value': '%DT%',
-			'append': {
-				'key': '_v',
-				'cover': 0,
-				'to': ['css', 'js', 'img']
-			},
-			'output': {
-				'file': 'config/version.json'
-			}
-		}))
-		.pipe(app.gulp.dest(app.path.build.html));
+		.pipe(app.plugins.if(app.isWebP, webpHtmlNosvg()))
+		.pipe(
+			versionNumber({
+				value: '%DT%',
+				append: {
+					key: '_v',
+					cover: 0,
+					to: ['css', 'js', 'img']
+				},
+				output: {
+					file: 'config/version.json'
+				}
+			})
+		)
+		.pipe(
+			typograf({
+				locale: ['ru', 'en-US']
+			})
+		)
+		.pipe(app.gulp.dest(app.path.build.html))
 }

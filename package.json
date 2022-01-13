@@ -53,6 +53,7 @@
 		"gulp-svg-sprite": "latest",
 		"gulp-ttf2woff": "latest",
 		"gulp-ttf2woff2": "latest",
+		"gulp-typograf": "^4.0.3",
 		"gulp-util": "latest",
 		"gulp-version-number": "latest",
 		"gulp-webp": "latest",
@@ -93,7 +94,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-				"nouislider": "latest",
+		"nouislider": "latest",
 		"simplebar": "latest",
 		"swiper": "latest"
 	}
