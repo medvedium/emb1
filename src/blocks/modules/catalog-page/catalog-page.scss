@@ -175,12 +175,11 @@
 
 	&::after {
 		display: inline-block;
-		width: 16px;
-		height: 16px;
-		margin-bottom: -2px;
-		margin-left: 4px;
+		width: 11px;
+		height: 10px;
+		margin-left: 15px;
 		color: $blue;
-		background-image: url('img/svg/dropdown-blue.svg');
+		background-image: url('../img/svg/dropdown-blue.svg');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 95%;

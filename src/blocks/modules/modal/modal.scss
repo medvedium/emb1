@@ -1,23 +1,21 @@
 .modal {
-
-
 	&-content {
 		position: relative;
-		background: #FFFFFF;
-		box-shadow: 0px 5px 25px rgba(19, 48, 80, 0.25);
-		border-radius: 0;
 		min-height: 100vh;
+		background: #fff;
 		border: none;
+		border-radius: 0;
+		box-shadow: 0 5px 25px rgb(19 48 80 / 25%);
 
 		@include above(575px) {
-			border-radius: 4px;
 			min-height: auto;
+			border-radius: 4px;
 		}
 	}
 
 	&-dialog {
-		width: 100%;
-		margin: 0;
+		//width: 100%;
+		//margin: 0;
 
 		@include above(424px) {
 			margin-top: 0;
@@ -29,14 +27,13 @@
 			margin-bottom: 30px;
 		}
 
-		&--sm  {
+		&--sm {
 			@include above(576px) {
 				max-width: 368px;
 			}
 		}
 
-		&--md  {
-
+		&--md {
 			@include above(424px) {
 				max-width: 100%;
 			}
@@ -45,7 +42,7 @@
 			}
 		}
 
-		&--xl  {
+		&--xl {
 			@include above(424px) {
 				max-width: 100%;
 			}
@@ -72,12 +69,11 @@
 		padding-bottom: 0;
 	}
 
-
 	&-header {
 		position: relative;
-		background: #F7F8FA;
-		border: none;
 		padding: 12px;
+		background: #f7f8fa;
+		border: none;
 
 		@include above(576px) {
 			padding: 16px;
@@ -86,25 +82,24 @@
 
 	&-footer {
 		display: block;
-		border:  none;
 		padding: 16px 32px 32px;
+		border: none;
 
 		& > * {
-			margin: 0 ;
+			margin: 0;
 		}
 	}
 
-
 	&-close {
 		position: absolute;
-		right: 10px;
 		top: 6px;
+		right: 10px;
+		z-index: 1;
 		width: 30px;
 		height: 30px;
+		background: transparent;
 		border: none;
 		cursor: pointer;
-		background: transparent;
-		z-index: 1;
 
 		@include above(576px) {
 			top: 12px;
@@ -115,17 +110,13 @@
 		margin: 0;
 	}
 
-
 	&--custom {
-
 		@include above(1024px) {
 			position: absolute;
 			height: auto;
-			pointer-events: none;
 			margin-top: 20px;
+			pointer-events: none;
 		}
-
-
 
 		.container {
 			@include above(1024px) {
@@ -135,27 +126,23 @@
 			}
 
 			@include below(1023px) {
-				padding-left: 0;
 				padding-right: 0;
+				padding-left: 0;
 			}
-
 		}
 
 		.modal-dialog {
-
 			@include above(1024px) {
-				margin-left: 0;
 				margin-right: 0;
+				margin-left: 0;
 			}
-
 		}
 	}
 
-
 	&-body__grid {
 		display: flex;
-		margin-left: -32px;
 		margin-right: -32px;
+		margin-left: -32px;
 
 		@include below(767px) {
 			flex-wrap: wrap;
@@ -163,43 +150,41 @@
 	}
 
 	&-body__col {
-		padding-left: 32px;
 		padding-right: 32px;
+		padding-left: 32px;
 	}
 
 	&-body__col--1 {
 		display: none;
 
-
 		@include below(1023px) {
+			position: relative;
 			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
-			position: relative;
 			flex-grow: 1;
+			align-items: flex-start;
 		}
 
 		@include below(767px) {
 			width: 100%;
-			padding-bottom: 32px;
 			margin-bottom: 32px;
+			padding-bottom: 32px;
 		}
 
-		&:before {
-			content: '';
+		&::before {
 			position: absolute;
 			right: 0;
 			width: 1px;
-			background-color: $gray-2;
 			height: 266px;
+			background-color: $gray-2;
+			content: '';
 
 			@include below(767px) {
-				width: auto;
-				height: 1px;
+				top: 100%;
 				right: 32px;
 				left: 32px;
-				top: 100%;
-
+				width: auto;
+				height: 1px;
 			}
 		}
 	}
@@ -217,10 +202,9 @@
 	}
 }
 
-
 .modal-backdrop--transparent {
-	background-color: transparent !important;
-	pointer-events: none !important;
 	width: 0;
 	height: 0;
+	background-color: transparent !important;
+	pointer-events: none !important;
 }

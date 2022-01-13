@@ -7,17 +7,31 @@ const buyBtn = document.querySelectorAll('.item-pricing__btn .button__text')
 function textChange() {
 	if (buyBtn && window.innerWidth < 601) {
 		buyBtn.forEach((item) => {
-			item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#buy-cart"></use></svg>'
+			if (item.parentNode.dataset.bsToggle !== "modal") {
+				item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#buy-cart"></use></svg>'
+			} else {
+				item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#bell"></use></svg>'
+			}
 		})
 	} else {
 		buyBtn.forEach((item) => {
-			item.innerHTML = 'Купить'
+			if (item.parentNode.dataset.bsToggle !== "modal") {
+				item.innerHTML = 'Купить'
+			} else {
+				item.innerHTML = 'Уведомить'
+
+			}
 		})
 	}
 
 	if (catalogInner && catalogInner.classList.contains('mosaic')) {
 		buyBtn.forEach((item) => {
-			item.innerHTML = 'Купить'
+			if (item.parentNode.dataset.bsToggle !== "modal") {
+				item.innerHTML = 'Купить'
+			} else {
+				item.innerHTML = 'Уведомить'
+
+			}
 		})
 	}
 }

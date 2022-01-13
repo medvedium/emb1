@@ -1,7 +1,10 @@
-// import "@babel/polyfill";
+import "babel-polyfill";
 import "../scss/style.scss";
 import "./import/modules.js";
+import * as flsFunctions from "./modules/functions.js";
 import "./modules/dynamic_adapt.js"
+
+flsFunctions.isWebp();
 
 import Modal from 'bootstrap/js/dist/modal.js';
 

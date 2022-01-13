@@ -8,8 +8,8 @@
 	@include below(490px) {
 		flex-wrap: wrap;
 	}
-
 }
+
 .pagination {
 	display: flex;
 
@@ -19,6 +19,28 @@
 		margin-top: 24px;
 	}
 }
+
+.show-more {
+	color: $dark;
+	text-decoration: none;
+
+	&:hover {
+		color: $blue;
+	}
+
+	svg {
+		width: 16px;
+		height: 9px;
+		margin-left: 12px;
+		transition: all 0.2s linear;
+	}
+
+	@include below(490px) {
+		width: 100%;
+		text-align: center;
+	}
+}
+
 .pagination-item {
 	color: $dark;
 	text-decoration: none;
@@ -42,7 +64,6 @@
 
 	&.prev-btn,
 	&.next-btn {
-
 		height: 100%;
 		width: 40px;
 
@@ -50,26 +71,5 @@
 			height: 24px;
 			stroke: $blue;
 		}
-	}
-}
-
-.show-more {
-	color: $dark;
-	text-decoration: none;
-
-	&:hover {
-		color: $blue;
-	}
-	svg {
-		width: 13px;
-		height: 7px;
-		fill: #00ADEF;
-		margin-left: 12px;
-		transition: all 0.2s linear;
-	}
-
-	@include below(490px) {
-		width: 100%;
-		text-align: center;
 	}
 }

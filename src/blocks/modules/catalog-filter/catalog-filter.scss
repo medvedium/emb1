@@ -1,17 +1,91 @@
+.filter-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px;
+	background-color: $gray-3;
+
+	&__close {
+		cursor: pointer;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			pointer-events: none;
+			fill: $gray-1;
+		}
+	}
+	@include above(924px) {
+		display: none;
+	}
+}
+
 .catalog-filter {
 	transition: all 0.2s linear;
+
+	&__inner {
+		max-height: 145px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		overflow-y: auto;
+		scrollbar-color: $gray-2;
+		scrollbar-width: thin;
+
+		&--radio {
+			padding-top: 10px;
+
+			.radio-btn__text {
+				font-size: 14px;
+			}
+
+			label:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			@include below(923px) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $gray-2;
+			border: 3px solid $gray-2;
+			border-radius: 20px;
+		}
+	}
+
 	&__form {
-		padding: 16px 16px 12px 16px;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
+		padding: 16px 16px 12px;
 		border: 1px solid $gray-2;
+		border-radius: 4px;
+	}
+
+	&__title {
+		margin-bottom: 14px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 150%;
+		cursor: pointer;
+
+		svg {
+			width: 13px;
+			height: 7px;
+			margin-right: 10px;
+			margin-left: 5px;
+			transition: all 0.2s linear;
+			fill: $blue;
+		}
 	}
 
 	&__item {
 		height: 38px;
-		transition: all 0.2s linear;
 		overflow: hidden;
+		transition: all 0.2s linear;
 
 		.catalog-filter__inner {
 			opacity: 0;
@@ -43,54 +117,6 @@
 		}
 	}
 
-	&__inner {
-		overflow-y: auto;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		max-height: 145px;
-		scrollbar-color: $gray-2;
-		scrollbar-width: thin;
-
-		&--radio {
-			padding-top: 10px;
-			label:not(:last-child) {
-				margin-bottom: 16px;
-			}
-
-			@include below(923px) {
-				display: flex;
-				flex-direction: column;
-			}
-		}
-
-		&::-webkit-scrollbar {
-			width: 4px;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			background-color: $gray-2;
-			border-radius: 20px;
-			border: 3px solid $gray-2;
-		}
-	}
-
-	&__title {
-		margin-bottom: 14px;
-		font-weight: 700;
-		font-size: 16px;
-		line-height: 150%;
-		cursor: pointer;
-
-		svg {
-			width: 13px;
-			height: 7px;
-			fill: $blue;
-			margin-left: 5px;
-			margin-right: 10px;
-			transition: all 0.2s linear;
-		}
-	}
-
 	&__row {
 		&:not(:last-child) {
 			margin-bottom: 15px;
@@ -98,8 +124,8 @@
 	}
 
 	&__value {
-		color: $filter-checkbox-value;
 		margin-left: 15px;
+		color: $filter-checkbox-value;
 	}
 
 	button + button {
@@ -110,11 +136,11 @@
 		position: fixed;
 		top: 0;
 		left: -100%;
+		z-index: 102;
 		width: 100%;
 		height: calc(100% - 75px);
-		background-color: $white;
-		z-index: 102;
 		overflow: auto;
+		background-color: $white;
 
 		@include below(767px) {
 			height: calc(100% - 60px);
@@ -128,52 +154,29 @@
 
 .range-slider {
 	width: 99%;
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 
 	&-label {
 		width: 48%;
+		color: $gray-1;
 
 		input {
 			width: 100px;
 			height: 44px;
 			padding: 12px;
 			border: 1px solid $gray-2;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
 			border-radius: 4px;
 
 			&::-webkit-outer-spin-button,
 			&::-webkit-inner-spin-button {
-				-webkit-appearance: none;
 				margin: 0;
+				appearance: none;
 			}
 
 			&[type='number'] {
-				-moz-appearance: textfield;
+				appearance: textfield;
 			}
 		}
-	}
-}
-
-.filter-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: $gray-3;
-	padding: 16px;
-
-	&__close {
-		cursor: pointer;
-
-		svg {
-			height: 24px;
-			width: 24px;
-			fill: $gray-1;
-			pointer-events: none;
-		}
-	}
-	@include above(924px) {
-		display: none;
 	}
 }
