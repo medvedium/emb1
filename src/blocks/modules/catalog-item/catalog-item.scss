@@ -295,9 +295,9 @@
 		}
 
 		@include below(600px) {
-			position: absolute;
-			top: 126px;
-			right: 16px;
+			position: relative;
+			//top: 126px;
+			//right: 16px;
 			height: auto;
 		}
 	}
@@ -550,13 +550,13 @@
 			}
 		}
 
-		&__status {
-			position: absolute;
-			top: auto;
-			right: auto;
-			bottom: 0;
-			left: 12px;
-			height: 100%;
-		}
+		//&__status {
+		//	position: absolute;
+		//	top: auto;
+		//	right: auto;
+		//	bottom: 0;
+		//	left: 12px;
+		//	height: 100%;
+		//}
 	}
 }

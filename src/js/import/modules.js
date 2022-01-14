@@ -13,3 +13,4 @@ import "../../blocks/modules/catalog-filter/catalog-filter.js";
 import "../../blocks/modules/catalog-page/catalog-page.js";
 import "../../blocks/modules/catalog-tags/catalog-tags.js";
 import "../../blocks/modules/catalog-description/catalog-description.js";
+import "../../blocks/modules/catalog-item/catalog-item.js";
