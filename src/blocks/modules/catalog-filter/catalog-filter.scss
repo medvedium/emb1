@@ -33,6 +33,9 @@
 
 		&--radio {
 			padding-top: 10px;
+			padding-bottom: 3px;
+			display: flex;
+			flex-direction: column;
 
 			.radio-btn__text {
 				font-size: 14px;
@@ -163,6 +166,7 @@
 	width: 99%;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 30px;
 
 	&-label {
 		width: 48%;

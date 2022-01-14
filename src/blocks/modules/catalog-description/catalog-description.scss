@@ -12,8 +12,6 @@
 		flex: 0 0 40%;
 		height: 509px;
 		overflow: hidden;
-		//background: url('../img/catalog-description/threads.jpg') center no-repeat;
-		//background-size: cover;
 		border-radius: 4px;
 
 		@include below(1023px) {
@@ -50,14 +48,17 @@
 	// .catalog-description__inner
 
 	&__inner {
-		p + p {
+		p:nth-child(n+3) {
 			transition: all 0.2s linear;
-
-			@include below(1023px) {
 				display: none;
 				opacity: 0;
-			}
+
 		}
+			@include below(1023px) {
+				p:nth-child(n+2) {
+					display: none;
+				}
+			}
 	}
 
 	&__text {

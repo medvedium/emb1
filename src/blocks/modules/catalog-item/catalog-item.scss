@@ -149,8 +149,6 @@
 		&--colors {
 			align-items: flex-end;
 			margin-top: -5px;
-
-
 		}
 
 		@include below(625px) {
@@ -280,7 +278,9 @@
 		display: flex;
 		align-items: center;
 		height: 100%;
-		font-size: 12px;
+		font-size: 14px;
+		margin-top: 18px;
+		margin-bottom: 18px;
 
 		&--available {
 			color: $status-available;
@@ -294,11 +294,15 @@
 			color: $status-order;
 		}
 
+		@include below(1023px) {
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+
 		@include below(625px) {
 			position: relative;
-			//top: 126px;
-			//right: 16px;
 			height: auto;
+			margin: 0;
 		}
 	}
 
@@ -451,7 +455,6 @@
 				position: absolute;
 				@include adaptiveValue('top', 146, 80);
 				left: 8px;
-
 			}
 			&--colors-text .item-options__value {
 				background-color: $gray-3;
@@ -549,14 +552,8 @@
 				font-size: 10px;
 			}
 		}
-
-		//&__status {
-		//	position: absolute;
-		//	top: auto;
-		//	right: auto;
-		//	bottom: 0;
-		//	left: 12px;
-		//	height: 100%;
-		//}
+		&__status {
+			display: none;
+		}
 	}
 }
