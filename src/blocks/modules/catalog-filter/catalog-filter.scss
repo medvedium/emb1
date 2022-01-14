@@ -22,6 +22,9 @@
 
 .catalog-filter {
 	transition: all 0.2s linear;
+	a {
+		color: $dark;
+	}
 
 	&__inner {
 		max-height: 145px;
