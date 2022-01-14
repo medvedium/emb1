@@ -1,17 +1,26 @@
-const statusItem = document.querySelectorAll('.item-pricing__status')
-const catalogInner = document.querySelector('.catalog__inner')
+const itemCard = document.querySelectorAll('.catalog-item')
+const moveStatusItem = function() {
+	itemCard.forEach((item) => {
 
-const moveStatusItem = function () {
-	statusItem.forEach((item) => {
-		const tempItem = document.createElement('div')
-		for (let i = 0; i < item.classList.length; i++) {
-			tempItem.classList.add(item.classList[i])
-		}
-		tempItem.innerHTML = item.innerHTML
-		if (window.innerWidth <= 600) {
-			item.closest('.catalog-item').querySelector('.catalog-item__title').after(tempItem)
-			item.remove()
-		}
+			if (window.innerWidth <= 625 && item.querySelector('.item-pricing .item-pricing__status')) {
+				const status = item.querySelector('.item-pricing .item-pricing__status')
+				const tempItem = document.createElement('div')
+				for (let i = 0; i < status.classList.length; i++) {
+					tempItem.classList.add(status.classList[i])
+				}
+				tempItem.innerHTML = status.innerHTML
+				item.querySelector('.catalog-item__title').after(tempItem)
+				status.remove()
+			} else if (window.innerWidth >= 625 && item.querySelector('.catalog-item__description .item-pricing__status')) {
+				const status = item.querySelector('.catalog-item__description .item-pricing__status')
+				const tempItem = document.createElement('div')
+				for (let i = 0; i < status.classList.length; i++) {
+					tempItem.classList.add(status.classList[i])
+				}
+				tempItem.innerHTML = status.innerHTML
+				item.querySelector('.item-pricing__price').after(tempItem)
+				status.remove()
+			}
 	})
 }
 

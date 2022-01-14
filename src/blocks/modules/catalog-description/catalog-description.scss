@@ -1,7 +1,7 @@
 .catalog-description {
 	display: flex;
 
-	@include below(600px) {
+	@include below(625px) {
 		display: block;
 	}
 
@@ -24,7 +24,7 @@
 			height: 331px;
 		}
 
-		@include below(600px) {
+		@include below(625px) {
 			height: 230px;
 		}
 		@include below(400px) {
@@ -67,7 +67,7 @@
 			padding: 40px 0 40px 32px;
 		}
 
-		@include below(600px) {
+		@include below(625px) {
 			margin-top: 32px;
 			padding: 0;
 		}

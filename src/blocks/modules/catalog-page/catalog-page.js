@@ -5,7 +5,7 @@ const catalogInner = document.querySelector('.jsCatalogInner')
 const buyBtn = document.querySelectorAll('.item-pricing__btn .button__text')
 
 function textChange() {
-	if (buyBtn && window.innerWidth < 601) {
+	if (buyBtn && window.innerWidth <= 625) {
 		buyBtn.forEach((item) => {
 			if (item.parentNode.dataset.bsToggle !== 'modal') {
 				item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#buy-cart"></use></svg>'
