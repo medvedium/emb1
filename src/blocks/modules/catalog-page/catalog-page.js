@@ -7,7 +7,7 @@ const buyBtn = document.querySelectorAll('.item-pricing__btn .button__text')
 function textChange() {
 	if (buyBtn && window.innerWidth < 601) {
 		buyBtn.forEach((item) => {
-			if (item.parentNode.dataset.bsToggle !== "modal") {
+			if (item.parentNode.dataset.bsToggle !== 'modal') {
 				item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#buy-cart"></use></svg>'
 			} else {
 				item.innerHTML = '<svg><use xlink:href="img/icons/icons.svg#bell"></use></svg>'
@@ -15,22 +15,20 @@ function textChange() {
 		})
 	} else {
 		buyBtn.forEach((item) => {
-			if (item.parentNode.dataset.bsToggle !== "modal") {
+			if (item.parentNode.dataset.bsToggle !== 'modal') {
 				item.innerHTML = 'Купить'
 			} else {
 				item.innerHTML = 'Уведомить'
-
 			}
 		})
 	}
 
 	if (catalogInner && catalogInner.classList.contains('mosaic')) {
 		buyBtn.forEach((item) => {
-			if (item.parentNode.dataset.bsToggle !== "modal") {
+			if (item.parentNode.dataset.bsToggle !== 'modal') {
 				item.innerHTML = 'Купить'
 			} else {
 				item.innerHTML = 'Уведомить'
-
 			}
 		})
 	}
@@ -39,25 +37,43 @@ function textChange() {
 textChange()
 window.addEventListener('resize', textChange)
 
-if (toggler) {
-	catalogListView.addEventListener('click', () => {
-		if (!catalogListView.classList.contains('active')) {
-			catalogListView.classList.add('active')
-			catalogMosaicView.classList.remove('active')
-			catalogInner.classList.toggle('mosaic')
-		}
-		textChange()
-	})
+const toggleCatalogView = function () {
+	if (toggler) {
+		if (window.innerWidth <= 424) {
+			toggler.style.display = 'none'
+			if (catalogInner.classList.contains('mosaic')) {
+				catalogInner.classList.remove('mosaic')
+			}
+		} else {
+			toggler.style.display = 'flex'
 
-	catalogMosaicView.addEventListener('click', () => {
-		if (!catalogMosaicView.classList.contains('active')) {
-			catalogMosaicView.classList.toggle('active')
-			catalogListView.classList.toggle('active')
-			catalogInner.classList.toggle('mosaic')
+			if (catalogMosaicView.classList.contains('active')) {
+				catalogInner.classList.add('mosaic')
+			}
 		}
-		textChange()
-	})
+
+		catalogListView.addEventListener('click', () => {
+			if (!catalogListView.classList.contains('active')) {
+				catalogListView.classList.add('active')
+				catalogMosaicView.classList.remove('active')
+				catalogInner.classList.toggle('mosaic')
+			}
+			textChange()
+		})
+
+		catalogMosaicView.addEventListener('click', () => {
+			if (!catalogMosaicView.classList.contains('active')) {
+				catalogMosaicView.classList.toggle('active')
+				catalogListView.classList.toggle('active')
+				catalogInner.classList.toggle('mosaic')
+			}
+			textChange()
+		})
+	}
 }
+
+toggleCatalogView()
+window.addEventListener('resize', toggleCatalogView)
 
 const sortProduct = () => {
 	const sortBox = document.querySelector('[data-box="sort-prod"]'),
@@ -121,7 +137,5 @@ function removeOverlay() {
 		overlay.remove()
 	}
 }
-
-// export default sortProduct;
 
 sortProduct()
