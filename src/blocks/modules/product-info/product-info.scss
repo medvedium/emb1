@@ -15,6 +15,9 @@
 
 	// .product-info__details
 	&__details {
+		@include below(960px) {
+			display: none;
+		}
 	}
 
 	// .product-info__buttons
@@ -25,9 +28,20 @@
 .product-buttons {
 	&__item {
 		cursor: pointer;
+		position: relative;
 
 		&:not(:last-child) {
 			margin-right: 32px;
+		}
+
+		&:hover .product-info__popup {
+			opacity: 1;
+			visibility: visible;
+			width: 318px;
+			left: 12px;
+			top: -10px;
+			//display: block;
+			transform: translate(-50%, -100%) scale(1);
 		}
 	}
 }
@@ -59,5 +73,9 @@
 
 	// .product-properties__value
 	&__value {
+	}
+
+	@include below(960px) {
+		display: none;
 	}
 }

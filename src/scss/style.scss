@@ -22,3 +22,4 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 @import 'base/modules';
 @import '../blocks/components/components';
 @import '../blocks/modules/modules';
+@import "base/forms/rating";

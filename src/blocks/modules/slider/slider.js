@@ -132,28 +132,34 @@ for (let i = 0; i < specialSliders.length; i++) {
 	});
 }
 
-const recentSlider = new Swiper('.jsRecentSliderInner', {
-	slidesPerView: 2,
-	loop: false,
-	scrollbar: {
-		el: '.jsRecentSliderScroll',
-	},
-	navigation: {
-		nextEl: '.jsRecentSliderBtnNext',
-		prevEl: '.jsRecentSliderBtnPrev',
-	},
-	breakpoints: {
-		768: {
-			slidesPerView: 3,
-			scrollbar: false,
+const recentSlider = document.querySelector('.jsRecentSliderInner')
+let recentSliderInit
+
+if (recentSlider) {
+
+	recentSliderInit = new Swiper('.jsRecentSliderInner', {
+		slidesPerView: 2,
+		loop: false,
+		scrollbar: {
+			el: '.jsRecentSliderScroll',
 		},
-		1024: {
-			slidesPerView: 4,
-			scrollbar: false,
+		navigation: {
+			nextEl: '.jsRecentSliderBtnNext',
+			prevEl: '.jsRecentSliderBtnPrev',
 		},
-		1600: {
-			slidesPerView: 5,
-			scrollbar: false,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				scrollbar: false,
+			},
+			1024: {
+				slidesPerView: 4,
+				scrollbar: false,
+			},
+			1600: {
+				slidesPerView: 5,
+				scrollbar: false,
+			},
 		},
-	},
-});
+	});
+}

@@ -4,16 +4,41 @@
 		grid-column-gap: 32px;
 		grid-template:
 			'code code code'
-			'image info control'
+			'hero info control'
 			'tabs tabs tabs';
 		grid-template-rows: repeat(3, min-content);
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: percent(528, 1312) repeat(2, 1fr);
 
+		@include below(1260px) {
+			grid-template-columns: percent(464, 1400) repeat(2, 1fr);
+		}
 		@include below(1200px) {
+			gap: 16px;
 			grid-template-areas:
 				'code code code'
-				'image control info'
+				'hero control info'
 				'tabs tabs tabs';
+		}
+		@include below(1100px) {
+			grid-template-columns: 227px repeat(2, 1fr);
+		}
+		@include below(960px) {
+			grid-template:
+				'code code'
+				'hero control'
+				'info control'
+				'tabs tabs';
+			grid-template-columns: repeat(2, minmax(40%, 1fr));
+			grid-template-rows: min-content 412px 88px min-content;
+		}
+		@include below(680px) {
+			grid-template:
+				'code'
+				'hero'
+				'info'
+				'control'
+				'tabs';
+			grid-template-columns: 1fr;
 		}
 	}
 
@@ -22,8 +47,8 @@
 		color: $gray-6;
 	}
 
-	&__img {
-		grid-area: image;
+	&__hero {
+		grid-area: hero;
 	}
 
 	&__info {
