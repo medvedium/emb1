@@ -1,3 +1,5 @@
+@use "sass:math";
+
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
@@ -79,5 +81,33 @@
 		@media (max-width: $widthToMedia) {
 			#{$property}: rem($minSize);
 		}
+	}
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder {@content}
+	&::-moz-placeholder {@content}
+	&:-ms-input-placeholder {@content}
+}
+
+%clearfix {
+	&:after {
+		content:"";
+		display: block;
+		clear: both;
+	}
+}
+//@extend %clearfix;
+
+@mixin below($width, $orientation: 'width') {
+	@media all and (max-#{$orientation}: $width) {
+		@content;
+	}
+}
+
+@mixin above($width, $orientation: 'width') {
+	@media all and (min-#{$orientation}: $width) {
+		@content;
 	}
 }
