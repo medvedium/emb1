@@ -45,11 +45,9 @@ function initSliders() {
 	// Перечень слайдеров
 	if (document.querySelector('.product-hero-track__slider')) {
 		new Swiper('.product-hero-track__slider', {
-			// modules: [Navigation],
 			slidesPerView: 4,
 			spaceBetween: 12,
 			slidesPerGroup: 1,
-			// autoHeight: true,
 			speed: 800,
 			direction: 'vertical',
 			mousewheel: {
@@ -64,7 +62,6 @@ function initSliders() {
 	}
 	if (document.querySelector('.product-hero__slider')) {
 		new Swiper('.product-hero__slider', {
-			// modules: [Navigation, Pagination],
 			effect: "slide",
 			speed: 500,
 			slidesPerView: 1,

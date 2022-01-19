@@ -120,59 +120,61 @@ for (let i = 0; i < forms.length; i++) {
 		});
 	}
 
-	btn.addEventListener('click', function (e) {
-		e.preventDefault();
+	if (btn) {
+		btn.addEventListener('click', function (e) {
+			e.preventDefault();
 
-		for (let b = 0; b < forms[i].querySelectorAll('.jsInput[required]').length; b++) {
-			if (forms[i].querySelectorAll('.jsInput[required]')[b].value === '') {
-				ok = false;
-				forms[i].querySelectorAll('.jsInput[required]')[b].closest('.input ').classList.add('is-error')
-			}  else {
-				// forms[i].querySelectorAll('.jsInput[required]')[b].closest('.input ').classList.remove('is-error')
-			}
-		}
-
-		if (passEq.length){
-			if (
-				this.closest('.jsForm').querySelector('.jsInputPasswordEq--1').value ===
-				this.closest('.jsForm').querySelector('.jsInputPasswordEq--2').value
-
-				&&  this.closest('.jsForm').querySelector('.jsInputPasswordEq--1').value !== ''
-				&&  this.closest('.jsForm').querySelector('.jsInputPasswordEq--2').value !== ''
-			) {
-				ok = true
-				console.log(1)
-				for (let q = 0; q < passEq.length; q++) {
-					passEq[q].closest('.input').classList.remove('is-error');
-				}
-			} else  {
-				console.log(2)
-				ok = false
-				for (let q = 0; q < passEq.length; q++) {
-					passEq[q].closest('.input').classList.add('is-error');
+			for (let b = 0; b < forms[i].querySelectorAll('.jsInput[required]').length; b++) {
+				if (forms[i].querySelectorAll('.jsInput[required]')[b].value === '') {
+					ok = false;
+					forms[i].querySelectorAll('.jsInput[required]')[b].closest('.input ').classList.add('is-error')
+				}  else {
+					// forms[i].querySelectorAll('.jsInput[required]')[b].closest('.input ').classList.remove('is-error')
 				}
 			}
-		}
 
-		if (checkbox) {
-			if  (!checkbox.checked) {
-				checkbox.classList.add('is-empty');
-				ok = false
-			} else  {
-				checkbox.classList.remove('is-empty')
+			if (passEq.length){
+				if (
+						this.closest('.jsForm').querySelector('.jsInputPasswordEq--1').value ===
+						this.closest('.jsForm').querySelector('.jsInputPasswordEq--2').value
+
+						&&  this.closest('.jsForm').querySelector('.jsInputPasswordEq--1').value !== ''
+						&&  this.closest('.jsForm').querySelector('.jsInputPasswordEq--2').value !== ''
+				) {
+					ok = true
+					console.log(1)
+					for (let q = 0; q < passEq.length; q++) {
+						passEq[q].closest('.input').classList.remove('is-error');
+					}
+				} else  {
+					console.log(2)
+					ok = false
+					for (let q = 0; q < passEq.length; q++) {
+						passEq[q].closest('.input').classList.add('is-error');
+					}
+				}
 			}
-		}
 
-		if (ok && this.closest('.jsForm').querySelectorAll('.input.is-error').length == 0 ) {
-
-			if (!this.closest('.jsForm').classList.contains('form-with-success')) {
-				this.closest('.jsForm').submit();
-			} else {
-				this.closest('.jsForm').querySelector('.jsFormFront').classList.add('is-hidden');
-				this.closest('.jsForm').querySelector('.jsFormSuccess').classList.add('is-visible');
+			if (checkbox) {
+				if  (!checkbox.checked) {
+					checkbox.classList.add('is-empty');
+					ok = false
+				} else  {
+					checkbox.classList.remove('is-empty')
+				}
 			}
-		}
 
-	})
+			if (ok && this.closest('.jsForm').querySelectorAll('.input.is-error').length == 0 ) {
+
+				if (!this.closest('.jsForm').classList.contains('form-with-success')) {
+					this.closest('.jsForm').submit();
+				} else {
+					this.closest('.jsForm').querySelector('.jsFormFront').classList.add('is-hidden');
+					this.closest('.jsForm').querySelector('.jsFormSuccess').classList.add('is-visible');
+				}
+			}
+
+		})
+	}
 
 }
