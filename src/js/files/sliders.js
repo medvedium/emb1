@@ -7,7 +7,8 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from 'swiper'
+// import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper from "swiper/bundle";
 // import Swiper from "swiper/bundle";
 /*
 Основниые модули слайдера:
@@ -44,101 +45,39 @@ function initSliders() {
 	// Перечень слайдеров
 	if (document.querySelector('.product-hero-track__slider')) {
 		new Swiper('.product-hero-track__slider', {
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation],
-			/*
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-			// observer: true,
-			// observeParents: true,
+			// modules: [Navigation],
 			slidesPerView: 4,
 			spaceBetween: 12,
-			autoHeight: true,
+			slidesPerGroup: 1,
+			// autoHeight: true,
 			speed: 800,
 			direction: 'vertical',
 			mousewheel: {
 				sensitivity: 1
 			},
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
-			// Arrows
 			navigation: {
 				prevEl: '.product-hero-prev',
 				nextEl: '.product-hero-next'
 			},
-			/*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
 			on: {}
 		})
 	}
 	if (document.querySelector('.product-hero__slider')) {
 		new Swiper('.product-hero__slider', {
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation, Pagination],
-			effect: 'slide',
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
-			observer: true,
-			observeParents: true,
+			// modules: [Navigation, Pagination],
+			effect: "slide",
+			speed: 500,
 			slidesPerView: 1,
+			slidesPerGroup: 1,
 			spaceBetween: 0,
-			// autoHeight: true,
-			// speed: 800,
-			//
-			// navigation: {
-			// 	nextEl: '.product-hero-main-next',
-			// 	prevEl: '.product-hero-main-prev',
-			// },
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-			// Dotts
-			// pagination: {
-			// 	el: '.product-hero__dots',
-			// 	// clickable: true,
-			// },
-			// Arrows
-			// navigation: {
-			// 	nextEl: '.about__more .more__item_next',
-			// 	prevEl: '.about__more .more__item_prev',
-			// },
+			navigation: {
+				nextEl: '.product-hero-main-next',
+				prevEl: '.product-hero-main-prev',
+			},
+			pagination: {
+				el: '.product-hero__dots',
+				type: 'fraction'
+			},
 			thumbs: {
 				swiper: {
 					el: '.product-hero-track__slider'

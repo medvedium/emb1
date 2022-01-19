@@ -1,11 +1,13 @@
 .product {
 	&__inner {
-		display: grid;
-		grid-column-gap: 32px;
 		grid-template:
 			'code code code'
 			'hero info control'
 			'tabs tabs tabs';
+		//max-width: calc(100vw - 16px);
+		width: 100%;
+		display: grid;
+		grid-column-gap: 32px;
 		grid-template-rows: repeat(3, min-content);
 		grid-template-columns: percent(528, 1312) repeat(2, 1fr);
 
@@ -13,11 +15,11 @@
 			grid-template-columns: percent(464, 1400) repeat(2, 1fr);
 		}
 		@include below(1200px) {
-			gap: 16px;
 			grid-template-areas:
 				'code code code'
 				'hero control info'
 				'tabs tabs tabs';
+			column-gap: 16px;
 		}
 		@include below(1100px) {
 			grid-template-columns: 227px repeat(2, 1fr);
@@ -32,13 +34,7 @@
 			grid-template-rows: min-content 412px 88px min-content;
 		}
 		@include below(680px) {
-			grid-template:
-				'code'
-				'hero'
-				'info'
-				'control'
-				'tabs';
-			grid-template-columns: 1fr;
+			display: block;
 		}
 	}
 

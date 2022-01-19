@@ -1,6 +1,12 @@
 .product {
 	// .product__info
 	&__info {
+		@include below(960px) {
+			height: 88px;
+		}
+		@include below(680px) {
+			margin-bottom: 16px;
+		}
 	}
 }
 
@@ -9,6 +15,12 @@
 	background-color: $white;
 	border: 1px solid #f7f8fa;
 	border-radius: 4px;
+
+	@include below(960px) {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
 	// .product-info__properties
 	&__properties {
 	}
@@ -22,6 +34,13 @@
 
 	// .product-info__buttons
 	&__buttons {
+		width: 100%;
+	}
+
+	@include below(960px) {
+		//display: flex;
+		//align-items: center;
+		//justify-content: center;
 	}
 }
 
@@ -31,16 +50,16 @@
 		position: relative;
 
 		&:not(:last-child) {
-			margin-right: 32px;
+			//margin-right: 32px;
 		}
 
 		&:hover .product-info__popup {
+			display: none;
 			opacity: 1;
 			visibility: visible;
 			width: 318px;
 			left: 12px;
 			top: -10px;
-			//display: block;
 			transform: translate(-50%, -100%) scale(1);
 		}
 	}
