@@ -179,3 +179,9 @@
 .favourite-add.is-active .icon {
 	fill: $blue;
 }
+
+.product-control__buttons {
+	@include below(444px) {
+		flex-direction: column;
+	}
+}
