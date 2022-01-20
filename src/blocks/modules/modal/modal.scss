@@ -200,6 +200,27 @@
 			flex: 0 0 100%;
 		}
 	}
+
+	&--review {
+		.input-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 16px;
+
+			@include below(550px) {
+				grid-template-columns: 1fr;
+			}
+		}
+		textarea {
+			width: 100%;
+			min-height: 110px;
+			padding: 16px;
+
+			& + .input__placeholder {
+				top: 25px;
+			}
+		}
+	}
 }
 
 .modal-backdrop--transparent {
