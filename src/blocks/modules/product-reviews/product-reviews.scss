@@ -98,11 +98,18 @@
 	}
 
 	&-stars {
-		display: flex;
-		flex-direction: column;
+		//display: flex;
+		//flex-direction: column;
 		&__text {
-			font-size: 12px;
 			color: $gray-4;
+			font-size: 12px;
+		}
+		&__item {
+			fill: $gray-2;
+
+			&_active {
+				fill: $active-star;
+			}
 		}
 	}
 

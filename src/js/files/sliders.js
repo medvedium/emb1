@@ -43,8 +43,8 @@ function bildSliders() {
 function initSliders() {
 	bildSliders()
 	// Перечень слайдеров
-	if (document.querySelector('.product-hero-track__slider')) {
-		new Swiper('.product-hero-track__slider', {
+	if (document.querySelector('.product-hero-track__slider--equipment')) {
+		new Swiper('.product-hero-track__slider--equipment', {
 			slidesPerView: 4,
 			spaceBetween: 12,
 			slidesPerGroup: 1,
@@ -60,8 +60,8 @@ function initSliders() {
 			on: {}
 		})
 	}
-	if (document.querySelector('.product-hero__slider')) {
-		new Swiper('.product-hero__slider', {
+	if (document.querySelector('.product-hero__slider--equipment')) {
+		new Swiper('.product-hero__slider--equipment', {
 			effect: "slide",
 			speed: 500,
 			slidesPerView: 1,
@@ -78,6 +78,53 @@ function initSliders() {
 			thumbs: {
 				swiper: {
 					el: '.product-hero-track__slider'
+				}
+			},
+
+			breakpoints: {
+				1100: {
+					navigation: false
+				}
+			},
+
+			on: {}
+		})
+	}
+	if (document.querySelector('.product-hero-track__slider--flizelin')) {
+		new Swiper('.product-hero-track__slider--flizelin', {
+			slidesPerView: 3,
+			spaceBetween: 12,
+			slidesPerGroup: 1,
+			speed: 800,
+			direction: 'vertical',
+			mousewheel: {
+				sensitivity: 1
+			},
+			navigation: {
+				prevEl: '.product-hero-prev',
+				nextEl: '.product-hero-next'
+			},
+			on: {}
+		})
+	}
+	if (document.querySelector('.product-hero__slider--flizelin')) {
+		new Swiper('.product-hero__slider--flizelin', {
+			effect: "slide",
+			speed: 500,
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: '.product-hero-main-next',
+				prevEl: '.product-hero-main-prev',
+			},
+			pagination: {
+				el: '.product-hero__dots',
+				type: 'fraction'
+			},
+			thumbs: {
+				swiper: {
+					el: '.product-hero-track__slider--flizelin'
 				}
 			},
 

@@ -3,6 +3,9 @@
 	&__info {
 		@include below(960px) {
 			height: 88px;
+			&--flizelin {
+				display: none;
+			}
 		}
 		@include below(680px) {
 			margin-bottom: 16px;
@@ -21,6 +24,7 @@
 		display: flex;
 		align-items: center;
 	}
+
 	// .product-info__properties
 	&__properties {
 	}
