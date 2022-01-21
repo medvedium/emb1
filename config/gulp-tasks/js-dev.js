@@ -40,7 +40,6 @@ webPackConfigBeautify.output = {
 	filename: 'app.js',
 	publicPath: '/',
 }
-webPackConfigBeautify.plugins = [];
 
 export const jsDev = () => {
 	return app.gulp.src(app.path.src.js)

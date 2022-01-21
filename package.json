@@ -7,7 +7,6 @@
 	"license": "GNU General Public License (GPL)",
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
 		"build": "gulp build --build",
 		"sprite": "gulp sprite",

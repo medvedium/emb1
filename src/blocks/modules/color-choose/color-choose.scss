@@ -37,13 +37,40 @@
 	}
 }
 
-.search-header {
-	// .search-header__button
-	&__button {
-	}
+.search-color {
+		//background-color: rgba(7, 7, 7, 0.03);
+		border-radius: rem(3);
+		position: relative;
+		border: 1px solid rgba(4, 4, 4, 0.5);
+		@media (min-width: $tablet) {
+			max-width: rem(377);
+		}
 
-	// .search-header__input
+	// .search-color__button
+	&__button {
+		position: absolute;
+		background-color: transparent;
+		height: rem(41);
+		width: rem(41);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: rem(8);
+		font-size: rem(14);
+		color: rgba(0, 0, 0, 0.5);
+	}
+	// .search-color__input
 	&__input {
+		width: 100%;
+		background-color: transparent;
+		border-radius: rem(3);
+		height: rem(41);
+		color: $mainColor;
+		padding: 0px rem(20) 0px rem(50);
+		&::placeholder {
+			color: rgba(0, 0, 0, 0.5);
+		}
 	}
 }
 
@@ -137,3 +164,6 @@
 	}
 }
 
+.color-choose {
+
+}

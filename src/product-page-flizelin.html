@@ -235,18 +235,13 @@
 							<div class="product-tabs__body">
 								<div class="color-choose">
 									<div class="color-choose__controls d-flex">
-										<form action="#" class="color-choose__search">
-											<label>
-												<button type="submit" class="search-header__button _icon-search"></button>
-												<input
-													autocomplete="off"
-													type="text"
-													name="form[]"
-													data-error="Ошибка"
-													placeholder="Поиск"
-													class="search-header__input"
-												/>
-											</label>
+										<form action="#" class="color-choose__search search-color">
+											<button type="submit" class="search-color__button">
+												<svg class="icon icon--sm icon--blue">
+													<use xlink:href="img/icons/icons.svg#search"></use>
+												</svg>
+											</button>
+											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search-color__input">
 										</form>
 										<div class="color-choose__sorting d-flex" id="sorting">
 											<div class="color-choose__sorting-title">
