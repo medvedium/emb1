@@ -115,6 +115,49 @@
 	}
 	&._select-checkbox {
 	}
+
+	&_color-choose__select {
+		width: 100%;
+		max-width: 200px;
+		height: 44px;
+
+		&:not(:last-child) {
+			margin-right: rem(24);
+		}
+
+		.select-body {
+			height: rem(44);
+		}
+		.select__title {
+			border-color: $gray-2;
+		}
+		.select__value {
+			//height: 100%;
+			height: rem(44);
+			white-space: nowrap;
+			&::before {
+				font-size: 8px;
+				color: $blue;
+				@extend %ic;
+				content: '\e900';
+			}
+
+			@include below($mobile) {
+				padding: 0 10px;
+			}
+		}
+		.select__options {
+			border-color: $gray-2;
+		}
+		.select__option {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #fff;
+					color: $blue;
+				}
+			}
+		}
+	}
 }
 
 // Тег
