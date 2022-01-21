@@ -1,6 +1,7 @@
 .color-choose {
 	// .color-choose__controls
 	&__controls {
+		padding: 16px 0;
 	}
 
 	// .color-choose__search
@@ -17,10 +18,14 @@
 
 	// .color-choose__heading
 	&__heading {
+		display: grid;
+		grid-template-columns: 5fr repeat(5, 2fr);
+		padding: 16px 0;
 	}
 
 	// .color-choose__heading-item
 	&__heading-item {
+		font-weight: 700;
 	}
 
 	// .color-choose__inner
@@ -43,44 +48,92 @@
 }
 
 .item-color {
+	display: grid;
+	grid-template-columns: 5fr repeat(5, 2fr);
+	padding: 16px 0 24px 0;
+	border-top: 1px solid $gray-2;
 	// .item-color__title
 	&__title {
+		display: grid;
+		grid-template-columns: 56px 1fr;
+		grid-template-rows: repeat(3, 1fr);
+		column-gap: 16px;
 	}
 
 	// .item-color__img
 	&__img {
 		width: 56px;
 		height: 56px;
-		background-color: #70b2e2;
-		border-radius: 4px;
+		border: 1px solid $gray-2;
+		border-radius: 4px;grid-row: 1 / 4;
+		align-content: center;
 	}
 
 	// .item-color__code
 	&__code {
+		color: $gray-1;
+		font-size: 14px;
+		line-height: em(16, 14);
 	}
 
 	// .item-color__name
 	&__name {
+		line-height: 1;
 	}
 
 	// .item-color__availability
 	&__availability {
+		line-height: 16px;
+		font-size: 14px;
+
+		&.delivery {
+			color: $status-delivery;
+		}
+		&.available {
+			color: $status-available;
+		}
+		&.order {
+			color: $status-order;
+		}
 	}
 
 	// .item-color__width
 	&__width {
+		align-self: center;
 	}
 
 	// .item-color__length
 	&__length {
+		align-self: center;
 	}
 
 	// .item-color__meter-price
 	&__meter-price {
+		align-self: center;
 	}
 
 	// .item-color__roll-price
 	&__roll-price {
+		align-self: center;
+		display: flex;
+		align-items: center;
+	}
+
+	// .item-color__roll-price-tip
+	&__roll-price-tip {
+		margin-left: 4px;
+		margin-bottom: 3px;
+	}
+
+	// .item-color__roll-price-info
+	&__roll-price-info {
+		display: none;
+	}
+	// .item-color__btn
+	&__btn {
+		justify-self: end;
+		width: 154px;
+		margin-top: 10px;
 	}
 }
 
