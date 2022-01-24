@@ -4,6 +4,7 @@
 	color: $dark;
 	text-decoration: none;
 	cursor: pointer;
+	transition: color .2s linear;
 
 	&__text {
 		transition: color 0.2s ease;

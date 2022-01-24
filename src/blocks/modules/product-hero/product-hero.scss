@@ -119,6 +119,37 @@
 			height: 100%;
 			object-fit: contain;
 		}
+		
+		&.video {
+			position: relative;
+			filter: brightness(0.7);
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background-color: rgba(0, 0, 0, 0.5);
+				transform: translate(-50%, -50%);
+			}
+
+			&::after {
+				content: '';
+				width: 0;
+				height: 0;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 10px solid $white;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
 	}
 
 	&__nav {
