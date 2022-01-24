@@ -53,18 +53,24 @@
 		cursor: pointer;
 		position: relative;
 
-		&:not(:last-child) {
-			//margin-right: 32px;
+		span {
+			transition: color .2s linear;
 		}
 
-		&:hover .product-info__popup {
-			display: none;
-			opacity: 1;
-			visibility: visible;
-			width: 318px;
-			left: 12px;
-			top: -10px;
-			transform: translate(-50%, -100%) scale(1);
+		&:hover {
+			span {
+				color: $blue;
+			}
+
+			.product-info__popup {
+				//display: none;
+				opacity: 1;
+				visibility: visible;
+				width: 318px;
+				left: 12px;
+				top: -10px;
+				transform: translate(-50%, -100%) scale(1);
+			}
 		}
 	}
 }

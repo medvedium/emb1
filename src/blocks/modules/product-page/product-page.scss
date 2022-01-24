@@ -11,6 +11,14 @@
 		grid-template-rows: repeat(3, min-content);
 		grid-template-columns: percent(528, 1312) repeat(2, 1fr);
 
+		&.other-order {
+			grid-template:
+			'code code code'
+			'hero control info'
+			'tabs tabs tabs';
+			grid-template-columns: percent(528, 1312) repeat(2, 1fr);
+		}
+
 		@include below(1260px) {
 			grid-template-columns: percent(464, 1400) repeat(2, 1fr);
 		}
