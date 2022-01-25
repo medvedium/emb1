@@ -128,6 +128,10 @@
 		visibility: visible;
 		left: 10px;
 		top: -10px;
+
+		@media (max-width: 680px) {
+			transform: translate(0, -100%) scale(1);
+		}
 	}
 	svg {
 		fill: $blue;

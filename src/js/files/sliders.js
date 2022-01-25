@@ -57,7 +57,8 @@ function initSliders() {
 				prevEl: '.product-hero-prev',
 				nextEl: '.product-hero-next'
 			},
-			on: {}
+			on: {
+			}
 		})
 	}
 	if (document.querySelector('.product-hero__slider--equipment')) {

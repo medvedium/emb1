@@ -163,3 +163,35 @@ if (recentSlider) {
 		},
 	});
 }
+
+const complectSlider = document.querySelector('.jsComplectSliderInner')
+let complectSliderInit
+
+if (complectSlider) {
+
+	complectSliderInit = new Swiper('.jsComplectSliderInner', {
+		slidesPerView: 2,
+		loop: false,
+		scrollbar: {
+			el: '.jsComplectSliderScroll',
+		},
+		navigation: {
+			nextEl: '.jsComplectSliderBtnNext',
+			prevEl: '.jsComplectSliderBtnPrev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				scrollbar: false,
+			},
+			1024: {
+				slidesPerView: 4,
+				scrollbar: false,
+			},
+			1600: {
+				slidesPerView: 5,
+				scrollbar: false,
+			},
+		},
+	});
+}
