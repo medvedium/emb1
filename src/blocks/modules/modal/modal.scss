@@ -63,6 +63,24 @@
 				max-width: 368px;
 			}
 		}
+
+		&--ml {
+			@include above(424px) {
+				max-width: 100%;
+			}
+			@include above(576px) {
+				max-width: 726px;
+			}
+		}
+
+		&--xxl {
+			@include above(424px) {
+				max-width: 100%;
+			}
+			@include above(576px) {
+				max-width: 900px;
+			}
+		}
 	}
 
 	&-body {
@@ -229,6 +247,14 @@
 
 		}
 
+	}
+
+	&--analog {
+		.modal-body {
+			@include below(574px) {
+				padding: 16px;
+			}
+		}
 	}
 }
 

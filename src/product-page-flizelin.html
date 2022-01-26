@@ -43,7 +43,7 @@
 					<div class="container">
 						<h1 class="h1 mb-2">Вышивальная машина Aurora SM-801 (36*20)</h1>
 
-						<div class="product__inner product__inner--flizelin">
+						<div class="product__inner product__inner--flizelin other-order">
 							<div class="product__code mb-5 text--sm">Код товара: 648494</div>
 
 							<div class="product__hero product-hero product-hero--flizelin">
@@ -149,7 +149,7 @@
 											<div class="product-properties__value text--xl text--bold">1 817 ₽</div>
 										</li>
 									</ul>
-									<button class="button button--wide" data-bs-toggle="modal" data-bs-target="#">
+									<button class="button button--wide button--fill" data-bs-toggle="modal" data-bs-target="#">
 										Выбрать цвет и размер
 									</button>
 								</div>
@@ -216,8 +216,8 @@
 										</li>
 									</ul>
 
-									<div class="product-info__details">
-										<a href="#">Подробнее ›</a>
+									<div class="product-info__details jsProductMore">
+										<a href="#" data-goto=".product-tabs">Подробнее ›</a>
 									</div>
 								</div>
 							</div>
@@ -250,28 +250,49 @@
 														class="search-color__input"
 													/>
 												</form>
-												<div class="color-choose__sorting" id="sorting">
-													<div class="color-choose__sorting-title">Сортировка:</div>
-													<select name="color" class="color-choose__select">
-														<option value="1" selected>Цвет</option>
-														<option value="2">Пункт №2</option>
-														<option value="3">Пункт №3</option>
-														<option value="4">Пункт №4</option>
-													</select>
+												<div class="color-choose__sorting-toggler d-flex d-md-none jsColorChooseToggle">
+													<span class="mr-2">Сортировка</span>
+													<svg class="icon icon--md icon--blue">
+														<use xlink:href="img/icons/icons.svg#filter"></use>
+													</svg>
+												</div>
+												<div class="color-choose__sorting-wrap jsColorChooseWrap">
+													<div class="color-choose__sorting" id="sorting">
+														<div class="color-choose__sorting-title">Сортировка:</div>
+														<select name="color" class="color-choose__select">
+															<option value="1" selected>Цвет</option>
+															<option value="2">Пункт №2</option>
+															<option value="3">Пункт №3</option>
+															<option value="4">Пункт №4</option>
+															<option value="5">Пункт №5</option>
+															<option value="6">Пункт №6</option>
+															<option value="7">Пункт №7</option>
+															<option value="8">Пункт №8</option>
+															<option value="9">Пункт №9</option>
+															<option value="10">Пункт №10</option>
+														</select>
 
-													<select name="length" class="color-choose__select">
-														<option value="1" selected>Длина</option>
-														<option value="2">Пункт №2</option>
-														<option value="3">Пункт №3</option>
-														<option value="4">Пункт №4</option>
-													</select>
+														<select name="length" class="color-choose__select">
+															<option value="1" selected>Длина</option>
+															<option value="2">Пункт №2</option>
+															<option value="3">Пункт №3</option>
+															<option value="4">Пункт №4</option>
+														</select>
 
-													<select name="width" class="color-choose__select">
-														<option value="1" selected>Ширина</option>
-														<option value="2">Пункт №2</option>
-														<option value="3">Пункт №3</option>
-														<option value="4">Пункт №4</option>
-													</select>
+														<select name="width" class="color-choose__select">
+															<option value="1" selected>Ширина</option>
+															<option value="2">Пункт №2</option>
+															<option value="3">Пункт №3</option>
+															<option value="4">Пункт №4</option>
+														</select>
+
+														<button
+															type="submit"
+															class="button button--md button--border button--border--blue w-100 color-choose__submit d-md-none"
+														>
+															<span class="button__text text--md">Применить</span>
+														</button>
+													</div>
 												</div>
 											</div>
 											<div class="color-choose__heading">
@@ -334,7 +355,7 @@
 														</div>
 													</div>
 													<div class="item-color__buttons">
-														<div class="button button--md button--border button--hover-main item-color__btn">
+														<div class="button button--md button--border button--hover-main item-color__btn" data-bs-target="#flizelin-buy" data-bs-toggle="modal">
 															Купить
 														</div>
 													</div>
@@ -373,7 +394,7 @@
 														</div>
 													</div>
 													<div class="item-color__buttons">
-														<div class="button button--md button--border button--hover-main item-color__btn">
+														<div class="button button--md button--border button--hover-main item-color__btn" data-bs-target="#flizelin-buy" data-bs-toggle="modal">
 															Купить
 														</div>
 													</div>
@@ -412,10 +433,10 @@
 														</div>
 													</div>
 													<div class="item-color__buttons item-color__buttons--with-analog">
-														<div class="button button--md button--border button--hover-main item-color__btn">
+														<div class="button button--md button--border button--hover-main item-color__btn" data-bs-target="#flizelin-buy" data-bs-toggle="modal">
 															Купить
 														</div>
-														<button class="item-color__analog mt-2">
+														<button class="item-color__analog mt-2" data-bs-toggle="modal" data-bs-target="#flizelin-analog">
 															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#analog"></use>
 															</svg>
@@ -457,7 +478,7 @@
 														</div>
 													</div>
 													<div class="item-color__buttons">
-														<div class="button button--md button--border button--hover-main item-color__btn">
+														<div class="button button--md button--border button--hover-main item-color__btn" data-bs-target="#flizelin-buy" data-bs-toggle="modal">
 															Купить
 														</div>
 													</div>
@@ -496,7 +517,7 @@
 														</div>
 													</div>
 													<div class="item-color__buttons">
-														<div class="button button--md button--border button--hover-main item-color__btn">
+														<div class="button button--md button--border button--hover-main item-color__btn" data-bs-target="#flizelin-buy" data-bs-toggle="modal">
 															Купить
 														</div>
 													</div>
@@ -535,7 +556,7 @@
 														</div>
 													</div>
 													<div class="item-color__buttons">
-														<div class="button button--md button--border button--hover-main item-color__btn">
+														<div class="button button--md button--border button--hover-main item-color__btn" data-bs-target="#flizelin-buy" data-bs-toggle="modal">
 															Купить
 														</div>
 													</div>
@@ -588,1412 +609,1308 @@
 										</div>
 									</div>
 									<div class="product-tabs__body">
-										<section class="section">
-											<div class="container">
-												<div class="recent-block jsTabs">
-													<div class="slider recent-slider jsRecentSlider">
-														<div class="swiper recent-slider__inner jsRecentSliderInner">
-															<div class="swiper-wrapper recent-slider__wrap">
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/1.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
+										<div class="common-block">
+											<div class="slider common-slider jsOptionalEquipmentSlider">
+												<div class="swiper common-slider__inner jsOptionalEquipmentSliderInner">
+													<div class="swiper-wrapper common-slider__wrap">
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/1.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
 
-																			<span class="card-product__colors">
-																				<span class="product-colors">
-																					<span class="product-colors__row">
-																						<span class="product-colors__col">
-																							<span
-																								class="product-color"
-																								style="background-color: #ffffff; border: 1px solid #c8cbce"
-																							></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #2d9cdb"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #219653"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #0c131d"></span>
-																						</span>
-																					</span>
+																	<span class="card-product__colors">
+																		<span class="product-colors">
+																			<span class="product-colors__row">
+																				<span class="product-colors__col">
+																					<span
+																						class="product-color"
+																						style="background-color: #ffffff; border: 1px solid #c8cbce"
+																					></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #2d9cdb"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #219653"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #0c131d"></span>
 																				</span>
 																			</span>
-																		</a>
+																		</span>
+																	</span>
+																</a>
 
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
 																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
 																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
 																		</div>
 																	</div>
 																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/3.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">300 цветов</span>
-																			</span>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/3.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">300 цветов</span>
+																	</span>
 
-																			<span class="card-product__colors">
-																				<span class="label label--gray">300 цветов</span>
-																			</span>
+																	<span class="card-product__colors">
+																		<span class="label label--gray">300 цветов</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
 																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
 																		</div>
 																	</div>
 																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/2.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__colors">
-																				<span class="product-colors">
-																					<span class="product-colors__row">
-																						<span class="product-colors__col">
-																							<span
-																								class="product-color"
-																								style="background-color: #ffffff; border: 1px solid #c8cbce"
-																							></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #eb5757"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #f2994a"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #219653"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #2f80ed"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #9b51e0"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #f2c94c"></span>
-																						</span>
-																					</span>
-																					<span class="product-colors__btn-wrap">
-																						<span class="product-colors__btn"></span>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/2.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__colors">
+																		<span class="product-colors">
+																			<span class="product-colors__row">
+																				<span class="product-colors__col">
+																					<span
+																						class="product-color"
+																						style="background-color: #ffffff; border: 1px solid #c8cbce"
+																					></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #eb5757"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #f2994a"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #219653"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #2f80ed"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #9b51e0"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #f2c94c"></span>
+																				</span>
+																			</span>
+																			<span class="product-colors__btn-wrap">
+																				<span class="product-colors__btn"></span>
 
-																						<span class="product-colors__body">
-																							<span class="product-colors__body-inner">
-																								<span class="product-colors__row product-colors__row--dropdown">
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #c4e0a6"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #90a4af"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #8ac44b"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #7a5648"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #8ac44b"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #2d9cdb"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #9b51e0"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #f2994a"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #9b51e0"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #f2c94c"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #eb5757"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #f2994a"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #219653"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #2f80ed"
-																										></span>
-																									</span>
-																								</span>
+																				<span class="product-colors__body">
+																					<span class="product-colors__body-inner">
+																						<span class="product-colors__row product-colors__row--dropdown">
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #c4e0a6"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #90a4af"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #8ac44b"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #7a5648"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #8ac44b"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #2d9cdb"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #9b51e0"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #f2994a"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #9b51e0"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #f2c94c"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #eb5757"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #f2994a"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #219653"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #2f80ed"></span>
 																							</span>
 																						</span>
 																					</span>
 																				</span>
 																			</span>
+																		</span>
+																	</span>
+																</a>
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+																			<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
 																		</a>
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин
-																					</div>
-																					<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">Цена</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">по запросу</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Запросить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">Цена</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">по запросу</span>
 																		</div>
 																	</div>
-																</div>
-
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/1.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Запросить</span>
+																			</a>
 																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/3.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/2.jpg" alt="" class="card-product__img" />
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин
-																					</div>
-																					<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">Цена</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">по запросу</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Запросить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/3.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/2.jpg" alt="" class="card-product__img" />
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин
-																					</div>
-																					<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">Цена</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">по запросу</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Запросить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="slider__nav recent-slider__nav">
-															<div class="slider__btn slider__btn--prev jsRecentSliderBtnPrev">
-																<svg class="icon icon--arrow icon--lg slider__btn-icon">
-																	<use xlink:href="img/icons/icons.svg#arrow-left"></use>
-																</svg>
-															</div>
-															<div class="slider__btn slider__btn--next jsRecentSliderBtnNext">
-																<svg class="icon icon--arrow icon--lg slider__btn-icon">
-																	<use xlink:href="img/icons/icons.svg#arrow-right"></use>
-																</svg>
+
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/1.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
 															</div>
 														</div>
-														<div class="slider__scroll recent-slider__scroll jsRecentSliderScroll"></div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/3.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/2.jpg" alt="" class="card-product__img" />
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+																			<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">Цена</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">по запросу</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Запросить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/3.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/2.jpg" alt="" class="card-product__img" />
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+																			<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">Цена</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">по запросу</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Запросить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
+												<div class="slider__nav common-slider__nav">
+													<div class="slider__btn slider__btn--prev jsOptionalEquipmentSliderBtnPrev">
+														<svg class="icon icon--arrow icon--lg slider__btn-icon">
+															<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+														</svg>
+													</div>
+													<div class="slider__btn slider__btn--next jsOptionalEquipmentSliderBtnNext">
+														<svg class="icon icon--arrow icon--lg slider__btn-icon">
+															<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="slider__scroll common-slider__scroll jsOptionalEquipmentSliderScroll"></div>
 											</div>
-										</section>
+										</div>
 									</div>
 									<div class="product-tabs__body">
-										<section class="section">
-											<div class="container">
-												<div class="recent-block jsTabs">
-													<div class="slider recent-slider jsRecentSlider">
-														<div class="swiper recent-slider__inner jsRecentSliderInner">
-															<div class="swiper-wrapper recent-slider__wrap">
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/1.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
+										<div class="common-block">
+											<div class="slider common-slider jsComplectSlider">
+												<div class="swiper common-slider__inner jsComplectSliderInner">
+													<div class="swiper-wrapper common-slider__wrap">
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/1.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
 
-																			<span class="card-product__colors">
-																				<span class="product-colors">
-																					<span class="product-colors__row">
-																						<span class="product-colors__col">
-																							<span
-																								class="product-color"
-																								style="background-color: #ffffff; border: 1px solid #c8cbce"
-																							></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #2d9cdb"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #219653"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #0c131d"></span>
-																						</span>
-																					</span>
+																	<span class="card-product__colors">
+																		<span class="product-colors">
+																			<span class="product-colors__row">
+																				<span class="product-colors__col">
+																					<span
+																						class="product-color"
+																						style="background-color: #ffffff; border: 1px solid #c8cbce"
+																					></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #2d9cdb"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #219653"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #0c131d"></span>
 																				</span>
 																			</span>
-																		</a>
+																		</span>
+																	</span>
+																</a>
 
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
 																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
 																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
 																		</div>
 																	</div>
 																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/3.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">300 цветов</span>
-																			</span>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/3.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">300 цветов</span>
+																	</span>
 
-																			<span class="card-product__colors">
-																				<span class="label label--gray">300 цветов</span>
-																			</span>
+																	<span class="card-product__colors">
+																		<span class="label label--gray">300 цветов</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
 																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
 																		</div>
 																	</div>
 																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/2.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__colors">
-																				<span class="product-colors">
-																					<span class="product-colors__row">
-																						<span class="product-colors__col">
-																							<span
-																								class="product-color"
-																								style="background-color: #ffffff; border: 1px solid #c8cbce"
-																							></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #eb5757"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #f2994a"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #219653"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #2f80ed"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #9b51e0"></span>
-																						</span>
-																						<span class="product-colors__col">
-																							<span class="product-color" style="background-color: #f2c94c"></span>
-																						</span>
-																					</span>
-																					<span class="product-colors__btn-wrap">
-																						<span class="product-colors__btn"></span>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/2.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__colors">
+																		<span class="product-colors">
+																			<span class="product-colors__row">
+																				<span class="product-colors__col">
+																					<span
+																						class="product-color"
+																						style="background-color: #ffffff; border: 1px solid #c8cbce"
+																					></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #eb5757"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #f2994a"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #219653"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #2f80ed"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #9b51e0"></span>
+																				</span>
+																				<span class="product-colors__col">
+																					<span class="product-color" style="background-color: #f2c94c"></span>
+																				</span>
+																			</span>
+																			<span class="product-colors__btn-wrap">
+																				<span class="product-colors__btn"></span>
 
-																						<span class="product-colors__body">
-																							<span class="product-colors__body-inner">
-																								<span class="product-colors__row product-colors__row--dropdown">
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #c4e0a6"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #90a4af"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #8ac44b"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #7a5648"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #8ac44b"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #2d9cdb"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #9b51e0"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #f2994a"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #9b51e0"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #f2c94c"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #eb5757"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #f2994a"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #219653"
-																										></span>
-																									</span>
-																									<span class="product-colors__col">
-																										<span
-																											class="product-color"
-																											style="background-color: #2f80ed"
-																										></span>
-																									</span>
-																								</span>
+																				<span class="product-colors__body">
+																					<span class="product-colors__body-inner">
+																						<span class="product-colors__row product-colors__row--dropdown">
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #c4e0a6"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #90a4af"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #8ac44b"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #7a5648"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #8ac44b"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #2d9cdb"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #9b51e0"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #f2994a"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #9b51e0"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #f2c94c"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #eb5757"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #f2994a"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #219653"></span>
+																							</span>
+																							<span class="product-colors__col">
+																								<span class="product-color" style="background-color: #2f80ed"></span>
 																							</span>
 																						</span>
 																					</span>
 																				</span>
 																			</span>
+																		</span>
+																	</span>
+																</a>
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+																			<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
 																		</a>
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин
-																					</div>
-																					<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">Цена</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">по запросу</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Запросить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">Цена</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">по запросу</span>
 																		</div>
 																	</div>
-																</div>
-
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/1.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Запросить</span>
+																			</a>
 																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/3.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/2.jpg" alt="" class="card-product__img" />
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин
-																					</div>
-																					<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">Цена</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">по запросу</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Запросить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/3.jpg" alt="" class="card-product__img" />
-																			<span class="card-product__labels">
-																				<span class="label">Распродажа</span>
-																			</span>
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин Gunold Solvy Fabric
-																					</div>
-																					<div class="text text--sm text--color--gray-4">
-																						62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
-																					</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 275 ₽/м</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
-																					<span
-																						class="text text--xs text--color--gray-4 text--strike card-product__price-old"
-																					>
-																						1 817 ₽
-																					</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Купить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="swiper-slide slider__slide recent-slider__slide">
-																	<div class="card-product">
-																		<a href="#" class="card-product__top">
-																			<img src="img/product/2.jpg" alt="" class="card-product__img" />
-
-																			<span class="card-product__colors">
-																				<span class="label label--gray">Распродажа</span>
-																			</span>
-																		</a>
-
-																		<div class="card-product__body">
-																			<div class="card-product__info">
-																				<a href="#" class="card-product__info-link">
-																					<div class="text text--sm text--color--dark mb-2">
-																						Водорастворимый флизелин
-																					</div>
-																					<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
-																				</a>
-																			</div>
-																			<div class="card-product__price">
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">Цена</span>
-																				</div>
-																				<div class="card-product__price-item">
-																					<span class="text text--sm text--bold">по запросу</span>
-																				</div>
-																			</div>
-																			<div class="card-product__buttons">
-																				<div class="card-product__buttons-left">
-																					<a
-																						href="#"
-																						class="button button--md button--border button--hover-main card-product__btn"
-																					>
-																						<span class="button__text">Запросить</span>
-																					</a>
-																				</div>
-																				<div class="card-product__buttons-right">
-																					<a href="#" class="card-product__favorite jsFavorite">
-																						<svg
-																							class="icon icon--md"
-																							width="20"
-																							height="20"
-																							viewBox="0 0 20 20"
-																							fill="none"
-																							xmlns="http://www.w3.org/2000/svg"
-																						>
-																							<path
-																								d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-																								stroke-linecap="round"
-																								stroke-linejoin="round"
-																							/>
-																						</svg>
-																					</a>
-																				</div>
-																			</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="slider__nav recent-slider__nav">
-															<div class="slider__btn slider__btn--prev jsRecentSliderBtnPrev">
-																<svg class="icon icon--arrow icon--lg slider__btn-icon">
-																	<use xlink:href="img/icons/icons.svg#arrow-left"></use>
-																</svg>
-															</div>
-															<div class="slider__btn slider__btn--next jsRecentSliderBtnNext">
-																<svg class="icon icon--arrow icon--lg slider__btn-icon">
-																	<use xlink:href="img/icons/icons.svg#arrow-right"></use>
-																</svg>
+
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/1.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
 															</div>
 														</div>
-														<div class="slider__scroll recent-slider__scroll jsRecentSliderScroll"></div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/3.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/2.jpg" alt="" class="card-product__img" />
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+																			<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">Цена</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">по запросу</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Запросить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/3.jpg" alt="" class="card-product__img" />
+																	<span class="card-product__labels">
+																		<span class="label">Распродажа</span>
+																	</span>
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">
+																				Водорастворимый флизелин Gunold Solvy Fabric
+																			</div>
+																			<div class="text text--sm text--color--gray-4">
+																				62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+																			</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 275 ₽/м</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+																			<span
+																				class="text text--xs text--color--gray-4 text--strike card-product__price-old"
+																			>
+																				1 817 ₽
+																			</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Купить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slider__slide common-slider__slide">
+															<div class="card-product">
+																<a href="#" class="card-product__top">
+																	<img src="img/product/2.jpg" alt="" class="card-product__img" />
+
+																	<span class="card-product__colors">
+																		<span class="label label--gray">Распродажа</span>
+																	</span>
+																</a>
+
+																<div class="card-product__body">
+																	<div class="card-product__info">
+																		<a href="#" class="card-product__info-link">
+																			<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+																			<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+																		</a>
+																	</div>
+																	<div class="card-product__price">
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">Цена</span>
+																		</div>
+																		<div class="card-product__price-item">
+																			<span class="text text--sm text--bold">по запросу</span>
+																		</div>
+																	</div>
+																	<div class="card-product__buttons">
+																		<div class="card-product__buttons-left">
+																			<a
+																				href="#"
+																				class="button button--md button--border button--hover-main card-product__btn"
+																			>
+																				<span class="button__text">Запросить</span>
+																			</a>
+																		</div>
+																		<div class="card-product__buttons-right">
+																			<a href="#" class="card-product__favorite jsFavorite">
+																				<svg
+																					class="icon icon--md"
+																					width="20"
+																					height="20"
+																					viewBox="0 0 20 20"
+																					fill="none"
+																					xmlns="http://www.w3.org/2000/svg"
+																				>
+																					<path
+																						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																					/>
+																				</svg>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
+												<div class="slider__nav common-slider__nav">
+													<div class="slider__btn slider__btn--prev jsComplectSliderBtnPrev">
+														<svg class="icon icon--arrow icon--lg slider__btn-icon">
+															<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+														</svg>
+													</div>
+													<div class="slider__btn slider__btn--next jsComplectSliderBtnNext">
+														<svg class="icon icon--arrow icon--lg slider__btn-icon">
+															<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="slider__scroll common-slider__scroll jsComplectSliderScroll"></div>
 											</div>
-										</section>
+										</div>
 									</div>
 									<div class="product-tabs__body">
 										<div class="text text--bold mb-3">Условия доставки</div>
@@ -2344,11 +2261,11 @@
 						<div class="section__header mb-3 mb-md-4">
 							<div class="h2 section__title">С этим товаром покупают</div>
 						</div>
-						<div class="recent-block jsTabs">
-							<div class="slider recent-slider jsRecentSlider">
-								<div class="swiper recent-slider__inner jsRecentSliderInner">
-									<div class="swiper-wrapper recent-slider__wrap">
-										<div class="swiper-slide slider__slide recent-slider__slide">
+						<div class="common-block">
+							<div class="slider common-slider jsSeeAlsoSlider">
+								<div class="swiper common-slider__inner jsSeeAlsoSliderInner">
+									<div class="swiper-wrapper common-slider__wrap">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/1.jpg" alt="" class="card-product__img" />
@@ -2432,7 +2349,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/3.jpg" alt="" class="card-product__img" />
@@ -2498,7 +2415,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/2.jpg" alt="" class="card-product__img" />
@@ -2629,7 +2546,7 @@
 											</div>
 										</div>
 
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/1.jpg" alt="" class="card-product__img" />
@@ -2695,7 +2612,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/3.jpg" alt="" class="card-product__img" />
@@ -2761,7 +2678,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/2.jpg" alt="" class="card-product__img" />
@@ -2814,7 +2731,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/3.jpg" alt="" class="card-product__img" />
@@ -2880,7 +2797,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide slider__slide recent-slider__slide">
+										<div class="swiper-slide slider__slide common-slider__slide">
 											<div class="card-product">
 												<a href="#" class="card-product__top">
 													<img src="img/product/2.jpg" alt="" class="card-product__img" />
@@ -2935,7 +2852,625 @@
 										</div>
 									</div>
 								</div>
-								<div class="slider__nav recent-slider__nav">
+								<div class="slider__nav common-slider__nav">
+									<div class="slider__btn slider__btn--prev jsSeeAlsoSliderBtnPrev">
+										<svg class="icon icon--arrow icon--lg slider__btn-icon">
+											<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+										</svg>
+									</div>
+									<div class="slider__btn slider__btn--next jsSeeAlsoSliderBtnNext">
+										<svg class="icon icon--arrow icon--lg slider__btn-icon">
+											<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="slider__scroll common-slider__scroll jsSeeAlsoSliderScroll"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--section	ENDS-->
+
+				@@include('blocks/modules/special/special.html')
+
+				<!--section	-->
+				<section class="section">
+					<div class="container">
+						<div class="section__header mb-3 mb-md-4">
+							<div class="h2 section__title">Вы недавно смотрели</div>
+						</div>
+						<div class="common-block">
+							<div class="slider common-slider jsRecentSlider">
+								<div class="swiper common-slider__inner jsRecentSliderInner">
+									<div class="swiper-wrapper common-slider__wrap">
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/1.jpg" alt="" class="card-product__img" />
+													<span class="card-product__labels">
+														<span class="label">Распродажа</span>
+													</span>
+
+													<span class="card-product__colors">
+														<span class="product-colors">
+															<span class="product-colors__row">
+																<span class="product-colors__col">
+																	<span
+																		class="product-color"
+																		style="background-color: #ffffff; border: 1px solid #c8cbce"
+																	></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #2d9cdb"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #219653"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #0c131d"></span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">
+																Водорастворимый флизелин Gunold Solvy Fabric
+															</div>
+															<div class="text text--sm text--color--gray-4">
+																62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+															</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 275 ₽/м</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Купить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/3.jpg" alt="" class="card-product__img" />
+													<span class="card-product__labels">
+														<span class="label">300 цветов</span>
+													</span>
+
+													<span class="card-product__colors">
+														<span class="label label--gray">300 цветов</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">
+																Водорастворимый флизелин Gunold Solvy Fabric
+															</div>
+															<div class="text text--sm text--color--gray-4">
+																62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+															</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 275 ₽/м</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Купить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/2.jpg" alt="" class="card-product__img" />
+													<span class="card-product__colors">
+														<span class="product-colors">
+															<span class="product-colors__row">
+																<span class="product-colors__col">
+																	<span
+																		class="product-color"
+																		style="background-color: #ffffff; border: 1px solid #c8cbce"
+																	></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #eb5757"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #f2994a"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #219653"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #2f80ed"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #9b51e0"></span>
+																</span>
+																<span class="product-colors__col">
+																	<span class="product-color" style="background-color: #f2c94c"></span>
+																</span>
+															</span>
+															<span class="product-colors__btn-wrap">
+																<span class="product-colors__btn"></span>
+
+																<span class="product-colors__body">
+																	<span class="product-colors__body-inner">
+																		<span class="product-colors__row product-colors__row--dropdown">
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #c4e0a6"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #90a4af"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #8ac44b"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #7a5648"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #8ac44b"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #2d9cdb"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #9b51e0"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #f2994a"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #9b51e0"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #f2c94c"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #eb5757"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #f2994a"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #219653"></span>
+																			</span>
+																			<span class="product-colors__col">
+																				<span class="product-color" style="background-color: #2f80ed"></span>
+																			</span>
+																		</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</a>
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+															<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">Цена</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">по запросу</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Запросить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/1.jpg" alt="" class="card-product__img" />
+													<span class="card-product__labels">
+														<span class="label">Распродажа</span>
+													</span>
+
+													<span class="card-product__colors">
+														<span class="label label--gray">Распродажа</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">
+																Водорастворимый флизелин Gunold Solvy Fabric
+															</div>
+															<div class="text text--sm text--color--gray-4">
+																62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+															</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 275 ₽/м</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Купить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/3.jpg" alt="" class="card-product__img" />
+													<span class="card-product__labels">
+														<span class="label">Распродажа</span>
+													</span>
+
+													<span class="card-product__colors">
+														<span class="label label--gray">Распродажа</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">
+																Водорастворимый флизелин Gunold Solvy Fabric
+															</div>
+															<div class="text text--sm text--color--gray-4">
+																62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+															</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 275 ₽/м</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Купить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/2.jpg" alt="" class="card-product__img" />
+
+													<span class="card-product__colors">
+														<span class="label label--gray">Распродажа</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+															<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">Цена</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">по запросу</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Запросить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/3.jpg" alt="" class="card-product__img" />
+													<span class="card-product__labels">
+														<span class="label">Распродажа</span>
+													</span>
+
+													<span class="card-product__colors">
+														<span class="label label--gray">Распродажа</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">
+																Водорастворимый флизелин Gunold Solvy Fabric
+															</div>
+															<div class="text text--sm text--color--gray-4">
+																62 г/м², 50×42 см, 30×40 см, 40×50 см, Китай
+															</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 275 ₽/м</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">от 10 817 ₽/рул</span>
+															<span class="text text--xs text--color--gray-4 text--strike card-product__price-old">
+																1 817 ₽
+															</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Купить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide slider__slide common-slider__slide">
+											<div class="card-product">
+												<a href="#" class="card-product__top">
+													<img src="img/product/2.jpg" alt="" class="card-product__img" />
+
+													<span class="card-product__colors">
+														<span class="label label--gray">Распродажа</span>
+													</span>
+												</a>
+
+												<div class="card-product__body">
+													<div class="card-product__info">
+														<a href="#" class="card-product__info-link">
+															<div class="text text--sm text--color--dark mb-2">Водорастворимый флизелин</div>
+															<div class="text text--sm text--color--gray-4">62 г/м², 50×42 см, Китай</div>
+														</a>
+													</div>
+													<div class="card-product__price">
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">Цена</span>
+														</div>
+														<div class="card-product__price-item">
+															<span class="text text--sm text--bold">по запросу</span>
+														</div>
+													</div>
+													<div class="card-product__buttons">
+														<div class="card-product__buttons-left">
+															<a href="#" class="button button--md button--border button--hover-main card-product__btn">
+																<span class="button__text">Запросить</span>
+															</a>
+														</div>
+														<div class="card-product__buttons-right">
+															<a href="#" class="card-product__favorite jsFavorite">
+																<svg
+																	class="icon icon--md"
+																	width="20"
+																	height="20"
+																	viewBox="0 0 20 20"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path
+																		d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																	/>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__nav common-slider__nav">
 									<div class="slider__btn slider__btn--prev jsRecentSliderBtnPrev">
 										<svg class="icon icon--arrow icon--lg slider__btn-icon">
 											<use xlink:href="img/icons/icons.svg#arrow-left"></use>
@@ -2947,14 +3482,12 @@
 										</svg>
 									</div>
 								</div>
-								<div class="slider__scroll recent-slider__scroll jsRecentSliderScroll"></div>
+								<div class="slider__scroll common-slider__scroll jsRecentSliderScroll"></div>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--section	ENDS-->
-
-				@@include('blocks/modules/special/special.html') @@include('blocks/modules/recent-slider/recent-slider.html')
 
 				<section class="section">
 					<div class="container">
@@ -2971,21 +3504,21 @@
 											<div class="form__inner">
 												<div class="form__left">
 													<div class="input mb-2">
-														<input type="text" class="input__field" placeholder="Имя" required />
+														<input type="text" class="input__field" placeholder="Имя *" required />
 													</div>
 													<div class="input mb-2">
-														<input type="text" class="input__field" placeholder="Телефон" required />
+														<input type="text" class="input__field" placeholder="Телефон *" required />
 													</div>
 													<div class="input">
-														<input type="email" class="input__field" placeholder="Email" required />
+														<input type="email" class="input__field" placeholder="Email *" required />
 													</div>
 												</div>
 												<div class="form__right">
-													<div class="input input--textarea">
-														<textarea class="input__field" placeholder="Ваш вопрос"></textarea>
+													<div class="input input--textarea mb-2">
+														<textarea class="input__field" placeholder="Ваш вопрос *"></textarea>
 													</div>
 													<div class="form__footer">
-														<label class="checkbox form__checkbox">
+														<label class="checkbox form__checkbox mb-2">
 															<input type="checkbox" class="checkbox__input" required checked />
 															<span class="checkbox__custom"></span>
 															<span class="text--color--graphite checkbox__text">

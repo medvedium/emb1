@@ -40,7 +40,7 @@
 				'tabs tabs';
 			grid-template-columns: repeat(2, minmax(40%, 1fr));
 			grid-template-rows: min-content 412px 88px min-content;
-			&--flizelin {
+			&--flizelin.product__inner {
 				grid-template:
 			'code code'
 				'hero control'

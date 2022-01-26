@@ -195,3 +195,67 @@ if (complectSlider) {
 		},
 	});
 }
+
+const optionalEquipmentSlider = document.querySelector('.jsOptionalEquipmentSliderInner')
+let optionalEquipmentSliderInit
+
+if (optionalEquipmentSlider) {
+
+	optionalEquipmentSliderInit = new Swiper('.jsOptionalEquipmentSliderInner', {
+		slidesPerView: 2,
+		loop: false,
+		scrollbar: {
+			el: '.jsOptionalEquipmentSliderScroll',
+		},
+		navigation: {
+			nextEl: '.jsOptionalEquipmentSliderBtnNext',
+			prevEl: '.jsOptionalEquipmentSliderBtnPrev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				scrollbar: false,
+			},
+			1024: {
+				slidesPerView: 4,
+				scrollbar: false,
+			},
+			1600: {
+				slidesPerView: 5,
+				scrollbar: false,
+			},
+		},
+	});
+}
+
+const seeAlsoSlider = document.querySelector('.jsSeeAlsoSliderInner')
+let seeAlsoSliderInit
+
+if (seeAlsoSlider) {
+
+	seeAlsoSliderInit = new Swiper('.jsSeeAlsoSliderInner', {
+		slidesPerView: 2,
+		loop: false,
+		scrollbar: {
+			el: '.jsSeeAlsoSliderScroll',
+		},
+		navigation: {
+			nextEl: '.jsSeeAlsoSliderBtnNext',
+			prevEl: '.jsSeeAlsoSliderBtnPrev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				scrollbar: false,
+			},
+			1024: {
+				slidesPerView: 4,
+				scrollbar: false,
+			},
+			1600: {
+				slidesPerView: 5,
+				scrollbar: false,
+			},
+		},
+	});
+}

@@ -12,6 +12,10 @@
 			grid-template-columns: 1fr 3fr;
 			column-gap: rem(24);
 		}
+
+		@include below($mobile) {
+			grid-template-columns: 1fr 142px;
+		}
 	}
 
 	// .color-choose__search
@@ -21,13 +25,60 @@
 	// color-choose__select
 	&__select {
 		margin-right: 24px;
+
+		@include below($mobile) {
+		}
+	}
+
+	// .color-choose__sorting-wrap
+	&__sorting-wrap {
+		@include below($mobile) {
+			display: none;
+			//display: flex;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($dark, .5);
+			z-index: 1;
+			justify-content: center;
+			align-items: center;
+
+			&.is-open {
+				display: flex;
+			}
+		}
+
+	}
+
+	// color-choose__sorting-toggler
+	&__sorting-toggler {
+		border: 1px solid $gray-2;
+		border-radius: 4px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			margin-left: 9px;
+		}
 	}
 
 	// .color-choose__sorting
 	&__sorting {
 		align-items: center;
 		display: flex;
-		//justify-self: end;
+
+		@include below($mobile) {
+			flex-direction: column;
+			background-color: $white;
+			padding: 24px;
+			width: 100%;
+			max-width: 376px;
+			border-radius: 4px;
+		}
 	}
 
 	// .color-choose__sorting-title
@@ -37,6 +88,18 @@
 		@include below(1080px) {
 			display: none;
 		}
+		@include below($mobile) {
+			display: block;
+			margin-bottom: 24px;
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	// .color-choose__submit
+	&__submit {
+		background-color: $blue;
+		color: $white;
 	}
 
 	// .color-choose__heading
@@ -84,6 +147,10 @@
 	max-width: rem(230);
 	//@media (min-width: $tablet) {
 	//}
+
+	@include below($mobile) {
+		max-width: none;
+	}
 
 	// .search-color__button
 	&__button {
@@ -303,6 +370,8 @@
 		margin-left: 4px;
 		margin-bottom: 3px;
 		display: inline-flex;
+		cursor: pointer;
+		position: relative;
 
 		@include below(550px) {
 			display: none;
@@ -312,6 +381,18 @@
 	// .item-color__roll-price-info
 	&__roll-price-info {
 		display: none;
+	}
+
+	&__roll-price-tip:hover .item-color__roll-price-info {
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		display: block;
+		width: 200px;
+		background-color: $white;
+		padding: 15px;
+		border-radius: 4px;
+		filter: drop-shadow(0px 12px 25px rgba(19, 48, 80, 0.08));
 	}
 
 	// .item-color__buttons
@@ -326,6 +407,7 @@
 			.item-color__analog {
 				margin-bottom: -12px;
 				transition: color .2s linear;
+				font-size: 14px;
 
 				&:hover {
 					@media (hover: hover) {
@@ -354,6 +436,11 @@
 				height: 44px;
 				margin-top: 10px;
 				margin-left: 12px;
+				font-size: 14px;
+				padding-left: 16px;
+				padding-right: 16px;
+				width: auto;
+				max-width: unset;
 			}
 		}
 	}
