@@ -70,6 +70,7 @@
 	&__sorting {
 		align-items: center;
 		display: flex;
+		justify-content: flex-end;
 
 		@include below($mobile) {
 			flex-direction: column;
@@ -367,8 +368,8 @@
 
 	// .item-color__roll-price-tip
 	&__roll-price-tip {
-		margin-left: 4px;
-		margin-bottom: 3px;
+		top: 2px;
+		margin-left: 1px;
 		display: inline-flex;
 		cursor: pointer;
 		position: relative;

@@ -149,11 +149,11 @@
 											<div class="product-properties__value text--xl text--bold">1 817 ₽</div>
 										</li>
 									</ul>
-									<button class="button button--wide button--fill" data-bs-toggle="modal" data-bs-target="#">
+									<button class="button button--wide button--fill jsColorChoose" data-goto=".product__tabs">
 										Выбрать цвет и размер
 									</button>
 								</div>
-								<div class="delivery-info mb-3">
+								<div class="delivery-info mb-3 jsDeliveryScrollBtn" data-goto=".product-tabs">
 									<svg class="icon icon--md">
 										<use xlink:href="img/icons/icons.svg#delivery"></use>
 									</svg>
@@ -224,11 +224,11 @@
 
 							<div class="product__tabs product-tabs" data-tabs="">
 								<nav data-tabs-titles class="product-tabs__navigation mb-5">
-									<button type="button" class="product-tabs__title _tab-active">Выберите цвет и размер</button>
-									<button type="button" class="product-tabs__title">Описание</button>
+									<button type="button" class="product-tabs__title jsColorChooseTab _tab-active">Выберите цвет и размер</button>
+									<button type="button" class="product-tabs__title jsProductMoreTab">Описание</button>
 									<button type="button" class="product-tabs__title">Применение</button>
 									<button type="button" class="product-tabs__title">Сертификаты</button>
-									<button type="button" class="product-tabs__title">Доставка</button>
+									<button type="button" class="product-tabs__title  jsDeliveryTab">Доставка</button>
 									<button type="button" class="product-tabs__title">Отзывы</button>
 								</nav>
 								<div data-tabs-body class="product-tabs__content">
@@ -348,7 +348,7 @@
 														<div class="item-color__divider"></div>
 														<span>10 817 ₽</span>
 														<div class="item-color__roll-price-tip">
-															<svg class="icon icon--xs">
+															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#i"></use>
 															</svg>
 															<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
@@ -387,7 +387,7 @@
 														<div class="item-color__divider"></div>
 														<span>10 817 ₽</span>
 														<div class="item-color__roll-price-tip">
-															<svg class="icon icon--xs">
+															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#i"></use>
 															</svg>
 															<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
@@ -426,7 +426,7 @@
 														<div class="item-color__divider"></div>
 														<span>10 817 ₽</span>
 														<div class="item-color__roll-price-tip">
-															<svg class="icon icon--xs">
+															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#i"></use>
 															</svg>
 															<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
@@ -471,7 +471,7 @@
 														<div class="item-color__divider"></div>
 														<span>10 817 ₽</span>
 														<div class="item-color__roll-price-tip">
-															<svg class="icon icon--xs">
+															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#i"></use>
 															</svg>
 															<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
@@ -510,7 +510,7 @@
 														<div class="item-color__divider"></div>
 														<span>10 817 ₽</span>
 														<div class="item-color__roll-price-tip">
-															<svg class="icon icon--xs">
+															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#i"></use>
 															</svg>
 															<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
@@ -549,7 +549,7 @@
 														<div class="item-color__divider"></div>
 														<span>10 817 ₽</span>
 														<div class="item-color__roll-price-tip">
-															<svg class="icon icon--xs">
+															<svg class="icon icon--sm">
 																<use xlink:href="img/icons/icons.svg#i"></use>
 															</svg>
 															<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
@@ -2243,7 +2243,7 @@
 									<div class="badge badge--show jsCompilationBtn">
 										<div class="badge__inner">
 											<div class="badge__text">Показать все</div>
-											<svg class="icon icon--arrow icon--xs badge__icon">
+											<svg class="icon icon--arrow icon--sm badge__icon">
 												<use xlink:href="img/icons/icons.svg#arrow-down"></use>
 											</svg>
 										</div>
