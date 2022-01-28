@@ -264,3 +264,15 @@
 	background-color: transparent !important;
 	pointer-events: none !important;
 }
+
+.modal-slider-main {
+	overflow: hidden;
+}
+.modal-slider-track {
+	.swiper-slide {
+
+width: auto;
+height: 80px;
+	}
+}
+

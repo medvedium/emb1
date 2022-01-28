@@ -39,6 +39,9 @@
 	// .product-info__buttons
 	&__buttons {
 		width: 100%;
+		@include below(960px) {
+			position: relative;
+		}
 	}
 
 	@include below(960px) {
@@ -70,7 +73,15 @@
 				left: 12px;
 				top: -10px;
 				transform: translate(-50%, -100%) scale(1);
+
+				@include below(960px) {
+					left: 50%;
+				}
 			}
+		}
+
+		@include below(960px) {
+			position: static;
 		}
 	}
 }

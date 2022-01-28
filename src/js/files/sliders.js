@@ -19,11 +19,11 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-// import "../../scss/base/swiper.scss";
+import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
-// import 'swiper/css';
+import 'swiper/css';
 
 function bildSliders() {
 	//BildSlider
@@ -43,6 +43,7 @@ function bildSliders() {
 function initSliders() {
 	bildSliders()
 	// Перечень слайдеров
+	let productHeroSlider
 	if (document.querySelector('.product-hero-track__slider--equipment')) {
 		new Swiper('.product-hero-track__slider--equipment', {
 			slidesPerView: 4,
@@ -62,7 +63,8 @@ function initSliders() {
 		})
 	}
 	if (document.querySelector('.product-hero__slider--equipment')) {
-		new Swiper('.product-hero__slider--equipment', {
+
+		productHeroSlider = new Swiper('.product-hero__slider--equipment', {
 			effect: "slide",
 			speed: 500,
 			slidesPerView: 1,
@@ -90,7 +92,9 @@ function initSliders() {
 
 			on: {}
 		})
+			// return productHeroslider
 	}
+		console.log(productHeroSlider);
 	if (document.querySelector('.product-hero-track__slider--flizelin')) {
 		new Swiper('.product-hero-track__slider--flizelin', {
 			slidesPerView: 3,

@@ -16,5 +16,7 @@ import "../../blocks/modules/catalog-description/catalog-description.js";
 import "../../blocks/modules/catalog-item/catalog-item.js";
 import "../../blocks/modules/product-control/product-control.js";
 import "../../blocks/modules/color-choose/color-choose.js";
+import "../../blocks/modules/product-page/increase-img-product.js"
+// import "../../blocks/modules/product-page/increase-img.js"
 
 import Modal from 'bootstrap/js/dist/modal.js';
