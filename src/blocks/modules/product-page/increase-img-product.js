@@ -20,71 +20,63 @@ if (imageBlock) {
     heroSliderWrap.classList.add('modal-slider-main')
     trackSliderWrap.classList.add('modal-slider-track')
 
+  const trackSliderNavPrev = document.createElement('div')
+  const trackSliderNavNext = document.createElement('div')
+
+  trackSliderNavPrev.innerHTML =
+    `
+      <div class="modal-slider-prev">
+        <svg class="icon icon--arrow icon--lg slider__btn-icon">
+          <use xlink:href="img/icons/icons.svg#arrow-left"></use>
+        </svg>
+      </div>
+    `
+
+   trackSliderNavNext.innerHTML =
+    `
+      <div class="modal-slider-next">
+        <svg class="icon icon--arrow icon--lg slider__btn-icon">
+          <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+        </svg>
+      </div>
+    `
+
     trackSliderWrap.innerHTML = trackSlider.innerHTML
     heroSliderWrap.innerHTML = heroSlider.innerHTML
 
+  heroModal.querySelector('.modal-footer').append(trackSliderNavPrev)
+  heroModal.querySelector('.modal-footer').append(trackSliderNavNext)
+
     heroModal.querySelector('.modal-body').append(heroSliderWrap)
     heroModal.querySelector('.modal-footer').append(trackSliderWrap)
+
 
     new Swiper('.modal-slider-main', {
       effect: "slide",
       speed: 500,
       slidesPerView: 1,
-      // slidesPerGroup: 1,
       spaceBetween: 0,
-      // loop: true,
-      // navigation: {
-      //   nextEl: '.product-hero-main-next',
-      //   prevEl: '.product-hero-main-prev',
-      // },
-      // pagination: {
-      //   el: '.product-hero__dots',
-      //   type: 'fraction'
-      // },
+      allowTouchMove: false,
+      navigation: false,
       thumbs: {
         swiper: {
           el: '.modal-slider-track'
         }
       },
 
-      // breakpoints: {
-      //   1100: {
-      //     navigation: false
-      //   }
-      // },
 
       on: {}
     })
 
   new Swiper('.modal-slider-track', {
-    // effect: "slide",
-    // speed: 500,
-    slidesPerView: 5,
-    slidesPerGroup: 1,
-    spaceBetween: 0,
+    slidesPerView: 3,
+    spaceBetween: 30,
     slideToClickedSlide: true,
-    // loop: true,
     centeredSlides: true,
-    // slidesPerView: 'auto',
-    // navigation: {
-    //   nextEl: '.product-hero-main-next',
-    //   prevEl: '.product-hero-main-prev',
-    // },
-    // pagination: {
-    //   el: '.product-hero__dots',
-    //   type: 'fraction'
-    // },
-    // thumbs: {
-    //   swiper: {
-    //     el: '.product-hero-track__slider'
-    //   }
-    // },
-
-    // breakpoints: {
-    //   1100: {
-    //     navigation: false
-    //   }
-    // },
+    navigation: {
+      nextEl: '.modal-slider-next',
+      prevEl: '.modal-slider-prev',
+    },
 
     on: {}
   })

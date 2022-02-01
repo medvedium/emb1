@@ -178,6 +178,59 @@
 }
 
 .modal-slider-track {
-	width: 100%;
+	//width: 100%;
 	overflow: hidden;
+	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.modal-slider-prev,
+.modal-slider-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+.modal-slider-prev {
+	left: 10px;
+}
+.modal-slider-next {
+	right: 10px;
+}
+
+.modal .product-hero__navbar {
+	display: none;
+}
+
+.modal--hero .modal-content {
+	min-height: fit-content;
+}
+
+.modal--hero {
+	.modal-footer {
+		position: relative;
+	}
+}
+
+.modal--video {
+	.modal-dialog {
+		//margin: 0;
+		@include below(423px) {
+			margin: 0;
+		}
+	}
+	.modal-content {
+		min-height: fit-content;
+		height: 0;
+		padding-top: 56.25%;
+
+	}
+
+	iframe {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		//inset: 0;
+		height: 100%;
+	}
 }
