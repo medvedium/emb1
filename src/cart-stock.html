@@ -3,59 +3,507 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Каталог</title>
+	<title>Корзина товаров</title>
 	<meta name="theme-color" content="#fff" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta
-		name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-	/>
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 	@@include('blocks/modules/favicons/favicons.html')
 	<link rel="stylesheet" href="css/style.min.css" />
 </head>
 <body class="body">
-@@include('blocks/modules/header/header.html')
+	@@include('blocks/modules/header/header.html')
 
-<main class="main">
-	<div class="breadcrumbs mb-2">
-		<div class="container">
-			<div class="breadcrumbs__list">
-				<div class="breadcrumbs__item">
-					<a href="#" class="breadcrumbs__link">Главная</a>
-				</div>
-				<div class="breadcrumbs__item">
-					<span class="breadcrumbs__link">Корзина</span>
+	<main class="main">
+		<div class="breadcrumbs mb-2">
+			<div class="container">
+				<div class="breadcrumbs__list">
+					<div class="breadcrumbs__item">
+						<a href="#" class="breadcrumbs__link">Главная</a>
+					</div>
+					<div class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Корзина</span>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="content">
-		<section class="section">
-			<div class="container cart__heading">
-				<h1 class="h1 mb-5">Корзина</h1>
-				<span class="cart__clear">Очистить</span>
-			</div>
-		</section>
+		<div class="content">
+			<section class="section">
+				<div class="container ">
+					<div class="cart__heading">
 
-		<section class="cart">
-			<div class="cart__block">
-				<div class="cart__links"></div>
-				<div class="cart__advices"></div>
-				<div class="cart__list"></div>
-			</div>
-			<aside class="cart__aside"></aside>
-		</section>
+						<h1 class="h1 mb-5">Корзина</h1>
+						<span class="cart__clear">Очистить</span>
+					</div>
+					<div class="cart__wrap">
+						<div class="cart__block">
+							<div class="cart__links cart-links">
+								<a href="#" class="cart-links__item active">В наличии (<span class="cart-links__value">4</span>)</a>
+								<a href="cart-delivery.html" class="cart-links__item">В пути (<span
+										class="cart-links__value">4</span>)</a>
+							</div>
+							<div class="cart__advices cart-advices">
+								<div class="cart-advices__item">
+									<svg class="icon icon--lg icon--blue">
+										<use xlink:href="img/icons/icons.svg#i"></use>
+									</svg>
+									<div class="cart-advices__text">Добавьте еще 3 Нитки №1 любого цвета и цена за шт. будет 90 ₽</div>
+									<div class="cart-advices__remove">
+										<svg class="icon icon--lg icon--gray">
+											<use xlink:href="img/icons/icons.svg#cross"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="cart-advices__item">
+									<svg class="icon icon--lg icon--blue">
+										<use xlink:href="img/icons/icons.svg#i"></use>
+									</svg>
+									<div class="cart-advices__text">Добавьте еще 3 Нитки №2 любого цвета и цена за шт. будет 110 ₽</div>
+									<div class="cart-advices__remove">
+										<svg class="icon icon--lg icon--gray">
+											<use xlink:href="img/icons/icons.svg#cross"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="cart-advices__item">
+									<svg class="icon icon--lg icon--blue">
+										<use xlink:href="img/icons/icons.svg#i"></use>
+									</svg>
+									<div class="cart-advices__text">Поменяйте 20 метров Флизелин №1 на 2 рулона и сэкономьте 500 ₽</div>
+									<div class="cart-advices__remove">
+										<svg class="icon icon--lg icon--gray">
+											<use xlink:href="img/icons/icons.svg#cross"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="cart__inner cart-inner">
+								<div class="cart-inner__heading">
+									<div class="cart-inner__heading-item">Фото</div>
+									<div class="cart-inner__heading-item">Название</div>
+									<div class="cart-inner__heading-item">Цена</div>
+									<div class="cart-inner__heading-item">Количество</div>
+									<div class="cart-inner__heading-item">Сумма</div>
+									<div class="cart-inner__heading-item"></div>
+								</div>
+								<div class="cart-inner__list cart-list">
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-1.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Флизелин Aurora 80 неклеевой
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318, Рулон, Д.: 100 м,
+												Ш.: 100 см</div>
+											<div class="cart-item__status order">
+												<span class="">Под заказ</span>
+											</div>
 
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽/рул.</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 рул.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-2.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Вышивальная машина Brother серии PR-670
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318</div>
+											<div class="cart-item__status order">
+												<span class="">Под заказ</span>
+											</div>
 
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽</div>
+											<div class="cart-item__price-item cart-item__old-price text--strike">1 817 ₽</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 шт.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-3.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Нитки хлопок сotty №30 Gunold, 5000m
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318,  Gunold</div>
+											<div class="cart-item__status available">
+												<span class="">В наличии</span>
+											</div>
 
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 шт.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-1.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Флизелин Aurora 80 неклеевой
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318, Рулон, Д.: 100 м,
+												Ш.: 100 см</div>
+											<div class="cart-item__status order">
+												<span class="">Под заказ</span>
+											</div>
 
-	</div>
-	@@include('blocks/modules/footer/footer.html")
-</main>
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽/рул.</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 рул.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-2.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Вышивальная машина Brother серии PR-670
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318</div>
+											<div class="cart-item__status order">
+												<span class="">Под заказ</span>
+											</div>
 
-@@include('blocks/modules/modal/modal.html")
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽</div>
+											<div class="cart-item__price-item cart-item__old-price text--strike">1 817 ₽</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 шт.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-3.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Нитки хлопок сotty №30 Gunold, 5000m
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318,  Gunold</div>
+											<div class="cart-item__status available">
+												<span class="">В наличии</span>
+											</div>
 
-<!--js	-->
-<script src="js/app.min.js"></script>
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 шт.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-1.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Флизелин Aurora 80 неклеевой
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318, Рулон, Д.: 100 м,
+												Ш.: 100 см</div>
+											<div class="cart-item__status order">
+												<span class="">Под заказ</span>
+											</div>
+
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽/рул.</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 рул.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-2.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Вышивальная машина Brother серии PR-670
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318</div>
+											<div class="cart-item__status order">
+												<span class="">Под заказ</span>
+											</div>
+
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽</div>
+											<div class="cart-item__price-item cart-item__old-price text--strike">1 817 ₽</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 шт.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart-list__item cart-item">
+										<div class="cart-item__img">
+											<img src="img/cart/cart-item-3.jpg" alt="">
+										</div>
+										<div class="cart-item__title">
+											<div class="cart-item__name">Нитки хлопок сotty №30 Gunold, 5000m
+											</div>
+											<div class="cart-item__specifications">Код товара: 3216465, Артикул: 464318,  Gunold</div>
+											<div class="cart-item__status available">
+												<span class="">В наличии</span>
+											</div>
+
+										</div>
+										<div class="cart-item__price">
+											<div class="cart-item__price-item">10 275 ₽</div>
+										</div>
+										<div class="cart-item__quantity item-quantity">
+											<div class="item-quantity__minus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#minus"></use>
+												</svg>
+											</div>
+											<div class="item-quantity__value">1100 шт.</div>
+											<div class="item-quantity__plus">
+												<svg class="icon icon--xs">
+													<use xlink:href="img/icons/icons.svg#plus"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="cart-item__total">
+											<span class="cart-item__total-value">1 100 817 ₽</span>
+										</div>
+										<div class="cart-item__remove">
+											<svg class="icon icon--md icon--gray">
+												<use xlink:href="img/icons/icons.svg#trash"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<aside class="cart__aside">
+							<div class="cart__controls">
+								<div class="cart__controls-title">Ваш заказ</div>
+								<div class="cart__total total">
+									<div class="total__row total__quantity">
+										<div class="total__title">Товары (4)</div>
+										<div class="total__value">20 000 ₽</div>
+									</div>
+									<div class="total__row total__sale">
+										<div class="total__title">Скидка</div>
+										<div class="total__value">- 5 000 ₽</div>
+									</div>
+									<div class="total__row total__bonus">
+										<div class="total__title">Бонусы</div>
+										<div class="total__value">+ 150</div>
+									</div>
+									<div class="total__row total__bonus-pay">
+										<div class="total__title">Оплатить бонусами</div>
+										<div class="total__value">- 5 000 ₽</div>
+									</div>
+									<div class="total__row total__price">
+										<div class="total__title">Итого:</div>
+										<div class="total__value">15 000 ₽</div>
+									</div>
+								</div>
+								<div class="cart__bonus mb-4">
+									<label class="checkbox mb-2">
+										<input type="checkbox" class="checkbox__input" />
+										<span class="checkbox__custom"></span>
+										<span class="checkbox__text cart__bonus-text">
+											<span class="text text--sm">Списать доступные бонусы: <span class="text--color--blue">5&nbsp;000</span> из <span>12&nbsp;000</span> </span><br>
+											<span class="text text--sm text--color--gray-4">Можно оплатить до 20% стоимости заказа</span>
+										</span>
+									</label>
+									<input type="text" class="input__field mb-2" placeholder="5000">
+									<button class="button button--border button--border--blue w-100">
+										<span class="button__text">Применить</span>
+									</button>
+								</div>
+								<div class="cart__promocode">
+									<label class="checkbox mb-3">
+										<input type="checkbox" class="checkbox__input" />
+										<span class="checkbox__custom"></span>
+										<span class="checkbox__text">
+											<span class="text text--sm">Использовать промокод</span>
+										</span>
+									</label>
+									<input type="text" class="input__field mb-2" placeholder="Введите промокод">
+									<button class="button button--border button--border--blue w-100">
+										<span class="button__text">Применить</span>
+									</button>
+								</div>
+								<button class="button w-100">Оформить заказ</button>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		@@include('blocks/modules/footer/footer.html")
+	</main>
+
+	@@include('blocks/modules/modal/modal.html")
+
+	<!--js	-->
+	<script src="js/app.min.js"></script>
 </body>
 </html>

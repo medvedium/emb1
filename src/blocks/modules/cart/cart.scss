@@ -1,0 +1,314 @@
+.cart {
+	&__heading {
+		position: relative;
+	}
+
+	&__clear {
+		position: absolute;
+		left: 154px;
+		top: 13px;
+		color: $gray;
+		font-size: 16px;
+		line-height: 20px;
+		cursor: pointer;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__wrap {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		column-gap: 32px;
+	}
+
+	&__block {
+	}
+
+	&__links {
+	}
+
+	&__advices {
+	}
+
+	&__inner {
+	}
+
+	&__aside {
+	}
+
+	&__controls {
+		padding: 24px;
+		background-color: $gray-3;
+		border-radius: 4px;
+	}
+
+	&__controls-title {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: 24px;
+	}
+
+	&__total {
+	}
+
+	&__bonus {
+	}
+
+	&__bonus-text {
+		
+	}
+
+	&__promocode {
+		padding-bottom: 24px;
+		margin-bottom: 16px;
+		border-bottom: 1px solid $gray-2;
+	}
+
+	&__submit {
+	}
+}
+.cart-links {
+	display: flex;
+	margin-bottom: 24px;
+	&__item {
+		height: 52px;
+		padding: 16px 24px;
+		background-color: $gray-2;
+		border-bottom: 2px solid transparent;
+
+		&:not(:last-child) {
+			margin-right: 1px;
+		}
+
+		&:first-child {
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+		}
+
+		&:last-child {
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+
+		&.active {
+			background-color: $gray-3;
+			border-bottom-color: $blue;
+		}
+	}
+
+	&__value {
+	}
+}
+.cart-advices {
+	&__item {
+		display: flex;
+		align-items: center;
+		background-color: $advice-bg;
+		border-radius: 4px;
+		border: 1px solid $blue;
+		padding: 16px;
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		flex-grow: 1;
+		margin-left: 16px;
+	}
+
+	&__remove {
+		cursor: pointer;
+	}
+}
+.icon {
+	&--lg {
+	}
+
+	&--blue {
+	}
+
+	&--gray {
+	}
+
+	&--md {
+	}
+}
+.cart-inner {
+	&__heading {
+		display: grid;
+		grid-template-columns: 64px 1fr 88px 136px 80px 20px;
+		padding: 8px;
+		column-gap: 16px;
+	}
+
+	&__heading-item {
+	}
+
+	&__list {
+	}
+}
+.cart-list {
+	&__item {
+		display: grid;
+		grid-template-columns: 64px 1fr 88px 136px 80px 20px;
+		padding: 8px;
+		column-gap: 16px;
+		border: 1px solid $gray-2;
+		border-radius: 4px;
+		margin-bottom: 8px;
+	}
+}
+.cart-item {
+	&__img {
+		width: 64px;
+		height: 64px;
+		overflow: hidden;
+		border-radius: 4px;
+		margin-right: 16px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title {
+	}
+
+	&__name {
+		font-size: 14px;
+		margin-bottom: 4px;
+		line-height: 20px;
+	}
+
+	&__specifications {
+		font-size: 12px;
+		color: $gray-4;
+		margin-bottom: 8px;
+		line-height: 16px;
+		max-width: 302px;
+	}
+
+	&__status {
+		font-size: 12px;
+		line-height: 16px;
+
+		&.order {
+			color: $status-delivery;
+		}
+
+		&.available {
+			color: $status-available;
+		}
+	}
+
+	&__price {
+		align-self: center;
+	}
+
+	&__price-item {
+		white-space: nowrap;
+		color: $gray-4;
+		font-size: 14px;
+	}
+
+	&__old-price {
+		font-size: 12px;
+	}
+
+	&__quantity {
+		align-self: center;
+	}
+
+	&__total {
+		align-self: center;
+	}
+
+	&__total-value {
+		white-space: nowrap;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	&__remove {
+		align-self: center;
+		cursor: pointer;
+	}
+}
+
+.item-quantity {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border: 1px solid $gray-2;
+	border-radius: 4px;
+	height: 36px;
+
+	&__minus,
+	&__plus {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 12px 8px;
+		cursor: pointer;
+	}
+	&__minus {
+		border-right: 1px solid $gray-2;
+	}
+
+	&__value {
+		flex-grow: 1;
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 14px;
+		white-space: nowrap;
+	}
+
+	&__plus {
+		border-left: 1px solid $gray-2;
+	}
+}
+
+.order {
+}
+.total {
+padding-bottom: 24px;
+margin-bottom: 24px;
+border-bottom: 1px solid $gray-2;
+
+	&__quantity {
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__title {
+	}
+
+	&__value {
+	}
+
+	&__sale {
+	}
+
+	&__bonus {
+	}
+
+	&__bonus-pay {
+	}
+
+	&__price {
+	}
+}
