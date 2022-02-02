@@ -33,7 +33,7 @@
 					<div class="cart__heading">
 
 						<h1 class="h1 mb-5">Корзина</h1>
-						<span class="cart__clear">Очистить</span>
+						<span class="cart__clear" data-bs-toggle="modal" data-bs-target="#clean-cart">Очистить</span>
 					</div>
 					<div class="cart__wrap">
 						<div class="cart__block">
@@ -493,7 +493,9 @@
 								</div>
 								<div class="cart__controls-wrap">
 									<div class="cart__checkboxes">
+
 										<div class="cart__bonus">
+
 											<label class="checkbox mb-2 jsUseBonus">
 												<input type="checkbox" class="checkbox__input" />
 												<span class="checkbox__custom"></span>
@@ -503,6 +505,7 @@
 													<span class="text text--sm text--color--gray-4">Можно оплатить до 20% стоимости заказа</span>
 												</span>
 											</label>
+
 											<div class="cart__bonus-content jsBonusContent">
 												<input type="text" class="input__field" placeholder="5000">
 												<button class="button button--border button--border--blue w-100">
@@ -510,6 +513,7 @@
 												</button>
 											</div>
 										</div>
+
 										<div class="cart__promocode">
 											<label class="checkbox mb-3 jsUsePromocode">
 												<input type="checkbox" class="checkbox__input" />
@@ -519,9 +523,10 @@
 												</span>
 											</label>
 											<div class="cart__promocode-content jsPromocodeContent">
-												<input type="text" class="input__field" placeholder="Введите промокод">
+												<input type="text" class="input__field jsPromocodeInput" placeholder="Введите промокод">
+												<span class="promocode-status jsPromocodeSatus"></span>
 												<button class="button button--border button--border--blue w-100">
-													<span class="button__text">Применить</span>
+													<span class="button__text jsPromocodeCheck">Применить</span>
 												</button>
 											</div>
 										</div>

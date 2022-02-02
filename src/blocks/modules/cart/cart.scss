@@ -150,6 +150,34 @@
 		&.is-open {
 			display: flex;
 		}
+
+		.input__field.correct {
+			border-color: #27AE60 !important;
+			position: relative;
+		}
+		.input__field.incorrect {
+			border-color: #f04438 !important;
+			position: relative;
+		}
+		.promocode-status {
+			font-size: 12px;
+			position: relative;
+			line-height: 12px;
+			display: block;
+			margin-top: -8px;
+			margin-bottom: 6px;
+			transform: scale(0);
+			transition: all .2s linear;
+
+			&.correct {
+				color: #27AE60;
+				transform: scale(1);
+			}
+			&.incorrect {
+				color: #f04438;
+				transform: scale(1);
+			}
+		}
 	}
 
 	&__submit {
@@ -186,6 +214,20 @@
 		@media (max-width: 1023px) and (min-width: 724px) {
 			margin-bottom: 0;
 			border-bottom: 0;
+		}
+	}
+
+	&__modal {
+		.modal-body {
+			padding-top: 0;
+		}
+		.modal-footer {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 0;
+		}
+		.modal-btn {
+			width: 47%;
 		}
 	}
 }
