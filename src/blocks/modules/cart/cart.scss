@@ -164,8 +164,8 @@
 			position: relative;
 			line-height: 12px;
 			display: block;
-			margin-top: -8px;
-			margin-bottom: 6px;
+			margin-top: -5px;
+			margin-bottom: 4px;
 			transform: scale(0);
 			transition: all .2s linear;
 
@@ -196,7 +196,7 @@
 			border-right: 1px solid $gray-2;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			//justify-content: space-between;
 		}
 	}
 	&__controls-wrap {
@@ -559,6 +559,7 @@
 	&__popup {
 		display: none;
 		position: absolute;
+		white-space: normal;
 		width: 318px;
 		background-color: $white;
 		padding: 12px 16px;
@@ -581,6 +582,15 @@
 			bottom: 0;
 			left: 50%;
 			transform: translate(-50%, 100%);
+		}
+
+		@include below(1023px) {
+			width: 300px;
+			left: 68px;
+
+			&::after {
+				left: 90px;
+			}
 		}
 	}
 

@@ -54,14 +54,17 @@ if (usePromocode) {
 
 const promocodeInput = document.querySelector('.jsPromocodeInput')
 const promocodeCheck = document.querySelector('.jsPromocodeCheck')
-const promocodeStatus = document.querySelector('.jsPromocodeSatus')
+const promocodeStatus = document.querySelector('.jsPromocodeStatus')
 
 if (promocodeInput && promocodeCheck) {
+	// Перевод вводимого текста в верхний регистр
 	promocodeInput.addEventListener('input', () => {
 		promocodeInput.value = promocodeInput.value.toUpperCase()
 	})
 
 	promocodeCheck.addEventListener('click', () => {
+
+		// Отмена корректного промокода
 		function promocodeCancel() {
 			promocodeCheck.textContent = 'Применить'
 			promocodeInput.classList.remove('correct')
@@ -73,6 +76,7 @@ if (promocodeInput && promocodeCheck) {
 		}
 
 		if (promocodeInput.value === 'CORRECT') {
+			// Случай корректного промокода
 			if (promocodeStatus.classList.contains('incorrect')) {
 				promocodeStatus.classList.remove('incorrect')
 			}
@@ -88,6 +92,7 @@ if (promocodeInput && promocodeCheck) {
 			promocodeCheck.addEventListener('click', promocodeCancel)
 			
 		} else {
+			// Случай некорректного промокода
 			promocodeInput.classList.add('incorrect')
 			promocodeStatus.textContent = 'Неверный промокод'
 			promocodeStatus.classList.add('incorrect')
