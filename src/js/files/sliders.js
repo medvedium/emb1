@@ -46,14 +46,15 @@ function initSliders() {
 	let productHeroSlider
 	if (document.querySelector('.product-hero-track__slider--equipment')) {
 		new Swiper('.product-hero-track__slider--equipment', {
+			freeMode: true,
 			slidesPerView: 4,
 			spaceBetween: 12,
 			slidesPerGroup: 1,
-			speed: 800,
+			// speed: 800,
 			direction: 'vertical',
-			mousewheel: {
-				sensitivity: 1
-			},
+			// mousewheel: {
+			// 	sensitivity: 1
+			// },
 			navigation: {
 				prevEl: '.product-hero-prev',
 				nextEl: '.product-hero-next'
@@ -102,14 +103,15 @@ function initSliders() {
 		console.log(productHeroSlider);
 	if (document.querySelector('.product-hero-track__slider--flizelin')) {
 		new Swiper('.product-hero-track__slider--flizelin', {
+			freeMode: true,
 			slidesPerView: 3,
 			spaceBetween: 12,
 			slidesPerGroup: 1,
-			speed: 800,
+			// speed: 800,
 			direction: 'vertical',
-			mousewheel: {
-				sensitivity: 1
-			},
+			// mousewheel: {
+			// 	sensitivity: 1
+			// },
 			navigation: {
 				prevEl: '.product-hero-prev',
 				nextEl: '.product-hero-next'

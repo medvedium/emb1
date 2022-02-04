@@ -113,6 +113,7 @@ heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 		const modalHeroSlider = new Swiper('.modal-slider-main', {
 			spaceBetween: 10,
 			slidesPerView: 1,
+			autoHeight: true,
 			thumbs: {
 				swiper: modalTrackSlider
 			},

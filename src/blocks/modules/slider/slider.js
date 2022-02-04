@@ -259,3 +259,110 @@ if (seeAlsoSlider) {
 		},
 	});
 }
+
+let productHeroSlider
+if (document.querySelector('.product-hero-track__slider--equipment')) {
+	new Swiper('.product-hero-track__slider--equipment', {
+		// freeMode: true,
+		slidesPerView: 4,
+		spaceBetween: 12,
+		// slidesPerGroup: 1,
+		// speed: 800,
+		direction: 'vertical',
+		// mousewheel: {
+		// 	sensitivity: 1
+		// },
+		navigation: {
+			prevEl: '.product-hero-prev',
+			nextEl: '.product-hero-next'
+		},
+		on: {
+		}
+	})
+}
+if (document.querySelector('.product-hero__slider--equipment')) {
+
+	productHeroSlider = new Swiper('.product-hero__slider--equipment', {
+		effect: "slide",
+		speed: 500,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.product-hero-main-next',
+			prevEl: '.product-hero-main-prev',
+		},
+		pagination: {
+			el: '.product-hero__dots',
+			type: 'fraction'
+		},
+		thumbs: {
+			swiper: {
+				el: '.product-hero-track__slider'
+			}
+		},
+
+		breakpoints: {
+			680: {
+				autoHeight: false,
+			},
+			1100: {
+				navigation: false,
+				autoHeight: false
+			}
+		},
+
+		on: {}
+	})
+	// return productHeroslider
+}
+console.log(productHeroSlider);
+if (document.querySelector('.product-hero-track__slider--flizelin')) {
+	new Swiper('.product-hero-track__slider--flizelin', {
+		// freeMode: true,
+		slidesPerView: 3,
+		spaceBetween: 12,
+		// slidesPerGroup: 1,
+		// speed: 800,
+		direction: 'vertical',
+		// mousewheel: {
+		// 	sensitivity: 1
+		// },
+		navigation: {
+			prevEl: '.product-hero-prev',
+			nextEl: '.product-hero-next'
+		},
+		on: {}
+	})
+}
+if (document.querySelector('.product-hero__slider--flizelin')) {
+	new Swiper('.product-hero__slider--flizelin', {
+		effect: "slide",
+		speed: 500,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.product-hero-main-next',
+			prevEl: '.product-hero-main-prev',
+		},
+		pagination: {
+			el: '.product-hero__dots',
+			type: 'fraction'
+		},
+		thumbs: {
+			swiper: {
+				el: '.product-hero-track__slider--flizelin'
+			}
+		},
+
+		breakpoints: {
+			1100: {
+				navigation: false
+			}
+		},
+
+		on: {}
+	})
+}
