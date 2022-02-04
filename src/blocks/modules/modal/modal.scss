@@ -250,9 +250,36 @@
 	}
 
 	&--analog {
+		.modal-content {
+			height: 100%;
+		}
+
+
+
 		.modal-body {
-			@include below(574px) {
-				padding: 16px;
+				padding: 12px;
+
+			//@include below(574px) {
+			//}
+		}
+
+		.flizelin-analog__inner {
+			height: 100%;
+			padding: 16px;
+			overflow-y: auto;
+			scrollbar-color: $gray-2;
+			scrollbar-width: thin;
+
+			&::-webkit-scrollbar {
+				width: 4px;
+				margin-right: 10px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $gray-2;
+				border: 4px solid $gray-2;
+				border-radius: 20px;
+				margin-right: 10px;
 			}
 		}
 	}

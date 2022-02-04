@@ -19,11 +19,11 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-import "../../scss/libs/swiper.scss";
+// import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
-import 'swiper/css';
+// import 'swiper/css';
 
 function bildSliders() {
 	//BildSlider
@@ -70,6 +70,7 @@ function initSliders() {
 			slidesPerView: 1,
 			slidesPerGroup: 1,
 			spaceBetween: 0,
+			autoHeight: true,
 			navigation: {
 				nextEl: '.product-hero-main-next',
 				prevEl: '.product-hero-main-prev',
@@ -85,8 +86,12 @@ function initSliders() {
 			},
 
 			breakpoints: {
+				680: {
+					autoHeight: false,
+				},
 				1100: {
-					navigation: false
+					navigation: false,
+					autoHeight: false
 				}
 			},
 
