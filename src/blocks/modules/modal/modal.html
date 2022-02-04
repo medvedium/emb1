@@ -1040,7 +1040,7 @@
 </div>
 
 <div class="modal fade modal--analog" id="flizelin-analog" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-dialog--xxl">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog--xxl">
 		<div class="modal-content">
 			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
 				<svg class="icon icon--lg icon--gray">
@@ -1516,9 +1516,9 @@
 					<div class="modal-body">
 						<div class="text mb-4 mt-4 text--color--gray-4">Вы действительно хотите удалить все товары из корзины?</div>
 					</div>
-					<div class="modal-footer jsCleanCart">
+					<div class="modal-footer">
 						<button
-							class="button modal-btn"
+							class="button modal-btn jsCleanCart"
 							type="button"
 							data-bs-dismiss="modal"
 							aria-label="Close"
@@ -1527,11 +1527,53 @@
 						</button>
 
 						<button
-							
+
 							class="button modal-btn"
+							type="button"
+							aria-label="Close"
+							data-bs-dismiss="modal"
+						>
+							<span class="button__text">Нет</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade cart__modal" id="remove-cart-item" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--sm">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">Подтверждение</div>
+					</div>
+					<div class="modal-body">
+						<div class="text mb-4 mt-4 text--color--gray-4">Вы действительно хотите удалить товар из корзины?</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							class="button modal-btn jsRemoveCartItemConfirm"
 							type="button"
 							data-bs-dismiss="modal"
 							aria-label="Close"
+						>
+							<span class="button__text">Да</span>
+						</button>
+
+						<button
+
+							class="button modal-btn"
+							type="button"
+							aria-label="Close"
+							data-bs-dismiss="modal"
 						>
 							<span class="button__text">Нет</span>
 						</button>

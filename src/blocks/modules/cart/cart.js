@@ -9,19 +9,9 @@ if (cleanCart) {
 const removeAdvice = document.querySelectorAll('.jsRemoveAdvice')
 
 if (removeAdvice) {
-	removeAdvice.forEach(removeAdviceBtn => {
+	removeAdvice.forEach((removeAdviceBtn) => {
 		removeAdviceBtn.addEventListener('click', () => {
 			removeAdviceBtn.closest('.cart-advices__item').remove()
-		})
-	})
-}
-
-const removeCartItem = document.querySelectorAll('.jsRemoveCartItem')
-
-if (removeCartItem) {
-	removeCartItem.forEach(removeCartItemBtn => {
-		removeCartItemBtn.addEventListener('click', () => {
-			removeCartItemBtn.closest('.cart-item').remove()
 		})
 	})
 }
@@ -63,7 +53,6 @@ if (promocodeInput && promocodeCheck) {
 	})
 
 	promocodeCheck.addEventListener('click', () => {
-
 		// Отмена корректного промокода
 		function promocodeCancel() {
 			promocodeCheck.textContent = 'Применить'
@@ -90,12 +79,22 @@ if (promocodeInput && promocodeCheck) {
 			promocodeInput.setAttribute('readonly', 'readonly')
 
 			promocodeCheck.addEventListener('click', promocodeCancel)
-			
 		} else {
 			// Случай некорректного промокода
 			promocodeInput.classList.add('incorrect')
 			promocodeStatus.textContent = 'Неверный промокод'
 			promocodeStatus.classList.add('incorrect')
 		}
+	})
+}
+
+// Удаление элемента корзины с подтверждением
+let removeCartItem = document.querySelectorAll('.jsRemoveCartItem')
+
+for (let i = 0; i < removeCartItem.length; i++) {
+	removeCartItem[i].addEventListener('click', function () {
+		document.querySelector('.jsRemoveCartItemConfirm').addEventListener('click', () => {
+			this.closest('.cart-item').remove()
+		})
 	})
 }

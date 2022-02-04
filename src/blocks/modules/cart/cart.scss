@@ -127,6 +127,7 @@
 	&__promocode-content {
 		display: none;
 		flex-direction: column;
+		position: relative;
 		.input__field {
 			height: 44px;
 			margin-bottom: 8px;
@@ -154,20 +155,24 @@
 		.input__field.correct {
 			border-color: #27AE60 !important;
 			position: relative;
+			margin-bottom: 16px;
 		}
 		.input__field.incorrect {
 			border-color: #f04438 !important;
 			position: relative;
+			margin-bottom: 16px;
 		}
 		.promocode-status {
 			font-size: 12px;
-			position: relative;
+			position: absolute;
 			line-height: 12px;
 			display: block;
 			margin-top: -5px;
 			margin-bottom: 4px;
 			transform: scale(0);
 			transition: all .2s linear;
+			top: 51px;
+			left: 0;
 
 			&.correct {
 				color: #27AE60;

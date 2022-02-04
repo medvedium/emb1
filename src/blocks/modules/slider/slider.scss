@@ -202,6 +202,12 @@
 	display: none;
 }
 
+.modal--hero {
+	@include below(960px) {
+		//display: none !important;
+	}
+}
+
 .modal--hero .modal-content {
 	min-height: fit-content;
 }

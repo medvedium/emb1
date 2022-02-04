@@ -1,6 +1,5 @@
 import versionNumber from "gulp-version-number";
 import webpHtmlNosvg from "gulp-webp-html-nosvg";
-import typograf from 'gulp-typograf';
 
 export const html = () => {
 	return app.gulp.src(`${app.path.build.html}*.html`)
@@ -27,10 +26,5 @@ export const html = () => {
 				'file': 'config/version.json'
 			}
 		}))
-		.pipe(
-			typograf({
-				locale: ['ru', 'en-US']
-			})
-		)
 		.pipe(app.gulp.dest(app.path.build.html));
 }
