@@ -33,7 +33,6 @@ if (imageBlock) {
 		const heroSlides = document.querySelectorAll('.product-hero__main .product-hero__slide')
 
 		let activeSlide = getActiveSlide(heroSlides)
-		console.log(activeSlide);
 
 
 		const heroModal = document.getElementById('hero')
