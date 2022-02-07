@@ -83,6 +83,7 @@ heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 
 
 		const modalTrackSlider = new Swiper('.modal-slider-track', {
+			initialSlide: activeSlide,
 			spaceBetween: 30,
 			slidesPerView: 3,
 			direction: 'horizontal',
@@ -93,24 +94,10 @@ heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 				nextEl: '.modal-slider-next',
 				prevEl: '.modal-slider-prev'
 			},
-
-
-
-			// // initialSlide: activeSlide,
-			// slidesPerView: 3,
-			// slidesPerGroup: 1,
-			// spaceBetween: 30,
-			// // slideToClickedSlide: true,
-			// // centeredSlides: false,
-			// navigation: {
-			// 	nextEl: '.modal-slider-next',
-			// 	prevEl: '.modal-slider-prev'
-			// },
-
-			on: {}
 		})
 
 		const modalHeroSlider = new Swiper('.modal-slider-main', {
+			initialSlide: activeSlide,
 			spaceBetween: 10,
 			slidesPerView: 1,
 			autoHeight: true,
@@ -118,24 +105,6 @@ heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 				swiper: modalTrackSlider
 			},
 
-			// initialSlide: activeSlide,
-			// effect: 'slide',
-			// speed: 500,
-			// slidesPerView: 1,
-			// slidesPerGroup: 1,
-			// spaceBetween: 0,
-			// // slideToClickedSlide: true,
-			// // allowTouchMove: false,
-			// navigation: {
-			// 	nextEl: '.modal-slider-next',
-			// 	prevEl: '.modal-slider-prev'
-			// },
-			// autoHeight: true,
-			// thumbs: {
-			// 	swiper: {
-			// 		el: '.modal-slider-track'
-			// 	}
-			// },
 
 			on: {}
 		})

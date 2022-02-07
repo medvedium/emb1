@@ -43,7 +43,6 @@ function bildSliders() {
 function initSliders() {
 	bildSliders()
 	// Перечень слайдеров
-	let productHeroSlider
 	if (document.querySelector('.product-hero-track__slider--equipment')) {
 		new Swiper('.product-hero-track__slider--equipment', {
 			freeMode: true,
@@ -65,7 +64,7 @@ function initSliders() {
 	}
 	if (document.querySelector('.product-hero__slider--equipment')) {
 
-		productHeroSlider = new Swiper('.product-hero__slider--equipment', {
+		new Swiper('.product-hero__slider--equipment', {
 			effect: "slide",
 			speed: 500,
 			slidesPerView: 1,
@@ -100,7 +99,6 @@ function initSliders() {
 		})
 			// return productHeroslider
 	}
-		console.log(productHeroSlider);
 	if (document.querySelector('.product-hero-track__slider--flizelin')) {
 		new Swiper('.product-hero-track__slider--flizelin', {
 			freeMode: true,

@@ -1,6 +1,14 @@
 // import Swiper from 'swiper/swiper-bundle.esm.browser.js';
 import Swiper from "swiper/bundle";
 
+// Стили Swiper
+// Базовые стили
+// import "../../scss/base/swiper.scss";
+// Полный набор стилей из scss/libs/swiper.scss
+// import "../../scss/libs/swiper.scss";
+// Полный набор стилей из node_modules
+import 'swiper/css';
+
 const mainSlider = document.querySelector('.jsMainSlider');
 let mainSliderInit;
 
@@ -260,18 +268,11 @@ if (seeAlsoSlider) {
 	});
 }
 
-let productHeroSlider
-if (document.querySelector('.product-hero-track__slider--equipment')) {
-	new Swiper('.product-hero-track__slider--equipment', {
-		// freeMode: true,
+if (document.querySelector('.product-hero-track__slider--equipment') && document.querySelector('.product-hero__slider--equipment')) {
+	let productTrack = new Swiper('.product-hero-track__slider--equipment', {
+		direction: 'vertical',
 		slidesPerView: 4,
 		spaceBetween: 12,
-		// slidesPerGroup: 1,
-		// speed: 800,
-		direction: 'vertical',
-		// mousewheel: {
-		// 	sensitivity: 1
-		// },
 		navigation: {
 			prevEl: '.product-hero-prev',
 			nextEl: '.product-hero-next'
@@ -279,12 +280,8 @@ if (document.querySelector('.product-hero-track__slider--equipment')) {
 		on: {
 		}
 	})
-}
-if (document.querySelector('.product-hero__slider--equipment')) {
 
-	productHeroSlider = new Swiper('.product-hero__slider--equipment', {
-		effect: "slide",
-		speed: 500,
+	new Swiper('.product-hero__slider--equipment', {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		spaceBetween: 0,
@@ -298,9 +295,7 @@ if (document.querySelector('.product-hero__slider--equipment')) {
 			type: 'fraction'
 		},
 		thumbs: {
-			swiper: {
-				el: '.product-hero-track__slider'
-			}
+			swiper: productTrack
 		},
 
 		breakpoints: {
@@ -317,15 +312,18 @@ if (document.querySelector('.product-hero__slider--equipment')) {
 	})
 	// return productHeroslider
 }
-console.log(productHeroSlider);
-if (document.querySelector('.product-hero-track__slider--flizelin')) {
-	new Swiper('.product-hero-track__slider--flizelin', {
+if (document.querySelector('.product-hero-track__slider--flizelin') &&
+		document.querySelector('.product-hero__slider--flizelin')) {
+	let productTrack = new Swiper('.product-hero-track__slider--flizelin', {
+		direction: 'vertical',
+		// freeMode: true,
+		// watchSlidesVisibility: true,
+		// watchSlidesProgress: true,
 		// freeMode: true,
 		slidesPerView: 3,
 		spaceBetween: 12,
 		// slidesPerGroup: 1,
 		// speed: 800,
-		direction: 'vertical',
 		// mousewheel: {
 		// 	sensitivity: 1
 		// },
@@ -335,14 +333,12 @@ if (document.querySelector('.product-hero-track__slider--flizelin')) {
 		},
 		on: {}
 	})
-}
-if (document.querySelector('.product-hero__slider--flizelin')) {
+
 	new Swiper('.product-hero__slider--flizelin', {
-		effect: "slide",
-		speed: 500,
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		spaceBetween: 0,
+		autoHeight: true,
 		navigation: {
 			nextEl: '.product-hero-main-next',
 			prevEl: '.product-hero-main-prev',
@@ -352,9 +348,8 @@ if (document.querySelector('.product-hero__slider--flizelin')) {
 			type: 'fraction'
 		},
 		thumbs: {
-			swiper: {
-				el: '.product-hero-track__slider--flizelin'
-			}
+			swiper: productTrack
+
 		},
 
 		breakpoints: {
