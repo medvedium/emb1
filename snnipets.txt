@@ -10,7 +10,7 @@
 		"scope": "html",
 		"prefix": "rating",
 		"body": [
-			"<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+			"<div class="rating rating_set"><div class="rating__body"><div class="rating__active"></div><div class="rating__items"><input type="radio" class="rating__item" value="1" name="rating"><input type="radio" class="rating__item" value="2" name="rating"><input type="radio" class="rating__item" value="3" name="rating"><input type="radio" class="rating__item" value="4" name="rating"><input type="radio" class="rating__item" value="5" name="rating"></div></div><div class="rating__value">3.6</div></div>"
 		],
 		"description": "Добавляет базовый HTML код рейтинга"
 	},
@@ -18,7 +18,7 @@
 		"scope": "html",
 		"prefix": "spollers",
 		"body": [
-			"<div data-spollers class=\"spollers\">\n\t<div class=\"spollers__item\">\n\t\t<button type=\"button\" data-spoller class=\"spollers__title\">Заголовок спойлера</button>\n\t\t<div class=\"spollers__body\">Контент спойлера</div>\n\t</div>\n</div>"
+			"<div data-spollers class="spollers"><div class="spollers__item"><button type="button" data-spoller class="spollers__title">Заголовок спойлера</button><div class="spollers__body">Контент спойлера</div></div></div>"
 		],
 		"description": "Добавляет базовый HTML код спойлеров"
 	},
@@ -26,7 +26,7 @@
 		"scope": "html",
 		"prefix": "tabs",
 		"body": [
-			"<div data-tabs class=\"${1:tabs}\">\n\t<nav data-tabs-titles class=\"${1:tabs}__navigation\">\n\t\t<button type=\"button\" class=\"${1:tabs}__title _tab-active\">Таб №1</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Таб №2</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Таб №3</button>\n\t</nav>\n\t<div data-tabs-body class=\"${1:tabs}__content\">\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tСодержимое первого таба\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tСодержимое второго таба\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tСодержимое третьего таба\n\t\t</div>\n\t</div>\n</div>"
+			"<div data-tabs class="${1:tabs}"><nav data-tabs-titles class="${1:tabs}__navigation"><button type="button" class="${1:tabs}__title _tab-active">Таб №1</button><button type="button" class="${1:tabs}__title">Таб №2</button><button type="button" class="${1:tabs}__title">Таб №3</button></nav><div data-tabs-body class="${1:tabs}__content"><div class="${1:tabs}__body">Содержимое первого таба</div><div class="${1:tabs}__body">Содержимое второго таба</div><div class="${1:tabs}__body">Содержимое третьего таба</div></div></div>"
 		],
 		"description": "Добавляет базовый HTML код табов"
 	},
@@ -34,7 +34,7 @@
 		"scope": "html",
 		"prefix": "showmore",
 		"body": [
-			"<div data-showmore class=\"${1:block}\">\n\t<div data-showmore-content class=\"${1:block}__content\"></div>\n\t<button hidden data-showmore-button type=\"button\" class=\"${1:block}__more\"><span>Показать еще</span><span>Скыть</span></button>\n</div>"
+			"<div data-showmore class="${1:block}"><div data-showmore-content class="${1:block}__content"></div><button hidden data-showmore-button type="button" class="${1:block}__more"><span>Показать еще</span><span>Скыть</span></button></div>"
 		],
 		"description": "Добавляет базовый HTML код блока 'показать еще'"
 	},
@@ -42,7 +42,7 @@
 		"scope": "html",
 		"prefix": "swiper",
 		"body": [
-			"<div class=\"${1:имя-блока}__slider swiper\">\n\t<div class=\"${1:имя-блока}__wrapper swiper-wrapper\">\n\t\t<div class=\"${1:имя-блока}__slide swiper-slide\"></div>\n\t</div>\n</div>"
+			"<div class="${1:имя-блока}__slider swiper"><div class="${1:имя-блока}__wrapper swiper-wrapper"><div class="${1:имя-блока}__slide swiper-slide"></div></div></div>"
 		],
 		"description": "Добавляет базовый HTML код слайдера Swiper"
 	},
@@ -50,21 +50,21 @@
 		"scope": "html",
 		"prefix": "swiperfull",
 		"body": [
-			"<!-- Оболочка слайдера -->\n<div class=\"${1:имя-блока}__slider swiper\">\n\t<!-- Двигающееся часть слайдера -->\n\t<div class=\"${1:имя-блока}__wrapper swiper-wrapper\">\n\t\t<!-- Слайд -->\n\t\t<div class=\"${1:имя-блока}__slide swiper-slide\"></div>\n\t</div>\n\t<!-- Если нужна пагинация -->\n\t<div class=\"swiper-pagination\"></div>\n\t<!-- Если нужна навигация (влево/вправо) -->\n\t<button type=\"button\" class=\"swiper-button-prev\"></button>\n\t<button type=\"button\" class=\"swiper-button-next\"></button>\n\t<!-- Если нужен скролбар -->\n\t<div class=\"swiper-scrollbar\"></div>\n</div>"
+			"<!-- Оболочка слайдера --><div class="${1:имя-блока}__slider swiper"><!-- Двигающееся часть слайдера --><div class="${1:имя-блока}__wrapper swiper-wrapper"><!-- Слайд --><div class="${1:имя-блока}__slide swiper-slide"></div></div><!-- Если нужна пагинация --><div class="swiper-pagination"></div><!-- Если нужна навигация (влево/вправо) --><button type="button" class="swiper-button-prev"></button><button type="button" class="swiper-button-next"></button><!-- Если нужен скролбар --><div class="swiper-scrollbar"></div></div>"
 		],
 		"description": "Добавляет базовый HTML код слайдера Swiper"
 	},
 	"Quantity": {
 		"scope": "html",
 		"prefix": "quantity",
-		"body": "<div class=\"quantity\">\n\t<button type=\"button\" class=\"quantity__button quantity__button_plus\"></button>\n\t<div class=\"quantity__input\">\n\t\t<input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\">\n\t</div>\n\t<button type=\"button\" class=\"quantity__button quantity__button_minus\"></button>\n</div>",
+		"body": "<div class="quantity"><button type="button" class="quantity__button quantity__button_plus"></button><div class="quantity__input"><input autocomplete="off" type="text" name="form[]" value="1"></div><button type="button" class="quantity__button quantity__button_minus"></button></div>",
 		"description": "Добавняет HTML формы с кол-вом"
 	},
 	"Add tooltip": {
 		"scope": "html",
 		"prefix": "tip",
 		"body": [
-			"data-tippy-content=\"Подсказка\""
+			"data-tippy-content="Подсказка""
 		],
 		"description": "Добавляет текст-подсказку (Tippy)"
 	},
@@ -80,7 +80,7 @@
 		"scope": "html",
 		"prefix": "da",
 		"body": [
-			"data-da=\".${1:имя блока}, 768\""
+			"data-da=".${1:имя блока}, 768""
 		],
 		"description": "Добавляет атрибут динамического адаптива"
 	},
@@ -88,7 +88,7 @@
 		"scope": "html",
 		"prefix": "ibg",
 		"body": [
-			"<div class=\"${1:имя блока}__image-ibg\"><img data-src=\"@img$2\" alt=\"\"></div>"
+			"<div class="${1:имя блока}__image-ibg"><img data-src="@img$2" alt=""></div>"
 		],
 		"description": "Добавляет объект с картинкой и классом IBG"
 	},
@@ -96,27 +96,27 @@
 		"scope": "html",
 		"prefix": "ibga",
 		"body": [
-			"<a href=\"\" class=\"${1:имя блока}__image-ibg\"><img data-src=\"@img$2\" alt=\"\"></a>"
+			"<a href="" class="${1:имя блока}__image-ibg"><img data-src="@img$2" alt=""></a>"
 		],
 		"description": "Добавляет ссылку с картинкой и классом IBG"
 	},
 	"Add input tag": {
 		"scope": "html",
 		"prefix": "inp",
-		"body": "<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-error=\"Ошибка\" placeholder=\"\" class=\"input\">",
+		"body": "<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">",
 		"description": "Добавляет input со настройками"
 	},
 	"Add container": {
 		"scope": "html",
 		"prefix": "cnt",
-		"body": "<div class=\"${1:имя блока}__container\">\n\t$2\n</div>",
+		"body": "<div class="${1:имя блока}__container">$2</div>",
 		"description": "Добавляет ограничивающий контейнер"
 	},
 	"Adaptiv Value": {
 		"scope": "scss",
 		"prefix": "av",
 		"body": [
-			"@include adaptiveValue(\"${1:font-size}\", $2, $3);"
+			"@include adaptiveValue("${1:font-size}", $2, $3);"
 		],
 		"description": "Адаптивное свойство (clamp): CSS-свойство, начальное значение, конечное значение, ширина начальная, ширина конечная"
 	},
@@ -218,7 +218,7 @@
 		"scope": "scss",
 		"prefix": "nlc",
 		"body": [
-			"&:not(:last-child) {\n\t$1\n}"
+			"&:not(:last-child) {$1}"
 		],
 		"description": "Исключая последний объект"
 	},
@@ -249,14 +249,14 @@
 	"@media max": {
 		"prefix": "md",
 		"body": [
-			"@media (max-width: em($1)){\n\t $2 \n}"
+			"@media (max-width: em($1)){ $2 }"
 		],
 		"description": "Добавляет медиазапрос max-width c переводом в EM"
 	},
 	"@media min": {
 		"prefix": "mmd",
 		"body": [
-			"@media (min-width:em($1)){\n\t $2 \n}"
+			"@media (min-width:em($1)){ $2 }"
 		],
 		"description": "Добавляет медиазапрос min-width c переводом в EM"
 	},
@@ -264,7 +264,7 @@
 		"scope": "html",
 		"prefix": "pl",
 		"body": [
-			"data-popup=\"$1\""
+			"data-popup="$1""
 		],
 		"description": "Добавляет трибут для открытия попапа"
 	},
@@ -272,7 +272,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "click",
 		"body": [
-			"${1:document}.addEventListener(\"click\", function (e) {\n\t$2\n});"
+			"${1:document}.addEventListener("click", function (e) {$2});"
 		],
 		"description": "document.querySelectorAll"
 	},
@@ -585,14 +585,14 @@
 	"lc": {
 		"prefix": "lc",
 		"body": [
-			"&:last-child{\n\t$0\n}"
+			"&:last-child{$0}"
 		],
 		"description": "lc"
 	},
 	"fc": {
 		"prefix": "fc",
 		"body": [
-			"&:first-child{\n\t$0\n}"
+			"&:first-child{$0}"
 		],
 		"description": "fc"
 	},
@@ -606,42 +606,42 @@
 	"BeforeAfter": {
 		"prefix": "ba",
 		"body": [
-			"&::before,&::after{\n\tcontent:'';\n\t$0\n}"
+			"&::before,&::after{content:'';$0}"
 		],
 		"description": "ba"
 	},
 	"After": {
 		"prefix": "a",
 		"body": [
-			"&::after{\n\tcontent:'';\n\t$0\n}"
+			"&::after{content:'';$0}"
 		],
 		"description": "after"
 	},
 	"Before": {
 		"prefix": "b",
 		"body": [
-			"&::before{\n\tcontent:'';\n\t$0\n}"
+			"&::before{content:'';$0}"
 		],
 		"description": "before"
 	},
 	"hv": {
 		"prefix": "hv",
 		"body": [
-			"&:hover{\n\t$0\n}"
+			"&:hover{$0}"
 		],
 		"description": "hv"
 	},
 	"hhv": {
 		"prefix": "hhv",
 		"body": [
-			"@media (any-hover: hover){\n\t&:hover{\n\t\t$0\n\t}\n}"
+			"@media (any-hover: hover){&:hover{$0}}"
 		],
 		"description": "hhv"
 	},
 	"acc": {
 		"prefix": "acc",
 		"body": [
-			"&:active{\n\t$0\n}"
+			"&:active{$0}"
 		],
 		"description": "acc"
 	},
@@ -649,7 +649,7 @@
 		"scope": "scss,css",
 		"prefix": "ac",
 		"body": [
-			"&._active{\n\t$0\n}"
+			"&._active{$0}"
 		],
 		"description": "ac_css"
 	},
@@ -671,56 +671,56 @@
 	"md1": {
 		"prefix": "md1",
 		"body": [
-			"@media (max-width:\\$pc){\n\t $0 \n}"
+			"@media (max-width:$pc){ $0 }"
 		],
 		"description": "md1"
 	},
 	"mmd1": {
 		"prefix": "mmd1",
 		"body": [
-			"@media (min-width:\\$pc){\n\t $0 \n}"
+			"@media (min-width:$pc){ $0 }"
 		],
 		"description": "md1"
 	},
 	"md2": {
 		"prefix": "md2",
 		"body": [
-			"@media (max-width:\\$tablet){\n\t$0\n}"
+			"@media (max-width:$tablet){$0}"
 		],
 		"description": "md2"
 	},
 	"mmd2": {
 		"prefix": "mmd2",
 		"body": [
-			"@media (min-width:\\$tablet){\n\t $0 \n}"
+			"@media (min-width:$tablet){ $0 }"
 		],
 		"description": "md1"
 	},
 	"md3": {
 		"prefix": "md3",
 		"body": [
-			"@media (max-width:\\$mobile){\n\t $0 \n}"
+			"@media (max-width:$mobile){ $0 }"
 		],
 		"description": "md3"
 	},
 	"mmd3": {
 		"prefix": "mmd3",
 		"body": [
-			"@media (min-width:\\$mobile){\n\t $0 \n}"
+			"@media (min-width:$mobile){ $0 }"
 		],
 		"description": "md1"
 	},
 	"md4": {
 		"prefix": "md4",
 		"body": [
-			"@media (max-width:\\$mobileSmall){\n\t $0 \n}"
+			"@media (max-width:$mobileSmall){ $0 }"
 		],
 		"description": "md4"
 	},
 	"mmd4": {
 		"prefix": "mmd4",
 		"body": [
-			"@media (min-width:\\$mobileSmall){\n\t $0 \n}"
+			"@media (min-width:$mobileSmall){ $0 }"
 		],
 		"description": "md1"
 	},
@@ -846,92 +846,92 @@
 	"bt": {
 		"prefix": "bt",
 		"body": [
-			"body.touch &{\n\t$1\n}"
+			"body.touch &{$1}"
 		],
 		"description": "bt"
 	},
 	"kf": {
 		"prefix": "kf",
-		"body": "@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}",
+		"body": "@keyframes ${1:name} {0% {$2}100% {$3}}",
 		"description": "kf"
 	},
 	"qa": {
 		"scope": "html,kit",
 		"prefix": "qa",
-		"body": "<div class=\"quantity\"><div class=\"quantity__button quantity__button_plus _icon-plus\"></div><div class=\"quantity__input\"><input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\"></div><div class=\"quantity__button quantity__button_minus _icon-minus\"></div></div>",
+		"body": "<div class="quantity"><div class="quantity__button quantity__button_plus _icon-plus"></div><div class="quantity__input"><input autocomplete="off" type="text" name="form[]" value="1"></div><div class="quantity__button quantity__button_minus _icon-minus"></div></div>",
 		"description": "qa"
 	},
 	"Textarea": {
 		"scope": "html,kit",
 		"prefix": "txta",
-		"body": "<textarea autocomplete=\"off\" name=\"form[]\" placeholder=\"$1\" data-error=\"Ошибка\" class=\"input\"></textarea>",
+		"body": "<textarea autocomplete="off" name="form[]" placeholder="$1" data-error="Ошибка" class="input"></textarea>",
 		"description": "txta"
 	},
 	"Select": {
 		"prefix": "sel",
-		"body": "<select name=\"form[]\" class=\"form\">\n\t<option value=\"1\" selected>Пункт №1</option>\n\t<option value=\"2\">Пункт №2</option>\n\t<option value=\"3\">Пункт №3</option>\n\t<option value=\"4\">Пункт №4</option>\n</select>",
+		"body": "<select name="form[]" class="form"><option value="1" selected>Пункт №1</option><option value="2">Пункт №2</option><option value="3">Пункт №3</option><option value="4">Пункт №4</option></select>",
 		"description": "sel"
 	},
 	"Radio buttons": {
 		"prefix": "opt",
-		"body": "<div class=\"options\">\n\t<div class=\"options__item\">\n\t\t<input hidden id=\"o_1\" class=\"options__input\" checked type=\"radio\" value=\"1\" name=\"option\">\n\t\t<label for=\"o_1\" class=\"options__label\"><span class=\"options__text\">${1:Текст}</span></label>\n\t</div>\n\t<div class=\"options__item\">\n\t\t<input hidden id=\"o_2\" class=\"options__input\" type=\"radio\" value=\"2\" name=\"option\">\n\t\t<label for=\"o_2\" class=\"options__label\"><span class=\"options__text\">${2:Текст}</span></label>\n\t</div>\n</div>",
+		"body": "<div class="options"><div class="options__item"><input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option"><label for="o_1" class="options__label"><span class="options__text">${1:Текст}</span></label></div><div class="options__item"><input hidden id="o_2" class="options__input" type="radio" value="2" name="option"><label for="o_2" class="options__label"><span class="options__text">${2:Текст}</span></label></div></div>",
 		"description": ""
 	},
 	"CheckBox": {
 		"prefix": "chk",
-		"body": "<div class=\"checkbox\">\n\t<input id=\"c_1\" data-error=\"Ошибка\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\" name=\"form[]\">\n\t<label for=\"c_1\" class=\"checkbox__label\"><span class=\"checkbox__text\">${1:Текст}</span></label>\n</div>",
+		"body": "<div class="checkbox"><input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]"><label for="c_1" class="checkbox__label"><span class="checkbox__text">${1:Текст}</span></label></div>",
 		"description": ""
 	},
 	"Button": {
 		"prefix": "btn",
-		"body": "<button type=\"submit\" class=\"button\">${1:Отправить}</button>",
+		"body": "<button type="submit" class="button">${1:Отправить}</button>",
 		"description": ""
 	},
 	"Button Item": {
 		"prefix": "bbtn",
-		"body": "<button type=\"button\" class=\"${1:class}\">${2:Текст}</button>",
+		"body": "<button type="button" class="${1:class}">${2:Текст}</button>",
 		"description": ""
 	},
 	"Button Link": {
 		"prefix": "abtn",
-		"body": "<a href=\"\" class=\"button\">${1:Текст}</a>",
+		"body": "<a href="" class="button">${1:Текст}</a>",
 		"description": ""
 	},
 	"str": {
 		"prefix": "str",
-		"body": "<div class=\"${1:block}\">\n\t<div class='${1:block}__container'>\n\t\t<div class=\"${1:block}__title\"></div>\n\t\t<div class=\"${1:block}__row\">\n\t\t\t<div class=\"${1:block}__column\">\n\t\t\t\t$2\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
+		"body": "<div class="${1:block}"><div class='${1:block}__container'><div class="${1:block}__title"></div><div class="${1:block}__row"><div class="${1:block}__column">$2</div></div></div></div>",
 		"description": "str"
 	},
 	"menu": {
 		"prefix": "menu",
-		"body": "<div class=\"header__menu menu\">\n\t<button type=\"button\" class=\"menu__icon icon-menu\"><span></span></button>\n\t<nav class=\"menu__body\">\n\t\t<ul class=\"menu__list\">\n\t\t\t<li class=\"menu__item\"><a href=\"\" class=\"menu__link\"></a></li>\n\t\t</ul>\n\t</nav>\n</div>",
+		"body": "<div class="header__menu menu"><button type="button" class="menu__icon icon-menu"><span></span></button><nav class="menu__body"><ul class="menu__list"><li class="menu__item"><a href="" class="menu__link"></a></li></ul></nav></div>",
 		"description": "menu"
 	},
 	"logo": {
 		"prefix": "logo",
-		"body": "<a href=\"\" class=\"header__logo\"><img data-src=\"../img/logo.svg\" alt=\"\"></a>",
+		"body": "<a href="" class="header__logo"><img data-src="../img/logo.svg" alt=""></a>",
 		"description": "logo"
 	},
 	"Image": {
 		"prefix": "img",
-		"body": "<img src=\"@img$0\" alt=\"\">",
+		"body": "<img src="@img$0" alt="">",
 		"description": "img"
 	},
 	"Image Lazy": {
 		"prefix": "imgl",
-		"body": "<img data-src=\"@img$0\" alt=\"\">",
+		"body": "<img data-src="@img$0" alt="">",
 		"description": "img lazy load"
 	},
 	/*
 	"Image": {
 		"prefix": "img",
-		"body": "<img src=\"img$0\" alt=\"\">",
+		"body": "<img src="img$0" alt="">",
 		"description": "img"
 	},
 	*/
 	"sp": {
 		"prefix": "sp",
-		"body": "//========================================================================================================================================================\n$1",
+		"body": "//========================================================================================================================================================$1",
 		"description": "sp"
 	},
 	"nowrap": {

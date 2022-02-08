@@ -1,0 +1,156 @@
+.thread-choose {
+	// .thread-choose__controls
+	&__controls {
+		padding: rem(16) 0;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .thread-choose__search
+	&__search {
+	}
+
+	// .thread-choose__sorting
+	&__sorting {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+
+	// .thread-choose__sorting-title
+	&__sorting-title {
+		margin-right: rem(24);
+
+		@include below(1080px) {
+			display: none;
+		}
+	}
+
+	// .thread-choose__select
+	&__select {
+	}
+
+	// .thread-choose__inner
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		column-gap: rem(24);
+	}
+
+	// .thread-choose__item
+	&__item {
+	}
+}
+
+.search-thread {
+	border-radius: rem(4);
+	position: relative;
+	border: 1px solid $gray-2;
+	width: 100%;
+	max-width: rem(304);
+
+	// .search-thread__button
+	&__button {
+		position: absolute;
+		background-color: transparent;
+		height: rem(44);
+		width: rem(44);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		right: 0;
+		font-size: rem(14);
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	// .search-thread__input
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		border-radius: rem(3);
+		height: rem(44);
+		color: $mainColor;
+		padding: 0px rem(30) 0px rem(20);
+
+		&::placeholder {
+			color: $dark;
+		}
+	}
+}
+
+.item-thread {
+	position: relative;
+	// .item-thread__code
+	&__code {
+	}
+
+	// .item-thread__content
+	&__content {
+	}
+
+	// .item-thread__img
+	&__img {
+		height: rem(72);
+		width: 100%;
+		border-radius: 4px;
+	}
+
+	// .item-thread__to-cart
+	&__to-cart {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $white;
+		border-radius: rem(4);
+		font-size: rem(12);
+		line-height: 1.3;
+		white-space: nowrap;
+		padding: 2px 4px 2px 20px;
+		cursor: pointer;
+		.item-thread:not(.is-in-cart):hover & {
+			display: block;
+		}
+	}
+
+	// .item-thread__in-cart
+	&__in-cart {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $white;
+		border-radius: rem(4);
+		font-size: rem(12);
+		line-height: 1.3;
+		padding: 2px 4px 2px 24px;
+		white-space: nowrap;
+
+		.item-thread.is-in-cart & {
+			display: block;
+		}
+	}
+
+	// .item-thread__status
+	&__status {
+		&.available {
+			color: $status-available;
+		}
+	}
+
+	// .item-thread__status-text
+	&__status-text {
+		font-size: 14px;
+		&::before {
+			font-size: 6px;
+			margin-right: 7px;
+			margin-left: 2px;
+			vertical-align: middle;
+		}
+	}
+}

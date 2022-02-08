@@ -1,0 +1,82 @@
+<div class="product-tabs__body">
+  <div class="thread-choose">
+    <div class="thread-choose__controls">
+      <form action="#" class="thread-choose__search search-thread">
+        <button type="submit" class="search-thread__button">
+          <svg class="icon icon--sm icon--blue">
+            <use xlink:href="img/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+        <input
+          autocomplete="off"
+          type="text"
+          name="form[]"
+          data-error="Ошибка"
+          placeholder="Артикул"
+          class="search-thread__input"
+        />
+      </form>
+        <div class="thread-choose__sorting" id="sorting">
+          <div class="thread-choose__sorting-title">Сортировка:</div>
+          <select name="thread" class="thread-choose__select">
+            <option value="1" selected>Добавленные</option>
+            <option value="2">Пункт №2</option>
+            <option value="3">Пункт №3</option>
+            <option value="4">Пункт №4</option>
+            <option value="5">Пункт №5</option>
+            <option value="6">Пункт №6</option>
+            <option value="7">Пункт №7</option>
+            <option value="8">Пункт №8</option>
+            <option value="9">Пункт №9</option>
+            <option value="10">Пункт №10</option>
+          </select>
+        </div>
+    </div>
+    <div class="thread-choose__inner">
+      <div class="thread-choose__item item-thread">
+        <div class="item-thread__title">
+          <div class="item-thread__img" style="background-thread: #70b2e2"></div>
+          <div class="item-thread__code">208746</div>
+          <div class="item-thread__name">Морская волна (парадная форма)</div>
+          <div class="item-thread__availability delivery">В пути</div>
+        </div>
+        <div class="item-thread__width item-thread__row">
+          <div class="item-thread__option">Ширина рулона:</div>
+          <div class="item-thread__divider"></div>
+          <span>40 см</span>
+        </div>
+        <div class="item-thread__length item-thread__row">
+          <div class="item-thread__option">Длина рулона:</div>
+          <div class="item-thread__divider"></div>
+          <span>30 м</span>
+        </div>
+        <div class="item-thread__meter-price item-thread__row">
+          <div class="item-thread__option">Цена за метр</div>
+          <div class="item-thread__divider"></div>
+          <span>275 ₽</span>
+        </div>
+        <div class="item-thread__roll-price item-thread__row">
+          <div class="item-thread__option">Цена за рулон:</div>
+          <div class="item-thread__divider"></div>
+          <span>10 817 ₽</span>
+          <div class="item-thread__roll-price-tip">
+            <svg class="icon icon--sm icon--gray">
+              <use xlink:href="img/icons/icons.svg#i"></use>
+            </svg>
+            <div class="item-thread__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
+          </div>
+        </div>
+        <div class="item-thread__buttons">
+          <div
+            class="button button--md button--border button--hover-main item-thread__btn"
+            data-bs-target="#flizelin-buy"
+            data-bs-toggle="modal"
+          >
+            Купить
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/modules/pagination/pagination.html')
+  </div>
+</div>
