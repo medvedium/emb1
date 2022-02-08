@@ -198,6 +198,7 @@
 			filter: drop-shadow(0px 12px 25px rgba(19, 48, 80, 0.08));
 		}
 	}
+
 	&_thread-choose__select {
 		width: 100%;
 		max-width: rem(300);
@@ -205,23 +206,10 @@
 		transition: filter .2s linear;
 
 
-		@include below($mobile) {
+		@include below(910px) {
 			max-width: none;
 		}
 
-		&:not(:last-of-type) {
-			margin-right: rem(24);
-
-			@include below($mobile) {
-				margin-right: 0;
-				margin-bottom: 16px;
-			}
-		}
-		&:last-of-type {
-			@include below($mobile) {
-				margin-bottom: rem(24);
-			}
-		}
 
 		.select-body {
 			height: rem(44);
@@ -241,7 +229,7 @@
 			}
 
 			@include below($mobile) {
-				padding: 0 rem(10);
+				padding: 0 rem(15) 0 rem(12);
 			}
 		}
 		.select__options {
