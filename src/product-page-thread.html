@@ -38,10 +38,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="content">
+			<div class="content" itemscope itemtype="http://schema.org/Product">
 				<section class="section">
 					<div class="container">
-						<h1 class="h1 mb-2">Нитки хлопок сotty №30 Gunold, 5000m</h1>
+						<h1 class="h1 mb-2" itemprop="name">Нитки хлопок сotty №30 Gunold, 5000m</h1>
 
 						<div class="product__inner product__inner--flizelin other-order">
 							<div class="product__code mb-5 text--sm">Код товара: 648494</div>
@@ -99,7 +99,7 @@
 									<div class="product-hero__slider jsThreadSliderMain swiper" data-slider="main-img-slider">
 										<div class="product-hero__swiper swiper-wrapper" data-bs-toggle="modal" data-bs-target="#hero">
 											<div class="product-hero__slide swiper-slide">
-												<img src="img/product-page/product-thread.jpg" alt="" class="img" />
+												<img src="img/product-page/product-thread.jpg" alt="" class="img" itemprop="image" />
 											</div>
 											<div class="product-hero__slide swiper-slide">
 												<img src="img/product-page/product-flizelin.jpg" alt="" class="img" />
@@ -143,7 +143,9 @@
 								</div>
 							</div>
 
-							<div class="product__control-panel product-control">
+							<div class="product__control-panel product-control" itemprop="offers"
+							     itemscope
+							     itemtype="http://schema.org/Offer">
 								<div class="product-pricing mb-3">
 									<div class="product-pricing__title mb-5">Цена:</div>
 									<ul class="mb-4">
@@ -168,7 +170,8 @@
 												</div>
 											</div>
 											<div class="product-properties__divider"></div>
-											<div class="product-properties__value text--xl text--bold">1 817 ₽</div>
+											<div class="product-properties__value text--xl text--bold" itemprop="price">1 817 ₽</div>
+											<meta itemprop="priceCurrency" content="RUB">
 										</li>
 									</ul>
 									<button class="button button--wide button--fill jsColorChoose" data-goto=".product__tabs">
@@ -1447,7 +1450,7 @@
 											@@include('blocks/modules/pagination/pagination.html')
 										</div>
 									</div>
-									<div class="product-tabs__body">
+									<div class="product-tabs__body"  itemprop="description">
 										<div class="text text--bold mb-4 product-about-title">
 											Вышивальная машина Brother PR- 1050X Одноголовочная десяти игольная вышивальная машина.
 										</div>
