@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Каталог</title>
+		<title>Оформление заказа</title>
 		<meta name="theme-color" content="#fff" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta
@@ -36,8 +36,749 @@
 				<section class="section">
 					<div class="container">
 						<h1 class="h1 mb-5">Оформление заказа</h1>
+						<div class="order-cart__title">
+							<span>Корзина</span>
+							<a href="#" class="link-color-blue">Перейти в корзину</a>
+						</div>
 
-						.order>.order__inner
+						<div id="bx-soa-order" class="row bx-green">
+							<!--	MAIN BLOCK	-->
+							<div class="col-sm-9 bx-soa">
+								<div id="bx-soa-main-notifications">
+									<div class="alert alert-danger" style="display: none"></div>
+									<div data-type="informer" style="display: none"></div>
+								</div>
+								<!--	AUTH BLOCK	-->
+								<div id="bx-soa-auth" class="bx-soa-section bx-soa-auth" style="display: none">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+											Авторизация
+										</h2>
+									</div>
+									<div class="bx-soa-section-content container-fluid"></div>
+								</div>
+
+								<!--	DUPLICATE MOBILE ORDER SAVE BLOCK	-->
+								<div id="bx-soa-total-mobile" style="margin-bottom: 6px" class="visible-xs">
+									<div class="bx-soa-cart-total">
+										<div class="bx-soa-cart-total-line">
+											<span class="bx-soa-cart-t">Товаров на:</span>
+											<span class="bx-soa-cart-d">39 900 р</span>
+										</div>
+										<div class="bx-soa-cart-total-line">
+											<span class="bx-soa-cart-t">Общий вес:</span>
+											<span class="bx-soa-cart-d">10.6 кг</span>
+										</div>
+										<div class="bx-soa-cart-total-line">
+											<span class="bx-soa-cart-t">Доставка:</span>
+											<span class="bx-soa-cart-d">
+												<span class="bx-soa-price-free">
+													бесплатно
+													<br />
+													<span class="bx-price-old">300 р</span>
+												</span>
+											</span>
+										</div>
+										<div class="bx-soa-cart-total-line bx-soa-cart-total-line-total">
+											<span class="bx-soa-cart-t">Итого:</span>
+											<span class="bx-soa-cart-d">39 900 р</span>
+										</div>
+										<div class="bx-soa-cart-total-line" id="bonus_add_block_mobile">
+											<div id="bonus_add_sum_mobile">
+												<span class="bx-soa-cart-t">Бонусные баллы:</span>
+												<span class="bx-soa-cart-d">898</span>
+											</div>
+										</div>
+										<div class="bx-soa-cart-total-button-container" style="display: none !important">
+											<a href="javascript:void(0)" class="btn btn-default btn-lg btn-order-save">Оформить заказ</a>
+										</div>
+									</div>
+								</div>
+
+								<!--	REGION BLOCK	-->
+								<div id="bx-soa-region" data-visited="true" class="bx-soa-section bx-active bx-selected">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+											Регион доставки
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+									</div>
+									<div class="bx-soa-section-content container-fluid">
+										<div class="alert alert-danger" style="display: none"></div>
+										<div class="bx_soa_location row">
+											<div class="col-xs-12">
+												<div class="form-group">
+													<label class="bx-soa-custom-label">Тип плательщика</label>
+													<br />
+													<div class="radio-inline">
+														<label>
+															<input checked="true" type="radio" name="PERSON_TYPE" value="1" />
+															Физическое лицо
+														</label>
+													</div>
+													<br />
+													<div class="radio-inline">
+														<label>
+															<input type="radio" name="PERSON_TYPE" value="2" />
+															Юридическое лицо
+														</label>
+													</div>
+													<input type="hidden" name="PERSON_TYPE_OLD" value="1" />
+												</div>
+												<div data-property-id-row="6" class="form-group bx-soa-location-input-container" style="">
+													<label class="bx-soa-custom-label" for="soa-property-6">
+														<span class="bx-authform-starrequired">*</span>
+														Местоположение
+													</label>
+													<font color="#FF0000">Cannot find 'empty' template with page ''</font>
+												</div>
+												<input type="hidden" name="RECENT_DELIVERY_VALUE" value="0000103664" />
+												<div class="bx-soa-reference">
+													Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а
+													город впишите в поле "Город"
+												</div>
+											</div>
+										</div>
+										<div class="row bx-soa-more">
+											<div class="bx-soa-more-btn col-xs-12">
+												<a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--	DELIVERY BLOCK	-->
+								<div id="bx-soa-delivery" data-visited="false" class="bx-soa-section bx-active">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+											Доставка
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right">
+											<a href="" class="bx-soa-editstep" style="display: none">изменить</a>
+										</div>
+									</div>
+
+									<div class="bx-soa-section-content" style="display: none">
+										<div class="alert alert-danger" style="display: none"></div>
+										<div class="col-sm-9 bx-soa-pp-company-selected">
+											<img
+												src="/upload/resize_cache/sale/delivery/logotip/226/300_300_1/truck_red.png"
+												alt=""
+												style="height: 18px"
+											/>
+											<strong>Доставка курьером до двери</strong>
+										</div>
+										<div class="col-sm-3 bx-soa-pp-price">
+											0 р
+											<br />
+											<span class="bx-price-old">300 р</span>
+										</div>
+										<div style="clear: both"></div>
+									</div>
+								</div>
+								<!--	PICKUP BLOCK	-->
+								<div id="bx-soa-pickup" data-visited="false" class="bx-soa-section" style="display: none">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+									</div>
+									<div class="bx-soa-section-content container-fluid"></div>
+								</div>
+								<!--	PAY SYSTEMS BLOCK	-->
+								<div id="bx-soa-paysystem" data-visited="false" class="bx-soa-section bx-active">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+											Оплата
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right">
+											<a href="" class="bx-soa-editstep" style="display: none">изменить</a>
+										</div>
+									</div>
+
+									<div class="bx-soa-section-content" style="display: none">
+										<div class="alert alert-danger" style="display: none"></div>
+										<div class="bx-soa-pp-company-selected">
+											<img
+												src="/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png"
+												style="height: 18px"
+												alt=""
+											/>
+											<strong>Он-лайн оплата (банковской картой)</strong>
+										</div>
+										<div style="clear: both"></div>
+									</div>
+								</div>
+								<!--	BUYER PROPS BLOCK	-->
+								<div id="bx-soa-properties" data-visited="false" class="bx-soa-section bx-active">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+											Покупатель
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right">
+											<a href="" class="bx-soa-editstep" style="display: none">изменить</a>
+										</div>
+									</div>
+
+									<div class="bx-soa-section-content container-fluid" style="display: none">
+										<div class="alert alert-danger" style="display: none"></div>
+										<div>
+											<strong>Ф.И.О.:</strong>
+											не выбрано
+										</div>
+										<div>
+											<strong>E-Mail:</strong>
+											не выбрано
+										</div>
+										<div>
+											<strong>Телефон:</strong>
+											не выбрано
+										</div>
+										<div>
+											<strong>Адрес доставки:</strong>
+											не выбрано
+										</div>
+									</div>
+								</div>
+
+								<!--	BASKET ITEMS BLOCK	-->
+								<div id="bx-soa-basket" data-visited="false" class="bx-soa-section bx-active">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+											Товары в заказе
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right">
+											<a href="javascript:void(0)" class="bx-soa-editstep" style="display: none">изменить</a>
+										</div>
+									</div>
+
+									<div class="bx-soa-section-content container-fluid">
+										<div class="bx-soa-table-fade">
+											<div style="overflow: auto hidden">
+												<div class="bx-soa-item-table">
+													<div class="bx-soa-item-tr bx-soa-basket-info bx-soa-item-tr-first">
+														<div class="bx-soa-item-td" style="min-width: 300px">
+															<div class="bx-soa-item-block">
+																<div class="bx-soa-item-img-block">
+																	<a href="/catalog/rasposhivalnaya-mashina-brother-cv3550/">
+																		<div
+																			class="bx-soa-item-imgcontainer"
+																			style="
+																				background-image: url('/upload/iblock/1d0/rasposhivalnaya_mashina_brother_cv_3550.jpg');
+																				background-image: -webkit-image-set(
+																					url('/upload/iblock/1d0/rasposhivalnaya_mashina_brother_cv_3550.jpg') 1x,
+																					url('/upload/iblock/1d0/rasposhivalnaya_mashina_brother_cv_3550.jpg') 2x
+																				);
+																			"
+																		></div>
+																	</a>
+																</div>
+																<div class="bx-soa-item-content">
+																	<div class="bx-soa-item-title">
+																		<a href="/catalog/rasposhivalnaya-mashina-brother-cv3550/">
+																			Распошивальная машина Brother CV 3550
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+															<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+															<div class="bx-soa-item-td-text"><strong class="bx-price all">39 900 р</strong></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--	ORDER SAVE BLOCK	-->
+								<div id="bx-soa-orderSave" style="display: none">
+									<div class="checkbox">
+										<label
+											data-bx-user-consent='{"id":1,"sec":"1doduf","autoSave":false,"actionUrl":"\/bitrix\/components\/bitrix\/main.userconsent.request\/ajax.php","replace":{"button_caption":"\u041e\u0444\u043e\u0440\u043c\u0438\u0442\u044c \u0437\u0430\u043a\u0430\u0437","fields":["\u0424.\u0418.\u041e.","\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u043d\u043e\u0435 \u043b\u0438\u0446\u043e","\u0427\u0435\u043a \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d","E-Mail","E-Mail","\u0422\u0435\u043b\u0435\u0444\u043e\u043d","\u0422\u0435\u043b\u0435\u0444\u043e\u043d","\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438","\u042e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u0434\u0440\u0435\u0441","\u0418\u041d\u041d","\u041a\u041f\u041f","\u0420\/\u0441\u0447\u0435\u0442","\u041a\/\u0441\u0447\u0435\u0442","\u0411\u0418\u041a","\u041d\u0430\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u043d\u0438\u0435 \u0431\u0430\u043d\u043a\u0430","\u0413\u043e\u0440\u043e\u0434 \u0431\u0430\u043d\u043a\u0430","\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435","\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435","\u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438","\u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438","IP-\u0430\u0434\u0440\u0435\u0441"]},"url":null,"text":"\u0421\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445\n\n\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0438\u043c \u0432 \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0438 \u0441 \u0424\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u044b\u043c \u0437\u0430\u043a\u043e\u043d\u043e\u043c \u2116 152-\u0424\u0417 \u00ab\u041e \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445\u00bb \u043e\u0442 27.07.2006 \u0433\u043e\u0434\u0430 \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u043e, \u0441\u0432\u043e\u0435\u0439 \u0432\u043e\u043b\u0435\u0439 \u0438 \u0432 \u0441\u0432\u043e\u0435\u043c \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0435 \u0432\u044b\u0440\u0430\u0436\u0430\u044e \u0441\u0432\u043e\u0435 \u0431\u0435\u0437\u0443\u0441\u043b\u043e\u0432\u043d\u043e\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043c\u043e\u0438\u0445 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 , \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u0432 \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0438 \u0441 \u0437\u0430\u043a\u043e\u043d\u043e\u0434\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e\u043c \u0420\u0424 \u043f\u043e \u0430\u0434\u0440\u0435\u0441\u0443:\n (\u0434\u0430\u043b\u0435\u0435 \u043f\u043e \u0442\u0435\u043a\u0441\u0442\u0443 - \u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440).\n\u041f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0434\u0430\u043d\u043d\u044b\u0435\u00a0- \u043b\u044e\u0431\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f, \u043e\u0442\u043d\u043e\u0441\u044f\u0449\u0430\u044f\u0441\u044f \u043a \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u043c\u0443 \u0438\u043b\u0438 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u0435\u043c\u043e\u043c\u0443 \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u0430\u043d\u0438\u0438 \u0442\u0430\u043a\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438\u00a0\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u043c\u0443 \u043b\u0438\u0446\u0443.\n\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0421\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0432\u044b\u0434\u0430\u043d\u043e \u043c\u043d\u043e\u044e \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0445 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445:\n- \u0424.\u0418.\u041e.;\n- \u041a\u043e\u043d\u0442\u0430\u043a\u0442\u043d\u043e\u0435 \u043b\u0438\u0446\u043e;\n- \u0427\u0435\u043a \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d;\n- E-Mail;\n- E-Mail;\n- \u0422\u0435\u043b\u0435\u0444\u043e\u043d;\n- \u0422\u0435\u043b\u0435\u0444\u043e\u043d;\n- \u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438;\n- \u042e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u0434\u0440\u0435\u0441;\n- \u0418\u041d\u041d;\n- \u041a\u041f\u041f;\n- \u0420\/\u0441\u0447\u0435\u0442;\n- \u041a\/\u0441\u0447\u0435\u0442;\n- \u0411\u0418\u041a;\n- \u041d\u0430\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u043d\u0438\u0435 \u0431\u0430\u043d\u043a\u0430;\n- \u0413\u043e\u0440\u043e\u0434 \u0431\u0430\u043d\u043a\u0430;\n- \u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435;\n- \u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435;\n- \u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438;\n- \u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438.\n\n\u0421\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0434\u0430\u043d\u043e \u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0443 \u0434\u043b\u044f \u0441\u043e\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u044f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0445 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439 \u0441 \u043c\u043e\u0438\u043c\u0438 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u0434\u0430\u043d\u043d\u044b\u043c\u0438 \u0441 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u0441\u0440\u0435\u0434\u0441\u0442\u0432 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u0438\/\u0438\u043b\u0438 \u0431\u0435\u0437 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0430\u043a\u0438\u0445 \u0441\u0440\u0435\u0434\u0441\u0442\u0432: \u0441\u0431\u043e\u0440, \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f, \u043d\u0430\u043a\u043e\u043f\u043b\u0435\u043d\u0438\u0435, \u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435, \u0443\u0442\u043e\u0447\u043d\u0435\u043d\u0438\u0435 (\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435, \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435), \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435, \u043e\u0431\u0435\u0437\u043b\u0438\u0447\u0438\u0432\u0430\u043d\u0438\u0435, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043e\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043b\u0435\u043d\u0438\u0435 \u043b\u044e\u0431\u044b\u0445 \u0438\u043d\u044b\u0445 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439, \u043f\u0440\u0435\u0434\u0443\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u043d\u044b\u0445 \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u044e\u0449\u0438\u043c \u0437\u0430\u043a\u043e\u043d\u043e\u0434\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e\u043c \u0420\u0424 \u043a\u0430\u043a \u043d\u0435\u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438, \u0442\u0430\u043a \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438 \u0441\u043f\u043e\u0441\u043e\u0431\u0430\u043c\u0438.\n\u0414\u0430\u043d\u043d\u043e\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0434\u0430\u0435\u0442\u0441\u044f \u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0443 \u0434\u043b\u044f \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 \u043c\u043e\u0438\u0445 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 \u0432 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0445 \u0446\u0435\u043b\u044f\u0445:\n- \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u043d\u0435 \u0443\u0441\u043b\u0443\u0433\/\u0440\u0430\u0431\u043e\u0442;\n- \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432 \u043c\u043e\u0439 \u0430\u0434\u0440\u0435\u0441 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0439, \u043a\u0430\u0441\u0430\u044e\u0449\u0438\u0445\u0441\u044f \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u043c\u044b\u0445 \u0443\u0441\u043b\u0443\u0433\/\u0440\u0430\u0431\u043e\u0442;\n- \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0438 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u0442\u0432\u0435\u0442\u043e\u0432 \u043d\u0430 \u043c\u043e\u0438 \u0437\u0430\u043f\u0440\u043e\u0441\u044b;\n- \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432 \u043c\u043e\u0439 \u0430\u0434\u0440\u0435\u0441 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438, \u0432 \u0442\u043e\u043c \u0447\u0438\u0441\u043b\u0435 \u0440\u0435\u043a\u043b\u0430\u043c\u043d\u043e\u0439, \u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445\/\u0442\u043e\u0432\u0430\u0440\u0430\u0445\/\u0443\u0441\u043b\u0443\u0433\u0430\u0445\/\u0440\u0430\u0431\u043e\u0442\u0430\u0445 \u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430.\n\n\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u0434\u043e \u043c\u043e\u043c\u0435\u043d\u0442\u0430 \u0435\u0433\u043e \u043e\u0442\u0437\u044b\u0432\u0430 \u043f\u0443\u0442\u0435\u043c \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044e\u0449\u0435\u0433\u043e \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 btxprog@knit.ru. \u0412 \u0441\u043b\u0443\u0447\u0430\u0435 \u043e\u0442\u0437\u044b\u0432\u0430 \u043c\u043d\u043e\u044e \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u044f \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 \u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440 \u0432\u043f\u0440\u0430\u0432\u0435 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 \u0431\u0435\u0437 \u043c\u043e\u0435\u0433\u043e \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u044f \u043f\u0440\u0438 \u043d\u0430\u043b\u0438\u0447\u0438\u0438 \u043e\u0441\u043d\u043e\u0432\u0430\u043d\u0438\u0439, \u0443\u043a\u0430\u0437\u0430\u043d\u043d\u044b\u0445 \u0432 \u043f\u0443\u043d\u043a\u0442\u0430\u0445 2 \u2013 11 \u0447\u0430\u0441\u0442\u0438 1 \u0441\u0442\u0430\u0442\u044c\u0438 6, \u0447\u0430\u0441\u0442\u0438 2 \u0441\u0442\u0430\u0442\u044c\u0438 10 \u0438 \u0447\u0430\u0441\u0442\u0438 2 \u0441\u0442\u0430\u0442\u044c\u0438 11 \u0424\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0437\u0430\u043a\u043e\u043d\u0430 \u2116152-\u0424\u0417 \u00ab\u041e \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445\u00bb \u043e\u0442 27.07.2006 \u0433.","submitEventName":"bx-soa-order-save"}'
+											class="main-user-consent-request"
+										>
+											<input type="checkbox" value="Y" checked="" name="" />
+											<span class="main-user-consent-request-announce-link">
+												Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в
+												соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на
+												условиях и для целей, определенных в Согласии на обработку персональных данных
+											</span>
+										</label>
+										<script type="text/html" data-bx-template="main-user-consent-request-loader">
+											<div class="main-user-consent-request-popup">
+												<div class="main-user-consent-request-popup-cont">
+													<div data-bx-head="" class="main-user-consent-request-popup-header"></div>
+													<div class="main-user-consent-request-popup-body">
+														<div data-bx-loader="" class="main-user-consent-request-loader">
+															<svg class="main-user-consent-request-circular" viewBox="25 25 50 50">
+																<circle
+																	class="main-user-consent-request-path"
+																	cx="50"
+																	cy="50"
+																	r="20"
+																	fill="none"
+																	stroke-width="1"
+																	stroke-miterlimit="10"
+																></circle>
+															</svg>
+														</div>
+														<div data-bx-content="" class="main-user-consent-request-popup-content">
+															<div class="main-user-consent-request-popup-textarea-block">
+																<div data-bx-textarea="" class="main-user-consent-request-popup-text"></div>
+																<div
+																	data-bx-link=""
+																	style="display: none;"
+																	class="main-user-consent-request-popup-link"
+																>
+																	<div>Ознакомьтесь с текстом по ссылке</div>
+																	<div><a target="_blank"></a></div>
+																</div>
+															</div>
+															<div class="main-user-consent-request-popup-buttons">
+																<span
+																	data-bx-btn-accept=""
+																	class="main-user-consent-request-popup-button main-user-consent-request-popup-button-acc"
+																>
+																	Y
+																</span>
+																<span
+																	data-bx-btn-reject=""
+																	class="main-user-consent-request-popup-button main-user-consent-request-popup-button-rej"
+																>
+																	N
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</script>
+									</div>
+									<a
+										href="javascript:void(0)"
+										style="margin: 10px 0"
+										class="pull-right btn btn-default btn-lg hidden-xs"
+										data-save-button="true"
+									>
+										Оформить заказ
+									</a>
+								</div>
+
+								<div style="display: none">
+									<div id="bx-soa-basket-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="bx-soa-table-fade">
+												<div style="overflow: auto hidden">
+													<div class="bx-soa-item-table">
+														<div class="bx-soa-item-tr bx-soa-basket-info bx-soa-item-tr-first">
+															<div class="bx-soa-item-td" style="min-width: 300px">
+																<div class="bx-soa-item-block">
+																	<div class="bx-soa-item-img-block">
+																		<a href="/catalog/rasposhivalnaya-mashina-brother-cv3550/">
+																			<div
+																				class="bx-soa-item-imgcontainer"
+																				style="
+																					background-image: url('/upload/iblock/1d0/rasposhivalnaya_mashina_brother_cv_3550.jpg');
+																					background-image: -webkit-image-set(
+																						url('/upload/iblock/1d0/rasposhivalnaya_mashina_brother_cv_3550.jpg') 1x,
+																						url('/upload/iblock/1d0/rasposhivalnaya_mashina_brother_cv_3550.jpg') 2x
+																					);
+																				"
+																			></div>
+																		</a>
+																	</div>
+																	<div class="bx-soa-item-content">
+																		<div class="bx-soa-item-title">
+																			<a href="/catalog/rasposhivalnaya-mashina-brother-cv3550/">
+																				Распошивальная машина Brother CV 3550
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+																<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+																<div class="bx-soa-item-td-text"><strong class="bx-price all">39 900 р</strong></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12">
+													<a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="bx-soa-region-hidden" class="bx-soa-section"></div>
+									<div id="bx-soa-paysystem-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="alert alert-danger" style="display: none"></div>
+											<div class="bx-soa-pp row">
+												<div class="col-sm-7 bx-soa-pp-item-container">
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6 bx-selected">
+														<div class="bx-soa-pp-company-graf-container">
+															<input
+																id="ID_PAY_SYSTEM_ID_11"
+																name="PAY_SYSTEM_ID"
+																type="checkbox"
+																class="bx-soa-pp-company-checkbox"
+																value="11"
+															/>
+															<div
+																class="bx-soa-pp-company-image"
+																style="
+																	background-image: url('/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png');
+																	background-image: -webkit-image-set(
+																		url('/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png')
+																			1x,
+																		url('/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png')
+																			2x
+																	);
+																"
+															></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Он-лайн оплата (банковской картой)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container">
+															<input
+																id="ID_PAY_SYSTEM_ID_14"
+																name="PAY_SYSTEM_ID"
+																type="checkbox"
+																class="bx-soa-pp-company-checkbox"
+																value="14"
+															/>
+															<div
+																class="bx-soa-pp-company-image"
+																style="
+																	background-image: url('/bitrix/templates/test/components/bitrix/sale.order.ajax/.default/images/pay_system_logo.png');
+																"
+															></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Кредит / Tinkoffbank</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container">
+															<input
+																id="ID_PAY_SYSTEM_ID_19"
+																name="PAY_SYSTEM_ID"
+																type="checkbox"
+																class="bx-soa-pp-company-checkbox"
+																value="19"
+															/>
+															<div
+																class="bx-soa-pp-company-image"
+																style="
+																	background-image: url('/bitrix/templates/test/components/bitrix/sale.order.ajax/.default/images/pay_system_logo.png');
+																"
+															></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Рассрочка / Tinkoffbank</div>
+													</div>
+												</div>
+												<div class="col-sm-5 bx-soa-pp-desc-container">
+													<div class="bx-soa-pp-company">
+														<div>
+															<div class="bx-soa-pp-company-subTitle">Он-лайн оплата (банковской картой)</div>
+															<div class="bx-soa-pp-company-logo">
+																<div class="bx-soa-pp-company-graf-container">
+																	<div
+																		class="bx-soa-pp-company-image"
+																		style="
+																			background-image: url('/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png');
+																			background-image: -webkit-image-set(
+																				url('/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png')
+																					1x,
+																				url('/upload/sale/paysystem/logotip/ed6/05c6bc6b5dd9ba5d71f6ea2b8ac2a48f_1_1_.png')
+																					2x
+																			);
+																		"
+																	></div>
+																</div>
+															</div>
+															<div class="bx-soa-pp-company-block">
+																<div class="bx-soa-pp-company-desc">
+																	При оплате банковской картой, уточняйте наличие товара у менеджера.
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="bx-soa-coupon">
+												<div class="bx-soa-coupon-label"><label>Применить купон:</label></div>
+												<div class="bx-soa-coupon-block">
+													<div class="bx-soa-coupon-input"><input class="form-control bx-ios-fix" type="text" /></div>
+													<span class="bx-soa-coupon-item"></span>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12">
+													<a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a>
+													<a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="bx-soa-delivery-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="alert alert-danger" style="display: none"></div>
+											<div class="bx-soa-pp row">
+												<div class="col-sm-7 bx-soa-pp-item-container">
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6 bx-selected">
+														<div class="bx-soa-pp-company-graf-container">
+															<input
+																id="ID_DELIVERY_ID_2"
+																name="DELIVERY_ID"
+																type="checkbox"
+																class="bx-soa-pp-company-checkbox"
+																value="2"
+															/>
+															<div
+																class="bx-soa-pp-company-image"
+																style="
+																	background-image: url('/upload/resize_cache/sale/delivery/logotip/226/300_300_1/truck_red.png');
+																	background-image: -webkit-image-set(
+																		url('/upload/resize_cache/sale/delivery/logotip/226/300_300_1/truck_red.png') 1x,
+																		url('/upload/resize_cache/sale/delivery/logotip/226/600_600_1/truck_red.png') 2x
+																	);
+																"
+															></div>
+															<div class="bx-soa-pp-delivery-cost">0 р</div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Доставка курьером до двери</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container">
+															<input
+																id="ID_DELIVERY_ID_195"
+																name="DELIVERY_ID"
+																type="checkbox"
+																class="bx-soa-pp-company-checkbox"
+																value="195"
+															/>
+															<div
+																class="bx-soa-pp-company-image"
+																style="
+																	background-image: url('/upload/resize_cache/sale/delivery/logotip/afe/300_300_1/truck_red.png');
+																	background-image: -webkit-image-set(
+																		url('/upload/resize_cache/sale/delivery/logotip/afe/300_300_1/truck_red.png') 1x,
+																		url('/upload/resize_cache/sale/delivery/logotip/afe/600_600_1/truck_red.png') 2x
+																	);
+																"
+															></div>
+															<div class="bx-soa-pp-delivery-cost">0 р</div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Доставка до пункта выдачи</div>
+													</div>
+												</div>
+												<div class="col-sm-5 bx-soa-pp-desc-container">
+													<div class="bx-soa-pp-company">
+														<div class="bx-soa-pp-company-subTitle">Доставка курьером до двери</div>
+														<div class="bx-soa-pp-company-logo">
+															<div class="bx-soa-pp-company-graf-container">
+																<div
+																	class="bx-soa-pp-company-image"
+																	style="
+																		background-image: url('/upload/resize_cache/sale/delivery/logotip/226/300_300_1/truck_red.png');
+																		background-image: -webkit-image-set(
+																			url('/upload/resize_cache/sale/delivery/logotip/226/300_300_1/truck_red.png') 1x,
+																			url('/upload/resize_cache/sale/delivery/logotip/226/600_600_1/truck_red.png') 2x
+																		);
+																	"
+																></div>
+															</div>
+														</div>
+														<div class="bx-soa-pp-company-block">
+															<div class="bx-soa-pp-company-desc">Бесплатно при сумме заказа от 10 000 рублей</div>
+														</div>
+														<div style="clear: both"></div>
+														<ul class="bx-soa-pp-list">
+															<li>
+																<div class="bx-soa-pp-list-termin">Стоимость:</div>
+																<div class="bx-soa-pp-list-description">
+																	0 р
+																	<br />
+																	<span class="bx-price-old">300 р</span>
+																</div>
+															</li>
+															<li>
+																<div class="bx-soa-pp-list-termin">Срок доставки:</div>
+																<div class="bx-soa-pp-list-description">1-2 дня</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12">
+													<a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a>
+													<a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="bx-soa-pickup-hidden" class="bx-soa-section"></div>
+									<div id="bx-soa-properties-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="alert alert-danger" style="display: none"></div>
+											<div class="row">
+												<div class="col-sm-12 bx-soa-customer">
+													<div class="form-group bx-soa-customer-field" data-property-id-row="1">
+														<label for="soa-property-1" class="bx-soa-custom-label">
+															<span class="bx-authform-starrequired">*</span>
+															Ф.И.О.
+														</label>
+														<div class="soa-property-container">
+															<input
+																type="text"
+																size="40"
+																name="ORDER_PROP_1"
+																id="soa-property-1"
+																autocomplete="name"
+																placeholder=""
+																class="form-control bx-soa-customer-input bx-ios-fix"
+															/>
+														</div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="2">
+														<label for="soa-property-2" class="bx-soa-custom-label">
+															<span class="bx-authform-starrequired">*</span>
+															E-Mail
+														</label>
+														<div class="soa-property-container">
+															<input
+																type="text"
+																size="40"
+																name="ORDER_PROP_2"
+																id="soa-property-2"
+																autocomplete="email"
+																placeholder=""
+																class="form-control bx-soa-customer-input bx-ios-fix"
+															/>
+														</div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="3">
+														<label for="soa-property-3" class="bx-soa-custom-label">
+															<span class="bx-authform-starrequired">*</span>
+															Телефон
+														</label>
+														<div class="soa-property-container">
+															<input
+																type="text"
+																size="30"
+																name="ORDER_PROP_3"
+																id="soa-property-3"
+																autocomplete="tel"
+																placeholder=""
+																class="form-control bx-soa-customer-input bx-ios-fix"
+															/>
+														</div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="7">
+														<label for="soa-property-7" class="bx-soa-custom-label">
+															<span class="bx-authform-starrequired">*</span>
+															Адрес доставки
+														</label>
+														<div class="soa-property-container">
+															<textarea
+																cols="30"
+																rows="3"
+																name="ORDER_PROP_7"
+																id="soa-property-7"
+																autocomplete="address"
+																placeholder=""
+																class="form-control bx-ios-fix"
+															></textarea>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-12">
+													<div class="form-group bx-soa-customer-field">
+														<label for="orderDescription" class="bx-soa-customer-label">Комментарии к заказу:</label>
+														<textarea
+															id="orderDescription"
+															cols="4"
+															class="form-control bx-soa-customer-textarea bx-ios-fix"
+															name="ORDER_DESCRIPTION"
+														></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12">
+													<a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a>
+													<a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="bx-soa-auth-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid reg"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--	SIDEBAR BLOCK	-->
+							<div id="bx-soa-total" class="col-sm-3 bx-soa-sidebar">
+								<div class="bx-soa-cart-total-ghost"></div>
+								<div class="bx-soa-cart-total">
+									<div class="bx-soa-cart-total-line">
+										<span class="bx-soa-cart-t">Товаров на:</span>
+										<span class="bx-soa-cart-d">39 900 р</span>
+									</div>
+									<div class="bx-soa-cart-total-line">
+										<span class="bx-soa-cart-t">Общий вес:</span>
+										<span class="bx-soa-cart-d">10.6 кг</span>
+									</div>
+									<div class="bx-soa-cart-total-line">
+										<span class="bx-soa-cart-t">Доставка:</span>
+										<span class="bx-soa-cart-d">
+											<span class="bx-soa-price-free">
+												бесплатно
+												<br />
+												<span class="bx-price-old">300 р</span>
+											</span>
+										</span>
+									</div>
+									<div class="bx-soa-cart-total-line bx-soa-cart-total-line-total">
+										<span class="bx-soa-cart-t">Итого:</span>
+										<span class="bx-soa-cart-d" style="font-size: 28px">39 900 р</span>
+									</div>
+									<div class="bx-soa-cart-total-line" id="bonus_add_block">
+										<div id="bonus_add_sum">
+											<span class="bx-soa-cart-t">Бонусные баллы:</span>
+											<span class="bx-soa-cart-d">898</span>
+										</div>
+									</div>
+									<div class="bx-soa-cart-total-button-container" style="display: none !important">
+										<a href="javascript:void(0)" class="btn btn-default btn-lg btn-order-save" style="font-size: 8px">
+											Оформить заказ
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>
