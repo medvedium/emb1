@@ -34,7 +34,94 @@
 					<div class="container">
 						<h1 class="h1 mb-5">Оплата</h1>
 
-						<div class="paynent">nav.payment__nav</div>
+						<div class="payment">
+							<nav class="payment__nav payment-nav mb-5">
+								<div class="payment-nav__list">
+									<div class="payment-nav__item">
+										<div class="payment-nav__link" data-goto=".payment__section--online">Онлайн</div>
+									</div>
+									<div class="payment-nav__item">
+										<div class="payment-nav__link" data-goto=".payment__section--non-cash">Безналичная</div>
+									</div>
+									<div class="payment-nav__item">
+										<div class="payment-nav__link" data-goto=".payment__section--cash">Наличная</div>
+									</div>
+									<div class="payment-nav__item">
+										<div class="payment-nav__link" data-goto=".payment__section--bonus">Бонусными баллами</div>
+									</div>
+								</div>
+							</nav>
+							<div class="payment__section payment-section payment__section--online">
+								<h2 class="payment-section__title h2 mb-4">Онлайн оплата банковской картой</h2>
+								<div class="payment-section__content">
+									<p class="mb-4">Вы можете оплатить заказ, если являетесь владельцем пластиковых карт:</p>
+									<div class="payment-system">
+										<div class="payment-system__item"><img src="@img/payment/mir.png" alt="" /></div>
+										<div class="payment-system__item"><img src="" alt="" /></div>
+										<div class="payment-system__item"><img src="" alt="" /></div>
+									</div>
+									<div class="information">
+										После оформления заказа на сайте, дождитесь подтверждения от оператора о наличии товара на складе,
+										затем совершите оплату.
+									</div>
+									<p>
+										Все платежи через электронные платежные системы осуществляются только по безопасному защищенному
+										протоколу при поддержке ОАО «Петербургский социальный коммерческий банк» ПСКБ.
+									</p>
+									<p>
+										После выписки счета вы будете перенаправлены на сервер ПСКБ (который имеет все необходимые лицензии
+										и сертификаты на проведение платежей через Интернет) для введения данных кредитной карты. Передача
+										данных происходит в защищенном режиме, при котором полностью исключена возможность перехвата
+										информации о вашей карте. Для защиты информации от несанкционированного доступа на этапе передачи от
+										клиента на сервер системы ПСКБ используется протокол SSL 3.0, сертификат сервера выдан компанией
+										Deiteriy - признанным центром выдачи цифровых сертификатов. Вы можете проверить подлинность
+										сертификата сервера.
+									</p>
+									<p>
+										Запрещены платежи по карте, не принадлежащей лицу, указанному в качестве плательщика при оформлении
+										заказа! Все возвраты по платежам по кредитной карте могут быть осуществлены только безналичным путем
+										зачисления на карточный счет.
+									</p>
+								</div>
+							</div>
+							<div class="payment__section payment-section payment__section--non-cash">
+								<h2 class="payment-section__title h2 mb-4">Безналичный оплата (по расчетному счету)</h2>
+								<div class="payment-section__content">
+									<p>
+										Наш менеджер выставит счет и отправит его вам по электронной почте для оплаты. Денежные средства
+										поступают на наш счет в течение трех рабочих дней, после чего осуществляется отгрузка заказа.
+									</p>
+								</div>
+							</div>
+							<div class="payment__section payment-section payment__section--cash">
+								<h2 class="payment-section__title h2 mb-4">Наличными в кассе при самовывозе</h2>
+								<div class="payment-section__content">
+									<h3 class="h3">Санкт-Петербург</h3>
+									<p>
+										ул.Самойловой, д.5 лит. C, корпус 6, 5-й этаж, офис №8.  Режим работы: будни с 10:00 до 18:00, Пт. с
+										10:00 до 17:00
+									</p>
+									<h3 class="h3">Москва</h3>
+									<p>
+										Кронштадтский бульвар, д. 7, ТЦ "Крона", вход в офисное здание ОАО "Грамзапись",  3 этаж, офис 14,
+										тел. (495) 982-50-16. Режим работы: будни с 10:00 до 18:00, Пт. с 10:00 до 17:00
+									</p>
+								</div>
+							</div>
+							<div class="payment__section payment-section payment__section--bonus">
+								<h2 class="payment-section__title h2 mb-4">Частичная оплата бонусными баллами</h2>
+								<div class="payment-section__content">
+									<p>
+										С каждого оплаченного заказа 5% начисляется в виде бонусных баллов. Один бал- это один рубль.
+										Баллами можно оплатить до 20% от стоимости следующего заказа, для этого вам нужно будет в личном
+										кабинете при оформлении заказа использовать кнопку "оплатить бонусами". Стоимость заказа
+										автоматически уменьшится на сумму использованных бонусов. Бонусы можно использовать в течении 3х
+										месяцев, по истечении этого срока они обнуляются. Срок в три месяца начинается каждый раз с
+										последнего заказа.
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>
