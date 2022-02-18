@@ -1,0 +1,63 @@
+.payment {
+	// .payment__nav
+	&__nav {
+	}
+	// .payment__section
+	&__section {
+		// .payment__section--online
+		&--online {
+		}
+		// .payment__section--non-cash
+		&--non-cash {
+		}
+		// .payment__section--cash
+		&--cash {
+		}
+		// .payment__section--bonus
+		&--bonus {
+		}
+	}
+}
+.payment-nav {
+	// .payment-nav__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// .payment-nav__item
+	&__item {
+		margin-right: 8px;
+		background-color: $gray-3;
+		border-radius: 4px;
+		cursor: pointer;
+		border: 1px solid transparent;
+		transition: border-color 0.2s linear;
+
+		&:hover {
+			border-color: $blue;
+		}
+	}
+	// .payment-nav__link
+	&__link {
+		padding: 8px 12px;
+	}
+}
+.payment-section {
+	&:not(:last-child) {
+		margin-bottom: 48px;
+	}
+	// .payment-section__title
+	&__title {
+		line-height: 31px;
+		padding-left: 16px;
+		border-left: 3px solid $blue;
+	}
+	// .payment-section__content
+	&__content {
+	}
+}
+.payment-system {
+	// .payment-system__item
+	&__item {
+	}
+}
