@@ -28,7 +28,8 @@
 		margin-top: 2px;
 	}
 
-	&--disabled, &[disabled] {
+	&--disabled,
+	&[disabled] {
 		background-color: $gray;
 		pointer-events: none;
 		user-select: none;
@@ -67,11 +68,11 @@
 	}
 
 	&--blue {
-		background-color: $blue;
+		background-color: $blue !important;
 
 		&:hover {
 			@media (hover: hover) {
-				background-color: $blue-light;
+				background-color: $blue-light !important;
 			}
 		}
 
@@ -138,8 +139,7 @@
 		justify-content: center;
 	}
 
-
-	&--square  &__icon{
+	&--square &__icon {
 		margin-left: 0;
 	}
 
@@ -149,7 +149,6 @@
 		padding-left: 18px;
 		padding-right: 18px;
 	}
-
 
 	&--md.button--icon &__icon {
 		margin-left: 12px;
@@ -184,7 +183,8 @@
 	}
 
 	&--hover-main {
-		&:hover, &:active{
+		&:hover,
+		&:active {
 			@media (hover: hover) {
 				border-color: $main-color !important;
 				background-color: $main-color !important;
@@ -201,4 +201,8 @@
 		padding-left: 5px;
 		padding-right: 5px;
 	}
+}
+
+.bx_soa_location .bx-soa-custom-label {
+	display: none;
 }

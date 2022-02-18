@@ -143,9 +143,12 @@
 								</div>
 							</div>
 
-							<div class="product__control-panel product-control" itemprop="offers"
-							     itemscope
-							     itemtype="http://schema.org/Offer">
+							<div
+								class="product__control-panel product-control"
+								itemprop="offers"
+								itemscope
+								itemtype="http://schema.org/Offer"
+							>
 								<div class="product-pricing mb-3">
 									<div class="product-pricing__title mb-5">Цена:</div>
 									<ul class="mb-4">
@@ -171,14 +174,14 @@
 											</div>
 											<div class="product-properties__divider"></div>
 											<div class="product-properties__value text--xl text--bold" itemprop="price">1 817 ₽</div>
-											<meta itemprop="priceCurrency" content="RUB">
+											<meta itemprop="priceCurrency" content="RUB" />
 										</li>
 									</ul>
 									<button class="button button--wide button--fill jsColorChoose" data-goto=".product__tabs">
 										Выбрать цвет
 									</button>
 								</div>
-								<div class="delivery-info mb-3 jsDeliveryScrollBtn" data-goto=".product-tabs">
+								<div class="delivery-info mb-3 jsDeliveryScrollBtn" data-goto=".page-tabs">
 									<svg class="icon icon--md">
 										<use xlink:href="img/icons/icons.svg#delivery"></use>
 									</svg>
@@ -242,22 +245,22 @@
 									</ul>
 
 									<div class="product-info__details jsProductMore">
-										<a href="#" data-goto=".product-tabs">Подробнее ›</a>
+										<a href="#" data-goto=".page-tabs">Подробнее ›</a>
 									</div>
 								</div>
 							</div>
 
-							<div class="product__tabs product-tabs" data-tabs="">
-								<nav data-tabs-titles class="product-tabs__navigation mb-5">
-									<button type="button" class="product-tabs__title jsColorChooseTab _tab-active">Выберите цвет</button>
-									<button type="button" class="product-tabs__title jsProductMoreTab">Описание</button>
-									<button type="button" class="product-tabs__title">Применение</button>
-									<button type="button" class="product-tabs__title">Сертификаты</button>
-									<button type="button" class="product-tabs__title jsDeliveryTab">Доставка</button>
-									<button type="button" class="product-tabs__title">Отзывы</button>
+							<div class="product__tabs page-tabs" data-tabs="">
+								<nav data-tabs-titles class="page-tabs__navigation mb-5">
+									<button type="button" class="page-tabs__title jsColorChooseTab _tab-active">Выберите цвет</button>
+									<button type="button" class="page-tabs__title jsProductMoreTab">Описание</button>
+									<button type="button" class="page-tabs__title">Применение</button>
+									<button type="button" class="page-tabs__title">Сертификаты</button>
+									<button type="button" class="page-tabs__title jsDeliveryTab">Доставка</button>
+									<button type="button" class="page-tabs__title">Отзывы</button>
 								</nav>
-								<div data-tabs-body class="product-tabs__content">
-									<div class="product-tabs__body">
+								<div data-tabs-body class="page-tabs__content">
+									<div class="page-tabs__body">
 										<div class="thread-choose">
 											<div class="thread-choose__controls">
 												<form action="#" class="thread-choose__search search-thread">
@@ -303,9 +306,11 @@
 															<span class="item-thread__to-cart-text">В корзину</span>
 														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -319,11 +324,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -337,11 +346,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -355,15 +368,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -373,11 +390,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -391,11 +412,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -409,11 +434,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -427,11 +456,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -445,15 +478,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -463,11 +500,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -481,11 +522,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -499,11 +544,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -517,11 +566,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -535,15 +588,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -553,11 +610,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -571,11 +632,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -589,11 +654,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -607,11 +676,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -625,15 +698,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -643,11 +720,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -661,11 +742,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -679,11 +764,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -697,11 +786,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -715,15 +808,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -733,11 +830,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -751,11 +852,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -769,11 +874,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -787,11 +896,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -805,15 +918,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -823,11 +940,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -841,11 +962,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -859,11 +984,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -877,11 +1006,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -895,15 +1028,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -913,11 +1050,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -931,11 +1072,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -949,11 +1094,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -967,11 +1116,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -985,15 +1138,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -1003,11 +1160,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1021,11 +1182,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1039,11 +1204,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1057,11 +1226,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1075,15 +1248,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -1093,11 +1270,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1111,11 +1292,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1129,11 +1314,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1147,11 +1336,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1165,15 +1358,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -1183,11 +1380,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1201,11 +1402,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1219,11 +1424,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1237,11 +1446,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1255,15 +1468,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -1273,11 +1490,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1291,29 +1512,37 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
 														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
-												<div class="thread-choose__item item-thread"->
+												<div class="thread-choose__item item-thread" ->
 													<div class="item-thread__code">2358</div>
 													<div class="item-thread__content">
 														<div
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1327,11 +1556,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1345,15 +1578,19 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 												<div class="thread-choose__item item-thread">
@@ -1363,11 +1600,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-5.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1381,11 +1622,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-1.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1399,11 +1644,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-2.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status delivery">
@@ -1417,11 +1666,15 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-3.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
@@ -1435,22 +1688,26 @@
 															class="item-thread__img"
 															style="background-image: url('img/threads/thread-bg-4.jpg'); background-size: 50px 18px"
 														></div>
-														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy"><span class="item-thread__to-cart-text">В корзину</span></div>
+														<div class="item-thread__to-cart" data-bs-toggle="modal" data-bs-target="#thread-buy">
+															<span class="item-thread__to-cart-text">В корзину</span>
+														</div>
 														<div class="item-thread__in-cart">
-															<div class="item-thread__in-cart-text">В корзине
-																<br/>
-																3 шт.</div>
+															<div class="item-thread__in-cart-text">
+																В корзине
+																<br />
+																3 шт.
+															</div>
 														</div>
 													</div>
 													<div class="item-thread__status available">
-														<span class="item-thread__status-text  _icon-available">В наличии</span>
+														<span class="item-thread__status-text _icon-available">В наличии</span>
 													</div>
 												</div>
 											</div>
 											@@include('blocks/modules/pagination/pagination.html')
 										</div>
 									</div>
-									<div class="product-tabs__body"  itemprop="description">
+									<div class="page-tabs__body" itemprop="description">
 										<div class="text text--bold mb-4 product-about-title">
 											Вышивальная машина Brother PR- 1050X Одноголовочная десяти игольная вышивальная машина.
 										</div>
@@ -1494,7 +1751,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="product-tabs__body">
+									<div class="page-tabs__body">
 										<div class="common-block">
 											<div class="slider common-slider jsOptionalEquipmentSlider">
 												<div class="swiper common-slider__inner jsOptionalEquipmentSliderInner">
@@ -2146,7 +2403,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="product-tabs__body">
+									<div class="page-tabs__body">
 										<div class="text text--bold mb-3 product-about-title">Сертификаты</div>
 										<div class="text d-flex flex-column">
 											<a href="#" class="link link--icon mb-3">
@@ -2169,7 +2426,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="product-tabs__body">
+									<div class="page-tabs__body">
 										<div class="text text--bold mb-3">Условия доставки</div>
 										<div class="mb-5">
 											<p class="text--md">
@@ -2258,7 +2515,7 @@
 											</tbody>
 										</table>
 									</div>
-									<div class="product-tabs__body">
+									<div class="page-tabs__body">
 										<div class="reviews">
 											<header class="reviews__header mb-5">
 												<div class="rating-wrap">
