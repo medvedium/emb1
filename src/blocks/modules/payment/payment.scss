@@ -4,6 +4,9 @@
 	}
 	// .payment__section
 	&__section {
+		p {
+			margin-bottom: 24px;
+		}
 		// .payment__section--online
 		&--online {
 		}
@@ -59,5 +62,7 @@
 .payment-system {
 	// .payment-system__item
 	&__item {
+		display: inline-block;
+		margin-right: 16px;
 	}
 }
