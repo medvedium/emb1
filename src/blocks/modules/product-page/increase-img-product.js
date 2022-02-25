@@ -19,7 +19,6 @@ const imageBlock = document.querySelector('[data-block="product-image-block"]')
 
 if (imageBlock) {
 	imageBlock.addEventListener('click', () => {
-
 		const getActiveSlide = function (selector) {
 			let activeSlide = 0
 			for (let i = 0; i < selector.length; i++) {
@@ -33,7 +32,6 @@ if (imageBlock) {
 		const heroSlides = document.querySelectorAll('.product-hero__main .product-hero__slide')
 
 		let activeSlide = getActiveSlide(heroSlides)
-
 
 		const heroModal = document.getElementById('hero')
 
@@ -77,9 +75,7 @@ if (imageBlock) {
 		heroModal.querySelector('.modal-body').append(heroSliderWrap)
 		heroModal.querySelector('.modal-footer').append(trackSliderWrap)
 
-heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
-
-
+		heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 
 		const modalTrackSlider = new Swiper('.modal-slider-track', {
 			initialSlide: activeSlide,
@@ -92,7 +88,7 @@ heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 			navigation: {
 				nextEl: '.modal-slider-next',
 				prevEl: '.modal-slider-prev'
-			},
+			}
 		})
 
 		const modalHeroSlider = new Swiper('.modal-slider-main', {
@@ -104,12 +100,9 @@ heroModal.querySelector('[data-bs-toggle]').dataset.bsToggle = ''
 				swiper: modalTrackSlider
 			},
 
-
 			on: {}
 		})
 
 		// modalHeroSlider.controller.control = null;
-
 	})
-
 }
