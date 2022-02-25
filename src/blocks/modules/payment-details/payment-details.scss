@@ -1,0 +1,55 @@
+.payment-details {
+	padding: 64px;
+	border: 1px solid $gray-2;
+	border-radius: 4px;
+	display: flex;
+	@include below(1199px) {
+		flex-direction: column;
+	}
+	@include below(600px) {
+		padding: 32px;
+	}
+
+	// .payment-details__heading
+	&__heading {
+		@include above(1200px) {
+			flex: 1 1 40%;
+		}
+		@include below(1199px) {
+			margin-bottom: 64px;
+		}
+		@include below(600px) {
+			margin-bottom: 32px;
+		}
+	}
+	// .payment-details__content
+	&__content {
+		@include above(1200px) {
+			flex: 1 1 60%;
+		}
+	}
+	// .payment-details__item
+	&__item {
+		display: flex;
+		margin-bottom: 16px;
+		@include below(600px) {
+			flex-direction: column;
+		}
+	}
+	// .payment-details__name
+	&__name {
+		color: $gray-4;
+		flex: 0 0 100px;
+		margin-right: 32px;
+		@include below(600px) {
+			flex: 0 0 auto;
+			margin-bottom: 4px;
+		}
+	}
+	// .payment-details__value
+	&__value {
+		@include above(768px) {
+			white-space: nowrap;
+		}
+	}
+}

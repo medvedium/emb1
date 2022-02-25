@@ -1,4 +1,10 @@
 .payment {
+	a {
+		display: inline-block;
+	}
+	a + a {
+		margin-top: 16px;
+	}
 	// .payment__nav
 	&__nav {
 	}
