@@ -1,0 +1,48 @@
+.partners {
+  // .partners__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+
+  // .partners__item
+  &__item {
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    border: 1px solid $gray-2;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    min-height: 204px;
+    border-radius: 4px;
+  }
+
+  // .partners__img
+  &__img {
+  }
+
+  // .partners__link
+  &__link {
+    color: $gray-4;
+    position: relative;
+
+
+    &::after {
+      content: "›";
+      position: absolute;
+      right: -10px;
+      top: 0;
+      color: #b0bfc6;
+    }
+  }
+
+  // .partners__desc
+  &__desc {
+    display: none;
+  }
+  p {
+    margin-bottom: 32px;
+  }
+}
