@@ -1,5 +1,5 @@
 h1, .h1 {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 28px;
 	line-height: 130%;
 	font-weight: bold;
@@ -10,7 +10,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 24px;
 	line-height: 130%;
 	font-weight: bold;
@@ -21,7 +21,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 21px;
 	line-height: 130%;
 	font-weight: bold;
@@ -32,7 +32,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	line-height: 130%;
 	font-weight: bold;
@@ -43,7 +43,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	line-height: 130%;
 	font-weight: bold;
@@ -147,6 +147,11 @@ p{
 			background-color: $main-color;
 			transform: rotate(-5deg);
 		}
+	}
+
+	&--subtitle {
+		padding-left: 16px;
+		border-left: 3px solid #00adef;
 	}
 }
 

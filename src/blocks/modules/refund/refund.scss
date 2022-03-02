@@ -1,0 +1,21 @@
+.refund {
+  max-width: 864px;
+  p, ul {
+    margin-bottom: 24px;
+  }
+  li {
+    padding-left: 32px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 11px;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 3px;
+      background-color: #0c131d;
+      border-radius: 50%;
+    }
+  }
+}

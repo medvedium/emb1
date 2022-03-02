@@ -71,6 +71,8 @@
 	&__toggle {
 		display: flex;
 		align-items: center;
+		cursor: pointer;
+		width: fit-content;
 
 		&.active {
 			.map-block__toggle-btn::before {
