@@ -4,6 +4,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
+    @include below(1023px) {
+      grid-gap: 16px;
+    }
   }
 
   // .partners__item
@@ -15,18 +18,33 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 32px;
-    min-height: 204px;
+    //min-height: 204px;
     border-radius: 4px;
+
+    @include below(600px) {
+      padding: 16px;
+    }
   }
 
   // .partners__img
   &__img {
+    max-height: 100px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
   }
 
   // .partners__link
   &__link {
     color: $gray-4;
     position: relative;
+
+    @include below(600px) {
+      font-size: 14px;
+    }
 
 
     &::after {
