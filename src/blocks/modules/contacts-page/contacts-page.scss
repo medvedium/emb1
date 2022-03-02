@@ -1,0 +1,122 @@
+.contacts-tab {
+	// .contacts-tab__inner
+	&__inner {
+		display: grid;
+		grid-template-columns: 4fr 6fr;
+		column-gap: 16px;
+
+    @include below(1023px) {
+      display: block;
+    }
+	}
+
+	// .contacts-tab__text
+	&__text {
+    @include below(1023px) {
+      margin-bottom: 32px;
+    }
+	}
+
+	// .contacts-tab__item
+	&__item {
+	}
+
+	// .contacts-tab__map
+	&__map {
+	}
+}
+
+.map-block {
+	// .map-block__toggle-btn
+	&__toggle-btn {
+		display: inline-block;
+		width: 48px;
+		height: 24px;
+		border-radius: 320px;
+		background-color: $gray-2;
+		position: relative;
+		margin-left: 16px;
+		margin-right: 16px;
+		transition: all 0.2s linear;
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background-color: $blue;
+			left: 0;
+			top: 0;
+			transition: all 0.2s linear;
+		}
+		//&.active {
+		//	&::before {
+		//		transform: translateX(100%);
+		//		background-color: $main-color;
+		//	}
+		//}
+	}
+
+  &__toggle-first {
+
+  }
+
+  &__toggle-second {
+    color: $gray-1;
+  }
+
+	// .map-block__toggle
+	&__toggle {
+		display: flex;
+		align-items: center;
+
+		&.active {
+			.map-block__toggle-btn::before {
+				transform: translateX(100%);
+				background-color: $main-color;
+			}
+      .map-block__toggle-first {
+        color: $gray-1;
+      }
+
+      .map-block__toggle-second {
+        color: $dark;
+      }
+		}
+	}
+
+	// .map-block__inner
+	&__inner {
+		position: relative;
+	}
+
+	// .map-block__content
+	&__content {
+		//position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.2s linear;
+    display: none;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+      display: block;
+		}
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    //@include below(1023px) {
+    //  position: relative;
+    //}
+	}
+}

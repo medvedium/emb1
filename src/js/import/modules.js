@@ -20,5 +20,6 @@ import "../../blocks/modules/color-choose/color-choose.js";
 import "../../blocks/modules/product-page/increase-img-product.js";
 import "../../blocks/modules/cart/cart.js";
 import "../../blocks/modules/partners/partners.js";
+import "../../blocks/modules/contacts-page/contacts-page.js";
 
 import "../../blocks/modules/thread/thread.js";
