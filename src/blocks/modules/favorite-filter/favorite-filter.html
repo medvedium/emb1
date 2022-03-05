@@ -1,0 +1,44 @@
+<div class="favorite__filter favorite-filter">
+  <header class="favorite-filter__header filter-header">
+    <span class="filter-header__title text--bold">Все товары</span>
+    <div class="filter-header__close jsCloseFilter">
+      <svg>
+        <use xlink:href="img/icons/icons.svg#cross"></use>
+      </svg>
+    </div>
+  </header>
+  <form action="#" class="favorite-filter__form" id="favorite-filter">
+    <div class="favorite-filter__item">
+      <div class="favorite-filter__title jsFilterTitle">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#dropdown"></use>
+        </svg>
+        Характеристика
+      </div>
+      <div class="favorite-filter__inner favorite-filter__inner--radio">
+        <label class="radio-btn">
+          <input type="radio" class="radio-btn__input" name="radio" checked />
+          <span class="radio-btn__custom"></span>
+          <span class="radio-btn__text"><a href="#">Характеристика 1</a></span>
+        </label>
+        <label class="radio-btn">
+          <input type="radio" class="radio-btn__input" name="radio" />
+          <span class="radio-btn__custom"></span>
+          <span class="radio-btn__text"><a href="#">Характеристика 2</a></span>
+        </label>
+        <label class="radio-btn">
+          <input type="radio" class="radio-btn__input" name="radio" />
+          <span class="radio-btn__custom"></span>
+          <span class="radio-btn__text"><a href="#">Характеристика 3</a></span>
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="button button--md button--border button--border--blue w-100 favorite-filter__submit">
+      <span class="button__text text--md">Применить</span>
+    </button>
+    <button type="reset" class="button button--md button--empty w-100">
+      <span class="button__text text--md">Сбросить</span>
+    </button>
+  </form>
+</div>

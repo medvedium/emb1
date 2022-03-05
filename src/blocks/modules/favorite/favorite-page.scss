@@ -1,0 +1,305 @@
+.favorite-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 32px;
+	column-gap: 30px;
+
+	@include below(923px) {
+		display: block;
+	}
+
+	.favorite {
+		&__filter {
+			grid-row: 1/-6;
+			grid-column: 1/2;
+		}
+
+		&__controls {
+			display: flex;
+			grid-column: 2/5;
+			justify-content: space-between;
+			padding: 16px 24px;
+			border: 1px solid $gray-2;
+			border-radius: 4px;
+
+			@include below(923px) {
+				grid-column: 1/-1;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.filter-toggler {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+
+				svg {
+					width: 24px;
+					height: 24px;
+					margin-right: 10px;
+				}
+
+				@include above(924px) {
+					display: none;
+				}
+
+				@include below(490px) {
+					padding: 18px 24px;
+				}
+
+				@include below(424px) {
+					width: 100%;
+					justify-content: center;
+				}
+
+				@include below(400px) {
+					padding: 16px 24px;
+				}
+			}
+
+			@include below(490px) {
+				flex-wrap: wrap;
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+
+		&__view-type {
+			display: flex;
+
+			.favorite__view-type-item {
+				cursor: pointer;
+
+				&:not(:last-child) {
+					margin-right: 24px;
+				}
+
+				svg {
+					fill: $gray-1;
+				}
+
+				&:hover svg,
+				&.active svg {
+					fill: $blue;
+				}
+			}
+
+			@include below(923px) {
+				display: flex;
+				align-items: center;
+			}
+
+			@include below(490px) {
+				padding: 18px 24px;
+				border-left: 1px solid $gray-2;
+			}
+
+			@include below(400xp) {
+				padding: 16px 24px;
+			}
+		}
+
+		&__active-filter {
+			display: flex;
+			grid-column: 2/5;
+			margin-top: 16px;
+
+			@include below(923px) {
+				grid-column: 1/-1;
+			}
+		}
+
+		&__inner {
+			grid-column: 2/5;
+			margin-top: 24px;
+			transition: all 0.2s linear;
+
+			&.mosaic {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+
+				@include below(1023px) {
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				@include below(625px) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@include below(1023px) {
+				padding-right: 0;
+				padding-left: 0;
+			}
+
+			@include below(923px) {
+				grid-column: 1/-1;
+			}
+		}
+	}
+}
+
+.sort-list-wrap {
+	position: relative;
+
+	.sort-submenu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 3;
+		width: 250px;
+		margin-top: 12px;
+		padding: 24px;
+		background-color: $white;
+		border-radius: 4px;
+		box-shadow: 0 10px 21px 10px rgb(0 9 17 / 5%);
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	.sort-submenu-item {
+		margin-bottom: 12px;
+		cursor: pointer;
+		transition: 0.2s;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover,
+		&.active {
+			color: $blue;
+		}
+	}
+}
+
+.sort-list-title {
+	margin-left: 12px;
+	cursor: pointer;
+
+	&::after {
+		display: inline-block;
+		width: 11px;
+		height: 10px;
+		margin-left: 15px;
+		color: $blue;
+		background-image: url('../img/svg/dropdown-blue.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 95%;
+		transition: 0.2s;
+		content: '';
+	}
+}
+
+.sort-wrap {
+	display: flex;
+	align-items: center;
+
+	&.active {
+		.sort-list-title {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		.sort-submenu {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.sort-title {
+		@include below(923px) {
+			display: none;
+		}
+	}
+	@include below(923px) {
+		flex-grow: 1;
+		justify-content: center;
+		height: 58px;
+		margin-right: 24px;
+		margin-left: 24px;
+		border-right: 1px solid $gray-2;
+		border-left: 1px solid $gray-2;
+	}
+
+	@include below(490px) {
+		order: -1;
+		width: 100%;
+		margin: 0;
+		border: none;
+		border-bottom: 1px solid $gray-2;
+	}
+
+	@include below(400px) {
+		height: 52px;
+	}
+}
+
+.active-filter {
+	@include below(923px) {
+		padding-bottom: 4px;
+		overflow-x: auto;
+		scrollbar-color: $gray-2;
+		scrollbar-width: thin;
+	}
+
+	&::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $gray-2;
+		border: 3px solid $gray-2;
+		border-radius: 20px;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		height: 32px;
+		margin-right: 8px;
+		padding: 8px 32px 8px 12px;
+		color: $white;
+		background-color: $dark-blue;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&--reset {
+			padding: 8px 12px;
+			color: $dark-blue;
+			background-color: $white;
+			border: 1px solid $dark-blue;
+			transition: all 0.1s linear;
+
+			&:hover {
+				color: $white;
+				background-color: $dark-blue;
+			}
+		}
+	}
+
+	&__title {
+		white-space: nowrap;
+	}
+
+	&__remove {
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		display: flex;
+		width: 10px;
+		height: 10px;
+		transform: translateY(-50%);
+
+		svg use {
+			width: 10px;
+			height: 10px;
+			fill: $white;
+		}
+	}
+}

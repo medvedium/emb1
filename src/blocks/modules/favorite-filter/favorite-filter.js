@@ -1,31 +1,15 @@
-import noUiSlider from 'nouislider'
-
-const priceSlider = document.querySelector('#price-slider')
-
-if (priceSlider) {
-	noUiSlider.create(priceSlider, {
-		start: [20, 80],
-		connect: true,
-		range: {
-			min: 0,
-			max: 100
-		}
-	})
-}
-
-const filterTitle = document.querySelectorAll('.catalog-filter .jsFilterTitle')
+const filterTitle = document.querySelectorAll('.favorite-filter .jsFilterTitle')
 
 if (filterTitle) {
 	filterTitle.forEach((item) => {
 		item.addEventListener('click', (event) => {
-			item.closest('.catalog-filter__item').classList.toggle('is-open')
+			item.closest('.favorite-filter__item').classList.toggle('is-open')
 		})
 	})
 }
 
 const filterToggle = document.querySelector('.jsToggleFilter')
-const catalogFilter = document.querySelector('.catalog__filter')
-const catalogFilterClose = document.querySelector('.filter-header__close')
+const catalogFilter = document.querySelector('.favorite__filter')
 
 if (filterToggle) {
 	filterToggle.addEventListener('click', () => {

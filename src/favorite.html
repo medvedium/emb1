@@ -34,9 +34,9 @@
       <div class="container">
         <h1 class="h1 mb-5">Избранное</h1>
 
-        <div class="catalog-wrapper">
-          @@include('blocks/modules/catalog-filter/catalog-filter.html')
-          <div class="catalog__controls">
+        <div class="favorite-wrapper">
+          @@include('blocks/modules/favorite-filter/favorite-filter.html')
+          <div class="favorite__controls">
             <div class="filter-toggler jsToggleFilter">
               <svg>
                 <use xlink:href="img/icons/icons.svg#filter"></use>
@@ -57,30 +57,30 @@
                 </div>
               </div>
             </div>
-            <div class="catalog__view-type jsToggleViews">
-              <div class="catalog__view-type-item catalog__view-type-item--list jsToggleView jsListView active">
+            <div class="favorite__view-type jsToggleViews">
+              <div class="favorite__view-type-item favorite__view-type-item--list jsToggleView jsListView active">
                 <svg class="icon icon--md">
                   <use xlink:href="img/icons/icons.svg#list-view"></use>
                 </svg>
               </div>
-              <div class="catalog__view-type-item catalog__view-type-item--mosaic jsToggleView jsMosaicView">
+              <div class="favorite__view-type-item favorite__view-type-item--mosaic jsToggleView jsMosaicView">
                 <svg class="icon icon--md">
                   <use xlink:href="img/icons/icons.svg#mosaic-view"></use>
                 </svg>
               </div>
             </div>
           </div>
-          <div class="catalog__inner jsCatalogInner rows">
-            @@include('blocks/modules/catalog-item/catalog-item.html')
-            @@include('blocks/modules/catalog-item/catalog-item-2.html')
-            @@include('blocks/modules/catalog-item/catalog-item-3.html')
-            @@include('blocks/modules/catalog-item/catalog-item-threads.html')
-            @@include('blocks/modules/catalog-item/catalog-item.html')
-            @@include('blocks/modules/catalog-item/catalog-item-2.html')
-            @@include('blocks/modules/catalog-item/catalog-item-3.html')
-            @@include('blocks/modules/catalog-item/catalog-item.html')
-            @@include('blocks/modules/catalog-item/catalog-item-2.html')
-            @@include('blocks/modules/catalog-item/catalog-item-3.html')
+          <div class="favorite__inner jsFavoriteInner rows">
+            @@include('blocks/modules/favorite-item/favorite-item.html')
+            @@include('blocks/modules/favorite-item/favorite-item-2.html')
+            @@include('blocks/modules/favorite-item/favorite-item-3.html')
+            @@include('blocks/modules/favorite-item/favorite-item-threads.html')
+            @@include('blocks/modules/favorite-item/favorite-item.html')
+            @@include('blocks/modules/favorite-item/favorite-item-2.html')
+            @@include('blocks/modules/favorite-item/favorite-item-3.html')
+            @@include('blocks/modules/favorite-item/favorite-item.html')
+            @@include('blocks/modules/favorite-item/favorite-item-2.html')
+            @@include('blocks/modules/favorite-item/favorite-item-3.html')
           </div>
           @@include('blocks/modules/pagination/pagination.html')
         </div>

@@ -1,6 +1,6 @@
-const toggler = document.querySelector('.jsToggleViews')
-const catalogMosaicView = document.querySelector('.jsMosaicView')
-const catalogListView = document.querySelector('.jsListView')
+const toggler = document.querySelector('.catalog__controls .jsToggleViews')
+const catalogMosaicView = document.querySelector('.catalog__controls .jsMosaicView')
+const catalogListView = document.querySelector('.catalog__controls .jsListView')
 const catalogInner = document.querySelector('.jsCatalogInner')
 const buyBtn = document.querySelectorAll('.item-pricing__btn .button__text')
 
