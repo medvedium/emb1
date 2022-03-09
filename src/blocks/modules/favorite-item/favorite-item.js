@@ -26,3 +26,15 @@ const moveStatusItem = function() {
 
 moveStatusItem()
 window.addEventListener('resize', moveStatusItem)
+
+
+// Удаление элемента корзины с подтверждением
+let removeCartItem = document.querySelectorAll('.jsRemoveFavoriteItem')
+
+for (let i = 0; i < removeCartItem.length; i++) {
+	removeCartItem[i].addEventListener('click', function () {
+		document.querySelector('.jsRemoveFavoriteItemConfirm').addEventListener('click', () => {
+			this.closest('.favorite-item').remove()
+		})
+	})
+}

@@ -51,22 +51,12 @@
 			<button href="#" class="button button--md button--border button--hover-main item-pricing__btn">
 				<span class="button__text">Купить</span>
 			</button>
-			<a href="#" class="card-product__favorite jsFavorite">
-				<svg
-					class="icon icon--md"
-					width="20"
-					height="20"
-					viewBox="0 0 20 20"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M10.0001 13.3333L15.8334 17.5V4.16667C15.8334 3.72464 15.6578 3.30072 15.3453 2.98816C15.0327 2.67559 14.6088 2.5 14.1667 2.5H5.83341C5.39139 2.5 4.96746 2.67559 4.6549 2.98816C4.34234 3.30072 4.16675 3.72464 4.16675 4.16667V17.5L10.0001 13.3333Z"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
+			<div
+				class="card-product__favorite-remove jsRemoveFavoriteItem" data-bs-toggle="modal" data-bs-target="#remove-favorite-item">
+				<svg class="icon icon--blue icon--md">
+					<use xlink:href="img/icons/icons.svg#trash-blue"></use>
 				</svg>
-			</a>
+			</div>
 		</div>
 	</div>
 </div>

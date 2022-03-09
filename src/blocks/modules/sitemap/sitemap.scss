@@ -59,25 +59,23 @@
   &__item {
     margin-bottom: 24px;
   }
-}
 
-.h2 {
-}
+  .text {
+    & + ul {
+      margin-top: 24px;
+    }
 
-.text {
-  & + ul {
-    margin-top: 24px;
-  }
+    & + & {
+      margin-top: 16px;
+    }
 
-  & + & {
-    margin-top: 16px;
-  }
+    // .text--lg
+    &--lg {
+    }
 
-  // .text--lg
-  &--lg {
-  }
-
-  // .text--bold
-  &--bold {
+    // .text--bold
+    &--bold {
+    }
   }
 }
+

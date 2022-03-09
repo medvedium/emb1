@@ -1,3 +1,5 @@
+// Очистка корзины
+
 const cleanCart = document.querySelector('.jsCleanCart')
 
 if (cleanCart) {
@@ -6,6 +8,7 @@ if (cleanCart) {
 	})
 }
 
+// Удалить подсказку
 const removeAdvice = document.querySelectorAll('.jsRemoveAdvice')
 
 if (removeAdvice) {

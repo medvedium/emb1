@@ -75,3 +75,12 @@ const toggleFavoriteView = function () {
 toggleFavoriteView()
 window.addEventListener('resize', toggleFavoriteView)
 
+// Очистка избранного
+
+const cleanFavorite = document.querySelector('.jsCleanFavorite')
+
+if (cleanFavorite) {
+	cleanFavorite.addEventListener('click', () => {
+		document.querySelector('.favorite__inner').innerHTML = ''
+	})
+}

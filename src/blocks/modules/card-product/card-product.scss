@@ -91,7 +91,7 @@
 		display: flex;
 	}
 
-	&__favorite {
+	&__favorite, &__favorite-remove {
 		width: 44px;
 		height: 44px;
 		display: flex;
@@ -101,6 +101,7 @@
 		border-radius: 4px;
 		border: 1px solid #F7F8FA;
 		transition: all 0.3s ease;
+		cursor: pointer;
 
 		.icon {
 			stroke : #133050;

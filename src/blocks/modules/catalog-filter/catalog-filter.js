@@ -23,7 +23,7 @@ if (filterTitle) {
 	})
 }
 
-const filterToggle = document.querySelector('.jsToggleFilter')
+const filterToggle = document.querySelector('.catalog__controls .jsToggleFilter')
 const catalogFilter = document.querySelector('.catalog__filter')
 const catalogFilterClose = document.querySelector('.filter-header__close')
 
