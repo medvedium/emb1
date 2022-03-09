@@ -7,134 +7,164 @@
 	@include below(923px) {
 		display: block;
 	}
+}
 
-	.favorite {
-		&__filter {
-			grid-row: 1/-6;
-			grid-column: 1/2;
-		}
+.favorite {
+	&__heading {
+		position: relative;
+	}
 
-		&__controls {
-			display: flex;
-			grid-column: 2/5;
-			justify-content: space-between;
-			padding: 16px 24px;
-			border: 1px solid $gray-2;
-			border-radius: 4px;
+	&__clear {
+		position: absolute;
+		left: 154px;
+		top: 10px;
+		color: $gray;
+		font-size: 16px;
+		line-height: 20px;
+		cursor: pointer;
 
-			@include below(923px) {
-				grid-column: 1/-1;
-				padding-top: 0;
-				padding-bottom: 0;
-			}
-
-			.filter-toggler {
-				display: flex;
-				align-items: center;
-				cursor: pointer;
-
-				svg {
-					width: 24px;
-					height: 24px;
-					margin-right: 10px;
-				}
-
-				@include above(924px) {
-					display: none;
-				}
-
-				@include below(490px) {
-					padding: 18px 24px;
-				}
-
-				@include below(424px) {
-					width: 100%;
-					justify-content: center;
-				}
-
-				@include below(400px) {
-					padding: 16px 24px;
-				}
-			}
-
-			@include below(490px) {
-				flex-wrap: wrap;
-				padding-right: 0;
-				padding-left: 0;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 
-		&__view-type {
+		@media (min-width: 924px) {
+			display: none;
+		}
+
+		&-btn {
+			@media (max-width: 923px) {
+				display: none;
+			}
+		}
+	}
+
+	&__filter {
+		grid-row: 1/-6;
+		grid-column: 1/2;
+	}
+
+	&__controls {
+		display: flex;
+		grid-column: 2/5;
+		justify-content: space-between;
+		padding: 16px 24px;
+		border: 1px solid $gray-2;
+		border-radius: 4px;
+
+		@include below(923px) {
+			grid-column: 1/-1;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.filter-toggler {
 			display: flex;
+			align-items: center;
+			cursor: pointer;
 
-			.favorite__view-type-item {
-				cursor: pointer;
-
-				&:not(:last-child) {
-					margin-right: 24px;
-				}
-
-				svg {
-					fill: $gray-1;
-				}
-
-				&:hover svg,
-				&.active svg {
-					fill: $blue;
-				}
+			svg {
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
 			}
 
-			@include below(923px) {
-				display: flex;
-				align-items: center;
+			@include above(924px) {
+				display: none;
 			}
 
 			@include below(490px) {
 				padding: 18px 24px;
-				border-left: 1px solid $gray-2;
 			}
 
-			@include below(400xp) {
+			@include below(424px) {
+				width: 100%;
+				justify-content: center;
+			}
+
+			@include below(400px) {
 				padding: 16px 24px;
 			}
 		}
 
-		&__active-filter {
-			display: flex;
-			grid-column: 2/5;
-			margin-top: 16px;
+		@include below(490px) {
+			flex-wrap: wrap;
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
 
-			@include below(923px) {
-				grid-column: 1/-1;
+	&__view-type {
+		display: flex;
+
+		.favorite__view-type-item {
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+
+			svg {
+				fill: $gray-1;
+			}
+
+			&:hover svg,
+			&.active svg {
+				fill: $blue;
 			}
 		}
 
-		&__inner {
-			grid-column: 2/5;
-			margin-top: 24px;
-			transition: all 0.2s linear;
+		@include below(923px) {
+			display: flex;
+			align-items: center;
+		}
 
-			&.mosaic {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
+		@include below(490px) {
+			padding: 18px 24px;
+			border-left: 1px solid $gray-2;
+		}
 
-				@include below(1023px) {
-					grid-template-columns: repeat(3, 1fr);
-				}
+		@include below(400xp) {
+			padding: 16px 24px;
+		}
+	}
 
-				@include below(625px) {
-					grid-template-columns: repeat(2, 1fr);
-				}
-			}
+	&__active-filter {
+		display: flex;
+		grid-column: 2/5;
+		margin-top: 16px;
+
+		@include below(923px) {
+			grid-column: 1/-1;
+		}
+	}
+
+	&__inner {
+		grid-column: 2/5;
+		margin-top: 24px;
+		transition: all 0.2s linear;
+
+		&.mosaic {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
 
 			@include below(1023px) {
-				padding-right: 0;
-				padding-left: 0;
+				grid-template-columns: repeat(3, 1fr);
 			}
 
-			@include below(923px) {
-				grid-column: 1/-1;
+			@include below(625px) {
+				grid-template-columns: repeat(2, 1fr);
 			}
+		}
+
+		@include below(1023px) {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		@include below(923px) {
+			grid-column: 1/-1;
 		}
 	}
 }
