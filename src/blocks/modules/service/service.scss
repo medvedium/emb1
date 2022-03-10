@@ -84,11 +84,20 @@
     textarea {
       height: 132px;
       resize: none;
+      padding-top: 10px;
 
       & + .input__placeholder {
         top: 25px;
       }
     }
 
+  }
+
+  .input__placeholder {
+    background-color: transparent;
+  }
+
+  .input.is-focused .input__placeholder, .input.is-changed .input__placeholder {
+    top: -6px;
   }
 }

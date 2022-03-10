@@ -3,7 +3,11 @@
 	&__inner {
 		display: grid;
 		grid-template-columns: 4fr 6fr;
-		column-gap: 16px;
+		column-gap: 32px;
+
+		@include below(1300px) {
+			column-gap: 16px;
+		}
 
     @include below(1023px) {
       display: block;
@@ -19,6 +23,12 @@
 
 	// .contacts-tab__item
 	&__item {
+		display: flex;
+		align-items: center;
+
+		.icon {
+			flex-shrink: 0;
+		}
 	}
 
 	// .contacts-tab__map

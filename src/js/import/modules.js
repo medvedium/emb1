@@ -24,5 +24,6 @@ import "../../blocks/modules/contacts-page/contacts-page.js";
 import "../../blocks/modules/favorite/favorite-page.js";
 import "../../blocks/modules/favorite-item/favorite-item.js";
 import "../../blocks/modules/favorite-filter/favorite-filter.js";
+import "../../blocks/modules/service/service.js";
 
 import "../../blocks/modules/thread/thread.js";

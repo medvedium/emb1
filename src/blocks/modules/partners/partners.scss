@@ -1,66 +1,70 @@
 .partners {
-  // .partners__inner
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px;
-    @include below(1023px) {
-      grid-gap: 16px;
-    }
-  }
+	// .partners__inner
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px;
+		@include below(1023px) {
+			grid-gap: 16px;
+		}
+	}
 
-  // .partners__item
-  &__item {
-    display: flex;
-    //justify-content: center;
-    align-items: center;
-    border: 1px solid $gray-2;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px;
-    //min-height: 204px;
-    border-radius: 4px;
+	// .partners__item
+	&__item {
+		display: flex;
+		//justify-content: center;
+		align-items: center;
+		border: 1px solid $gray-2;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 32px;
+		//min-height: 204px;
+		border-radius: 4px;
 
-    @include below(600px) {
-      padding: 16px;
-    }
-  }
+		@include below(600px) {
+			padding: 16px;
+		}
+	}
 
-  // .partners__img
-  &__img {
-    max-height: 100px;
+	// .partners__img
+	&__img {
+		max-height: 100px;
+		margin-bottom: 16px;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-    }
-  }
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+	}
 
-  // .partners__link
-  &__link {
-    color: $gray-4;
-    position: relative;
+	// .partners__link
+	&__link {
+		color: $gray-4;
+		//position: relative;
+		text-align: center;
 
-    @include below(600px) {
-      font-size: 14px;
-    }
+		@include below(600px) {
+			font-size: 14px;
+		}
 
+		span {
+			position: relative;
+			&::after {
+				content: '›';
+				position: absolute;
+				right: -10px;
+				top: -1px;
+				color: #b0bfc6;
+			}
+		}
+	}
 
-    &::after {
-      content: "›";
-      position: absolute;
-      right: -10px;
-      top: 0;
-      color: #b0bfc6;
-    }
-  }
-
-  // .partners__desc
-  &__desc {
-    display: none;
-  }
-  p {
-    margin-bottom: 32px;
-  }
+	// .partners__desc
+	&__desc {
+		display: none;
+	}
+	p, ul {
+		margin-bottom: 32px;
+	}
 }

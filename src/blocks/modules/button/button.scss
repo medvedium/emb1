@@ -104,11 +104,12 @@
 	&--border--blue {
 		border-color: $blue;
 		color: $blue;
+		transition: all .2s linear;
 
 		&:hover {
 			@media (hover: hover) {
-				border-color: $blue;
-				color: $blue;
+				border-color: $blue-light;
+				color: $blue-light;
 			}
 		}
 

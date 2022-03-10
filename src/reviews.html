@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Отзывы</title>
+		<meta name="theme-color" content="#fff" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		@@include('blocks/modules/favicons/favicons.html')
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+	<body class="body">
+		@@include('blocks/modules/header/header.html')
+
+		<main class="main">
+			<div class="breadcrumbs mb-2">
+				<div class="container">
+					<div class="breadcrumbs__list">
+						<div class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">Главная</a>
+						</div>
+						<div class="breadcrumbs__item">
+							<span class="breadcrumbs__link">Отзывы</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<section class="section reviews">
+					<div class="container">
+						<h1 class="h1 mb-5">Отзывы</h1>
+						<div class="reviews__new">
+							<div class="reviews__header">
+								<div class="text">
+									Cпасибо, что выбрали нас. Нам важно услышать ваше мнение о нашей работе! Мы будем благодарны
+									как за положительную оценку, так и за любое замечание, которое мы учтём для улучшения нашего сервиса.
+								</div>
+								<button class="button button--blue">
+									<span class="button__text jsReviewBtnText">Оставить отзыв</span>
+								</button>
+							</div>
+							<div class="reviews-form__wrapper">
+								<div class="reviews-form">
+									<div class="reviews-form__title"></div>
+									<div class="text mb-4 d-flex align-items-center">
+										<div class="mr-16">Ваша оценка:</div>
+
+										<div class="rating rating_set">
+											<div class="rating__body">
+												<div class="rating__active" style="width: 72%"></div>
+												<div class="rating__items">
+													<input type="radio" class="rating__item" value="1" name="rating" />
+													<input type="radio" class="rating__item" value="2" name="rating" />
+													<input type="radio" class="rating__item" value="3" name="rating" />
+													<input type="radio" class="rating__item" value="4" name="rating" />
+													<input type="radio" class="rating__item" value="5" name="rating" />
+												</div>
+											</div>
+											<div class="rating__value">3.6</div>
+										</div>
+									</div>
+									<div class="reviews-form__row">
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="" />
+											<div class="input__placeholder">Имя *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="" />
+											<div class="input__placeholder">Город *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+									</div>
+									<div class="reviews-form__row">
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="" />
+											<div class="input__placeholder">Эл.почта *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="" />
+											<div class="input__placeholder">Организация</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+									</div>
+									<div class="reviews-form__row">
+										<div class="input">
+											<textarea class="input__field jsInput" required=""></textarea>
+											<div class="input__placeholder">Отзыв</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+									</div>
+									<div class="reviews-form__row">
+										<label class="checkbox form__checkbox">
+											<input type="checkbox" class="checkbox__input jsFormCheckBox" required="" checked="" />
+											<span class="checkbox__custom"></span>
+											<span class="text--color--graphite checkbox__text">
+												Согласие на&nbsp;обработку персональных данных
+											</span>
+										</label>
+										<button class="button button--blue">
+											<span class="button__text jsReviewBtnText">Оставить отзыв</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="reviews__inner">
+								<div class="reviews__item reviews-item">
+									<div class="reviews-item__info">
+										<div class="reviews-item__name">Константин Константинов</div>
+										<div class="reviews-item__rating">
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+										</div>
+										<div class="text reviews-item__company">ООО “Компания”</div>
+										<div class="text reviews-item__city">г. Город</div>
+										<time datetime="2019-11-12" class="text reviews-item__date">12.11.2019</time>
+									</div>
+									<div class="reviews-item__inner">
+										<p>
+											Прежде всего, экономическая повестка сегодняшнего дня является качественно новой ступенью
+											благоприятных перспектив. Вот вам яркий пример современных тенденций - выбранный нами
+											инновационный путь предоставляет широкие возможности для переосмысления внешнеэкономических
+											политик. В целом, конечно, понимание сути ресурсосберегающих технологий говорит о возможностях как
+											самодостаточных, так и внешне зависимых концептуальных решений. Мы вынуждены отталкиваться от
+											того, что реализация намеченных плановых заданий прекрасно подходит для реализации экспериментов,
+											поражающих по своей масштабности и грандиозности. С другой стороны, перспективное планирование
+											требует анализа экспериментов, поражающих по своей масштабности и грандиозности.
+										</p>
+										<p>
+											Вот вам яркий пример современных тенденций - синтетическое тестирование напрямую зависит от модели
+											развития. Ясность нашей позиции очевидна: существующая теория предоставляет широкие возможности
+											для новых предложений.
+										</p>
+										<p>
+											Есть над чем задуматься: многие известные личности своевременно верифицированы. Действия
+											представителей оппозиции неоднозначны и будут объединены в целые кластеры себе подобных.
+											Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство,
+											нанотехнологии объективно рассмотрены соответствующими инстанциями. Как уже неоднократно
+											упомянуто, базовые сценарии поведения пользователей могут быть своевременно верифицированы.
+										</p>
+									</div>
+								</div>
+								<div class="reviews__item reviews-item">
+									<div class="reviews-item__info">
+										<div class="reviews-item__name">Константин Константинов</div>
+										<div class="reviews-item__rating">
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+										</div>
+										<div class="text reviews-item__company">ООО “Компания”</div>
+										<div class="text reviews-item__city">г. Город</div>
+										<time datetime="2019-11-12" class="text reviews-item__date">12.11.2019</time>
+									</div>
+									<div class="reviews-item__inner">
+										<p>
+											Прежде всего, экономическая повестка сегодняшнего дня является качественно новой ступенью
+											благоприятных перспектив. Вот вам яркий пример современных тенденций - выбранный нами
+											инновационный путь предоставляет широкие возможности для переосмысления внешнеэкономических
+											политик. В целом, конечно, понимание сути ресурсосберегающих технологий говорит о возможностях как
+											самодостаточных, так и внешне зависимых концептуальных решений. Мы вынуждены отталкиваться от
+											того, что реализация намеченных плановых заданий прекрасно подходит для реализации экспериментов,
+											поражающих по своей масштабности и грандиозности. С другой стороны, перспективное планирование
+											требует анализа экспериментов, поражающих по своей масштабности и грандиозности.
+										</p>
+										<p>
+											Вот вам яркий пример современных тенденций - синтетическое тестирование напрямую зависит от модели
+											развития. Ясность нашей позиции очевидна: существующая теория предоставляет широкие возможности
+											для новых предложений.
+										</p>
+									</div>
+								</div>
+								<div class="reviews__item reviews-item">
+									<div class="reviews-item__info">
+										<div class="reviews-item__name">Константин Константинов</div>
+										<div class="reviews-item__rating">
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item rating-stars__item_active">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+											<svg class="icon icon--md rating-stars__item">
+												<use xlink:href="img/icons/icons.svg#star"></use>
+											</svg>
+										</div>
+										<div class="text reviews-item__company">ООО “Компания”</div>
+										<div class="text reviews-item__city">г. Город</div>
+										<time datetime="2019-11-12" class="text reviews-item__date">12.11.2019</time>
+									</div>
+									<div class="reviews-item__inner">
+										<p>
+											Прежде всего, экономическая повестка сегодняшнего дня является качественно новой ступенью
+											благоприятных перспектив. Вот вам яркий пример современных тенденций - выбранный нами
+											инновационный путь предоставляет широкие возможности для переосмысления внешнеэкономических
+											политик. В целом, конечно, понимание сути ресурсосберегающих технологий говорит о возможностях как
+											самодостаточных, так и внешне зависимых концептуальных решений. Мы вынуждены отталкиваться от
+											того, что реализация намеченных плановых заданий прекрасно подходит для реализации экспериментов,
+											поражающих по своей масштабности и грандиозности. С другой стороны, перспективное планирование
+											требует анализа экспериментов, поражающих по своей масштабности и грандиозности.
+										</p>
+										<p>
+											Вот вам яркий пример современных тенденций - синтетическое тестирование напрямую зависит от модели
+											развития. Ясность нашей позиции очевидна: существующая теория предоставляет широкие возможности
+											для новых предложений.
+										</p>
+									</div>
+								</div>
+
+								@@include('blocks/modules/pagination/pagination.html')
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			@@include('blocks/modules/footer/footer.html")
+		</main>
+
+		@@include('blocks/modules/modal/modal.html")
+
+		<!--js	-->
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
