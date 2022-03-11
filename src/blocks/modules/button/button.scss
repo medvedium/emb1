@@ -184,13 +184,17 @@
 	}
 
 	&--hover-main {
-		&:hover,
-		&:active {
+		&:hover{
 			@media (hover: hover) {
-				border-color: $main-color !important;
-				background-color: $main-color !important;
+				border-color: $pink-light !important;
+				background-color: $pink-light !important;
 				color: $white !important;
 			}
+		}
+		&:active {
+			border-color: $pink-dark !important;
+			background-color: $pink-dark !important;
+			color: $white !important;
 		}
 	}
 

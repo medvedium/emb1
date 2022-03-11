@@ -1,10 +1,10 @@
 const confirmService = document.querySelector('.jsConfirmService')
 
 if (confirmService) {
-  confirmService.addEventListener('click', function(event) {
-    event.preventDefault()
-    this.closest('.service__form').innerHTML = `
-      <div class="form__success-inner">
+	confirmService.addEventListener('click', function (event) {
+		event.preventDefault()
+		this.closest('.service__form').innerHTML = `
+          <div class="form__success-inner wide">
             <div class="form__success-icon">
               <img src="img/big-icons/check.svg" alt="" />
             </div>
@@ -18,5 +18,5 @@ if (confirmService) {
             </div>
           </div>
     `
-  })
+	})
 }

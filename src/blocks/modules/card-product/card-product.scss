@@ -124,8 +124,13 @@
 		}
 
 		@include below(423px) {
-			height: 36px;
-			width: 36px;
+			&:not(.card-product__favorite-remove) {
+				height: 36px;
+				width: 36px;
+			}
+			.card-product__favorite-remove {
+				margin-right: 10px;
+			}
 		}
 	}
 
@@ -158,4 +163,9 @@
 		}
 	}
 
+}
+@media (max-width: 625px) {
+	.card-product__favorite-remove {
+		margin-right: 10px;
+	}
 }

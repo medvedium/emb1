@@ -1,62 +1,125 @@
-
 .reviews {
-  // .reviews__new
-  &__new {
-  }
+	// .reviews__new
+	&__new {
+	}
 
-  // .reviews__header
-  &__header {
-  }
+	// .reviews__header
+	&__header {
+		display: flex;
 
-  // .reviews__inner
-  &__inner {
-  }
+		.text {
+			@include above(600px) {
+				margin-right: 64px;
+			}
+		}
+	}
 
-  // .reviews__item
-  &__item {
-  }
+	// .reviews__inner
+	&__inner {
+	}
+
+	// .reviews__item
+	&__item {
+	}
+
+	.button {
+		flex-shrink: 0;
+	}
 }
 
 .reviews-form {
-  // .reviews-form__wrapper
-  &__wrapper {
-  }
+	// .reviews-form__wrapper
+	&__wrapper {
+		display: none;
+	}
 
-  // .reviews-form__title
-  &__title {
-  }
+	// .reviews-form__title
+	&__title {
+	}
 
-  // .reviews-form__row
-  &__row {
-  }
+	// .reviews-form__row
+	&__row {
+	}
 }
 
 .reviews-item {
-  // .reviews-item__info
-  &__info {
-  }
+	background-color: $gray-3;
+	padding: 64px;
+	border-radius: 4px;
+	display: flex;
+	margin-bottom: 32px;
 
-  // .reviews-item__name
-  &__name {
-  }
+	// .reviews-item__info
+	&__info {
+		padding-right: 56px;
+		margin-right: 56px;
+		border-right: 1px solid $gray-2;
+		width: 300px;
+		flex-shrink: 0;
+	}
 
-  // .reviews-item__rating
-  &__rating {
-  }
+	// .reviews-item__name
+	&__name {
+		font-weight: 700;
+		font-size: 18px;
+		margin-bottom: 4px;
+	}
 
-  // .reviews-item__company
-  &__company {
-  }
+	// .reviews-item__rating
+	&__rating {
+		margin-bottom: 8px;
+	}
 
-  // .reviews-item__city
-  &__city {
-  }
+	// .reviews-item__company
+	&__company {
+		margin-bottom: 4px;
+	}
 
-  // .reviews-item__date
-  &__date {
-  }
+	// .reviews-item__city
+	&__city {
+		margin-bottom: 4px;
+	}
 
-  // .reviews-item__inner
-  &__inner {
-  }
+	// .reviews-item__date
+	&__date {
+	}
+
+	// .reviews-item__inner
+	&__inner {
+		// p + p {
+		// 	margin-top: 24px;
+		// }
+		p {
+			padding-bottom: 24px;
+		}
+	}
+
+	// .reviews-item__show-more
+	&__show-more {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+		border: 1px solid $gray-2;
+		border-radius: 4px;
+		margin-top: 32px;
+		cursor: pointer;
+		transition: all 0.2s linear;
+
+		&:hover {
+			border-color: $gray-1;
+			svg {
+				transform: translateY(-1px);
+				transition: all 0.2s linear;
+			}
+		}
+
+		._showmore-active & {
+			svg {
+				transform: rotate(180deg);
+				transition: all 0.2s linear;
+			}
+		}
+	}
 }
