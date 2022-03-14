@@ -47,49 +47,49 @@
 								<form class="reviews-form">
 									<div class="reviews-form__title mb-4 h2 wide">Ваш отзыв</div>
 									<div class="text mb-4 d-flex align-items-center wide">
-										<div class="mr-16">Ваша оценка:</div>
+										<div class="mr-16">Общая оценка</div>
 
 										<div class="rating rating_set">
 											<div class="rating__body">
 												<div class="rating__active" style="width: 72%"></div>
-												<div class="rating__items">
+												<label class="rating__items">
 													<input type="radio" class="rating__item" value="1" name="rating" />
 													<input type="radio" class="rating__item" value="2" name="rating" />
 													<input type="radio" class="rating__item" value="3" name="rating" />
 													<input type="radio" class="rating__item" value="4" name="rating" />
 													<input type="radio" class="rating__item" value="5" name="rating" />
-												</div>
+												</label>
 											</div>
 											<div class="rating__value">3.6</div>
 										</div>
 									</div>
 									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Имя *</div>
 									</div>
 									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Город *</div>
 									</div>
 									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Эл.почта *</div>
 									</div>
 									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+										<input type="text" class="input__field jsInput"  />
 										<div class="input__placeholder">Организация</div>
 									</div>
-									<div class="input wide">
-										<textarea type="text" class="input__field jsInput"></textarea>
-										<div class="input__placeholder">Отзыв</div>
+									<div class="input mb-3 wide">
+										<textarea type="text" class="input__field jsInput" required></textarea>
+										<div class="input__placeholder">Отзыв*</div>
 									</div>
 									<label class="checkbox form__checkbox mb-3">
 										<input type="checkbox" class="checkbox__input" required="" checked="" />
 										<span class="checkbox__custom"></span>
 										<span class="text--color--gray text--sm">Согласие на&nbsp;обработку персональных данных</span>
 									</label>
-									<button class="button button--blue button--wide">
-										<span class="button__text">Отправить</span>
+									<button class="button button--blue">
+										<span class="button__text">Оставить отзыв</span>
 									</button>
 								</form>
 							</div>

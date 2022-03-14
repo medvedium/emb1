@@ -7,9 +7,16 @@
 	&__header {
 		display: flex;
 
+		@include below(600px) {
+		flex-wrap: wrap;
+
+		}
+
 		.text {
-			@include above(600px) {
+			margin-bottom: 16px;
+			@include above(601px) {
 				margin-right: 64px;
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -24,36 +31,74 @@
 
 	.button {
 		flex-shrink: 0;
+
+		@include below(600px) {
+			width: 100%;
+		}
 	}
 }
 
 .reviews-form {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 16px;
-	align-items: center;
 
-	.wide {
-		grid-column: 1/3;
+	@include above(601px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 16px;
+		align-items: center;
+
+		.wide {
+			grid-column: 1/3;
+		}
+
+		.button {
+			justify-self: end;
+
+			@include below(600px) {
+				width: 100%;
+			}
+		}
 	}
+
+	@include below(600px) {
+		.button {
+			width: 100%;
+		}
+	}
+
+	textarea {
+		min-height: 112px;
+		padding-top: 15px;
+
+		& + .input__placeholder {
+			top: 25px;
+		}
+	}
+
+
+	.input__placeholder {
+		color: $gray-1;
+	}
+
+
 	// .reviews-form__wrapper
 	&__wrapper {
 		// display: none;
 		padding: 64px;
 		background-color: $gray-3;
+
+		@include below(1023px) {
+			padding: 32px;
+		}
+
+		@include below(423px) {
+			padding: 16px;
+		}
 	}
 
 	// .reviews-form__title
 	&__title {
 	}
 
-	// .reviews-form__row
-	&__row {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 16px;
-		align-items: center;
-	}
 }
 
 .reviews-item {
@@ -63,6 +108,18 @@
 	display: flex;
 	margin-bottom: 32px;
 
+	@include below(1200px) {
+		padding: 32px;
+	}
+
+	@include below(1023px) {
+		flex-direction: column;
+	}
+
+	@include below(600px) {
+		padding: 16px;
+	}
+
 	// .reviews-item__info
 	&__info {
 		padding-right: 56px;
@@ -70,6 +127,18 @@
 		border-right: 1px solid $gray-2;
 		width: 300px;
 		flex-shrink: 0;
+
+		@include below(1023px) {
+			width: 100%;
+			padding-right: 0;
+			margin-right: 0;
+			border-right: 0;
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+			border-bottom: 1px solid $gray-2;
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 
 	// .reviews-item__name
@@ -77,25 +146,35 @@
 		font-weight: 700;
 		font-size: 18px;
 		margin-bottom: 4px;
+		width: 100%;
 	}
 
 	// .reviews-item__rating
 	&__rating {
 		margin-bottom: 8px;
+		width: 100%;
 	}
 
 	// .reviews-item__company
 	&__company {
 		margin-bottom: 4px;
+		width: 100%;
 	}
 
 	// .reviews-item__city
 	&__city {
 		margin-bottom: 4px;
+		@include below(1023px) {
+			width: 50%;
+		}
 	}
 
 	// .reviews-item__date
 	&__date {
+		@include below(1023px) {
+			width: 50%;
+			text-align: right;
+		}
 	}
 
 	// .reviews-item__inner
