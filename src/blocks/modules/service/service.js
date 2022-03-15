@@ -13,7 +13,8 @@ if (confirmService) {
             </div>
             <div class="text-center form__success-desc">
               <div class="text text--color--gray-4">
-                Спасибо за обращение. <br>В ближайшее время с вами свяжется наш менеджер
+                Спасибо за обращение. <br>
+                В ближайшее время с вами свяжется наш менеджер
               </div>
             </div>
           </div>
