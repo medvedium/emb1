@@ -8,8 +8,7 @@
 		display: flex;
 
 		@include below(600px) {
-		flex-wrap: wrap;
-
+			flex-wrap: wrap;
 		}
 
 		.text {
@@ -46,7 +45,6 @@
 }
 
 .reviews-form {
-
 	@include above(601px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -81,15 +79,13 @@
 		}
 	}
 
-
 	.input__placeholder {
 		color: $gray-1;
 	}
 
-
 	// .reviews-form__wrapper
 	&__wrapper {
-		 display: none;
+		display: none;
 		padding: 64px;
 		background-color: $gray-3;
 
@@ -109,7 +105,6 @@
 	// .reviews-form__title
 	&__title {
 	}
-
 }
 
 .reviews-item {
@@ -219,11 +214,11 @@
 			}
 		}
 
-		// ._showmore-active & {
-		// 	svg {
-		// 		transform: rotate(180deg);
-		// 		transition: all 0.2s linear;
-		// 	}
-		// }
+		&.active {
+			svg {
+				transform: rotate(180deg);
+				transition: all 0.2s linear;
+			}
+		}
 	}
 }

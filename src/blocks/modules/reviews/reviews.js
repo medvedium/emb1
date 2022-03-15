@@ -35,3 +35,13 @@ if (showReviewsForm) {
 		})
 	})
 }
+
+const reviewsShowMoreBtn = document.querySelectorAll('.jsReviewsShowMore')
+
+if (reviewsShowMoreBtn) {
+	reviewsShowMoreBtn.forEach(btn => {
+		btn.addEventListener('click', function() {
+			this.classList.toggle('active')
+		})
+	})
+}
