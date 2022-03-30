@@ -90,15 +90,16 @@
 							</div>
 
 							<div class="service__form-wrap">
-								<form class="service__form">
+								<form class="service__form jsForm">
 									<div class="h2 mb-2 wide">Нужен сервис?</div>
 									<p class="wide">Оставьте заявку на сайте</p>
-									<div class="input mb-3 wide">
-										<input type="text" class="input__field jsInput" />
+									<div class="input mb-4 wide">
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Название оборудования *</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
-									<div class="input mb-3">
-										<select name="service-select" class="service__select">
+									<div class="input mb-4">
+										<select name="service-select" class="service__select" required>
 											<option value="1" selected>Марка оборудования *</option>
 											<option value="2">Пункт №2</option>
 											<option value="3">Пункт №3</option>
@@ -110,30 +111,37 @@
 											<option value="9">Пункт №9</option>
 											<option value="10">Пункт №10</option>
 										</select>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
-									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+									<div class="input mb-4">
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Модель оборудования *</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
-									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+									<div class="input mb-4">
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Ваше имя *</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
-									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+									<div class="input mb-4">
+										<input type="text" class="input__field jsInput" required />
 										<div class="input__placeholder">Город *</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
-									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+									<div class="input mb-4">
+										<input type="text" class="input__field jsInput jsInputPhone" required />
 										<div class="input__placeholder">Телефон *</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
-									<div class="input mb-3">
-										<input type="text" class="input__field jsInput" />
+									<div class="input mb-4">
+										<input type="text" class="input__field jsInput jsInputEmail" required />
 										<div class="input__placeholder">Эл.почта *</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
 									<div class="input wide">
 										<textarea type="text" class="input__field jsInput"></textarea>
 										<div class="input__placeholder">Комментарий</div>
+										<div class="input__error">Описание ошибки и способы ее исправить</div>
 									</div>
 									<div class="text text--color--gray text--sm mb-4 wide">Все поля выше обазательны к заполнению</div>
 									<div class="file-upload mb-5 wide">
@@ -143,10 +151,11 @@
 												<use xlink:href="img/icons/icons.svg#file"></use>
 											</svg>
 											<span class="text">Прикрепить файл</span>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</label>
 									</div>
 									<label class="checkbox form__checkbox mb-3 wide">
-										<input type="checkbox" class="checkbox__input" required="" checked="" />
+										<input type="checkbox" class="checkbox__input"  required checked />
 										<span class="checkbox__custom"></span>
 										<span class="text--color--gray text--sm">Согласие на&nbsp;обработку персональных данных</span>
 									</label>

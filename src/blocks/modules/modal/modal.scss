@@ -337,3 +337,22 @@ height: 80px;
 		min-height: auto;
 	}
 }
+
+#city-suggest .modal-dialog {
+
+	.modal-content {
+		min-height: auto;
+	}
+
+	@include above(1024px) {
+		margin-right: 390px;
+	}
+
+	.button {
+		height: 38px;
+
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+}

@@ -26,5 +26,6 @@ import "../../blocks/modules/favorite-item/favorite-item.js";
 import "../../blocks/modules/favorite-filter/favorite-filter.js";
 import "../../blocks/modules/service/service.js";
 import "../../blocks/modules/reviews/reviews.js";
+import "../../blocks/modules/home/home.js";
 
 import "../../blocks/modules/thread/thread.js";
