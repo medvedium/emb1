@@ -338,6 +338,14 @@ height: 80px;
 	}
 }
 
+#city-choose {
+	.modal-dialog {
+		@include above(1024px) {
+			width: 50%;
+		}
+	}
+}
+
 #city-suggest .modal-dialog {
 
 	.modal-content {
