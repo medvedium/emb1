@@ -343,6 +343,9 @@ height: 80px;
 		@include above(1024px) {
 			width: 50%;
 		}
+		@include above(575px) {
+			margin-bottom: 210px;
+		}
 	}
 }
 

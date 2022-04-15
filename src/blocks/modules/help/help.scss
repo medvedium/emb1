@@ -45,6 +45,7 @@
 	&__inner {
 		background-color: $gray-3;
 		padding: 64px;
+		height: 100%;
 
 		@include below(1600px) {
 			padding: 56px;
