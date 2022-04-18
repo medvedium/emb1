@@ -17,7 +17,7 @@
 		"tmp": "gulp -f gulpfile.tmp.js"
 	},
 	"devDependencies": {
-		"bootstrap": "^5.1.3",
+		"bootstrap": "latest",
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
 		"del": "latest",

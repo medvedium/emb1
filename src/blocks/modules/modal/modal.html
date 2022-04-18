@@ -1431,6 +1431,93 @@
 	</div>
 </div>
 
+<div class="modal fade" id="flizelin-buy" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog--ml">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon icon--lg icon--gray">
+					<use xlink:href="img/icons/icons.svg#cross"></use>
+				</svg>
+			</button>
+			<form action="" class="form form-with-success form--modal jsForm">
+				<div class="form__front jsFormFront">
+					<div class="modal-header">
+						<div class="h5">Выберите упаковку и количество</div>
+					</div>
+					<div class="modal-body flizelin-buy">
+						<div class="flizelin-buy__title">Нитки хлопок сotty №30 Gunold, 5000m</div>
+						<div class="flizelin-buy__size">Д.: 100 м, Ш.: 100 см</div>
+						<div class="flizelin-buy__color">
+							<img src="img/colors/color.jpg" alt="" />
+							208746 Морская волна (парадная форма)
+						</div>
+						<div class="flizelin-buy__inner">
+							<div class="flizelin-buy__image">
+								<img src="img/flizelin/flizelin.jpg" alt="" />
+							</div>
+							<div class="flizelin-buy__controls">
+								<div class="text text--sm text--color--gray">Вариант упаковки</div>
+								<div class="flizelin-buy__radio flizelin-radio">
+									<div class="flizelin-radio__item">
+										<label class="radio-btn">
+											<input type="radio" class="radio-btn__input" name="radio" checked />
+											<span class="radio-btn__custom"></span>
+											<span class="radio-btn__text">
+												<span class="flizelin-radio__title">Рулон</span>
+												<div class="item-color__roll-price-tip">
+													<svg class="icon icon--xs">
+														<use xlink:href="img/icons/icons.svg#i"></use>
+													</svg>
+													<div class="item-color__roll-price-info">При покупки рулона цена за метр 91 ₽</div>
+												</div>
+											</span>
+										</label>
+										<div class="flizelin-buy__price">
+											<span class="text text--color--gray-4 text--strike text--xs">1 817&nbsp;₽</span>
+											<span class="text text--bold">от&nbsp;275&nbsp;₽/м</span>
+										</div>
+									</div>
+									<div class="flizelin-radio__item">
+										<label class="radio-btn">
+											<input type="radio" class="radio-btn__input" name="radio" />
+											<span class="radio-btn__custom"></span>
+											<span class="radio-btn__text">
+												<span class="flizelin-radio__title">Метр</span>
+											</span>
+										</label>
+									</div>
+								</div>
+								<div class="flizelin-buy__quantity">
+									<div class="quantity-remove quantity-control">
+										<svg class="icon icon--xs">
+											<use xlink:href="img/icons/icons.svg#minus"></use>
+										</svg>
+									</div>
+									<input class="input jsProductQuantity" value="10" />
+									<div class="quantity-add quantity-control">
+										<svg class="icon icon--xs">
+											<use xlink:href="img/icons/icons.svg#plus"></use>
+										</svg>
+									</div>
+								</div>
+								<button
+									type="button"
+									class="button button--wide w-100"
+									data-bs-target="#add-to-cart"
+									data-bs-toggle="modal"
+									data-bs-dismiss="modal"
+								>
+									Купить
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
 <div class="modal fade" id="modal-buy" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-dialog--ml">
 		<div class="modal-content">
@@ -1503,8 +1590,9 @@
 								<button
 									type="button"
 									class="button button--wide w-100"
-									data-bs-toggle="modal"
 									data-bs-target="#add-to-cart"
+									data-bs-toggle="modal"
+									data-bs-dismiss="modal"
 								>
 									Купить
 								</button>
