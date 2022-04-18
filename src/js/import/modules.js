@@ -1,4 +1,4 @@
-import Modal from 'bootstrap/js/dist/modal.js';
+import { Modal } from 'bootstrap';
 import '../../blocks/modules/header/header.js';
 import "../../blocks/modules/footer/footer.js";
 import "../../blocks/modules/input/input.js";

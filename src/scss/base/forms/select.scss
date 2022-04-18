@@ -154,7 +154,7 @@
 				font-size: 8px;
 				color: $blue;
 				@extend %ic;
-				content: '\e900';
+				content: '\e903';
 			}
 
 			@include below($mobile) {
