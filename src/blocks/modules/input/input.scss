@@ -62,7 +62,13 @@
 		top: 100%;
 		color: $red;
 		font-size: 12px;
+		line-height: 12px;
 		display: none;
+		margin-top: 4px;
+	}
+
+	#PopupForm &.is-error {
+		margin-bottom: 30px !important;
 	}
 
 	&.is-focused &__placeholder,

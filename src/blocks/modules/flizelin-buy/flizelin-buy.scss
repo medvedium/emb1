@@ -26,11 +26,12 @@
     align-items: center;
     margin-bottom: 24px;
 
-    img {
+    &-item, img {
       width: 24px;
       height: 24px;
       border-radius: 50%;
       margin-right: 12px;
+      border: 1px solid $gray;
     }
   }
 
