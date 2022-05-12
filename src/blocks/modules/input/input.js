@@ -1,18 +1,17 @@
 import IMask from 'imask'
 
 
-const inputPhone = document.querySelectorAll('.jsInputPhone');
 const maskOptions = {
 	mask: '+{7} (000) 000-00-00'
 };
 
+const inputPhone = document.querySelectorAll('.jsInputPhone');
 for (let i = 0; i < inputPhone.length; i++) {
 	new IMask(inputPhone[i], maskOptions);
 }
 
 
 const input = document.querySelectorAll('.jsInput');
-
 
 const checkChange = function (that) {
 	const val = that.value;
@@ -23,7 +22,6 @@ const checkChange = function (that) {
 		that.parentNode.classList.remove('is-error');
 	}
 };
-
 
 for (let i = 0; i < input.length; i++) {
 	input[i].addEventListener('focus', function() {

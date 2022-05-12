@@ -1,53 +1,12 @@
-// Подключение функционала "Чертогов Фрилансера"
 import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../files/functions.js";
 import { flsModules } from "../files/modules.js";
 import { formValidate } from "../files/forms/forms.js";
-
-// Подключение файла стилей
-// Базовые стили поключаются в src/scss/forms.scss
-// Файл базовых стилей src/scss/forms/select.scss
-
-/*
-Документация:
-Снипет (HTML): sel
-*/
-/*
-// Настройки
-Для селекта (select):
-class="имя класса" - модификатор к конкретному селекту
-multiple - мультивыбор
-data-tags - режим тегов, только для (только для multiple)
-data-scroll - включит прокрутку для выпадающего списка, дополнительно можно подключить кастомный скролл simplebar в app.js. Указанное число для атрибута ограничит высоту
-data-checkbox - стилизация элементов по checkbox (только для multiple)
-data-show-selected - отключает скрытие выбранного элемента
-data-search - позволяет искать по выпадающему списку
-data-open - селект открыт сразу
-data-submit - отправляет форму при изменении селекта
-
-Для плейсхолдера (Плейсхолдер - это option с value=""):
-data-label для плейсхолдера, добавляет label к селекту
-data-show для плейсхолдера, показывает его в списке (только для единичного выбора)
-
-Для элемента (option):
-data-class="имя класса" - добавляет класс
-data-asset="путь к картинке или текст" - добавляет структуру 2х колонок и данными
-data-href="адрес ссылки" - добавляет ссылку в элемент списка
-data-href-blank - откроет ссылку в новом окне
-*/
-
-
-
-/*
-// Возможные доработки:
-попап на мобилке
-*/
 
 // Класс построения Select
 class SelectConstructor {
 	constructor(props, data = null) {
 		let defaultConfig = {
 			init: true,
-			logging: true,
 		}
 		this.config = Object.assign(defaultConfig, props);
 		// CSS классы модуля
@@ -82,9 +41,6 @@ class SelectConstructor {
 			const selectItems = data ? document.querySelectorAll(data) : document.querySelectorAll('select');
 			if (selectItems.length) {
 				this.selectsInit(selectItems);
-				this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
-			} else {
-				this.setLogging('Сплю, нет ни одного select zzZZZzZZz');
 			}
 		}
 	}
@@ -459,10 +415,6 @@ class SelectConstructor {
 				select: originalSelect
 			}
 		}));
-	}
-	// Логгинг в консоль
-	setLogging(message) {
-		this.config.logging ? FLS(`[select]: ${message}`) : null;
 	}
 }
 // Запускаем и добавляем в объект модулей

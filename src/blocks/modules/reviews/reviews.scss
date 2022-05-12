@@ -105,6 +105,12 @@
 	// .reviews-form__title
 	&__title {
 	}
+
+	// .reviews-form__rating
+	&__rating {
+		display: flex;
+		flex-direction: row-reverse;
+	}
 }
 
 .reviews-item {
@@ -185,16 +191,26 @@
 
 	// .reviews-item__inner
 	&__inner {
-		// p + p {
-		// 	margin-top: 24px;
-		// }
 		p:not(:last-of-type) {
 			padding-bottom: 24px;
 		}
 	}
 
+	// .reviews-item__inner-wrap
+	&__inner-wrap {
+		.reviews-item__inner {
+			height: auto;
+			overflow-y: hidden;
+		}
+
+		&.is-hide .reviews-item__inner {
+			height: 385px;
+		}
+	}
+
 	// .reviews-item__show-more
 	&__show-more {
+    position: relative;
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -202,12 +218,24 @@
 		padding: 12px;
 		border: 1px solid $gray-2;
 		border-radius: 4px;
-		margin-top: 32px;
+		margin-top: 8px;
 		cursor: pointer;
 		transition: all 0.2s linear;
 
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 110%;
+      left: 0;
+      right: 0;
+      height: 100px;
+      width: 100%;
+      background: linear-gradient(0deg, $gray-3 0%, rgba(0,0,0,0) 100%);
+    }
+
 		&:hover {
 			border-color: $gray-1;
+
 			svg {
 				transform: translateY(-1px);
 				transition: all 0.2s linear;

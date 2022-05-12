@@ -36,12 +36,29 @@ if (showReviewsForm) {
 	})
 }
 
-const reviewsShowMoreBtn = document.querySelectorAll('.jsReviewsShowMore')
+const reviewsItems = document.querySelectorAll('.reviews-item__inner-wrap')
 
-if (reviewsShowMoreBtn) {
-	reviewsShowMoreBtn.forEach(btn => {
-		btn.addEventListener('click', function() {
-			this.classList.toggle('active')
-		})
-	})
+if (reviewsItems) {
+	for (let i = 0; i < reviewsItems.length; i++) {
+		if (reviewsItems[i].offsetHeight >= 385) {
+			reviewsItems[i].classList.add('is-hide')
+
+			const showMoreBtn = document.createElement('button')
+			showMoreBtn.classList.add('reviews-item__show-more')
+			showMoreBtn.innerHTML = `
+			<span>
+				<svg class="icon icon--lg">
+					<use xlink:href="img/icons/icons.svg#union"></use>
+				</svg>
+			</span>
+			`
+
+			reviewsItems[i].append(showMoreBtn)
+
+			showMoreBtn.addEventListener('click', function() {
+				this.closest('.reviews-item__inner-wrap').classList.remove('is-hide')
+				this.remove()
+			})
+		}
+	}
 }

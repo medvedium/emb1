@@ -21,3 +21,12 @@ if (confirmService) {
     `
 	})
 }
+
+
+const fileUploadInput = document.querySelector('.form-control-file')
+
+if (fileUploadInput) {
+	fileUploadInput.addEventListener('change', function() {
+		this.closest('label').querySelector('span.text').textContent = this.files[0].name
+	})
+}

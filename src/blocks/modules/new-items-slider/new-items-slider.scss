@@ -6,17 +6,15 @@
 
 	@include below(1023px) {
 		height: auto;
-
 	}
 
 	&__wrap {
 		height: 100%;
 	}
 
-
-	 &__slide{
-		 display: inline-flex !important;
-		 height: 100% !important;
+	&__slide {
+		display: inline-flex !important;
+		height: 100% !important;
 	}
 
 	&__title {
@@ -27,11 +25,9 @@
 		z-index: 2;
 		text-align: center;
 
-
 		@include below(1600px) {
 			top: 24px;
 		}
-
 
 		@include below(1023px) {
 			position: static;
@@ -42,7 +38,6 @@
 		@include below(767px) {
 			margin-bottom: 16px;
 		}
-
 	}
 
 	&__inner {
@@ -60,24 +55,23 @@
 			padding-top: 62px;
 		}
 
-		@include below(1023px){
+		@include below(1023px) {
 			padding-top: 38px;
 			padding-left: 18px;
 			padding-right: 18px;
 			min-height: 250px;
 		}
 
-		@include below(575px){
+		@include below(575px) {
 			padding: 12px;
 			min-height: 224px;
 		}
 
-		@include below(423px){
+		@include below(423px) {
 			padding: 8px;
 			min-height: 190px;
 		}
 	}
-
 
 	&__img-wrap {
 		height: 238px;
@@ -109,8 +103,10 @@
 			height: 90px;
 			margin-bottom: 16px;
 		}
+	}
 
-
+	picture {
+		height: 100%;
 	}
 
 	&__img {
@@ -135,9 +131,8 @@
 		}
 	}
 
-
 	&__nav {
-		@include below(1023px){
+		@include below(1023px) {
 			left: 4px;
 			right: 4px;
 			width: auto;
@@ -151,24 +146,22 @@
 	}
 
 	&__count {
-
-		@include below(1023px){
+		@include below(1023px) {
 			display: none;
 		}
 
-		@include below(767px){
+		@include below(767px) {
 			display: flex;
 		}
 	}
 
 	&__nav &__btn {
-
-		@include below(1023px){
+		@include below(1023px) {
 			box-shadow: 0px 8px 20px rgba(0, 9, 17, 0.12);
 			pointer-events: auto;
 		}
 
-		@include below(767px){
+		@include below(767px) {
 			box-shadow: none;
 		}
 	}
