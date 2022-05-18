@@ -1,0 +1,86 @@
+.personal {
+	// .personal__aside
+	&__aside {
+	}
+
+	// .personal__info
+	&__info {
+	}
+
+	// .personal__name
+	&__name {
+	}
+
+	// .personal__status
+	&__status {
+	}
+
+	// .personal__course
+	&__course {
+	}
+
+	// .personal__menu
+	&__menu {
+	}
+
+	// .personal__inner
+	&__inner {
+	}
+
+	// .personal__form
+	&__form {
+	}
+}
+
+.personal-course {
+	// .personal-course__item
+	&__item {
+	}
+}
+
+.personal-menu {
+	// .personal-menu__list
+	&__list {
+	}
+
+	// .personal-menu__item
+	&__item {
+	}
+
+	// .personal-menu__link
+	&__link {
+		&.active {
+		}
+	}
+}
+
+.personal-form {
+	// .personal-form__radio
+	&__radio {
+		label:not(:last-of-type) {
+			margin-right: 16px;
+		}
+	}
+
+	// .personal-form__inner
+	&__inner {
+    display: none; // temporarily
+
+		// .personal-form__inner--physical
+		&--physical {
+      display: block;  // temporarily
+		}
+
+		// .personal-form__inner--juridical
+		&--juridical {
+		}
+
+		// .personal-form__inner--ip
+		&--ip {
+		}
+	}
+
+	// .personal-form__buttons
+	&__buttons {
+	}
+}

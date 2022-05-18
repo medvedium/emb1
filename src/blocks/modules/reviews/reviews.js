@@ -15,24 +15,24 @@ if (showReviewsForm) {
 
 		reviewsForm.classList.toggle('is-open')
 
-		reviewsSubmit.addEventListener('click', (event) => {
-			event.preventDefault()
-			reviewsForm.innerHTML = `
-      <div class="form__success-inner wide">
-            <div class="form__success-icon">
-              <img src="img/big-icons/check.svg" alt="" />
-            </div>
-            <div class="text-center form__success-title mb-2">
-              <div class="h4">Готово</div>
-            </div>
-            <div class="text-center form__success-desc">
-              <div class="text text--color--gray-4">
-                Ваш отзыв успешно отправлен. <br> 
-                Скоро он появится на сайте
-              </div>
-            </div>
-          </div>`
-		})
+		// reviewsSubmit.addEventListener('click', (event) => {
+		// 	event.preventDefault()
+		// 	reviewsForm.innerHTML = `
+    //   <div class="form__success-inner wide">
+    //         <div class="form__success-icon">
+    //           <img src="img/big-icons/check.svg" alt="" />
+    //         </div>
+    //         <div class="text-center form__success-title mb-2">
+    //           <div class="h4">Готово</div>
+    //         </div>
+    //         <div class="text-center form__success-desc">
+    //           <div class="text text--color--gray-4">
+    //             Ваш отзыв успешно отправлен. <br>
+    //             Скоро он появится на сайте
+    //           </div>
+    //         </div>
+    //       </div>`
+		// })
 	})
 }
 
@@ -48,7 +48,7 @@ if (reviewsItems) {
 			showMoreBtn.innerHTML = `
 			<span>
 				<svg class="icon icon--lg">
-					<use xlink:href="img/icons/icons.svg#union"></use>
+					<use xlink:href="/local/templates/emb1/img/icons/icons.svg#union"></use>
 				</svg>
 			</span>
 			`

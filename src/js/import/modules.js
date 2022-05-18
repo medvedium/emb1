@@ -27,5 +27,6 @@ import "../../blocks/modules/favorite-filter/favorite-filter.js";
 import "../../blocks/modules/service/service.js";
 import "../../blocks/modules/reviews/reviews.js";
 import "../../blocks/modules/home/home.js";
+import "../../blocks/modules/lk-personal-info/lk-personal-info.js";
 
 import "../../blocks/modules/thread/thread.js";

@@ -16,23 +16,48 @@
 .product-availability {
 	font-size: 14px;
 	&::before {
-		content: '';
-		display: inline-block;
-		width: 8px;
-		height: 8px;
-		border: 2px solid $status-delivery;
-		border-radius: 50%;
-		margin-right: 6px;
+		//content: '';
+
 	}
 
 	&.status-delivery {
 		color: $status-delivery;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border: 2px solid currentColor;
+			border-radius: 50%;
+			margin-right: 6px;
+		}
 	}
 	&.status-available {
 		color: $status-available;
+
+		&::before {
+			content: '\e900';
+			font-family: icons;
+			font-style: normal;
+			font-weight: 400;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			font-size: 12px;
+		}
 	}
 	&.status-order {
 		color: $status-order;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border: 2px solid currentColor;
+			border-radius: 50%;
+			margin-right: 6px;
+		}
 	}
 }
 

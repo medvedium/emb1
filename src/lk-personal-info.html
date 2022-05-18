@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Личный кабинет | Личные данные</title>
+		<meta name="theme-color" content="#fff" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		@@include('blocks/modules/favicons/favicons.html')
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+	<body class="body">
+		@@include('blocks/modules/header/header.html')
+
+		<main class="main">
+			<div class="breadcrumbs mb-2">
+				<div class="container">
+					<div class="breadcrumbs__list">
+						<div class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">Главная</a>
+						</div>
+						<div class="breadcrumbs__item">
+							<span class="breadcrumbs__link">Личный кабинет</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<section class="section">
+					<div class="container">
+						<h1 class="h1 mb-5">Личный кабинет</h1>
+						<div class="personal">
+							<div class="personal__aside">
+								<div class="personal__info">
+									<div class="personal__name text h2">Константин</div>
+									<div class="text--sm text--color--gray-4">konstantinov2203@gmail.com</div>
+									<div class="personal__status text--sm text--color--gray-4">Статус: Серебряный</div>
+								</div>
+								<div class="personal__course personal-course">
+									<div class="personal-course__item">$ = 72 ₽</div>
+									<div class="personal-course__item">€ = 80 ₽</div>
+								</div>
+								<div class="personal__menu">
+									<nav class="personal-menu">
+										<ul class="personal-menu__list">
+											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Заказы</a></li>
+											<li class="personal-menu__item">
+												<a href="#" class="link personal-menu__link active">Личные данные</a>
+											</li>
+											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Бонусы</a></li>
+											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Настройки</a></li>
+											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Выйти</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="personal__inner">
+								<div class="text h2 mb-4">Личные данные</div>
+								<div class="personal__form personal-form">
+									<div class="personal-form__radio mb-4">
+										<label class="radio-btn">
+											<input type="radio" class="radio-btn__input" name="typeOfPerson" checked="" />
+											<span class="radio-btn__custom"></span>
+											<span class="radio-btn__text">Физ. лицо</span>
+										</label>
+
+										<label class="radio-btn">
+											<input type="radio" class="radio-btn__input" name="typeOfPerson" />
+											<span class="radio-btn__custom"></span>
+											<span class="radio-btn__text">Юр. лицо</span>
+										</label>
+
+										<label class="radio-btn">
+											<input type="radio" class="radio-btn__input" name="typeOfPerson" />
+											<span class="radio-btn__custom"></span>
+											<span class="radio-btn__text">ИП</span>
+										</label>
+									</div>
+									<div class="personal-form__inner personal-form__inner--physical">
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Фамилия  *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Имя  *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Отчество *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">E-mail *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Телефон *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Пол</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Дата рождения</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Индекс</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Город  </div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Область</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Адрес  *</div>
+										</div>
+									</div>
+									<div class="personal-form__inner personal-form__inner--juridical">
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Фамилия  *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Имя  *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Отчество *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Организация *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">ИНН *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">E-mail *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Телефон *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Юр. адрес *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Почтовый адрес *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Индекс</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Город  </div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">ОКОНХ</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">ОГРН</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">КПП</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">ОКПО</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Наименование банка</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Город банка </div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">БИК</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Р/счет </div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">К/счет</div>
+										</div>
+									</div>
+									<div class="personal-form__inner personal-form__inner--ip">
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Фамилия  *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Имя  *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Отчество *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Организация *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">ИНН *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">E-mail *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Телефон *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Юр. адрес *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Почтовый адрес *</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Наименование банка</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Город банка </div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">БИК</div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">Р/счет </div>
+										</div>
+										<div class="input mb-3">
+											<input type="text" class="input__field jsInput" required="">
+											<div class="input__placeholder">К/счет</div>
+										</div>
+									</div>
+									<div class="personal-form__buttons">
+										<button class="button button--border button--border--blue">
+											<span class="button__text">Отменить</span>
+										</button>
+										<button class="button button--blue">
+											<span class="button__text">Сохранить</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			@@include('blocks/modules/footer/footer.html")
+		</main>
+
+		@@include('blocks/modules/modal/modal.html")
+
+		<!--js	-->
+		<script src="js/app.min.js"></script>
+	</body>
+</html>

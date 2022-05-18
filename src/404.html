@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>404</title>
+	<meta name="theme-color" content="#fff" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta
+		name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	/>
+	@@include('blocks/modules/favicons/favicons.html')
+	<link rel="stylesheet" href="css/style.min.css" />
+</head>
+<body class="body">
+@@include('blocks/modules/header/header.html')
+
+<main class="main">
+	<div class="content">
+		<section class="section">
+			<div class="container">
+				<div class="page-404__inner">
+					<img src="img/404.png" alt="404">
+					<div class="text h2 mt-4">Страница не найдена</div>
+					<div class="text text--gray mt-4 text--color--gray-4 text-center">Возможно, Вы воспользовались недействительной ссылкой
+						или страница была удалена
+					</div>
+					<div class="page-404__buttons">
+						<a href="#" class="button">
+							<span class="button__text">На главную</span>
+						</a>
+						<a href="#" class="button button--blue">
+							<span class="button__text">В каталог</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	@@include('blocks/modules/footer/footer.html")
+</main>
+
+@@include('blocks/modules/modal/modal.html")
+
+<!--js	-->
+<script src="js/app.min.js"></script>
+</body>
+</html>

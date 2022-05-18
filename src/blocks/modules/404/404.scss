@@ -1,0 +1,51 @@
+.page-404 {
+  // .page-404__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 436px;
+    margin: 112px auto 0;
+
+    @include below(1024px) {
+      margin-top: 72px;
+    }
+    @include below(575px) {
+      margin-top: 54px;
+    }
+
+    img {
+      @include below(1024px) {
+        height: 109px;
+      }
+    }
+  }
+
+  // .page-404__buttons
+  &__buttons {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    a {
+      white-space: nowrap;
+      width: 163px;
+
+      &:first-of-type {
+        margin-right: 32px;
+      }
+
+      @include below(575px) {
+        width: 148px;
+
+        &:first-of-type {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+
+
+}
