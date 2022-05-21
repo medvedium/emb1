@@ -95,6 +95,7 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 @import "base/modules";
 @import "base/helpers";
+@import "helpers/basic-styles";
 
 body {
 	// Скролл заблокирован
@@ -179,6 +180,7 @@ body {
 
 // Подключение стилей общих элементов проекта
 @import "common";
+@import "node_modules/vanillajs-datepicker/sass/datepicker";
 
 // Подключение стилей отдельных блоков
 // Подключение стилей отдельных страниц

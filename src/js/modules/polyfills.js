@@ -1,0 +1,8 @@
+import 'element-closest-polyfill'
+import 'element-remove'
+import 'element-remove-polyfill'
+import 'fetch-polyfill'
+import 'js-polyfills'
+// import 'node-fetch-polyfill'
+import 'nodelist-foreach-polyfill'
+import 'smoothscroll-polyfill'

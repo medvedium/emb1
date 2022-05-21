@@ -41,26 +41,34 @@
 									<div class="personal__status text--sm text--color--gray-4">Статус: Серебряный</div>
 								</div>
 								<div class="personal__course personal-course">
-									<div class="personal-course__item">$ = 72 ₽</div>
-									<div class="personal-course__item">€ = 80 ₽</div>
+									<div class="personal-course__item">$=72 ₽</div>
+									<div class="personal-course__item">€=80 ₽</div>
 								</div>
 								<div class="personal__menu">
 									<nav class="personal-menu">
 										<ul class="personal-menu__list">
-											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Заказы</a></li>
 											<li class="personal-menu__item">
-												<a href="#" class="link personal-menu__link active">Личные данные</a>
+												<a href="#" class="personal-menu__link">Заказы</a>
 											</li>
-											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Бонусы</a></li>
-											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Настройки</a></li>
-											<li class="personal-menu__item"><a href="#" class="link personal-menu__link">Выйти</a></li>
+											<li class="personal-menu__item active">
+												<a href="#" class="personal-menu__link">Личные данные</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link">Бонусы</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link">Настройки</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link text--color--gray">Выйти</a>
+											</li>
 										</ul>
 									</nav>
 								</div>
 							</div>
 							<div class="personal__inner">
 								<div class="text h2 mb-4">Личные данные</div>
-								<div class="personal__form personal-form">
+								<form class="personal__form personal-form jsForm">
 									<div class="personal-form__radio mb-4">
 										<label class="radio-btn">
 											<input type="radio" class="radio-btn__input" name="typeOfPerson" checked="" />
@@ -80,190 +88,235 @@
 											<span class="radio-btn__text">ИП</span>
 										</label>
 									</div>
-									<div class="personal-form__inner personal-form__inner--physical">
+									<div class="personal-form__inner personal-form__inner--physical active">
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Фамилия  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Имя  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Отчество *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+											<input type="email" class="input__field jsInput jsInputEmail" required="">
 											<div class="input__placeholder">E-mail *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+											<input type="text" class="input__field jsInput jsInputPhone" required="">
 											<div class="input__placeholder">Телефон *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Пол</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
-										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+										<div class="input mb-3 input--date">
+											<input type="date" class="input__field jsInput" required="">
 											<div class="input__placeholder">Дата рождения</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Индекс</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Город  </div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Область</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Адрес  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 									</div>
 									<div class="personal-form__inner personal-form__inner--juridical">
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Фамилия  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Имя  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Отчество *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Организация *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">ИНН *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+											<input type="email" class="input__field jsInput jsInputEmail" required="">
 											<div class="input__placeholder">E-mail *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+											<input type="text" class="input__field jsInput jsInputPhone" required="">
 											<div class="input__placeholder">Телефон *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Юр. адрес *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Почтовый адрес *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Индекс</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Город  </div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">ОКОНХ</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">ОГРН</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">КПП</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">ОКПО</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Наименование банка</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Город банка </div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">БИК</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Р/счет </div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">К/счет</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 									</div>
 									<div class="personal-form__inner personal-form__inner--ip">
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Фамилия  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Имя  *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Отчество *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Организация *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">ИНН *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+											<input type="email" class="input__field jsInput jsInputEmail" required="">
 											<div class="input__placeholder">E-mail *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
-											<input type="text" class="input__field jsInput" required="">
+											<input type="text" class="input__field jsInput jsInputPhone" required="">
 											<div class="input__placeholder">Телефон *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Юр. адрес *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Почтовый адрес *</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Наименование банка</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Город банка </div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">БИК</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">Р/счет </div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 										<div class="input mb-3">
 											<input type="text" class="input__field jsInput" required="">
 											<div class="input__placeholder">К/счет</div>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
 										</div>
 									</div>
 									<div class="personal-form__buttons">
@@ -274,7 +327,7 @@
 											<span class="button__text">Сохранить</span>
 										</button>
 									</div>
-								</div>
+								</form>
 							</div>
 						</div>
 					</div>
