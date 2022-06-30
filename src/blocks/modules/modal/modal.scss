@@ -336,6 +336,30 @@ height: 80px;
 	.modal-content {
 		min-height: auto;
 	}
+
+	.product-add-basket {
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.img-wrap {
+		width: 40%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.product-title {
+		width: 60%;
+		padding-left: 20px;
+		text-align: left;
+	}
+
+	.modal-header > .modal-header {
+		padding: 0;
+	}
 }
 
 #city-choose {
