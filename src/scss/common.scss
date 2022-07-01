@@ -1,1 +1,39 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.border--gray {
+    border: 1px solid #E7E9EB;
+    border-radius: 4px;
+}
+
+.text-color--green {
+    color: #27AE60;
+}
+
+.text-color--red {
+    color: #EB5757;
+}
+
+.text-color--purple {
+    color: #BB6BD9
+}
+
+.text-color--orange {
+    color: #F2994A;
+}
+
+.space-dashed {
+    display: flex;
+    align-items: baseline;
+    
+    &::before {
+        content: '';
+        border-bottom: 1px dashed #E7E9EB;
+        flex-grow: 1; 
+        order: 2; 
+        margin: 0 5px;
+    }
+
+    & span {
+        order: 3;
+    }
+}

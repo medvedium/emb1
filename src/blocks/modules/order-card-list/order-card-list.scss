@@ -1,0 +1,10 @@
+.order-card-list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}

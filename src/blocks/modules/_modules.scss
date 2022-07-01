@@ -85,6 +85,19 @@
 @import "404/404";
 @import "lk-personal-info/lk-personal-info";
 
+
+@import 'select-order/select-order';
+@import 'order-card-list/order-card-list';
+@import 'order-card/order-card';
+@import 'settings/settings';
+@import 'order-details/order-details';
+@import 'order-details-link/order-details-link';
+@import 'personal-bonuses/personal-bonuses';
+@import 'bonuses-history/bonuses-history';
+@import 'bonuses-history-list/bonuses-history-list';
+@import 'catalog-map/catalog-map';
+@import 'catalog-chapters/catalog-chapters';
+
 //секции
 
 @import 'sections/main-section';

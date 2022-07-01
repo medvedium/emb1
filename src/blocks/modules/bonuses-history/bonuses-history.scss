@@ -1,0 +1,16 @@
+.bonuses-history-list {
+    & li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 32px;
+        
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        
+        & > div span:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+} 

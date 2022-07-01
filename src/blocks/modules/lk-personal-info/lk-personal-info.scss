@@ -11,6 +11,11 @@
     display: block;
   }
 
+  &__inner {
+    width: 100%;
+    overflow: hidden;
+  }
+
   // .personal__aside
   &__aside {
     @include below(767px) {

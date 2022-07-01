@@ -11,6 +11,12 @@
 			min-height: auto;
 			border-radius: 4px;
 		}
+
+		&--payments-method {
+			@include below(576px) {
+				min-height: 0;
+			}
+		}
 	}
 
 	&-dialog {
@@ -283,6 +289,26 @@
 			}
 		}
 	}
+
+	&#pickup-map {
+		.modal-dialog {
+			@include above(424px) {
+				max-width: 750px;
+			}
+		}
+
+		.modal-content--map {
+			min-height: auto;
+
+			& .modal-body {
+				padding: 0;
+			}
+		}
+
+		& #y-pickup-map {
+			min-height: 50vh;
+		}
+	}
 }
 
 .modal-backdrop--transparent {
@@ -390,4 +416,77 @@ height: 80px;
 			margin-right: 20px;
 		}
 	}
+}
+
+.payment-method-modal {
+	.modal-body {
+		.radio-btn {
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	.modal-footer {
+		display: flex;
+		justify-content: center;
+		padding-top: 24px;
+
+		& .button {
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+	}
+}
+
+.bonuses-modal {
+	.modal-dialog {
+		max-width: 456px;
+		min-width: 320px;
+	}
+}
+
+.available-bonuses-modal {
+	&__list {
+		padding-right: 16px;
+		max-height: 508px;
+		overflow: auto;
+
+		@include below(576px) {
+			max-height: none;
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			height: 57px;
+			border-radius: 100px;
+			background-color: #E7E9EB;
+		}
+
+		&-wrapper {
+			padding: 32px;
+			padding-right: 16px;
+			overflow: hidden;
+		}
+
+		&-item {
+			display: flex;
+			justify-content: space-between;
+			padding: 16px;
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.modal-body {
+		padding: 16px;
+	}
+
 }

@@ -1,0 +1,121 @@
+.catalog-map {
+    &__item {
+        display: grid;
+        grid-template-columns: 224px 1fr;
+        gap: 40px;
+
+        @include below(1024px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            user-select: none;
+        }
+
+        &:first-child {
+            padding-bottom: 40px;
+
+            @include below(1024px) {
+                padding-bottom: 24px;
+            }
+        }
+
+        &:not(:first-child) {
+            padding: 40px 0;
+
+            @include below(1024px) {
+                padding: 24px 0;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #E7E9EB;
+        }
+
+        &-img {
+            width: 100%;
+            object-fit: contain;
+
+            &-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-shrink: 0;
+
+                @include below(1024px) {
+                    display: grid;
+                    grid-template-columns: 104px 1fr;
+                    gap: 24px;
+                }
+
+                @include below(424px) {
+                    grid-template-columns: 64px 1fr;
+                }
+            }
+        }
+
+        &-title {
+            @include above(1025px) {
+                display: none;
+            }
+
+            @include below(1024px) {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0 !important;
+                padding-right: 30px;
+                height: 104px;
+                font-weight: 400;
+                font-size: 18px;
+                cursor: pointer;
+            }
+
+            @include below(424px) {
+                height: 64px;
+            }
+
+            &::after {
+                content: "\e903";
+                font-family: "icons";
+                font-size: 0.5rem;
+                color: #00adef;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transition: all 0.2s linear;
+                transform: translateY(-50%);
+
+                @include above(1025px) {
+                    display: none;
+                }
+            }
+        }
+
+        &-content {
+            & .h2 {
+                @include below(1024px) {
+                    display: none;
+                }
+            }
+        }
+
+        &.is-open {
+            & .catalog-chapters {
+                @include below(1024px) {
+                    display: grid;
+                }
+            }
+
+            & .catalog-map__item-img-wrapper {
+                @include below(1024px) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            & .catalog-map__item-title::after {
+                @include below(1024px) {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+    }
+}

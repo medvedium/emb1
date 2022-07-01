@@ -1,0 +1,82 @@
+.catalog-chapters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    @include below(1024px) {
+        position: relative;
+        display: none;
+        padding-top: 24px;
+    }
+
+    @include below(576px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #E7E9EB;
+        transform: translateY(-50%);
+
+        @include above(1025px) {
+            display: none;
+        }
+    }
+    
+    & > ul {
+        & > li {
+            &:first-child {
+                @include above(1025px) {
+                    display: none;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            & > ul {
+                padding-left: 15px;
+                margin-top: 16px;
+                
+                & li {
+                    position: relative;
+                    padding-left: 15px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 3px;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 8px;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background-color: #0C131D;
+                    }
+                }
+                
+                & > li {
+                    & ul {
+                        margin-top: 3px;
+                    }
+                    
+                    & > ul {
+                        padding-left: 30px;
+                    }
+                } 
+            }
+        }
+    }
+    
+    
+}

@@ -1,0 +1,29 @@
+.bonuses-history-list {
+    & li {
+        @include below(666px) {
+            padding: 16px;
+        }
+
+        & > div span {
+            &:first-child {
+                @include below(666px) {
+                    display: block;
+                    margin: 0;
+                }
+            }
+
+            &:not(:first-child) {
+                @include below(666px) {
+                    font-size: 12px;
+                    margin-right: 8px;
+                }
+            }
+
+            &:last-child {
+                @include below(666px) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

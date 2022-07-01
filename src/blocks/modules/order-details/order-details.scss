@@ -1,0 +1,209 @@
+.order-details {
+    display: grid;
+    grid-template-columns: minmax(calc((100% - 32px) / 2), 1fr) minmax(calc((100% - 32px) / 2), 416px); 
+    gap: 32px; 
+    margin-bottom: 40px;
+
+    @include below(666px) {
+        grid-template-columns: 1fr; 
+        gap: 24px; 
+        margin-bottom: 32px;
+    }
+
+    @include below(424px) {
+        gap: 16px; 
+    }
+
+    & > &__total,
+    & > &__payment,
+    & > &__delivery,
+    & > &__customer-info {
+        padding: 32px;
+
+        @include below(666px) {
+            grid-column: unset;
+            grid-row: unset;
+            padding: 24px;
+        }
+
+        @include below(424px) {
+            padding: 16px;
+        }
+    }
+
+    &__total {
+        grid-column: 1;
+        grid-row: 1;
+
+        &-list {
+            &-item {
+                display: flex;
+                justify-content: space-between;
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+
+                &:nth-last-child(-n + 2) {
+                    margin-bottom: 24px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    align-items: flex-end;
+                }
+
+                & span:nth-child(2) {
+                    margin-left: 16px;
+                    white-space: nowrap;
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+
+    &__payment {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+
+        & .button {
+            margin-top: auto;
+        }
+
+        &-btn {
+            &::before {
+                content: '';
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &--disable {
+                pointer-events: none;
+            }
+
+            &--awaiting {
+                &::before {
+                    margin-right: 15px;
+                    width: 22px;
+                    height: 22px;
+                    background-image: url('./../img/svg/clock.svg');
+                }
+            }
+
+            &--paid {
+                &::before {
+                    margin-right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('./../img/svg/done.svg');
+                }
+            }
+        }
+    }
+
+    &__delivery {
+        grid-column: span 2;
+
+        &-address {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include below(576px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                margin-right: 16px;
+
+                @include below(576px) {
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+            }
+
+            & .button {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__customer-info {
+        grid-column: span 2;
+        grid-row: 3;
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        max-height: 82px;
+        overflow: hidden;
+
+        @include below(666px) {
+            max-height: 70px;
+        }
+
+        @include below(424px) {
+            max-height: 54px;
+        }
+
+        &-list {
+            &-item {
+                display: grid;
+                grid-template-columns: 192px 1fr;
+                gap: 64px;
+
+                @include below(576px) {
+                    grid-template-columns: 1fr;
+                    gap: 4px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                & address {
+                    font-style: normal;
+                }
+
+                & span:first-child {
+                    @include below(576px) {
+                        color: #86898E;
+                    }
+                }
+            }
+        }
+
+        & button {
+            position: relative;
+            text-align: left;
+
+            &::after {
+                content: "\e903";
+                font-family: "icons";
+                font-size: 0.5rem;
+                color: #00adef;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transition: all 0.2s linear;
+                transform: translateY(-50%);
+            }
+        }
+
+        &.is-open {
+            max-height: none;
+
+            & button {
+                &::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+    }
+}

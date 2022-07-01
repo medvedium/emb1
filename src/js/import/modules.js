@@ -30,3 +30,6 @@ import "../../blocks/modules/home/home.js";
 import "../../blocks/modules/lk-personal-info/lk-personal-info.js";
 
 import "../../blocks/modules/thread/thread.js";
+
+
+import "../../blocks/modules/select-order/select-order.js";

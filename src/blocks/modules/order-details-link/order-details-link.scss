@@ -1,0 +1,46 @@
+.order-details-links {
+    display: flex;
+    align-items: center;
+
+    @include below(576px) {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        font-size: 18px;
+
+        @include below(424px) {
+            font-size: 14px;
+        }
+
+        &:not(:first-child) {
+            margin: 0 17px;
+            
+            @include below(576px) {
+                margin: 0 12px;
+            }
+        }
+
+        & svg {
+            margin-right: 12px;
+
+            @include below(424px) {
+                margin-right: 10px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+
+    &__status {
+        margin-left: auto;
+
+        @include below(576px) {
+            order: -1;
+            margin-left: 0;
+            margin-bottom: 16px;
+            width: 100%;
+        }
+    }
+}

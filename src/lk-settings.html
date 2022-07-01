@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Личный кабинет | Настройки</title>
+		<meta name="theme-color" content="#fff" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		@@include('blocks/modules/favicons/favicons.html')
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+
+	<body class="body">
+		@@include('blocks/modules/header/header.html')
+
+		<main class="main">
+			<div class="breadcrumbs mb-2">
+				<div class="container">
+					<div class="breadcrumbs__list">
+						<div class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">Главная</a>
+						</div>
+						<div class="breadcrumbs__item">
+							<span class="breadcrumbs__link">Личный кабинет</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<section class="section">
+					<div class="container">
+						<h1 class="h1 mb-5">Личный кабинет</h1>
+						<div class="personal">
+							<div class="personal__aside">
+								<div class="personal__info">
+									<div class="personal__name text h2">Константин</div>
+									<div class="text--sm text--color--gray-4">konstantinov2203@gmail.com</div>
+									<div class="personal__status text--sm text--color--gray-4">Статус: Серебряный</div>
+								</div>
+								<div class="personal__course personal-course">
+									<div class="personal-course__item">$=72 ₽</div>
+									<div class="personal-course__item">€=80 ₽</div>
+								</div>
+								<div class="personal__menu">
+									<nav class="personal-menu">
+										<ul class="personal-menu__list">
+											<li class="personal-menu__item active">
+												<a href="#" class="personal-menu__link">Заказы</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link">Личные данные</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link">Бонусы</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link">Настройки</a>
+											</li>
+											<li class="personal-menu__item">
+												<a href="#" class="personal-menu__link text--color--gray">Выйти</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="personal__inner">
+								<div class="text h2 mb-4">Настройки</div>
+	
+								<form action="settings">
+									<div class="text h4 mb-4">Новостная рассылка</div>
+		
+									<label class="checkbox settings__checkbox">
+										<input type="checkbox" class="checkbox__input" required="" checked="">
+										<span class="checkbox__custom"></span>
+										<span class="checkbox__text text--md">Получать уведомления об&nbsp;акциях и&nbsp;скидках</span>
+									</label>
+	
+									<div class="text h4 mb-3">Смена пароля</div>
+									
+									<div class="settings__password mb-4">
+										<span class="text--color--gray">Новый пароль</span>
+	
+										<div class="input input--icon input--password">
+											<input type="password" class="input__field jsInput jsInputPasswordEq jsInputPasswordEq--1" required="">
+											<div class="input__placeholder">Пароль</div>
+											<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.59984 2.82666C7.05872 2.71924 7.52855 2.66555 7.99984 2.66666C12.6665 2.66666 15.3332 7.99999 15.3332 7.99999C14.9285 8.75706 14.4459 9.46981 13.8932 10.1267M9.41317 9.41332C9.23007 9.60982 9.00927 9.76743 8.76394 9.87674C8.51861 9.98605 8.25377 10.0448 7.98523 10.0496C7.71669 10.0543 7.44995 10.0049 7.20091 9.90432C6.95188 9.80373 6.72565 9.65401 6.53573 9.46409C6.34582 9.27418 6.1961 9.04795 6.09551 8.79892C5.99492 8.54988 5.94552 8.28314 5.95026 8.0146C5.955 7.74606 6.01378 7.48122 6.12309 7.23589C6.2324 6.99056 6.39001 6.76976 6.5865 6.58666M1.99984 2L13.9998 14M11.9598 11.96C10.8202 12.8287 9.43258 13.3099 7.99984 13.3333C3.33317 13.3333 0.666504 7.99999 0.666504 7.99999C1.49576 6.45459 2.64593 5.1044 4.03984 4.03999L11.9598 11.96Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+											<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23516 5.99935C1.31274 6.13661 1.42685 6.33006 1.57627 6.56142C1.88751 7.04334 2.34867 7.68465 2.94811 8.32405C4.1561 9.61257 5.86643 10.8327 8 10.8327C10.1336 10.8327 11.8439 9.61257 13.0519 8.32405C13.6513 7.68465 14.1125 7.04334 14.4237 6.56142C14.5732 6.33006 14.6873 6.1366 14.7648 5.99935C14.6873 5.86209 14.5732 5.66864 14.4237 5.43728C14.1125 4.95536 13.6513 4.31405 13.0519 3.67465C11.8439 2.38613 10.1336 1.16602 8 1.16602C5.86643 1.16602 4.1561 2.38613 2.94811 3.67465C2.34867 4.31405 1.88751 4.95536 1.57627 5.43728C1.42685 5.66864 1.31274 5.86209 1.23516 5.99935ZM15.3333 5.99935C15.7806 5.77574 15.7805 5.77557 15.7804 5.77537L15.7801 5.77489L15.7794 5.77354L15.7774 5.7694L15.7702 5.75544C15.7642 5.74364 15.7555 5.72691 15.7442 5.70559C15.7216 5.66296 15.6887 5.6019 15.6454 5.52505C15.559 5.37142 15.4314 5.15427 15.2638 4.89475C14.9292 4.37667 14.432 3.68465 13.7814 2.99071C12.4894 1.61257 10.5331 0.166016 8 0.166016C5.46692 0.166016 3.51058 1.61257 2.21857 2.99071C1.56801 3.68465 1.07083 4.37667 0.736235 4.89475C0.568628 5.15427 0.441 5.37142 0.354582 5.52505C0.311354 5.6019 0.278381 5.66296 0.25582 5.70559C0.244538 5.72691 0.235854 5.74364 0.229789 5.75544L0.222654 5.7694L0.220563 5.77354L0.219887 5.77489L0.219642 5.77537C0.219545 5.77557 0.219458 5.77574 0.666672 5.99935L0.219458 5.77574C0.149076 5.91651 0.149076 6.08219 0.219458 6.22296L0.666672 5.99935C0.219458 6.22296 0.219545 6.22313 0.219642 6.22332L0.219887 6.22381L0.220563 6.22516L0.222654 6.2293L0.229789 6.24326C0.235854 6.25506 0.244538 6.27178 0.25582 6.2931C0.278381 6.33574 0.311354 6.3968 0.354582 6.47365C0.441 6.62728 0.568628 6.84442 0.736235 7.10394C1.07083 7.62203 1.56801 8.31405 2.21857 9.00799C3.51058 10.3861 5.46692 11.8327 8 11.8327C10.5331 11.8327 12.4894 10.3861 13.7814 9.00799C14.432 8.31405 14.9292 7.62203 15.2638 7.10394C15.4314 6.84442 15.559 6.62728 15.6454 6.47365C15.6887 6.3968 15.7216 6.33574 15.7442 6.2931C15.7555 6.27178 15.7642 6.25506 15.7702 6.24326L15.7774 6.2293L15.7794 6.22516L15.7801 6.22381L15.7804 6.22332C15.7805 6.22313 15.7806 6.22296 15.3333 5.99935ZM15.3333 5.99935L15.7806 6.22296C15.8509 6.08219 15.8509 5.91651 15.7806 5.77574L15.3333 5.99935ZM8.00001 4.49935C7.17158 4.49935 6.50001 5.17092 6.50001 5.99935C6.50001 6.82778 7.17158 7.49935 8.00001 7.49935C8.82843 7.49935 9.5 6.82778 9.5 5.99935C9.5 5.17092 8.82843 4.49935 8.00001 4.49935ZM5.50001 5.99935C5.50001 4.61864 6.61929 3.49935 8.00001 3.49935C9.38072 3.49935 10.5 4.61864 10.5 5.99935C10.5 7.38006 9.38072 8.49935 8.00001 8.49935C6.61929 8.49935 5.50001 7.38006 5.50001 5.99935Z" fill="#86898E"/>
+													
+											</svg>
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+									</div>
+	
+									<div class="settings__password">
+										<span class="text--color--gray">Повтор пароля</span>
+	
+										<div class="input input--icon input--password">
+											<input type="password" class="input__field jsInput jsInputPasswordEq jsInputPasswordEq--1" required="">
+											<div class="input__placeholder">Пароль</div>
+											<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.59984 2.82666C7.05872 2.71924 7.52855 2.66555 7.99984 2.66666C12.6665 2.66666 15.3332 7.99999 15.3332 7.99999C14.9285 8.75706 14.4459 9.46981 13.8932 10.1267M9.41317 9.41332C9.23007 9.60982 9.00927 9.76743 8.76394 9.87674C8.51861 9.98605 8.25377 10.0448 7.98523 10.0496C7.71669 10.0543 7.44995 10.0049 7.20091 9.90432C6.95188 9.80373 6.72565 9.65401 6.53573 9.46409C6.34582 9.27418 6.1961 9.04795 6.09551 8.79892C5.99492 8.54988 5.94552 8.28314 5.95026 8.0146C5.955 7.74606 6.01378 7.48122 6.12309 7.23589C6.2324 6.99056 6.39001 6.76976 6.5865 6.58666M1.99984 2L13.9998 14M11.9598 11.96C10.8202 12.8287 9.43258 13.3099 7.99984 13.3333C3.33317 13.3333 0.666504 7.99999 0.666504 7.99999C1.49576 6.45459 2.64593 5.1044 4.03984 4.03999L11.9598 11.96Z" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+											<svg class="icon icon--sm input__icon jsInputPasswordTrigger" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23516 5.99935C1.31274 6.13661 1.42685 6.33006 1.57627 6.56142C1.88751 7.04334 2.34867 7.68465 2.94811 8.32405C4.1561 9.61257 5.86643 10.8327 8 10.8327C10.1336 10.8327 11.8439 9.61257 13.0519 8.32405C13.6513 7.68465 14.1125 7.04334 14.4237 6.56142C14.5732 6.33006 14.6873 6.1366 14.7648 5.99935C14.6873 5.86209 14.5732 5.66864 14.4237 5.43728C14.1125 4.95536 13.6513 4.31405 13.0519 3.67465C11.8439 2.38613 10.1336 1.16602 8 1.16602C5.86643 1.16602 4.1561 2.38613 2.94811 3.67465C2.34867 4.31405 1.88751 4.95536 1.57627 5.43728C1.42685 5.66864 1.31274 5.86209 1.23516 5.99935ZM15.3333 5.99935C15.7806 5.77574 15.7805 5.77557 15.7804 5.77537L15.7801 5.77489L15.7794 5.77354L15.7774 5.7694L15.7702 5.75544C15.7642 5.74364 15.7555 5.72691 15.7442 5.70559C15.7216 5.66296 15.6887 5.6019 15.6454 5.52505C15.559 5.37142 15.4314 5.15427 15.2638 4.89475C14.9292 4.37667 14.432 3.68465 13.7814 2.99071C12.4894 1.61257 10.5331 0.166016 8 0.166016C5.46692 0.166016 3.51058 1.61257 2.21857 2.99071C1.56801 3.68465 1.07083 4.37667 0.736235 4.89475C0.568628 5.15427 0.441 5.37142 0.354582 5.52505C0.311354 5.6019 0.278381 5.66296 0.25582 5.70559C0.244538 5.72691 0.235854 5.74364 0.229789 5.75544L0.222654 5.7694L0.220563 5.77354L0.219887 5.77489L0.219642 5.77537C0.219545 5.77557 0.219458 5.77574 0.666672 5.99935L0.219458 5.77574C0.149076 5.91651 0.149076 6.08219 0.219458 6.22296L0.666672 5.99935C0.219458 6.22296 0.219545 6.22313 0.219642 6.22332L0.219887 6.22381L0.220563 6.22516L0.222654 6.2293L0.229789 6.24326C0.235854 6.25506 0.244538 6.27178 0.25582 6.2931C0.278381 6.33574 0.311354 6.3968 0.354582 6.47365C0.441 6.62728 0.568628 6.84442 0.736235 7.10394C1.07083 7.62203 1.56801 8.31405 2.21857 9.00799C3.51058 10.3861 5.46692 11.8327 8 11.8327C10.5331 11.8327 12.4894 10.3861 13.7814 9.00799C14.432 8.31405 14.9292 7.62203 15.2638 7.10394C15.4314 6.84442 15.559 6.62728 15.6454 6.47365C15.6887 6.3968 15.7216 6.33574 15.7442 6.2931C15.7555 6.27178 15.7642 6.25506 15.7702 6.24326L15.7774 6.2293L15.7794 6.22516L15.7801 6.22381L15.7804 6.22332C15.7805 6.22313 15.7806 6.22296 15.3333 5.99935ZM15.3333 5.99935L15.7806 6.22296C15.8509 6.08219 15.8509 5.91651 15.7806 5.77574L15.3333 5.99935ZM8.00001 4.49935C7.17158 4.49935 6.50001 5.17092 6.50001 5.99935C6.50001 6.82778 7.17158 7.49935 8.00001 7.49935C8.82843 7.49935 9.5 6.82778 9.5 5.99935C9.5 5.17092 8.82843 4.49935 8.00001 4.49935ZM5.50001 5.99935C5.50001 4.61864 6.61929 3.49935 8.00001 3.49935C9.38072 3.49935 10.5 4.61864 10.5 5.99935C10.5 7.38006 9.38072 8.49935 8.00001 8.49935C6.61929 8.49935 5.50001 7.38006 5.50001 5.99935Z" fill="#86898E"/>
+											</svg>
+											
+											<div class="input__error">Описание ошибки и способы ее исправить</div>
+										</div>
+									</div>
+	
+									<div class="settings__btns">
+										<button class="button button--border button--border--blue">
+											<span class="button__text">Сохранить</span>
+										</button>
+										<button class="button button--blue">
+											<span class="button__text">Отменить</span>
+										</button>
+									</div>
+								</form>
+								
+	
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="get-up jsGetUp">
+				<svg class="icon icon--arrow icon--lg get-up__icon">
+					<use xlink:href="img/icons/icons.svg#arrow-up"></use>
+				</svg>
+			</div>
+	
+	
+			<footer class="footer">
+				<div class="container footer__container">
+					<div class="footer__row">
+						<div class="footer__col footer__col--2">
+							<div class="footer-menu">
+								<div class="footer-menu__left">
+									<div class="footer-menu__col footer-menu__col--1">
+										<div class="footer-menu__header">
+											<a href="#" class="link text text--bold footer-menu__title">
+												<span class="link__tex">
+													Вышивальное <br class="d-none d-md-inline"> оборудование
+												</span>
+											</a>
+											<div class="footer-menu__trigger jsFooterMenuTrigger"></div>
+										</div>
+										<div class="footer-menu__body">
+											<ul class="footer-menu__list">
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Вышивальные <br class="d-none d-md-inline"> машины
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Лазер
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Запчасти
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Пяльцы и рамы
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															ПО
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="footer-menu__col footer-menu__col--2">
+										<div class="footer-menu__header">
+											<a href="#" class="link text text--bold footer-menu__title">
+												<span class="link__tex">
+													Материалы <br class="d-none d-md-inline"> для вышивки
+												</span>
+											</a>
+											<div class="footer-menu__trigger jsFooterMenuTrigger"></div>
+										</div>
+										<div class="footer-menu__body">
+											<ul class="footer-menu__list">
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Нитки
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Материалы
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Аксессуары
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="footer-menu__right">
+									<div class="footer-menu__col footer-menu__col--3">
+										<div class="footer-menu__header footer-menu__header--not-parent">
+											<a href="#" class="link text text--bold footer-menu__title">
+												<span class="link__tex">
+													Сервис
+												</span>
+											</a>
+										</div>
+										<div class="footer-menu__header footer-menu__header--not-parent">
+											<a href="#" class="link text text--bold footer-menu__title">
+												<span class="link__tex">
+													Распродажа
+												</span>
+											</a>
+										</div>
+									</div>
+									<div class="footer-menu__col footer-menu__col--4">
+										<div class="footer-menu__header">
+											<a href="#" class="link text text--bold footer-menu__title">
+												<span class="link__tex">
+													Информация
+												</span>
+											</a>
+											<div class="footer-menu__trigger jsFooterMenuTrigger"></div>
+										</div>
+										<div class="footer-menu__body">
+											<ul class="footer-menu__list">
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Оплата
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Доставка
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Партнёры
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Новости
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Контакты
+														</span>
+													</a>
+												</li>
+												<li class="footer-menu__item">
+													<a href="#" class="link footer-menu__link">
+														<span class="link__text">
+															Карта сайта
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer__col footer__col--1">
+							<div class="footer__col-inner">
+								<a href="#" class="footer__logo">
+									<img src="img/logo.svg" alt="">
+								</a>
+	
+								<div class="footer__policy footer__policy--desktop d-none d-lg-block">
+									<div class="text text--xs text--opacity mb-2">
+										© 2015–2021
+									</div>
+									<div class="text text--xs  mb-2">
+										<a href="#" class="link link--opacity">
+											<span class="link__text">
+												Политика <br> конфиденциальности
+											</span>
+										</a>
+									</div>
+									<div class="text text--xs  mb-2">
+										<a href="#" class="link link--opacity">
+											<span class="link__text">
+												Соглашение на обработку <br> персональных данных
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer__col footer__col--3">
+							<div class="footer__col-inner">
+								<div class="footer__phone-block">
+									<div class="footer__phone-link">
+										<a href="#" class="link text--bold text text--xxl">
+											<span class="link__text">
+												8 (800) 350-98-50
+											</span>
+										</a>
+									</div>
+									<a href="#" class="link text text--sm link--opacity">
+										<span class="link__text">
+											Звонок по России бесплатный
+										</span>
+									</a>
+								</div>
+	
+								<div class="tabs footer__tabs jsTabs">
+									<div class="tabs__btns">
+										<div class="tabs__btn jsTabsBtn is-active" data-id="tab_1">
+											<div class="tabs__btn-title">
+												Санкт-Петербург
+											</div>
+										</div>
+										<div class="tabs__btn jsTabsBtn" data-id="tab_2">
+											<div class="tabs__btn-title">
+												Москва
+											</div>
+										</div>
+									</div>
+									<div class="tabs__items">
+										<div class="tabs__item jsTabsItem is-active" data-id="tab_1">
+											<div class="contacts">
+												<div class="contacts__list">
+													<div class="contacts__item">
+														<a href="tel:88126556744" class="link text text--sm text--bold link--icon--left contacts__link">
+															<svg class="icon icon--gray-light icon--md  link__icon">
+																<use xlink:href="img/icons/icons.svg#phone"></use>
+															</svg>
+															<span class="link__text ">
+																+7 (812) 655-67-44
+															</span>
+														</a>
+													</div>
+													<div class="contacts__item">
+														<a href="mailto:info@emb1.ru" class="link text text--sm link--icon--left contacts__link">
+															<svg class="icon icon--gray-light icon--md  link__icon">
+																<use xlink:href="img/icons/icons.svg#mail"></use>
+															</svg>
+															<span class="link__text ">
+																info@emb1.ru
+															</span>
+														</a>
+													</div>
+													<div class="contacts__item">
+														<span class="link link--no-hover text text--sm link--icon--left contacts__link">
+															<svg class="icon icon--gray-light icon--md  link__icon">
+																<use xlink:href="img/icons/icons.svg#map-pin"></use>
+															</svg>
+															<span class="link__text ">
+																ул.Самойловой, д.5 лит. C
+															</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tabs__item jsTabsItem" data-id="tab_2">
+											<div class="contacts">
+												<div class="contacts__list">
+													<div class="contacts__item">
+														<a href="tel:84959825016" class="link text text--sm text--bold link--icon--left contacts__link">
+															<svg class="icon icon--gray-light icon--md  link__icon">
+																<use xlink:href="img/icons/icons.svg#phone"></use>
+															</svg>
+															<span class="link__text ">
+																+7 (495) 982-50-16
+															</span>
+														</a>
+													</div>
+													<div class="contacts__item">
+														<a href="#" class="link text text--sm link--icon--left contacts__link">
+															<svg class="icon icon--gray-light icon--md  link__icon">
+																<use xlink:href="img/icons/icons.svg#mail"></use>
+															</svg>
+															<span class="link__text ">
+																info.msk@emb1.ru
+															</span>
+														</a>
+													</div>
+													<div class="contacts__item">
+														<span class="link link--no-hover text text--sm link--icon--left contacts__link">
+															<svg class="icon icon--gray-light icon--md  link__icon">
+																<use xlink:href="img/icons/icons.svg#map-pin"></use>
+															</svg>
+															<span class="link__text ">
+																Кронштадтский бульвар , д.7, ТЦ "Крона"
+															</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+	
+								<div class="footer__policy footer__policy--mobile d-lg-none">
+									<div class="text text--xs text--opacity mb-2">
+										© 2015–2021
+									</div>
+									<div class="text text--xs  mb-2">
+										<a href="#" class="link link--opacity">
+											<span class="link__text">
+												Политика <br class="d-none d-md-inline"> конфиденциальности
+											</span>
+										</a>
+									</div>
+									<div class="text text--xs  mb-2">
+										<a href="#" class="link link--opacity">
+											<span class="link__text">
+												Соглашение на обработку <br class="d-none d-md-inline"> персональных данных
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+	
+	
+	
+		</main>
+
+		@@include('blocks/modules/modal/modal.html")
+
+		<!--js	-->
+		<!--<script src="js/vendor.js?_v=20220527104241"></script>-->
+		<script src="js/app.min.js?_v=20220527104241"></script>
+	</body>
+
+</html>

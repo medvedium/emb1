@@ -1,0 +1,69 @@
+.settings {
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        padding: 0;
+
+        @include below(576px) {
+            align-items: flex-start;
+        }
+
+        & .checkbox__custom {
+            position: relative;
+            display: block;
+            flex-shrink: 0;
+            margin-right: 15px;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+    
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 7px;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+
+    &__password {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 528px;
+
+        @include below(576px) {
+            flex-direction: column;
+            align-items: unset;
+
+            & > span {
+                margin-bottom: 8px;
+            }
+        }
+
+        & .input {
+            width: 280px;
+
+            @include below(576px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__btns {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 48px;
+        max-width: 528px;
+
+        @include below(576px) {
+            gap: 16px;
+            margin-top: 24px;
+        }
+    }
+}

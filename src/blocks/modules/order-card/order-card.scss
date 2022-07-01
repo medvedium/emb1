@@ -1,0 +1,139 @@
+.order-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 16px 24px;
+
+    @include below(576px) {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+        width: 100%;
+
+        @include below(576px) {
+            margin: 0;
+            margin-bottom: 12px;
+        }
+
+        &-left {
+            &-time {
+                margin-left: 12px;
+
+                @include below(576px) {
+                    display: block;
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+
+            &-status {
+                display: block;
+
+                @include below(576px) {
+                    display: none;
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: 20px;
+
+            &-bonus {
+                white-space: nowrap;
+
+                @include below(576px) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &__aside {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include below(576px) {
+            width: 100%;
+        }
+
+        &-status {
+            display: block;
+            max-width: 200px;
+            
+            @include above(577px) {
+                display: none;
+            }
+        }
+
+        &-more-link {
+            display: flex;
+            align-items: center;
+            padding: 0 19px;
+            height: 44px;
+            font-size: 16px;
+
+            @include below(1023px) {
+                width: 44px;
+            }
+
+            @include below(576px) {
+                padding: 0 10px;
+                width: 24px;
+                height: 24px;
+            }
+
+            & .button__text {
+                margin: 0;
+                margin-right: 19px;
+
+                @include below(1023px) {
+                    display: none;
+                }
+            }
+
+            & .button__arrow-icon {
+                position: relative;
+                display: flex;
+                flex-shrink: 0;
+                width: 6px;
+                height: 12px;
+
+                @include below(576px) {
+                    width: 5px;
+                    height: 10px;
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 8px;
+                    height: 1px;
+                    background-color: #00adef;
+                    border-radius: 100px;
+                    transform-origin: left;
+                }
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
