@@ -1,0 +1,425 @@
+<div class="catalog__filter catalog-filter">
+	<header class="catalog-filter__header filter-header">
+		<span class="filter-header__title text--bold">Фильтр</span>
+		<div class="filter-header__close jsCloseFilter">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#cross"></use>
+			</svg>
+		</div>
+	</header>
+	<form action="#" class="catalog-filter__form" id="catalog-filter">
+		<div class="catalog-filter__item">
+			<div class="catalog-filter__title jsFilterTitle">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#dropdown"></use>
+				</svg>
+				Характеристика
+			</div>
+			<div class="catalog-filter__inner catalog-filter__inner--radio">
+				<label class="radio-btn">
+					<input type="radio" class="radio-btn__input" name="radio" checked />
+					<span class="radio-btn__custom"></span>
+					<span class="radio-btn__text"><a href="#">Характеристика 1</a></span>
+				</label>
+				<label class="radio-btn">
+					<input type="radio" class="radio-btn__input" name="radio" />
+					<span class="radio-btn__custom"></span>
+					<span class="radio-btn__text"><a href="#">Характеристика 2</a></span>
+				</label>
+				<label class="radio-btn">
+					<input type="radio" class="radio-btn__input" name="radio" />
+					<span class="radio-btn__custom"></span>
+					<span class="radio-btn__text"><a href="#">Характеристика 3</a></span>
+				</label>
+			</div>
+		</div>
+		<div class="catalog-filter__item catalog-filter__item--range is-open">
+			<div class="catalog-filter__title jsFilterTitle">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#dropdown"></use>
+				</svg>
+				Цена
+			</div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row d-flex justify-content-between">
+					<label class="range-slider-label">
+						<span>от</span>
+						<input type="number" min="0" value="100" />
+					</label>
+					<label class="range-slider-label">
+						<span>до</span>
+						<input type="number" min="0" value="1000" />
+					</label>
+				</div>
+				<div id="price-slider" class="mb-12 range-slider"></div>
+			</div>
+		</div>
+		<div class="catalog-filter__item is-open">
+			<div class="catalog-filter__title jsFilterTitle">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#dropdown"></use>
+				</svg>
+				Толщина
+			</div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 75</a>
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="catalog-filter__item">
+			<div class="catalog-filter__title jsFilterTitle">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#dropdown"></use>
+				</svg>
+				Намотка
+			</div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 75</a>
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="catalog-filter__item">
+			<div class="catalog-filter__title jsFilterTitle">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#dropdown"></use>
+				</svg>
+				Бренд
+			</div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 75</a>
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="catalog-filter__item">
+			<div class="catalog-filter__title jsFilterTitle">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#dropdown"></use>
+				</svg>
+				Цвет
+			</div>
+			<div class="catalog-filter__inner">
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">57</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">5</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40 120d/2</a>
+							<span class="catalog-filter__value">7</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 60</a>
+							<span class="catalog-filter__value">15</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 75</a>
+							<span class="catalog-filter__value">2</span>
+						</span>
+					</label>
+				</div>
+				<div class="catalog-filter__row">
+					<label class="checkbox filter-checkbox">
+						<input type="checkbox" class="checkbox__input" />
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">
+							<a href="#">№ 40</a>
+							<span class="catalog-filter__value">12</span>
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<button type="submit" class="button button--md button--border button--border--blue w-100 catalog-filter__submit">
+			<span class="button__text text--md">Применить</span>
+		</button>
+		<button type="reset" class="button button--md button--empty w-100">
+			<span class="button__text text--md">Сбросить</span>
+		</button>
+	</form>
+</div>
