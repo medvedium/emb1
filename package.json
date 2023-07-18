@@ -1,8 +1,7 @@
 {
-	"name": "fls-start",
+	"name": "andreev.frontend",
 	"version": "3.0.0",
-	"description": "Start template with Gulp and Webpack",
-	"author": "FLS",
+	"author": "andreev.frontend",
 	"private": true,
 	"license": "GNU General Public License (GPL)",
 	"type": "module",
@@ -14,7 +13,8 @@
 		"deploy": "gulp deployFTP --build",
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
-		"tmp": "gulp -f gulpfile.tmp.js"
+		"tmp": "gulp -f gulpfile.tmp.js",
+		"gh-pages": "gulp ghpublish"
 	},
 	"devDependencies": {
 		"bootstrap": "latest",
@@ -26,6 +26,7 @@
 		"element-remove-polyfill": "^1.1.0",
 		"fetch-polyfill": "^0.8.2",
 		"file-include-webpack-plugin-replace": "latest",
+		"gh-pages": "^5.0.0",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",

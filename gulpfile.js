@@ -5,6 +5,8 @@ import { plugins } from "./config/gulp-plugins.js";
 // Импорт путей
 import { path } from "./config/gulp-settings.js";
 
+import { publish } from "gh-pages"
+
 // Передаем значения в глобальную переменную
 global.app = {
 	isBuild: process.argv.includes('--build'),
@@ -29,6 +31,10 @@ import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
 import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 
+const ghPages = () => {
+	return publish('dist', {}, function(err) {});
+}
+
 // Последовательная обработака шрифтов
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
@@ -52,12 +58,14 @@ const development = gulp.series(devTasks);
 const build = gulp.series(buildTasks);
 const deployFTP = gulp.series(buildTasks, ftp);
 const deployZIP = gulp.series(buildTasks, zip);
+const ghpublish = gulp.series(buildTasks, ghPages)
 
 // Экспорт сценариев
 export { development }
 export { build }
 export { deployFTP }
 export { deployZIP }
+export { ghpublish }
 
 // Выполнение сценария по умолчанию
 gulp.task('default', development);
